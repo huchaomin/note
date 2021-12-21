@@ -7,6 +7,7 @@ const issueConfig = {
 }
 module.exports = {
   base: '/note/',
+  dest: resolve('../../dist'),
   title: '木林子的笔记空间',
   description: 'My note space build with vuepress',
   head: [

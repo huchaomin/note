@@ -1,9 +1,6 @@
 {
   "name": "my-note",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://gitee.com/mulinzi/note.git",
-  "author": "木林子 <mulinzi1991@yeah.net>",
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev src",
@@ -20,5 +17,8 @@
     "vuepress-plugin-element-tabs": "^0.2.8",
     "vuepress-plugin-nprogress": "^1.1.8",
     "vuetify": "^2.6.1"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.8.3"
   }
 }

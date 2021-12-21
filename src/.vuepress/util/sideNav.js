@@ -29,7 +29,7 @@ function getDocRouterPath (dirname, filename) {
   }
 }
 
-function findFolder (dir = docsRoot) {
+function findFolder (dir) {
   const arr = []
   const files = fs.readdirSync(dir)
   if (Array.isArray(files)) {
@@ -41,7 +41,7 @@ function findFolder (dir = docsRoot) {
         if (file === '.vuepress') continue
         const o = {
           name: file,
-          id: uniqueId('tree'),
+          id: String(stat.birthtimeMs),
           isDirectory: true,
         }
         const result = findFolder(path.join(dir, file))
@@ -61,5 +61,5 @@ function findFolder (dir = docsRoot) {
   return arr.length > 0 ? arr : null
 }
 
-module.exports = findFolder()
+module.exports = findFolder(docsRoot)
 

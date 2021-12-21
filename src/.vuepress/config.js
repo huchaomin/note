@@ -82,5 +82,11 @@ module.exports = {
         autoCreateIssue: true,
       },
     ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'G-EXL46Z8PQJ',
+      },
+    ],
   ],
 }

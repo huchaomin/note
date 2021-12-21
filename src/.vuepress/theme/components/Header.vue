@@ -148,4 +148,13 @@ export default {
 
 .receiving-qr-code
   width 100%
+
+.v-list-item__avatar
+  margin 0
+
+.v-list-item__content
+  padding 0
+
+.v-list-item
+  min-height unset
 </style>

@@ -7,7 +7,7 @@ const issueConfig = {
 }
 module.exports = {
   base: '/note/',
-  dest: resolve('../../dist'),
+  dest: resolve('../../docs'),
   title: '木林子的笔记空间',
   description: 'My note space build with vuepress',
   head: [
@@ -34,7 +34,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        'docs': resolve('../../docs'),
+        'src': resolve('../../src'),
       },
     },
   },

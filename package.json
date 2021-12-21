@@ -6,8 +6,8 @@
   "author": "木林子 <mulinzi1991@yeah.net>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
   },
   "dependencies": {
     "@mdi/font": "^6.5.95",

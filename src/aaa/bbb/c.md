@@ -37,7 +37,7 @@ export default {
 }
 ```
 #### 导入代码片段（无法使用路径别名）【也可以导入代码当中一部分】
-<<< docs/.vuepress/config.js{2}
+<<< src/.vuepress/config.js{2}
 
 ### 使用外部组件
 <v-alert

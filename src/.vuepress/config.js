@@ -6,7 +6,6 @@ const issueConfig = {
   clientSecret: 'b18db1776d565a67dc3010040770acc02635442f',
 }
 module.exports = {
-  base: '/note/',
   dest: resolve('../../docs'),
   title: '木林子的笔记空间',
   description: 'My note space build with vuepress',

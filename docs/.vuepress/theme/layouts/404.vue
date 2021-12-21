@@ -1,0 +1,9 @@
+<template>
+<v-img
+  :src="require('../assets/images/404.svg')"
+  class="mx-auto"
+  contain
+  max-height="100%"
+  width="500"
+></v-img>
+</template>

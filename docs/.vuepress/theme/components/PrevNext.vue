@@ -1,0 +1,65 @@
+<template>
+<div
+  v-if="$site.themeConfig.enablePrevAndNext && (prev || next)"
+  class="prev-next d-flex justify-space-between mt-9">
+  <v-btn
+    v-if="prev"
+    :fab="$vuetify.breakpoint.xsOnly"
+    :to="prev.routerPath"
+    color="primary"
+    depressed
+    exact-path
+    @dblclick.stop="">
+    <v-icon dense>mdi-arrow-left</v-icon>
+    <span class="d-none d-sm-inline">上一篇：{{ prev.name }}</span>
+  </v-btn>
+  <v-spacer></v-spacer>
+  <v-btn
+    v-if="next"
+    :fab="$vuetify.breakpoint.xsOnly"
+    :to="next.routerPath"
+    color="primary"
+    depressed
+    exact-path
+    @dblclick.stop="">
+    <span class="d-none d-sm-inline">下一篇：{{ next.name }}</span>
+    <v-icon dense>mdi-arrow-right</v-icon>
+  </v-btn>
+</div>
+</template>
+<script>
+import findSideNav from '../mixins/findSideNav.js'
+
+export default {
+  mixins: [findSideNav],
+  data () {
+    return {
+      prev: null,
+      next: null,
+    }
+  },
+  watch: {
+    '$page': {
+      handler () {
+        this.reRender()
+      },
+      immediate: true,
+    },
+  },
+  methods: {
+    reRender () {
+      this.prev = null
+      this.next = null
+      const currentNavId = this.currentNavId
+      if (!currentNavId) return
+      const parents = this.getAllParentsById(currentNavId)
+      if (parents.length === 0) return
+      const parent = parents[0]
+      const fileArr = parent.children.filter(o => !o.isDirectory)
+      const index = fileArr.findIndex(o => o.id === currentNavId)
+      this.prev = fileArr[index - 1]
+      this.next = fileArr[index + 1]
+    },
+  },
+}
+</script>

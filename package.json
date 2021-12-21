@@ -1,0 +1,24 @@
+{
+  "name": "my-note",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitee.com/mulinzi/note.git",
+  "author": "木林子 <mulinzi1991@yeah.net>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "@mdi/font": "^6.5.95",
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "@xiaopanda/vuepress-plugin-code-copy": "^1.0.3",
+    "countup.js": "^2.0.8",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-demo-code": "^0.6.0",
+    "vuepress-plugin-element-tabs": "^0.2.8",
+    "vuepress-plugin-nprogress": "^1.1.8",
+    "vuetify": "^2.6.1"
+  }
+}

@@ -1,0 +1,111 @@
+<template>
+<v-navigation-drawer
+  v-model="show"
+  :mobile-breakpoint="960"
+  app
+  clipped
+  width="300">
+  <v-text-field
+    v-model="search"
+    append-icon="mdi-magnify"
+    class="mx-2 mt-3"
+    clear-icon="mdi-close-circle-outline"
+    clearable
+    dense
+    hide-details="auto"
+    label="查找笔记文件"
+    outlined
+  ></v-text-field>
+  <v-treeview
+    :active.sync="active"
+    :items="sideNav"
+    :open.sync="open"
+    :search="search"
+    activatable
+    open-on-click
+    transition
+    @update:active="leafClick">
+    <template v-slot:prepend="{ item, open }">
+      <v-icon v-if="item.isDirectory">
+        {{ open ? 'mdi-folder-open' : 'mdi-folder' }}
+      </v-icon>
+      <v-icon v-else>mdi-file-document-outline</v-icon>
+    </template>
+  </v-treeview>
+</v-navigation-drawer>
+</template>
+<script>
+import findSideNav from '../mixins/findSideNav.js'
+
+export default {
+  mixins: [findSideNav],
+  data () {
+    return {
+      show: this.$vuetify.breakpoint.mdAndUp,
+      search: null,
+      open: [],
+      active: [],
+    }
+  },
+  watch: {
+    '$page': {
+      handler () {
+        this.focusItem()
+      },
+      immediate: true,
+    },
+  },
+  methods: {
+    toggleDrawer (flag) {
+      if (flag === undefined) {
+        this.show = !this.show
+        if (this.show) {
+          this.$emit('show')
+        }
+      } else {
+        this.show = flag
+      }
+    },
+    leafClick (itemArr) {
+      if (itemArr.length === 0) return
+      const navObj = this.findNavObjByKey('id', itemArr[0])
+      if (!navObj) return
+      const path = navObj.routerPath
+      if (this.$page.regularPath === path) return
+      this.$router.push({ path })
+    },
+    focusItem () {
+      const currentNavId = this.currentNavId
+      if (!currentNavId) return
+      if (!this.active.includes(currentNavId)) {
+        this.active.push(currentNavId)
+      }
+      const shouldOpenArr = this.getAllParentsById(currentNavId)
+      shouldOpenArr.forEach(o => {
+        const id = o.id
+        if (!this.open.includes(id)) {
+          this.open.push(id)
+        }
+      })
+    },
+  },
+}
+</script>
+<style scoped>
+.v-treeview {
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+
+.v-treeview >>> .v-treeview-node.v-treeview-node--shaped .v-treeview-node__root {
+  margin: 0;
+}
+
+.v-treeview >>> .v-treeview-node__root {
+  min-height: 32px;
+}
+
+.v-treeview >>> .v-treeview-node__content {
+  margin-left: 4px;
+}
+</style>

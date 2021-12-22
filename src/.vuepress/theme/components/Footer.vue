@@ -1,7 +1,7 @@
 <template>
 <v-footer
   app
-  class="d-sm-flex d-none pa-4 justify-space-between"
+  class="d-sm-flex d-none justify-space-between"
   padless>
   <div>欢迎您：
     <count-up :end-val="visitors"></count-up>
@@ -36,6 +36,8 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .v-footer
+  height 48px
+  padding 0 16px
   letter-spacing 1.5px
 
   &:before

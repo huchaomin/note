@@ -1,7 +1,7 @@
 <template>
 <div
   :class="{ 'rounded': $vuetify.breakpoint.smAndUp }"
-  class="theme-default-content pa-sm-6 pa-1">
+  class="theme-default-content pa-sm-6 pa-2">
   <div v-for="(item, index) in newestDocs" :key="index">
     <p>{{ item.regularPath }}</p>
     <p>{{ item.lastUpdated }}</p>

@@ -5,6 +5,7 @@ const issueConfig = {
   clientId: 'de01e27a69cdede2a898',
   clientSecret: 'b18db1776d565a67dc3010040770acc02635442f',
 }
+const baiduAnalytics = require('./plugins/baiduAnalytics')
 module.exports = {
   dest: resolve('../../docs'),
   title: '木林子的笔记空间',
@@ -16,15 +17,7 @@ module.exports = {
     ],
     [
       'meta',
-      { charset: 'utf-8' },
-    ],
-    [
-      'meta',
       { content: 'IE=edge', ['http-equiv']: 'X-UA-Compatible' },
-    ],
-    [
-      'meta',
-      { content: 'width=device-width,initial-scale=1.0', name: 'viewport' },
     ],
   ],
   markdown: {
@@ -88,5 +81,6 @@ module.exports = {
         'ga': 'UA-96097921-2',
       },
     ],
+    baiduAnalytics
   ],
 }

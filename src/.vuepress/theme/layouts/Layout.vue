@@ -1,5 +1,7 @@
 <template>
-<div class="theme-default-content rounded d-flex flex-column">
+<div
+  :class="{ 'rounded': $vuetify.breakpoint.smAndUp }"
+  class="theme-default-content d-flex flex-column pa-sm-6 pa-1">
   <Content></Content>
   <v-spacer></v-spacer>
   <prev-next></prev-next>

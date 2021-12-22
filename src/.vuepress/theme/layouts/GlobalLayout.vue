@@ -22,7 +22,7 @@
       id="scroll-body"
       ref="scrollBody"
       :class="$page.frontmatter.pageClass"
-      class="theme-container py-sm-10 py-5"
+      class="theme-container py-sm-10 py-0"
       @contextmenu="contextmenu">
       <component :is="layout" @contextmenu.native.stop=""/>
     </div>

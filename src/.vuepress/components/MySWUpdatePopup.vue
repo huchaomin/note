@@ -1,13 +1,18 @@
 <template>
 <SWUpdatePopup v-slot="{ enabled, reload, message, buttonText }">
-  <v-snackbar v-model="enabled" vertical>
+  <v-snackbar
+    v-model="enabled"
+    app
+    right
+    :timeout="-1"
+    vertical>
     {{ message }}
     <template v-slot:action="{ attrs }">
       <v-btn
         color="primary"
         v-bind="attrs"
         @click="reload">
-        buttonText
+        {{ buttonText }}
       </v-btn>
     </template>
   </v-snackbar>

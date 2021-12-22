@@ -4,6 +4,7 @@ export default () => {
     (function () {
       var hm = document.createElement('script')
       hm.src = 'https://hm.baidu.com/hm.js?ed1ab63bfd0067ce75ba91ad9b7b4d37'
+      hm.async = 1
       var s = document.getElementsByTagName('script')[0]
       s.parentNode.insertBefore(hm, s)
     })()

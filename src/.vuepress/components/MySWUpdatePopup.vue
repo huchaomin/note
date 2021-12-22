@@ -2,16 +2,14 @@
 <SWUpdatePopup v-slot="{ enabled, reload, message, buttonText }">
   <v-snackbar
     v-model="enabled"
+    :timeout="-1"
     app
     right
-    :timeout="-1"
     vertical>
     {{ message }}
     <template v-slot:action="{ attrs }">
       <v-btn
-        light
-        color="primary"
-        class="mr-2"
+        text
         v-bind="attrs"
         @click="reload">
         {{ buttonText }}

@@ -102,7 +102,7 @@ export default {
       ],
       x: 0,
       y: 0,
-      currentBg: 'chemicalMolecule',
+      currentBg: 'theMatrix',
       showToggleBgMenu: false,
     }
   },
@@ -115,9 +115,9 @@ export default {
     'layout': {
       handler (val) {
         if (val === 'NotFound') {
-          this.currentBg = 'theMatrix'
+          // this.currentBg = 'theMatrix'
         } else {
-          this.currentBg = 'chemicalMolecule'
+          // this.currentBg = 'chemicalMolecule'
         }
       },
       immediate: true,

@@ -2,7 +2,7 @@
 <v-app
   id="doc"
   @mousedown.native="globalMousedown">
-  <iframe :src="$withBase(`/bg/${ currentBg }/index.html`)"
+  <iframe :src="iframeSrc"
           frameborder="0"
           height="100%"
           scrolling="no"
@@ -102,8 +102,9 @@ export default {
       ],
       x: 0,
       y: 0,
-      currentBg: 'theMatrix',
+      currentBg: 'chemicalMolecule',
       showToggleBgMenu: false,
+      iframeSrc: '',
     }
   },
   watch: {
@@ -115,10 +116,18 @@ export default {
     'layout': {
       handler (val) {
         if (val === 'NotFound') {
-          // this.currentBg = 'theMatrix'
+          this.currentBg = 'theMatrix'
         } else {
-          // this.currentBg = 'chemicalMolecule'
+          this.currentBg = 'chemicalMolecule'
         }
+      },
+      immediate: true,
+    },
+    'currentBg': {
+      handler (val) {
+        this.$nextTick(() => {
+          this.iframeSrc = this.$withBase(`/bg/${val}/index.html`)
+        })
       },
       immediate: true,
     },
@@ -144,11 +153,6 @@ export default {
     },
   },
   methods: {
-    // onResize () {
-    //   const f1 = Math.min(window.innerWidth / 600 * 14, 14)
-    //   const f2 = Math.max(f1, 10)
-    //   document.documentElement.style.fontSize = `${f2}px`
-    // },
     toContainerTop () {
       this.$vuetify.goTo(0, { container: '#scroll-body' })
     },

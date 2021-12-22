@@ -11,15 +11,15 @@ module.exports = {
   title: '木林子的笔记空间',
   description: 'My note space build with vuepress',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' },],
-    ['meta', { content: 'IE=edge', ['http-equiv']: 'X-UA-Compatible' },],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { content: 'IE=edge', ['http-equiv']: 'X-UA-Compatible' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'apple-touch-icon', href: '/icons/apple-icon-152x152-seochecker-manifest-222.png' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/icons/apple-icon-144x144-seochecker-manifest-222.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ['link', { rel: 'apple-touch-icon', href: '/icons/icon-152x152.png' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/icons/icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
   ],
   markdown: {
     lineNumbers: false, // 是否显示行号，默认为false
@@ -86,8 +86,11 @@ module.exports = {
     [
       '@vuepress/pwa',
       {
-        popupComponent: 'SWUpdatePopup',
-        updatePopup: true,
+        popupComponent: 'MySWUpdatePopup',
+        updatePopup: {
+          message: '发现新内容可用',
+          buttonText: '刷新',
+        },
       },
     ],
   ],

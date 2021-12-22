@@ -88,7 +88,7 @@ module.exports = {
       {
         popupComponent: 'MySWUpdatePopup',
         updatePopup: {
-          message: '发现新内容可用',
+          message: '作者又有了新的笔记哟，点击刷新查看',
           buttonText: '刷新',
         },
       },

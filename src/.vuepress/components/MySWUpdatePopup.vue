@@ -9,7 +9,9 @@
     {{ message }}
     <template v-slot:action="{ attrs }">
       <v-btn
+        light
         color="primary"
+        class="mr-2"
         v-bind="attrs"
         @click="reload">
         {{ buttonText }}

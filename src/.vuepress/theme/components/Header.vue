@@ -42,14 +42,6 @@
       <v-list>
         <v-list-item>
           <v-list-item-avatar>
-            <v-icon>mdi-at</v-icon>
-          </v-list-item-avatar>
-          <v-list-item-title>
-            <a href="Mailto:mulinzi1991@yeah.net">mulinzi1991@yeah.net</a>
-          </v-list-item-title>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-avatar>
             <v-icon>mdi-home</v-icon>
           </v-list-item-avatar>
           <v-list-item-content>深圳--黄冈--武汉</v-list-item-content>

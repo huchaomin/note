@@ -11,7 +11,7 @@
     exact-path
     @dblclick.stop="">
     <v-icon dense>mdi-arrow-left</v-icon>
-    <span class="d-none d-sm-inline">上一篇：{{ prev.name }}</span>
+    <span class="d-none d-sm-inline-flex">上一篇：{{ prev.name }}</span>
   </v-btn>
   <v-spacer></v-spacer>
   <v-btn
@@ -22,7 +22,7 @@
     depressed
     exact-path
     @dblclick.stop="">
-    <span class="d-none d-sm-inline">下一篇：{{ next.name }}</span>
+    <span class="d-none d-sm-inline-flex">下一篇：{{ next.name }}</span>
     <v-icon dense>mdi-arrow-right</v-icon>
   </v-btn>
 </div>

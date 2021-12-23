@@ -84,15 +84,15 @@ module.exports = {
       },
     ],
     baiduAnalytics,
-    // [
-    //   '@vuepress/pwa',
-    //   {
-    //     popupComponent: 'MySWUpdatePopup',
-    //     updatePopup: {
-    //       message: '作者又有了新的笔记哟，点击刷新查看',
-    //       buttonText: '刷新',
-    //     },
-    //   },
-    // ],
+    [
+      '@vuepress/pwa',
+      {
+        popupComponent: 'MySWUpdatePopup',
+        updatePopup: {
+          message: '作者又有了新的笔记哟，点击刷新查看',
+          buttonText: '刷新',
+        },
+      },
+    ],
   ],
 }

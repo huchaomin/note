@@ -4,25 +4,25 @@
   class="prev-next d-flex justify-space-between mt-9">
   <v-btn
     v-if="prev"
-    :fab="$vuetify.breakpoint.xsOnly"
+    :fab="xsOnly"
     :to="prev.routerPath"
     color="primary"
     depressed
     exact-path
     @dblclick.stop="">
     <v-icon dense>mdi-arrow-left</v-icon>
-    <span :class="{ 'd-none': $vuetify.breakpoint.xsOnly }">上一篇：{{ prev.name }}</span>
+    <span :class="{ 'd-none': xsOnly }">上一篇：{{ prev.name }}</span>
   </v-btn>
   <v-spacer></v-spacer>
   <v-btn
     v-if="next"
-    :fab="$vuetify.breakpoint.xsOnly"
+    :fab="xsOnly"
     :to="next.routerPath"
     color="primary"
     depressed
     exact-path
     @dblclick.stop="">
-    <span :class="{ 'd-none': $vuetify.breakpoint.xsOnly }">下一篇：{{ next.name }}</span>
+    <span :class="{ 'd-none': xsOnly }">下一篇：{{ next.name }}</span>
     <v-icon dense>mdi-arrow-right</v-icon>
   </v-btn>
 </div>
@@ -44,6 +44,11 @@ export default {
         this.reRender()
       },
       immediate: true,
+    },
+  },
+  computed: {
+    xsOnly () {
+      return this.$vuetify.breakpoint.xsOnly
     },
   },
   methods: {

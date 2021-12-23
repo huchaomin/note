@@ -6,15 +6,15 @@
 ### yaml 可自定义
 ```yaml
 ---
-pageClass: custom-page-class // 给页面添加特殊class
-layout: SpecialLayout // 自定义页面布局（暂留功能）
+pageClass: custom-page-class
+layout: SpecialLayout
 ---
 ```
 ### themeConfig 可自定义
 ```js
 module.exports = {
   themeConfig: {
-    enablePrevAndNext: true, // 是否开启上一篇，下一篇
+    enablePrevAndNext: true,
   }
 }
 ```

@@ -18,15 +18,3 @@ module.exports = {
   }
 }
 ```
-### 代码高亮
-``` js {4,5}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-### 导入代码片段（无法使用路径别名）【也可以导入代码当中一部分】
-<<< src/.vuepress/config.js{2}

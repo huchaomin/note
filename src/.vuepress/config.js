@@ -1,5 +1,6 @@
 const resolve = dir => require('path').join(__dirname, dir)
 const sideNav = require('./util/sideNav.js')
+const isProd = process.env.NODE_ENV === 'production'
 const issueConfig = {
   repo: 'note',
   clientId: 'de01e27a69cdede2a898',
@@ -73,7 +74,7 @@ module.exports = {
         prefix: '[comment]',
         clientId: issueConfig.clientId,
         clientSecret: issueConfig.clientSecret,
-        autoCreateIssue: true,
+        autoCreateIssue: isProd,
       },
     ],
     [

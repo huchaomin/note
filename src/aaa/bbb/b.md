@@ -2,7 +2,7 @@
 ```js
 module.exports = {
   themeConfig: {
-    enablePrevAndNext: true, // 是否开启上一篇，下一篇
+    enablePrevAndNext: true,
   }
 }
 ```

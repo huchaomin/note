@@ -14,15 +14,15 @@
 ### yaml 可自定义
 ```yaml
 ---
-pageClass: custom-page-class // 给页面添加特殊class
-layout: SpecialLayout // 自定义页面布局
+pageClass: custom-page-class
+layout: SpecialLayout
 ---
 ```
 ### themeConfig 可自定义
 ```js
 module.exports = {
   themeConfig: {
-    enablePrevAndNext: true, // 是否开启上一篇，下一篇
+    enablePrevAndNext: true,
   }
 }
 ```
@@ -36,7 +36,7 @@ export default {
   }
 }
 ```
-#### 导入代码片段（无法使用路径别名）【也可以导入代码当中一部分】
+#### 导入代码片段
 <<< src/.vuepress/config.js{2}
 
 ### 使用外部组件

@@ -1,5 +1,7 @@
 <template>
-<span ref="countup"></span>
+<div>
+  <span ref="countup"></span>
+</div>
 </template>
 <script>
 export default {

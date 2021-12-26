@@ -6,7 +6,6 @@ module.exports = {
   }
 }
 ```
-
 ``` js {4,5}
 export default {
   data () {

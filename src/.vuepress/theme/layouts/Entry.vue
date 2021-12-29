@@ -11,7 +11,7 @@
 <script>
 export default {
   created () {
-    console.log(this.$site.pages)
+    console.log(this)
   },
   computed: {
     newestDocs () {

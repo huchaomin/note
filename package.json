@@ -10,7 +10,6 @@
     "@mdi/font": "^6.5.95",
     "@vssue/api-github-v3": "^1.4.7",
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
-    "@xiaopanda/vuepress-plugin-code-copy": "^1.0.3",
     "countup.js": "^2.0.8",
     "vuepress": "^1.8.2",
     "vuepress-plugin-demo-code": "^0.6.0",
@@ -20,6 +19,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.8.3",
-    "@vuepress/plugin-pwa": "^1.8.3"
+    "@vuepress/plugin-pwa": "^1.8.3",
+    "vuepress-plugin-seo": "^0.1.4"
   }
 }

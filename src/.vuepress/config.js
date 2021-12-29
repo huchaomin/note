@@ -55,6 +55,9 @@ module.exports = {
   themeConfig: {
     sideNav,
     enablePrevAndNext: true,
+    author: {
+      name: 'mulinzi',
+    },
   },
   plugins: [
     'vuepress-plugin-element-tabs',
@@ -103,6 +106,20 @@ module.exports = {
           message: '作者又有了新的笔记哟，点击刷新查看',
           buttonText: '刷新',
         },
+      },
+    ],
+    [
+      'seo',
+      {
+        siteTitle: (_, $site) => $site.title,
+        title: $page => $page.frontmatter.title,
+        description: $page => $page.frontmatter.description,
+        author: (_, $site) => $site.themeConfig.author,
+        tags: $page => $page.frontmatter.tags,
+        url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+        image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain && !$page.frontmatter.image.startsWith('http') || '') + $page.frontmatter.image),
+        publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+        modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
       },
     ],
   ],

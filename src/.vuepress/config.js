@@ -121,5 +121,11 @@ module.exports = {
         modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
       },
     ],
+    ['container', {
+      type: 'alert',
+      defaultTitle: '警告',
+      before: info => `<v-alert dense border="left" colored-border color="warning">${info}\n`,
+      after: () => '</v-alert>\n',
+    }],
   ],
 }

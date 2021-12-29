@@ -15,10 +15,8 @@
 </template>
 <script>
 import PrevNext from '../components/PrevNext.vue'
-import findSideNav from '../mixins/findSideNav.js'
 
 export default {
-  mixins: [findSideNav],
   components: {
     PrevNext,
   },

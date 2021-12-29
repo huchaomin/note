@@ -41,7 +41,7 @@ function findFolder (dir) {
         if (file === '.vuepress') continue
         const o = {
           name: file,
-          id: String(stat.birthtimeMs),
+          id: uniqueId('tree'),
           isDirectory: true,
         }
         const result = findFolder(path.join(dir, file))
@@ -52,7 +52,7 @@ function findFolder (dir) {
         if (dir === docsRoot && file === 'index.md') continue
         arr.push({
           name: path.basename(file, '.md'),
-          id: String(stat.birthtimeMs),
+          id: uniqueId('tree'),
           routerPath: getDocRouterPath(dir, file),
         })
       }

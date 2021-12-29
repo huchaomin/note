@@ -71,22 +71,26 @@ export default {
       const navObj = this.findNavObjByKey('id', itemArr[0])
       if (!navObj) return
       const path = navObj.routerPath
-      if (this.$page.regularPath === path) return
+      if (this.$page.regularPath === encodeURI(path)) return
       this.$router.push({ path })
     },
     focusItem () {
       const currentNavId = this.currentNavId
-      if (!currentNavId) return
-      if (!this.active.includes(currentNavId)) {
-        this.active.push(currentNavId)
-      }
-      const shouldOpenArr = this.getAllParentsById(currentNavId)
-      shouldOpenArr.forEach(o => {
-        const id = o.id
-        if (!this.open.includes(id)) {
-          this.open.push(id)
+      if (currentNavId) {
+        if (!this.active.includes(currentNavId)) {
+          this.active.push(currentNavId)
         }
-      })
+        const shouldOpenArr = this.getAllParentsById(currentNavId)
+        shouldOpenArr.forEach(o => {
+          const id = o.id
+          if (!this.open.includes(id)) {
+            this.open.push(id)
+          }
+        })
+      } else {
+        this.active.splice(0)
+        this.open.splice(0)
+      }
     },
   },
 }

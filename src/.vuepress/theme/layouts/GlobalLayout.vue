@@ -110,6 +110,7 @@ export default {
   watch: {
     '$page': {
       handler () {
+        console.log(this)
         this.toContainerTop()
       },
     },

@@ -3,10 +3,14 @@
   app
   class="d-sm-flex d-none pa-3 justify-space-between"
   padless>
-  <div>欢迎您：
-    <count-up :end-val="visitors"></count-up>
-    号游客
-  </div>
+  <v-btn
+    class="ma-n3"
+    depressed
+    icon
+    x-large
+    @click="toRoot">
+    <v-icon>mdi-home</v-icon>
+  </v-btn>
   <div>中华老字号版权所有</div>
   <div v-if="$page.lastUpdated">
     最后更新时间
@@ -17,20 +21,13 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      visitors: 2021,
-    }
-  },
-  created () {
-    const run = timeout => {
-      let timer = setTimeout(() => {
-        this.visitors += Math.floor(Math.random() * 50)
-        clearTimeout(timer)
-        run(Math.random() * 100000)
-      }, timeout)
-    }
-    run(Math.random() * 100000)
+  methods: {
+    toRoot () {
+      if (this.$route.path === '/') return
+      this.$router.push({
+        path: '/',
+      })
+    },
   },
 }
 </script>

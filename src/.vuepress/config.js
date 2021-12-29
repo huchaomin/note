@@ -7,7 +7,6 @@ const issueConfig = {
   clientSecret: 'b18db1776d565a67dc3010040770acc02635442f',
 }
 const baiduAnalytics = require('./plugins/baiduAnalytics')
-const codeCopy = require('./plugins/codeCopy')
 module.exports = {
   dest: resolve('../../docs'),
   title: '木林子的笔记空间',
@@ -23,6 +22,26 @@ module.exports = {
     ['meta', { name: 'msapplication-TileImage', content: '/icons/icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
   ],
+  chainWebpack: (config, isServer) => {
+    if (isServer === false) {
+      config.optimization.splitChunks({
+        maxInitialRequests: 5,
+        cacheGroups: {
+          vue: {
+            test: /[\\/]node_modules[\\/](vue|vue-router|vssue)[\\/]/,
+            name: 'vendor.vue',
+            chunks: 'all',
+          },
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            name: 'vendor.commons',
+            chunks: 'all',
+          },
+        },
+      })
+    }
+  },
   markdown: {
     lineNumbers: false, // 是否显示行号，默认为false
   },
@@ -53,16 +72,7 @@ module.exports = {
           codesandbox: false,
         },
         demoCodeMark: 'demo',
-        copyOptions: false, // 复制样式太丑了
-      },
-    ],
-    [
-      'codeCopy',
-      {
-        buttonStaticIcon: true,
-        buttonIconTitle: '复制代码',
-        buttonAlign: 'bottom',
-        buttonColor: '#3eaf7c',
+        copyOptions: false,
       },
     ],
     [

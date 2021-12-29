@@ -10,11 +10,10 @@
   </iframe>
   <header-bar @toggleDrawer="toggleDrawer"></header-bar>
   <navigation-drawer ref="drawer" @show="showBreadcrumbs = true"></navigation-drawer>
-  <v-main @dblclick.native="centerDblclick">
+  <v-main>
     <div
       v-if="showBreadcrumbs && breadcrumbs.length > 0"
-      class="d-flex align-center px-4 breadcrumbs"
-      @dblclick.stop="">
+      class="d-flex align-center px-4 breadcrumbs">
       <v-icon class="mr-n6">mdi-folder-home</v-icon>
       <v-breadcrumbs :items="breadcrumbs" class="py-2"></v-breadcrumbs>
     </div>
@@ -23,8 +22,12 @@
       ref="scrollBody"
       :class="$page.frontmatter.pageClass"
       class="theme-container py-sm-10 py-0"
-      @contextmenu="contextmenu">
-      <component :is="layout" @contextmenu.native.stop=""/>
+      @contextmenu="contextmenu"
+      @dblclick="centerDblclick">
+      <component
+        :is="layout"
+        @dblclick.native.stop=""
+        @contextmenu.native.stop=""/>
     </div>
     <v-menu
       v-model="showToggleBgMenu"
@@ -52,8 +55,7 @@
         fab
         fixed
         right
-        @click="toContainerTop"
-        @dblclick.stop="">
+        @click="toContainerTop">
         <v-icon color="primary">mdi-arch</v-icon>
       </v-btn>
     </v-fab-transition>
@@ -164,8 +166,6 @@ export default {
       this.offsetTop = e.target.scrollTop
     },
     centerDblclick () {
-      const isSelect = window.getSelection().toString().trim()
-      if (isSelect.length > 1) return
       this.showBreadcrumbs = !this.showBreadcrumbs
       this.toggleDrawer(this.showBreadcrumbs)
     },

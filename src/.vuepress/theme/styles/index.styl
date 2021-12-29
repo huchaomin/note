@@ -25,6 +25,13 @@ body
   min-height 100%
   @extend $wrapper
 
+  > .content__default
+    > *:first-child
+      margin-top 0
+
+    > *:last-child
+      margin-bottom 0
+
   p.demo
     padding 1rem 1.5rem
     border 1px solid #ddd

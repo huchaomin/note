@@ -6,11 +6,11 @@
   <v-spacer></v-spacer>
   <prev-next></prev-next>
   <Vssue
-    :key="currentNavId"
+    v-if="vssueId"
+    :key="vssueId"
     :options="{ locale: 'zh' }"
-    :title="currentNavId"
-    class="mt-10"
-    @dblclick.native.stop=""/>
+    :title="vssueId"
+    class="mt-10"/>
 </div>
 </template>
 <script>
@@ -22,5 +22,10 @@ export default {
   components: {
     PrevNext,
   },
+  computed:{
+    vssueId () {
+      return this.$page.frontmatter.date
+    }
+  }
 }
 </script>

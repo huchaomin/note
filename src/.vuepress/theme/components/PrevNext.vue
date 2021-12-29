@@ -5,11 +5,9 @@
   <v-btn
     v-if="prev"
     :fab="xsOnly"
-    :to="prev.routerPath"
     color="primary"
     depressed
-    exact-path
-    @dblclick.stop="">
+    @click="toPage(prev)">
     <v-icon dense>mdi-arrow-left</v-icon>
     <span :class="{ 'd-none': xsOnly }">上一篇：{{ prev.name }}</span>
   </v-btn>
@@ -17,11 +15,9 @@
   <v-btn
     v-if="next"
     :fab="xsOnly"
-    :to="next.routerPath"
     color="primary"
     depressed
-    exact-path
-    @dblclick.stop="">
+    @click="toPage(next)">
     <span :class="{ 'd-none': xsOnly }">下一篇：{{ next.name }}</span>
     <v-icon dense>mdi-arrow-right</v-icon>
   </v-btn>
@@ -64,6 +60,11 @@ export default {
       const index = fileArr.findIndex(o => o.id === currentNavId)
       this.prev = fileArr[index - 1]
       this.next = fileArr[index + 1]
+    },
+    toPage (page) {
+      this.$router.push({
+        path: page.routerPath,
+      })
     },
   },
 }

@@ -7,6 +7,7 @@ const issueConfig = {
   clientSecret: 'b18db1776d565a67dc3010040770acc02635442f',
 }
 const baiduAnalytics = require('./plugins/baiduAnalytics')
+const codeCopy = require('./plugins/codeCopy')
 module.exports = {
   dest: resolve('../../docs'),
   title: '木林子的笔记空间',
@@ -56,7 +57,7 @@ module.exports = {
       },
     ],
     [
-      '@xiaopanda/vuepress-plugin-code-copy',
+      'codeCopy',
       {
         buttonStaticIcon: true,
         buttonIconTitle: '复制代码',

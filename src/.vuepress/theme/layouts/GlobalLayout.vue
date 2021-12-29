@@ -11,13 +11,15 @@
   <header-bar @toggleDrawer="toggleDrawer"></header-bar>
   <navigation-drawer ref="drawer" @show="showBreadcrumbs = true"></navigation-drawer>
   <v-main @dblclick.native="centerDblclick">
-    <div
-      v-if="showBreadcrumbs && breadcrumbs.length > 0"
-      class="d-flex align-center px-4 breadcrumbs"
-      @dblclick.stop="">
-      <v-icon class="mr-n6">mdi-folder-home</v-icon>
-      <v-breadcrumbs :items="breadcrumbs" class="py-2"></v-breadcrumbs>
-    </div>
+    <client-only>
+      <div
+        v-if="showBreadcrumbs && breadcrumbs.length > 0"
+        class="d-flex align-center px-4 breadcrumbs"
+        @dblclick.stop="">
+        <v-icon class="mr-n6">mdi-folder-home</v-icon>
+        <v-breadcrumbs :items="breadcrumbs" class="py-2"></v-breadcrumbs>
+      </div>
+    </client-only>
     <div
       id="scroll-body"
       ref="scrollBody"

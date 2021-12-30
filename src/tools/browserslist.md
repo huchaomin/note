@@ -6,7 +6,7 @@ tags: [browserslist]
 ---
 
 ### 配置方法
-(1)package.json(推荐写法)
+1. package.json(推荐写法)
 ```json
 {
   "browserslist": [
@@ -17,7 +17,7 @@ tags: [browserslist]
   ]
 }
 ```
-(2).browserslistrc 或 browserslist
+2. browserslistrc 或 browserslist
 ```yaml
 last 1 version
 > 1%

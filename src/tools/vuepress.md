@@ -80,4 +80,3 @@ export default {
 - Algolia 搜索（文档写的足够好）
 - 排序
 - 网站备案 等待
-- page title date description tags(array)

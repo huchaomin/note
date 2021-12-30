@@ -81,5 +81,3 @@ export default {
 - 排序
 - 网站备案 等待
 - page title date description tags(array)
-- NavigationDrawer Duplicate keys
-- 首页排除index.md

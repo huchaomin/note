@@ -31,7 +31,7 @@
 export default {
   computed: {
     newestDocs () {
-      return this.$site.pages.filter(o => o.lastUpdated).sort((a, b) => {
+      return this.$site.pages.filter(o => o.lastUpdated && o.path !== '/').sort((a, b) => {
         let c1 = new Date(a.lastUpdated).valueOf()
         let c2 = new Date(b.lastUpdated).valueOf()
         return c2 - c1

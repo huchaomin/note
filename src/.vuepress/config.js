@@ -27,16 +27,18 @@ module.exports = {
       config.optimization.splitChunks({
         maxInitialRequests: 5,
         cacheGroups: {
-          vue: {
-            test: /[\\/]node_modules[\\/](vue|vue-router|vssue)[\\/]/,
-            name: 'vendor.vue',
-            chunks: 'all',
+          vendors: {
+            name: 'chunk-vendors',
+            test: /[\\/]node_modules[\\/]/,
+            chunks: 'initial',
+            priority: -10,
           },
           commons: {
-            test: /[\\/]node_modules[\\/]/,
-            priority: -10,
-            name: 'vendor.commons',
-            chunks: 'all',
+            name: 'chunk-common',
+            minChunks: 2,
+            priority: -20,
+            chunks: 'initial',
+            reuseExistingChunk: true,
           },
         },
       })
@@ -122,9 +124,15 @@ module.exports = {
       },
     ],
     ['container', {
+      type: 'tip',
+      defaultTitle: '提示',
+      before: info => `<v-alert color="primary" icon="mdi-lightbulb-multiple">${info}\n`,
+      after: () => '</v-alert>\n',
+    }],
+    ['container', {
       type: 'alert',
       defaultTitle: '警告',
-      before: info => `<v-alert dense border="left" colored-border color="warning">${info}\n`,
+      before: info => `<v-alert type="info">${info}\n`,
       after: () => '</v-alert>\n',
     }],
   ],

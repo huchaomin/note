@@ -1,3 +1,10 @@
+---
+date: '1640836911206' 
+title: .prettierrc 
+description: .prettierrc基本配置 
+tags: [.prettierrc]
+---
+### .prettierrc基本配置
 ```javascript
 module.exports = {
   printWidth: 160,

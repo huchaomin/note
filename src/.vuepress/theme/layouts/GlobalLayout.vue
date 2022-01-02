@@ -3,6 +3,7 @@
   id="doc"
   @mousedown.native="globalMousedown">
   <iframe :src="iframeSrc"
+          v-if="$vuetify.breakpoint.mdAndUp"
           frameborder="0"
           height="100%"
           scrolling="no"
@@ -12,7 +13,7 @@
   <navigation-drawer ref="drawer" @show="showBreadcrumbs = true"></navigation-drawer>
   <v-main>
     <div
-      v-if="showBreadcrumbs && breadcrumbs.length > 0"
+      v-if="showBreadcrumbs && breadcrumbs.length > 0 && $vuetify.breakpoint.mdAndUp"
       class="d-flex align-center px-4 breadcrumbs">
       <v-icon class="mr-n6">mdi-folder-home</v-icon>
       <v-breadcrumbs :items="breadcrumbs" class="py-2"></v-breadcrumbs>

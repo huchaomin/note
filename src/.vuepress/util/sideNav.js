@@ -38,7 +38,7 @@ function findFolder (dir) {
       const filePath = path.join(dir, file)
       const stat = fs.statSync(filePath)
       if (stat.isDirectory()) {
-        if (file === '.vuepress') continue
+        if (file === '.vuepress' || file === 'assets') continue
         const o = {
           name: file,
           id: uniqueId('tree'),

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  const script1 = document.createElement('script')
+  script1.src = './test1.js' // console.log('1')
+  // script1.async = false
+  document.head.appendChild(script1)
+
+  const script2 = document.createElement('script')
+  script2.src = './test2.js' // console.log('2')
+  // script2.async = false
+  document.head.appendChild(script2)
+  console.log(3)
+</script>
+</body>
+</html>

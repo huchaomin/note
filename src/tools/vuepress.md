@@ -82,4 +82,3 @@ export default {
 - 网站备案 等待
 - webpack optimization
 - webpack 打包出 manifest 和 runtime
-- defer和async

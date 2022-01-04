@@ -126,13 +126,13 @@ module.exports = {
     ['container', {
       type: 'tip',
       defaultTitle: '提示',
-      before: info => `<v-alert color="primary" icon="mdi-lightbulb-multiple">${info}\n`,
+      before: info => `<v-alert color="primary" text icon="mdi-lightbulb-multiple">${info}\n`,
       after: () => '</v-alert>\n',
     }],
     ['container', {
       type: 'alert',
       defaultTitle: '警告',
-      before: info => `<v-alert type="info">${info}\n`,
+      before: info => `<v-alert type="warning" text icon="mdi-alert-outline">${info}\n`,
       after: () => '</v-alert>\n',
     }],
   ],

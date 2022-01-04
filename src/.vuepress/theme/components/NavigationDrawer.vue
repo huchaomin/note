@@ -31,6 +31,22 @@
       </v-icon>
       <v-icon v-else>mdi-file-document-outline</v-icon>
     </template>
+    <template v-slot:label="{ item }">
+      <v-tooltip
+        :open-delay="1000"
+        color="#3eaf7c"
+        right>
+        <template v-slot:activator="{ on, attrs }">
+          <div
+            class="leaf-label"
+            v-bind="attrs"
+            v-on="on">
+            {{ item.name }}
+          </div>
+        </template>
+        <span>{{ item.name }}</span>
+      </v-tooltip>
+    </template>
   </v-treeview>
 </v-navigation-drawer>
 </template>
@@ -111,5 +127,16 @@ export default {
 
 .v-treeview >>> .v-treeview-node__content {
   margin-left: 4px;
+  min-height: inherit;
+}
+
+.v-treeview >>> .v-treeview-node__label {
+  min-height: inherit;
+}
+
+.v-treeview >>> .v-treeview-node__label .leaf-label {
+  min-height: inherit;
+  display: flex;
+  align-items: center;
 }
 </style>

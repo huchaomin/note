@@ -128,7 +128,7 @@ This means cross-origin module scripts must return valid CORS headers such as __
 
 ### 跨域请求的凭证
 如果请求来自同一来源，则大多数基于CORS的API都会发送凭据（Cookie等），但是fetch()和模块脚本例外  
-_但是随着浏览器的更新，这一切都改变了，现在fetch()和模块脚本的行为与其他基于CORS的API相同_
+但是随着浏览器的更新，这一切都改变了，现在fetch()和模块脚本的行为与其他基于CORS的API相同
 ```html
 <!-- Fetched with credentials (cookies etc) -->
 <script src="1.js"></script>

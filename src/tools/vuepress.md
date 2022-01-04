@@ -80,6 +80,6 @@ export default {
 - Algolia 搜索（文档写的足够好）
 - 排序
 - 网站备案 等待
-- treeitem 超长 tooltip
 - webpack optimization
 - webpack 打包出 manifest 和 runtime
+- defer和async

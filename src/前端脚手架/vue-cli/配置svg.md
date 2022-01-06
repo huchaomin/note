@@ -32,7 +32,7 @@ chainWebpack: config => {
     .end()
     .use('svgo-loader') // 主要是简化svg文件，当然你也可以引入svg文件时手动处理
     .loader('svgo-loader')
-    .options({ // .tab 方法一般用于修改options https://github.com/Yatoo2018/webpack-chain/tree/zh-cmn-Hans
+    .options({
       plugins: [
         {
           name: 'removeAttrs',

@@ -35,6 +35,7 @@
       <v-tooltip
         :open-delay="1000"
         color="#02a95e"
+        :disabled="!show"
         right>
         <template v-slot:activator="{ on, attrs }">
           <div

@@ -22,28 +22,6 @@ module.exports = {
     ['meta', { name: 'msapplication-TileImage', content: '/icons/icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
   ],
-  chainWebpack: (config, isServer) => {
-    if (isServer === false) {
-      config.optimization.splitChunks({
-        maxInitialRequests: 5,
-        cacheGroups: {
-          vendors: {
-            name: 'chunk-vendors',
-            test: /[\\/]node_modules[\\/]/,
-            chunks: 'initial',
-            priority: -10,
-          },
-          commons: {
-            name: 'chunk-common',
-            minChunks: 2,
-            priority: -20,
-            chunks: 'initial',
-            reuseExistingChunk: true,
-          },
-        },
-      })
-    }
-  },
   markdown: {
     lineNumbers: false, // 是否显示行号，默认为false
   },

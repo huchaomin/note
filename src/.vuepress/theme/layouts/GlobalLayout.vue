@@ -187,9 +187,13 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style lang="stylus" scoped>
 iframe {
   position: absolute;
+}
+
+.breadcrumbs {
+  border-top: 1px solid $border
 }
 
 .to-top {

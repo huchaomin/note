@@ -133,16 +133,6 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-.v-app-bar
-  &:after
-    content ' '
-    position absolute
-    left 0
-    bottom 0
-    width 100%
-    height 1px
-    background $border
-
 .v-list-item__subtitle
   white-space initial
 

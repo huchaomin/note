@@ -111,7 +111,12 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style lang="stylus" scoped>
+.v-navigation-drawer {
+  border-top: 1px solid $border
+  border-bottom: 1px solid $border
+}
+
 .v-treeview {
   font-size: 0.85rem;
   font-weight: normal;

@@ -1,20 +1,26 @@
 <template>
 <v-footer
   app
-  class="d-sm-flex d-none pa-3 justify-space-between"
+  class="d-sm-flex d-none pr-3 justify-space-between"
   padless>
   <v-btn
-    class="ma-n3"
     depressed
     icon
     x-large
     @click="toRoot">
     <v-icon>mdi-home</v-icon>
   </v-btn>
-  <div>中华老字号版权所有</div>
+  <div class="copyright">
+    <p>
+      Copyright
+      <v-icon>mdi-copyright</v-icon>
+      <span>{{ `2009-${new Date().getFullYear()} 木林子` }}</span>
+    </p>
+    <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2022000181号-1</a>
+  </div>
   <div v-if="$page.lastUpdated">
     最后更新时间
-    <v-icon style="font-size: 1.7rem">mdi-clock-time-ten-outline</v-icon>
+    <v-icon>mdi-clock-time-ten-outline</v-icon>
     {{ $page.lastUpdated | toDateLocaleString }}
   </div>
 </v-footer>
@@ -33,14 +39,11 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .v-footer
-  letter-spacing 1.5px
+  .copyright
+    text-align center
+    font-size 0.8em
 
-  &:before
-    content ' '
-    position absolute
-    width 100%
-    top 0
-    left 0
-    height 1px
-    background rgba(0, 0, 0, .12)
+  >>> .v-icon
+    font-size 1.4em
+    margin 0 -5px
 </style>

@@ -13,14 +13,14 @@
   <div class="copyright">
     <p>
       Copyright
-      <v-icon>mdi-copyright</v-icon>
+      <v-icon class="s-icon">mdi-copyright</v-icon>
       <span>{{ `2009-${new Date().getFullYear()} 木林子` }}</span>
     </p>
     <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2022000181号-1</a>
   </div>
   <div v-if="$page.lastUpdated">
     最后更新时间
-    <v-icon>mdi-clock-time-ten-outline</v-icon>
+    <v-icon class="s-icon">mdi-clock-time-ten-outline</v-icon>
     {{ $page.lastUpdated | toDateLocaleString }}
   </div>
 </v-footer>
@@ -43,7 +43,7 @@ export default {
     text-align center
     font-size 0.8em
 
-  >>> .v-icon
+  .s-icon
     font-size 1.4em
     margin 0 -5px
 </style>

@@ -2,11 +2,9 @@
 <v-app
   id="doc"
   @mousedown.native="globalMousedown">
-  <iframe v-if="!$vuetify.breakpoint.xsOnly"
+  <iframe v-if="!$vuetify.breakpoint.xsOnly && iframeSrc"
           :src="iframeSrc"
-          frameborder="0"
           height="100%"
-          scrolling="no"
           width="100%">
   </iframe>
   <header-bar @toggleDrawer="toggleDrawer"></header-bar>
@@ -83,6 +81,10 @@ export default {
       showBreadcrumbs: true,
       bg: [
         {
+          name: '渐变',
+          value: '',
+        },
+        {
           name: '化学分子',
           value: 'chemicalMolecule',
         },
@@ -122,7 +124,7 @@ export default {
         if (val === 'NotFound') {
           this.currentBg = 'theMatrix'
         } else {
-          this.currentBg = 'chemicalMolecule'
+          this.currentBg = ''
         }
       },
       immediate: true,
@@ -130,7 +132,11 @@ export default {
     'currentBg': {
       handler (val) {
         this.$nextTick(() => {
-          this.iframeSrc = this.$withBase(`/bg/${val}/index.html`)
+          if (val) {
+            this.iframeSrc = this.$withBase(`/bg/${val}/index.html`)
+          } else {
+            this.iframeSrc = ''
+          }
         })
       },
       immediate: true,

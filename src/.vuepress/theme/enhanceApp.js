@@ -38,7 +38,8 @@ export default ({
     theme: { // 自定义主题色
       themes: {
         light: {
-          primary: '#3eaf7c',
+          primary: '#02a95e',
+          warning: '#a15f0b',
         },
       },
     },

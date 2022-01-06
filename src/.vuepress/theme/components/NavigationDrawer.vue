@@ -34,7 +34,7 @@
     <template v-slot:label="{ item }">
       <v-tooltip
         :open-delay="1000"
-        color="#3eaf7c"
+        color="#02a95e"
         right>
         <template v-slot:activator="{ on, attrs }">
           <div

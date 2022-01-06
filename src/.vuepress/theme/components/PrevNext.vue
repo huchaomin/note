@@ -9,7 +9,7 @@
     depressed
     @click="toPage(prev)">
     <v-icon dense>mdi-arrow-left</v-icon>
-    <span :class="{ 'd-none': xsOnly }">{{ prev.name }}</span>
+    <span class="d-sm-inline d-none">{{ prev.name }}</span>
   </v-btn>
   <v-spacer></v-spacer>
   <v-btn
@@ -18,7 +18,7 @@
     color="primary"
     depressed
     @click="toPage(next)">
-    <span :class="{ 'd-none': xsOnly }">{{ next.name }}</span>
+    <span class="d-sm-inline d-none">{{ next.name }}</span>
     <v-icon dense>mdi-arrow-right</v-icon>
   </v-btn>
 </div>

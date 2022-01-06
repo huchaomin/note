@@ -84,7 +84,7 @@
           <v-list-item-content style="overflow: visible">
             <v-btn
               block
-              class="justify-start ml-n5"
+              class="justify-start ml-n4"
               depressed
               @click="showReceivingQrCode = !showReceivingQrCode">
               喜欢我的，支持一下吧

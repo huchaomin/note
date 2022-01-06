@@ -55,7 +55,7 @@
         fixed
         right
         @click="toContainerTop">
-        <v-icon color="primary">mdi-arch</v-icon>
+        <v-icon color="primary">mdi-arrow-expand-up</v-icon>
       </v-btn>
     </v-fab-transition>
   </v-main>

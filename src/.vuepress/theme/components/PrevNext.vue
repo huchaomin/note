@@ -1,24 +1,22 @@
 <template>
 <div
-  v-if="$site.themeConfig.enablePrevAndNext && (prev || next)"
+  v-if="$site.themeConfig.enablePrevAndNext && (prev || next) && !$vuetify.breakpoint.mobile"
   class="prev-next d-flex justify-space-between mt-9">
   <v-btn
     v-if="prev"
-    :fab="xsOnly"
     color="primary"
     depressed
     @click="toPage(prev)">
     <v-icon dense>mdi-arrow-left</v-icon>
-    <span class="d-sm-inline d-none">{{ prev.name }}</span>
+    <span>{{ prev.name }}</span>
   </v-btn>
   <v-spacer></v-spacer>
   <v-btn
     v-if="next"
-    :fab="xsOnly"
     color="primary"
     depressed
     @click="toPage(next)">
-    <span class="d-sm-inline d-none">{{ next.name }}</span>
+    <span>{{ next.name }}</span>
     <v-icon dense>mdi-arrow-right</v-icon>
   </v-btn>
 </div>
@@ -42,10 +40,22 @@ export default {
       immediate: true,
     },
   },
-  computed: {
-    xsOnly () {
-      return this.$vuetify.breakpoint.xsOnly
-    },
+  created () {
+    this.$bus.$on('parentTouchstart', isTouchCode => {
+      this.isTouchCode = isTouchCode
+    })
+    this.$bus.$on('swipe', direction => {
+      if (this.isTouchCode || !this.$vuetify.breakpoint.mobile) return
+      if (direction === 'Left') {
+        if (this.prev) {
+          this.toPage(this.prev)
+        }
+      } else if (direction === 'Right') {
+        if (this.next) {
+          this.toPage(this.next)
+        }
+      }
+    })
   },
   methods: {
     reRender () {

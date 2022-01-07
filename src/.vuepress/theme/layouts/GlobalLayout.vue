@@ -1,6 +1,10 @@
 <template>
 <v-app
   id="doc"
+  v-touch="{
+    left: () => swipe('Left'),
+    right: () => swipe('Right'),
+  }"
   @mousedown.native="globalMousedown">
   <iframe v-if="!$vuetify.breakpoint.xsOnly && iframeSrc"
           :src="iframeSrc"
@@ -162,6 +166,14 @@ export default {
       return arr
     },
   },
+  mounted () {
+    const el = this.$el
+    el.ontouchstart = e => {
+      const arr = [...document.querySelectorAll('div[class*="language-"]')]
+      this.isTouchCode = arr.some(parent => parent.contains(e.target))
+      this.$bus.$emit('parentTouchstart', this.isTouchCode)
+    }
+  },
   methods: {
     toContainerTop () {
       this.$vuetify.goTo(0, { container: '#scroll-body' })
@@ -189,6 +201,9 @@ export default {
     },
     globalMousedown () {
       this.showToggleBgMenu = false
+    },
+    swipe (direction) {
+      this.$bus.$emit('swipe', direction)
     },
   },
 }

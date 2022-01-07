@@ -80,3 +80,4 @@ export default {
 - Algolia 搜索（文档写的足够好）
 - 排序
 - 网站备案 等待
+- js 垃圾回收机制

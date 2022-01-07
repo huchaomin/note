@@ -1,6 +1,7 @@
 <template>
 <div
-  v-if="$site.themeConfig.enablePrevAndNext && (prev || next) && !$vuetify.breakpoint.mobile"
+  v-if="$site.themeConfig.enablePrevAndNext && (prev || next)"
+  v-show="!$vuetify.breakpoint.mobile"
   class="prev-next d-flex justify-space-between mt-9">
   <v-btn
     v-if="prev"

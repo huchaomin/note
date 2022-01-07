@@ -5,6 +5,9 @@ description: .eslintrc.js基本配置
 tags: [.eslintrc.js]
 ---
 
+### [官方文档](https://eslint.bootcss.com/docs/user-guide/configuring)  
+### [规则大全](https://eslint.bootcss.com/docs/rules/)
+
 ### vue开发通用的配置
 ```javascript
 module.exports = {
@@ -17,11 +20,27 @@ module.exports = {
     '@vue/standard',
   ],
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser', // 最新解析器
+    ecmaVersion: 6, // 对于 ES6 语法
+    sourceType: 'module', // 代码是 ECMAScript 模块
+      ecmaFeatures: {
+        globalReturn: false, // 允许在全局作用域下使用 return 语句
+        impliedStrict: true, // 启用全局 strict mode (如果 ecmaVersion 是 5 或更高)
+        jsx: true, //  启用 JSX
+      },
+  },
+  env: {
+    browser: true,
+    node: true,
+    commonjs: true,
+    es6: true, // 新的 ES6 全局变量
   },
   rules: {
+    // 禁用 console
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    // 仅用 debugger
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    // 强制使用一致的缩进
     'indent': ['warn', 2, { SwitchCase: 1 }],
     /**
      * 超长代码需要被换行
@@ -214,14 +233,16 @@ module.exports = {
      * 可以使用空的Promise.reject()
      */
     'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+    // 要求或禁止文件末尾存在空行
     'eol-last': ['warn', 'always'],
+    // 强制在逗号前后使用一致的空格
     'comma-spacing': ['error', {
       before: false,
       after: true,
     }],
   },
   globals: {
-    $: 'readonly',
+    $: 'readonly', // jquery
   },
 }
 ```

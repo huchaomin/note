@@ -20,7 +20,7 @@ methods: {
     navigator.sendBeacon(yourUrl, blob)
   },
 }
-beforeRouteLeave (to, from, next) {
+beforeRouteLeave (to, from, next) { // 这里没有考虑keep-alive的情况
   // 相同lockId页面之间互相跳转不用解锁，（会产生锁还没解完，就去拿锁，拿锁失败的情况）
   const arr = [//...]	// 相同lockId页面的name集合
   if (!arr.includes(to.name) || !arr.includes(from.name)) {
@@ -29,4 +29,7 @@ beforeRouteLeave (to, from, next) {
   next()
 },
 ```
+::: tip
+当浏览器窗口关闭或者刷新时，会触发beforeunload事件
+:::
 

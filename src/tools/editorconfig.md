@@ -1,7 +1,7 @@
 ---
 date: '1640833779808'
-title: editorconfig
-description: editorconfig 的作用及详细配置
+title: .editorconfig
+description: .editorconfig 的作用及详细配置
 tags: [editorconfig]
 ---
 ### 作用

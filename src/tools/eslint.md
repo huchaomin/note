@@ -8,13 +8,23 @@ tags: [.eslintrc.js]
 ### [官方文档](https://eslint.bootcss.com/docs/user-guide/configuring)  
 ### [规则大全](https://eslint.bootcss.com/docs/rules/)
 
+### 安装，初始化，使用
+```shell
+yarn add eslint --dev
+./node_modules/.bin/eslint --init
+./node_modules/.bin/eslint yourfile.js
+# 或者使用npx
+```
+
+### 规则码
+- `”off”` or `0` - 关闭规则
+- `”warn”` or `1` - 将规则视为一个警告（不会影响退出码）
+- `”error”` or `2` - 将规则视为一个错误 (退出码为1)
+
 ### vue开发通用的配置
 ```javascript
 module.exports = {
-  root: true,
-  env: {
-    node: true,
-  },
+  root: true, // 指定当前配置为根配置
   extends: [
     'plugin:vue/essential',
     '@vue/standard',
@@ -22,16 +32,18 @@ module.exports = {
   parserOptions: {
     parser: '@babel/eslint-parser', // 最新解析器
     ecmaVersion: 6, // 对于 ES6 语法
-    sourceType: 'module', // 代码是 ECMAScript 模块
-      ecmaFeatures: {
-        globalReturn: false, // 允许在全局作用域下使用 return 语句
-        impliedStrict: true, // 启用全局 strict mode (如果 ecmaVersion 是 5 或更高)
-        jsx: true, //  启用 JSX
-      },
+    sourceType: 'module', // 设置为 ”script” (默认) 或 ”module”（如果你的代码是 ECMAScript 模块)
+    ecmaFeatures: {
+      globalReturn: false, // 允许在全局作用域下使用 return 语句
+      impliedStrict: true, // 启用全局 strict mode (如果 ecmaVersion 是 5 或更高)
+      jsx: true, //  启用 JSX
+    },
+    allowImportExportEverywhere: false, // 仅允许 import export 语句出现在模块的顶层
+    requireConfigFile: false, // 即使没有 babelrc 配置文件，也使用 babel-eslint 来解析
   },
-  env: {
-    browser: true,
-    node: true,
+  env: { // 一组预定义的全局变量
+    browser: true, // 浏览器环境中的全局变量
+    node: true, // Node.js 全局变量和 Node.js 作用域
     commonjs: true,
     es6: true, // 新的 ES6 全局变量
   },
@@ -242,8 +254,24 @@ module.exports = {
     }],
   },
   globals: {
-    $: 'readonly', // jquery
+    $: 'readonly', // jquery 全局变量
   },
 }
 ```
 
+### 使用顺序
+1. `.eslintrc.js`
+2. `.eslintrc.yaml`
+3. `.eslintrc.yml`
+4. `.eslintrc.json`
+5. `.eslintrc`
+6. `package.json`
+
+### ignore
+除了 `.eslintignore` 文件中的模式，ESLint总是忽略 `/node_modules/*` 和 `/bower_components/*` 中的文件。
+
+### 行内注释
+```javascript
+/* eslint-disable */
+/* eslint-enable no-alert, no-console */
+```

@@ -12,8 +12,8 @@
     <p
       v-if="item.frontmatter.description"
       class="text--disabled text-truncate description">{{ item.frontmatter.description }}</p>
-    <p class="detail">
-       <span>
+    <p class="detail text-truncate">
+       <span v-if="$vuetify.breakpoint.smAndUp">
         <v-icon>mdi-account</v-icon>
         {{ $site.themeConfig.author.name }}
       </span> <span>

@@ -1,8 +1,7 @@
 <template>
 <div
   v-if="$site.themeConfig.enablePrevAndNext && (prev || next)"
-  v-show="!$vuetify.breakpoint.mobile"
-  class="prev-next d-flex justify-space-between mt-9">
+  class="prev-next d-none d-sm-flex justify-space-between mt-9">
   <v-btn
     v-if="prev"
     color="primary"
@@ -46,7 +45,7 @@ export default {
       this.isTouchCode = isTouchCode
     })
     this.$bus.$on('swipe', direction => {
-      if (this.isTouchCode || !this.$vuetify.breakpoint.mobile) return
+      if (this.isTouchCode || this.$vuetify.breakpoint.smAndUp) return
       if (direction === 'Left') {
         if (this.prev) {
           this.toPage(this.prev)

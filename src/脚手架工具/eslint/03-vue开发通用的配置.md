@@ -1,25 +1,15 @@
 ---
-date: '1640835517936' 
-title: .eslintrc.js 
-description: .eslintrc.js基本配置 
-tags: [.eslintrc.js]
+date: '1641550004147' 
+title: eslint vue开发
+description: eslint vue开发通用的配置
+tags: [eslint]
 ---
+### vue 如何配置 ESLint
+vue 官方提供了一个 ESLint 插件 [eslint-plugin-vue](https://eslint.vuejs.org/user-guide/#installation)，  
+它提供了 parser 和 rules。parser 为 [vue-eslint-parser](https://github.com/vuejs/vue-eslint-parser#readme)，  
+rules 为 [https://eslint.vuejs.org/rules/](https://eslint.vuejs.org/rules/)。
 
-### [官方文档](https://eslint.bootcss.com/docs/user-guide/configuring)  
-### [规则大全](https://eslint.bootcss.com/docs/rules/)
-
-### 安装，初始化，使用
-```shell
-yarn add eslint --dev
-./node_modules/.bin/eslint --init
-./node_modules/.bin/eslint yourfile.js
-# 或者使用npx
-```
-
-### 规则码
-- `”off”` or `0` - 关闭规则
-- `”warn”` or `1` - 将规则视为一个警告（不会影响退出码）
-- `”error”` or `2` - 将规则视为一个错误 (退出码为1)
+> 如果想为 vue 单文件组件中的 script 部分使用单独的 parser 可以将 parserOptions.parser 指定为想使用的 parser 即可
 
 ### vue开发通用的配置
 ```javascript
@@ -30,7 +20,7 @@ module.exports = {
     '@vue/standard',
   ],
   parserOptions: {
-    parser: '@babel/eslint-parser', // 最新解析器
+    parser: '@babel/eslint-parser', // ？不知道vue-cli默认生成的配置是不是用这个解析器
     ecmaVersion: 6, // 对于 ES6 语法
     sourceType: 'module', // 设置为 ”script” (默认) 或 ”module”（如果你的代码是 ECMAScript 模块)
     ecmaFeatures: {
@@ -257,21 +247,4 @@ module.exports = {
     $: 'readonly', // jquery 全局变量
   },
 }
-```
-
-### 使用顺序
-1. `.eslintrc.js`
-2. `.eslintrc.yaml`
-3. `.eslintrc.yml`
-4. `.eslintrc.json`
-5. `.eslintrc`
-6. `package.json`
-
-### ignore
-除了 `.eslintignore` 文件中的模式，ESLint总是忽略 `/node_modules/*` 和 `/bower_components/*` 中的文件。
-
-### 行内注释
-```javascript
-/* eslint-disable */
-/* eslint-enable no-alert, no-console */
 ```

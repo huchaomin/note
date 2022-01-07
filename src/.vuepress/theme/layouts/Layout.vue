@@ -6,7 +6,7 @@
   <v-spacer></v-spacer>
   <prev-next></prev-next>
   <Vssue
-    v-if="vssueId"
+    v-if="vssueId && !$vuetify.breakpoint.mobile"
     :key="vssueId"
     :options="{ locale: 'zh' }"
     :title="vssueId"

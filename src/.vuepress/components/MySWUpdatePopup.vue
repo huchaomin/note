@@ -2,6 +2,7 @@
 <SWUpdatePopup v-slot="{ enabled, reload, message, buttonText }">
   <v-snackbar
     v-model="enabled"
+    :max-width="$vuetify.breakpoint.width"
     :timeout="-1"
     app
     right

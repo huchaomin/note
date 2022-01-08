@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack Magic Comments | 木林子的笔记空间</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+    <meta name="description" content="webpack webpackChunkName webpackMode webpackPrefetch webpackPreload 使用方法">
+    <meta property="article:published_time" content="null">
+    <meta property="article:modified_time" content="2022-01-07T11:01:34.000Z">
+    <meta property="og:site_name" content="木林子的笔记空间">
+    <meta property="og:title" content="webpack Magic Comments">
+    <meta property="og:description" content="webpack webpackChunkName webpackMode webpackPrefetch webpackPreload 使用方法">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E5%85%B7/webpack/webpack%E4%B9%8Bmagic-comments.html">
+    <meta name="twitter:title" content="webpack Magic Comments">
+    <meta name="twitter:description" content="webpack webpackChunkName webpackMode webpackPrefetch webpackPreload 使用方法">
+    <meta name="twitter:url" content="/%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E5%85%B7/webpack/webpack%E4%B9%8Bmagic-comments.html">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="mulinzi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="webpack">
+    <meta property="article:tag" content="webpack">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="theme-color" content="rgba(255, 255, 255, 0.95)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.23dd6fbe.css" as="style"><link rel="preload" href="/assets/js/app.0550d76e.js" as="script"><link rel="preload" href="/assets/js/9.c0b1986f.js" as="script"><link rel="preload" href="/assets/js/59.001fafa4.js" as="script"><link rel="preload" href="/assets/js/4.9902e04a.js" as="script"><link rel="prefetch" href="/assets/js/10.3b7d0674.js"><link rel="prefetch" href="/assets/js/11.abd81a49.js"><link rel="prefetch" href="/assets/js/12.bc29cbe1.js"><link rel="prefetch" href="/assets/js/13.6fff73a2.js"><link rel="prefetch" href="/assets/js/14.525c56fd.js"><link rel="prefetch" href="/assets/js/15.3f6b0486.js"><link rel="prefetch" href="/assets/js/16.a6fde529.js"><link rel="prefetch" href="/assets/js/17.33efe046.js"><link rel="prefetch" href="/assets/js/18.871aa0b5.js"><link rel="prefetch" href="/assets/js/19.3c4b5cf4.js"><link rel="prefetch" href="/assets/js/2.3ad10982.js"><link rel="prefetch" href="/assets/js/20.cdb17dc3.js"><link rel="prefetch" href="/assets/js/21.ee613fce.js"><link rel="prefetch" href="/assets/js/22.ae110b8c.js"><link rel="prefetch" href="/assets/js/23.0dabf8ff.js"><link rel="prefetch" href="/assets/js/24.4463c32a.js"><link rel="prefetch" href="/assets/js/25.d9a554a6.js"><link rel="prefetch" href="/assets/js/26.ca81a31a.js"><link rel="prefetch" href="/assets/js/27.6cefd640.js"><link rel="prefetch" href="/assets/js/28.89fd1b45.js"><link rel="prefetch" href="/assets/js/29.375a9361.js"><link rel="prefetch" href="/assets/js/3.1bf47bc0.js"><link rel="prefetch" href="/assets/js/30.0c1755ab.js"><link rel="prefetch" href="/assets/js/31.3dbd9f2b.js"><link rel="prefetch" href="/assets/js/32.7768051b.js"><link rel="prefetch" href="/assets/js/33.0b82f591.js"><link rel="prefetch" href="/assets/js/34.b7d10feb.js"><link rel="prefetch" href="/assets/js/35.c2e8aa31.js"><link rel="prefetch" href="/assets/js/36.3fb3473c.js"><link rel="prefetch" href="/assets/js/37.d8c444c1.js"><link rel="prefetch" href="/assets/js/38.a002110f.js"><link rel="prefetch" href="/assets/js/39.ecb6f48a.js"><link rel="prefetch" href="/assets/js/40.76deba4c.js"><link rel="prefetch" href="/assets/js/41.f7f22033.js"><link rel="prefetch" href="/assets/js/42.2f9acf28.js"><link rel="prefetch" href="/assets/js/43.4f4a7543.js"><link rel="prefetch" href="/assets/js/44.d9041cc5.js"><link rel="prefetch" href="/assets/js/45.d7c1b9b9.js"><link rel="prefetch" href="/assets/js/46.2946cc28.js"><link rel="prefetch" href="/assets/js/47.8973da5c.js"><link rel="prefetch" href="/assets/js/48.1ed7550d.js"><link rel="prefetch" href="/assets/js/49.05f45fb5.js"><link rel="prefetch" href="/assets/js/5.9b7630b2.js"><link rel="prefetch" href="/assets/js/50.566958d8.js"><link rel="prefetch" href="/assets/js/51.447df943.js"><link rel="prefetch" href="/assets/js/52.aec3b200.js"><link rel="prefetch" href="/assets/js/53.68fd0f6a.js"><link rel="prefetch" href="/assets/js/54.ece78b17.js"><link rel="prefetch" href="/assets/js/55.3bf2d0c8.js"><link rel="prefetch" href="/assets/js/56.b8f90f27.js"><link rel="prefetch" href="/assets/js/57.0ebc403a.js"><link rel="prefetch" href="/assets/js/58.5270c222.js"><link rel="prefetch" href="/assets/js/6.be9e513b.js"><link rel="prefetch" href="/assets/js/60.d07ee831.js"><link rel="prefetch" href="/assets/js/61.c9316302.js"><link rel="prefetch" href="/assets/js/62.1f6d9a5b.js"><link rel="prefetch" href="/assets/js/63.d4b2ce50.js"><link rel="prefetch" href="/assets/js/64.3dea88e1.js"><link rel="prefetch" href="/assets/js/65.6361a32a.js"><link rel="prefetch" href="/assets/js/66.47440b6e.js"><link rel="prefetch" href="/assets/js/7.df51a559.js"><link rel="prefetch" href="/assets/js/8.e404883f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.23dd6fbe.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-a137e412><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped v-app-bar--fixed" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-bff4dc46 data-v-a137e412><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-bff4dc46><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-bff4dc46></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-bff4dc46><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light" data-v-bff4dc46></i></span></button> <div class="spacer" data-v-bff4dc46></div> <div class="v-menu" data-v-bff4dc46><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-bff4dc46><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-bff4dc46><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-bff4dc46></div> <span data-v-bff4dc46>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-bff4dc46></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-55f94f78 data-v-a137e412><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-55f94f78><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-2164" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-2164" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview theme--light" data-v-55f94f78><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-55f94f78></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-55f94f78><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-55f94f78>
+            javascript
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-55f94f78></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-55f94f78><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-55f94f78>
+            css
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-55f94f78></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-55f94f78><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-55f94f78>
+            脚手架工具
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-55f94f78></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-55f94f78><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-55f94f78>
+            tools
+          </div></span></div></div></div><!----></div></div></div><div class="v-navigation-drawer__border"></div></nav> <main class="v-main" style="padding-top:48px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-a137e412><div class="v-main__wrap"><!----> <div id="scroll-body" class="theme-container py-sm-10 py-0" data-v-a137e412><div class="theme-default-content d-flex flex-column pa-sm-6 pa-2" data-v-a137e412><div class="content__default"><h3 id="综合"><a href="#综合" class="header-anchor">#</a> 综合</h3> <p>通过在 import 中添加注释，我们可以进行诸如给 chunk 命名或选择不同模式的操作</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 单个目标</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token comment">/* webpackIgnore: true */</span> <span class="token string">'ignored-module.js'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">import</span><span class="token punctuation">(</span>
+  <span class="token comment">/* webpackChunkName: &quot;my-chunk-name&quot; */</span>
+  <span class="token comment">/* webpackMode: &quot;lazy&quot; */</span>
+  <span class="token comment">/* webpackExports: [&quot;default&quot;, &quot;named&quot;] */</span>
+  <span class="token string">'module'</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 多个可能的目标</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span>
+  <span class="token comment">/* webpackInclude: /\.json$/ */</span>
+  <span class="token comment">/* webpackExclude: /\.noimport\.json$/ */</span>
+  <span class="token comment">/* webpackChunkName: &quot;my-chunk-name&quot; */</span>
+  <span class="token comment">/* webpackMode: &quot;lazy&quot; */</span>
+  <span class="token comment">/* webpackPrefetch: true */</span>
+  <span class="token comment">/* webpackPreload: true */</span>
+  <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">./locale/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>language<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="webpackignore"><a href="#webpackignore" class="header-anchor">#</a> webpackIgnore</h3> <ul><li>设置为 true 时，禁用动态导入解析</li> <li>设置为 true 则不进行代码分割</li></ul> <h3 id="webpackchunkname"><a href="#webpackchunkname" class="header-anchor">#</a> webpackChunkName</h3> <p>新 chunk 的名称</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// your code</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token keyword">default</span><span class="token operator">:</span> _ <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token comment">/* webpackChunkName: &quot;lodash&quot; */</span> <span class="token string">'lodash'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// webpack.config.js</span>
+output<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  chunkFilename<span class="token operator">:</span> <span class="token string">'[name].vendor.js'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// bundle</span>
+lodash<span class="token punctuation">.</span>vendor<span class="token punctuation">.</span>js
+</code></pre></div><h3 id="webpackmode"><a href="#webpackmode" class="header-anchor">#</a> webpackMode</h3> <ul><li><code>&quot;lazy&quot;</code>（默认）：为每个 import() 导入的模块，生成一个可延迟加载(lazy-loadable) chunk</li> <li><code>&quot;lazy-once&quot;</code>：生成一个可以满足所有 import() 调用的单个可延迟加载(lazy-loadable) chunk。<br>
+此 chunk 将在第一次 import() 调用时获取，随后的 import() 调用将使用相同的网络响应。<br>
+注意，这种模式仅在部分动态语句中有意义，例如 import(<code>./locales/${language}.json</code>)，其中可能含有多个被请求的模块路径。</li> <li><code>&quot;eager&quot;</code>：不会生成额外的 chunk，所有模块都被当前 chunk 引入，并且没有额外的网络请求。<br>
+仍然会返回 Promise，但是是 resolved 状态。和静态导入相对比，在调用 import（）完成之前，该模块不会被执行。</li> <li><code>&quot;weak&quot;</code>：尝试加载模块，如果该模块函数已经以其他方式加载（即，另一个 chunk 导入过此模块，或包含模块的脚本被加载）。<br>
+仍然会返回 Promise，但是只有在客户端上已经有该 chunk 时才成功解析。<br>
+如果该模块不可用，Promise 将会是 rejected 状态，并且网络请求永远不会执行。<br>
+当需要的 chunks 始终在（嵌入在页面中的）初始请求中手动提供，而不是在应用程序导航在最初没有提供的模块导入的情况触发，这对于通用渲染（SSR）是非常有用的。</li></ul> <h3 id="webpackinclude-与-webpackexclude"><a href="#webpackinclude-与-webpackexclude" class="header-anchor">#</a> webpackInclude 与 webpackExclude</h3> <p>使用 webpackInclude and webpackExclude 选项可让你添加正则表达式模式，以减少 webpack 打包导入的文件数量</p> <h3 id="webpackprefetch-与-webpackpreload"><a href="#webpackprefetch-与-webpackpreload" class="header-anchor">#</a> webpackPrefetch 与 webpackPreload</h3> <p>设置模块的预加载方式</p></div> <div class="spacer"></div> <div class="prev-next d-none d-sm-flex justify-space-between mt-9"><button type="button" class="v-btn v-btn--has-bg theme--light v-size--default primary"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-left theme--light"></i> <span>webpack之hash</span></span></button> <div class="spacer"></div> <button type="button" class="v-btn v-btn--has-bg theme--light v-size--default primary"><span class="v-btn__content"><span>webpack之runtime与manifest</span> <i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-right theme--light"></i></span></button></div> <!----></div></div> <div class="v-menu" data-v-a137e412><!----></div> <button type="button" class="to-top v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--default" style="display:none;" data-v-a137e412 data-v-a137e412><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-up theme--light primary--text" data-v-a137e412></i></span></button></div></main> <footer class="v-footer d-sm-flex d-none pr-3 justify-space-between v-sheet theme--light v-footer--fixed v-footer--padless" style="left:0px;right:0px;bottom:0px;" data-v-95f7ac0c data-v-a137e412><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--x-large" data-v-95f7ac0c><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-home theme--light" data-v-95f7ac0c></i></span></button> <div class="copyright" data-v-95f7ac0c><p data-v-95f7ac0c>
+      Copyright
+      <i aria-hidden="true" class="v-icon notranslate s-icon mdi mdi-copyright theme--light" data-v-95f7ac0c></i> <span data-v-95f7ac0c>2009-2022 木林子</span></p> <a href="https://beian.miit.gov.cn/" target="_blank" data-v-95f7ac0c>鄂ICP备2022000181号-1</a></div> <div data-v-95f7ac0c>
+    最后更新时间
+    <i aria-hidden="true" class="v-icon notranslate s-icon mdi mdi-clock-time-ten-outline theme--light" data-v-95f7ac0c></i>
+    2022年01月07日
+  </div></footer></div></div><div class="global-ui"><div class="v-snack v-snack--bottom v-snack--has-background v-snack--right v-snack--vertical" style="padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:48px;" data-v-fec8b358><div class="v-snack__wrapper v-sheet theme--dark" style="max-width:0px;display:none;"><div role="status" aria-live="polite" class="v-snack__content">
+    作者又有了新的笔记哟，点击刷新查看
+    </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
+        刷新
+      </span></button></div></div></div></div></div>
+    <script src="/assets/js/app.0550d76e.js" defer></script><script src="/assets/js/9.c0b1986f.js" defer></script><script src="/assets/js/59.001fafa4.js" defer></script><script src="/assets/js/4.9902e04a.js" defer></script>
+  </body>
+</html>

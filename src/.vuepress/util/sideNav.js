@@ -3,6 +3,7 @@ const fs = require('fs')
 const resolve = dir => path.join(__dirname, dir)
 const docsRoot = resolve('../../')
 const uniqueId = require('./index.js').uniqueId
+const parentSort = ['javascript', 'css', '脚手架工具', 'tools']
 
 function isIndex (fileName) {
   return ['README.md', 'index.md'].includes(fileName)
@@ -61,5 +62,26 @@ function findFolder (dir) {
   return arr.length > 0 ? arr : null
 }
 
-module.exports = findFolder(docsRoot)
+function treatAsDirectory (o) {
+  return o.isDirectory && !/^\d*-/.test(o.name)
+}
+
+function rearrangeChildren (arr) {
+  arr.forEach(obj => {
+    if (obj.children) {
+      obj.children = rearrangeChildren(obj.children)
+    }
+  })
+  return [...arr.filter(obj => treatAsDirectory(obj)), ...arr.filter(obj => !treatAsDirectory(obj))]
+}
+
+const sideNav = findFolder(docsRoot)
+sideNav.forEach(obj => {
+  if (obj.children) {
+    obj.children = rearrangeChildren(obj.children)
+  }
+})
+sideNav.sort((a, b) => parentSort.indexOf(a.name) - parentSort.indexOf(b.name))
+
+module.exports = sideNav
 

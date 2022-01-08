@@ -33,9 +33,9 @@
     </template>
     <template v-slot:label="{ item }">
       <v-tooltip
+        :disabled="!show || $vuetify.breakpoint.mobile"
         :open-delay="1000"
         color="#02a95e"
-        :disabled="!show"
         right>
         <template v-slot:activator="{ on, attrs }">
           <div

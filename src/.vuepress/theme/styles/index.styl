@@ -36,6 +36,9 @@ body
       margin-top 8px
       margin-bottom 8px
 
+    p + p
+      margin-top 8px
+
   p.demo
     padding 1rem 1.5rem
     border 1px solid #ddd
@@ -48,10 +51,6 @@ a
   font-weight 500
   color $accentColor
   text-decoration none
-
-p a code
-  font-weight 400
-  color $accentColor
 
 kbd
   background #eee
@@ -94,21 +93,10 @@ h1, h2, h3, h4, h5, h6
       + p, + pre
         margin-top 2rem
 
-h1
-  font-size 2.2rem
-
-h2
-  font-size 1.65rem
-  padding-bottom .3rem
-  border-bottom 1px solid $borderColor
-
-h3
-  font-size 1.35rem
-
 a.header-anchor
   display none
 
-p, ul, ol
+ul, ol
   line-height 1.9
 
 hr
@@ -133,6 +121,7 @@ th, td
   padding .6em 1em
 
 p
+  line-height 1.5
   word-break break-word
 
   img

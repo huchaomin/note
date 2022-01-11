@@ -78,6 +78,6 @@ export default {
 
 ### 待完善
 - Algolia 搜索（文档写的足够好）
-- 网站备案 等待
 - js 垃圾回收机制
 - delete prefetch
+- queueWatcher 

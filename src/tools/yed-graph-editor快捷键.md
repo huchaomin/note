@@ -1,7 +1,7 @@
 ---
 date: '1641629094913' 
-title: yed-graph-editor快捷键
-description: yed-graph-editor快捷键
+title: yed-graph-editor 快捷键
+description: yed-graph-editor 快捷键
 tags: [yarn]
 ---
 

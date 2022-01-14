@@ -1,14 +1,13 @@
 html
   overflow: hidden
 
-html, body, #app, #doc, .v-application--wrap, .v-main, .v-main__wrap
-  height 100%
+.v-main
+  height 100vh
 
 .v-main__wrap
   display flex
   flex-direction column
 
-  .theme-container
+  #scroll-body
     flex 1
-    overflow-y auto
-    -webkit-overflow-scrolling touch
+    overflow auto

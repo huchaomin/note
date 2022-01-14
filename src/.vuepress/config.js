@@ -11,6 +11,11 @@ module.exports = {
   dest: resolve('../../docs'),
   title: '木林子的笔记空间',
   description: 'My note space build with vuepress',
+  locales: {
+    '/': {
+      lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
+    },
+  },
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { content: 'IE=edge', ['http-equiv']: 'X-UA-Compatible' }],

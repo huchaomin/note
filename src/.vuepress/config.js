@@ -52,12 +52,12 @@ module.exports = {
           },
           vuepress: { // vuepress 每次打包都会变化，不知道为什么
             name: 'chunk-vuepress',
-            priority: -10,
+            priority: -8,
             test: /[\\/]@vuepress[\\/]/,
           },
           vuepressDev: { // vuepress 每次打包都会变化，不知道为什么
             name: 'chunk-vuepress-dev',
-            priority: -10,
+            priority: -9,
             test: /[\\/].vuepress[\\/]/,
           },
           default: {

@@ -36,7 +36,7 @@ module.exports = {
     config.resolve.alias.set('@assets', resolve('../assets'))
     config.recordsPath(resolve('../../records.json')) // https://segmentfault.com/a/1190000015919928
     if (!isServer) {
-      config.optimization.runtimeChunk(true)
+      // config.optimization.runtimeChunk(true)
       config.optimization.splitChunks({
         chunks: 'all',
         minSize: 20000,

@@ -51,6 +51,12 @@ module.exports = {
             priority: -10,
             reuseExistingChunk: true,
           },
+          vuetify: { // vuepress 每次打包都会变化，不知道为什么
+            name: 'chunk-vuetify',
+            priority: -8,
+            test: /[\\/]node_modules[\\/]vuetify[\\/]/,
+            reuseExistingChunk: true,
+          },
           vuepress: { // vuepress 每次打包都会变化，不知道为什么
             name: 'chunk-vuepress',
             priority: -8,

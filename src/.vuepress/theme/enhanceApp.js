@@ -49,9 +49,7 @@ export default ({
     },
     breakpoint: {
       scrollBarWidth: 6,
-      thresholds: {
-        mobileBreakpoint: 600,
-      },
+      mobileBreakpoint: 'xs',
     },
   })
 }

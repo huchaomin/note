@@ -58,7 +58,7 @@ export default {
   mixins: [findSideNav],
   data () {
     return {
-      show: this.$vuetify.breakpoint.mobile,
+      show: !this.$vuetify.breakpoint.mobile,
       search: null,
       open: [],
       active: [],

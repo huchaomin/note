@@ -1,7 +1,7 @@
 <template>
 <v-navigation-drawer
   v-model="show"
-  :mobile-breakpoint="960"
+  :mobile-breakpoint="900"
   app
   clipped
   width="300">
@@ -58,7 +58,7 @@ export default {
   mixins: [findSideNav],
   data () {
     return {
-      show: this.$vuetify.breakpoint.mdAndUp,
+      show: this.$vuetify.breakpoint.mobile,
       search: null,
       open: [],
       active: [],

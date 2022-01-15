@@ -47,5 +47,11 @@ export default ({
     icons: {
       iconfont: 'mdi',
     },
+    breakpoint: {
+      scrollBarWidth: 6,
+      thresholds: {
+        mobileBreakpoint: 600,
+      },
+    },
   })
 }

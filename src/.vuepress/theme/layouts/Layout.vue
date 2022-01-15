@@ -1,6 +1,6 @@
 <template>
 <div
-  :class="{ 'rounded': $vuetify.breakpoint.smAndUp }"
+  :class="{ 'rounded': !$vuetify.breakpoint.mobile }"
   class="theme-default-content d-flex flex-column pa-sm-6 pa-2">
   <Content></Content>
   <v-spacer></v-spacer>

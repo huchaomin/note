@@ -1,13 +1,14 @@
 html
-  overflow: hidden
+  overflow: auto
 
-.v-main
-  height 100vh
+@media (min-width: 600px)
+  .v-main
+    height 100vh
 
-.v-main__wrap
-  display flex
-  flex-direction column
+  .v-main__wrap
+    display flex
+    flex-direction column
 
-  #scroll-body
-    flex 1
-    overflow auto
+    #scroll-body
+      flex 1
+      overflow auto

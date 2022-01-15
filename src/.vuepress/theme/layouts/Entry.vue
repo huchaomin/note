@@ -2,7 +2,7 @@
 <div>
   <div
     v-for="(item, index) in newestDocs" :key="index"
-    :class="{ 'rounded': $vuetify.breakpoint.smAndUp }"
+    :class="{ 'rounded': !$vuetify.breakpoint.mobile }"
     class="theme-default-content px-4 py-3 mb-4">
     <p>
       <a href="#" @click.prevent="toPage(item)">
@@ -13,7 +13,7 @@
       v-if="item.frontmatter.description"
       class="text--disabled text-truncate description">{{ item.frontmatter.description }}</p>
     <p class="detail text-truncate">
-       <span v-if="$vuetify.breakpoint.smAndUp">
+       <span v-if="!$vuetify.breakpoint.mobile">
         <v-icon>mdi-account</v-icon>
         {{ $site.themeConfig.author.name }}
       </span> <span>

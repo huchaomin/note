@@ -6,7 +6,7 @@
     right: () => swipe('Right'),
   }"
   @mousedown.native="globalMousedown">
-  <iframe v-if="!$vuetify.breakpoint.xsOnly && iframeSrc"
+  <iframe v-if="!$vuetify.breakpoint.mobile && iframeSrc"
           :src="iframeSrc"
           height="100%"
           width="100%">
@@ -15,7 +15,7 @@
   <navigation-drawer ref="drawer" @show="showBreadcrumbs = true"></navigation-drawer>
   <v-main>
     <div
-      v-if="showBreadcrumbs && breadcrumbs.length > 0 && !$vuetify.breakpoint.xsOnly"
+      v-if="showBreadcrumbs && breadcrumbs.length > 0 && !$vuetify.breakpoint.mobile"
       class="d-flex align-center px-4 breadcrumbs">
       <v-icon class="mr-n6">mdi-folder-home</v-icon>
       <v-breadcrumbs :items="breadcrumbs" class="py-2"></v-breadcrumbs>

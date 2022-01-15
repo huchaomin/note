@@ -85,7 +85,12 @@ module.exports = {
   },
   plugins: [
     'vuepress-plugin-element-tabs',
-    '@vuepress/last-updated',
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: timestamp => timestamp,
+      },
+    ],
     'vuepress-plugin-nprogress',
     [
       'demo-code',
@@ -122,7 +127,7 @@ module.exports = {
     //   },
     // ],
     baiduAnalytics,
-    [
+    [ // 打包方式影响
       '@vuepress/pwa',
       {
         popupComponent: 'MySWUpdatePopup',

@@ -63,10 +63,16 @@ module.exports = {
         },
       })
       if (isProd) {
+        config.plugin('extract-css').tap(args => {
+          return [{
+            filename: 'assets/css/styles.[contenthash:8].css',
+          }]
+        })
+
         config.plugin('analyze').use(BundleAnalyzerPlugin,
           [{
             analyzerMode: 'static',
-            reportFilename: '../report.html'
+            reportFilename: '../report.html',
           }],
         )
       }

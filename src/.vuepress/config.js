@@ -49,19 +49,16 @@ module.exports = {
             name: 'chunk-default',
             test: /[\\/]node_modules[\\/]/,
             priority: -10,
-            reuseExistingChunk: true,
           },
           vuepress: { // vuepress 每次打包都会变化，不知道为什么
             name: 'chunk-vuepress',
             priority: -9,
             test: /[\\/]node_modules[\\/]@vuepress[\\/]/,
-            reuseExistingChunk: true,
           },
           default: {
             name: 'chunk-common',
             minChunks: 2,
             priority: -20,
-            reuseExistingChunk: true,
           },
         },
       })

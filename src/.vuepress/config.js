@@ -52,8 +52,13 @@ module.exports = {
           },
           vuepress: { // vuepress 每次打包都会变化，不知道为什么
             name: 'chunk-vuepress',
-            priority: -9,
-            test: /[\\/]node_modules[\\/]@vuepress[\\/]/,
+            priority: -10,
+            test: /[\\/]@vuepress[\\/]/,
+          },
+          vuepressDev: { // vuepress 每次打包都会变化，不知道为什么
+            name: 'chunk-vuepress-dev',
+            priority: -10,
+            test: /[\\/].vuepress[\\/]/,
           },
           default: {
             name: 'chunk-common',

@@ -30,9 +30,6 @@
 </template>
 <script>
 export default {
-  created () {
-    console.log(this.$page.lastUpdated)
-  },
   methods: {
     toRoot () {
       if (this.$route.path === '/') return

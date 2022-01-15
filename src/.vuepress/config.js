@@ -36,7 +36,7 @@ module.exports = {
     config.resolve.alias.set('@assets', resolve('../assets'))
     config.recordsPath(resolve('../../records.json')) // https://segmentfault.com/a/1190000015919928
     if (!isServer) {
-      // config.optimization.runtimeChunk(true)
+      config.optimization.runtimeChunk(true)
       config.optimization.splitChunks({
         chunks: 'all',
         minSize: 20000,
@@ -52,8 +52,7 @@ module.exports = {
             reuseExistingChunk: true,
           },
           vuepress: { // vuepress 每次打包都会变化，不知道为什么
-            filename: '[name].[contenthash:8].bundle.js',
-            // name: 'chunk-vuepress',
+            name: 'chunk-vuepress',
             priority: -8,
             test: /[\\/]@vuepress[\\/]/,
             reuseExistingChunk: true,

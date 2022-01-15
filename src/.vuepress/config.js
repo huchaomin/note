@@ -7,6 +7,7 @@ const issueConfig = {
   clientSecret: 'b18db1776d565a67dc3010040770acc02635442f',
 }
 const baiduAnalytics = require('./plugins/baiduAnalytics')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 module.exports = {
   dest: resolve('../../docs'),
   title: '木林子的笔记空间',
@@ -30,12 +31,50 @@ module.exports = {
   markdown: {
     lineNumbers: false, // 是否显示行号，默认为false
   },
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@assets': resolve('../assets'),
-      },
-    },
+  shouldPrefetch: () => false, // 要适配移动端，不开启prefetch
+  chainWebpack: (config, isServer) => {
+    config.resolve.alias.set('@assets', resolve('../assets'))
+    config.recordsPath(resolve('records.json')) // https://segmentfault.com/a/1190000015919928
+    if (!isServer) {
+      // config.optimization.runtimeChunk(true)
+      config.optimization.splitChunks({
+        chunks: 'all',
+        minSize: 20000,
+        minChunks: 1,
+        maxAsyncRequests: 30,
+        maxInitialRequests: 30,
+        enforceSizeThreshold: 50000,
+        cacheGroups: {
+          defaultVendors: {
+            name: 'chunk-default',
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            reuseExistingChunk: true,
+          },
+          vuetify: {
+            name: 'chunk-vuetify',
+            priority: -9,
+            test: /[\\/]node_modules[\\/]vuetify[\\/]/,
+            reuseExistingChunk: true,
+          },
+          vuepress: { // vuepress 每次打包都会变化，不知道为什么
+            name: 'chunk-vuepress',
+            priority: -9,
+            test: /[\\/]node_modules[\\/]@vuepress[\\/]/,
+            reuseExistingChunk: true,
+          },
+          default: {
+            name: 'chunk-common',
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+        },
+      })
+      if (isProd) {
+        config.plugin('analyze').use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }])
+      }
+    }
   },
   themeConfig: {
     sideNav,

@@ -34,7 +34,7 @@ module.exports = {
   shouldPrefetch: () => false, // 要适配移动端，不开启prefetch
   chainWebpack: (config, isServer) => {
     config.resolve.alias.set('@assets', resolve('../assets'))
-    config.recordsPath(resolve('../records.json')) // https://segmentfault.com/a/1190000015919928
+    config.recordsPath(resolve('../../records.json')) // https://segmentfault.com/a/1190000015919928
     if (!isServer) {
       // config.optimization.runtimeChunk(true)
       config.optimization.splitChunks({

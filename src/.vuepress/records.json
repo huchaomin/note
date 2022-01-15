@@ -1292,7 +1292,8 @@
       "node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/plugin-pwa/lib/event.js": 479,
       "node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/lib/client/clientEntry.js a82c3a45fe3f44107382086aaa5e231e": 480,
       "node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!node_modules/@vuepress/plugin-pwa/lib/SWUpdatePopup.vue e2cf1afe0a8871ddd732137e3a3a1f44": 552,
-      "node_modules/register-service-worker/index.js": 553
+      "node_modules/register-service-worker/index.js": 553,
+      "node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/lib/client/clientEntry.js 9aa30c441523c94edf1abe686099d744": 480
     },
     "usedIds": {
       "0": 0,

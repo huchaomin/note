@@ -115,12 +115,12 @@ module.exports = {
         autoCreateIssue: isProd,
       },
     ],
-    [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'UA-96097921-2',
-      },
-    ],
+    // [
+    //   '@vuepress/google-analytics',
+    //   {
+    //     'ga': 'UA-96097921-2',
+    //   },
+    // ],
     baiduAnalytics,
     [
       '@vuepress/pwa',

@@ -72,7 +72,12 @@ module.exports = {
         },
       })
       if (isProd) {
-        config.plugin('analyze').use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }])
+        config.plugin('analyze').use(BundleAnalyzerPlugin,
+          [{
+            analyzerMode: 'static',
+            reportFilename: '../report.html'
+          }],
+        )
       }
     }
   },

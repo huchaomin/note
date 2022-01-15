@@ -2,7 +2,7 @@
 node_modules
 /dist
 /tmp.js
-/docs/report.html
+/report.html
 
 
 # local env files

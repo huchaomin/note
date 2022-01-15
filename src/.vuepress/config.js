@@ -52,15 +52,11 @@ module.exports = {
             reuseExistingChunk: true,
           },
           vuepress: { // vuepress 每次打包都会变化，不知道为什么
-            name: 'chunk-vuepress',
+            filename: '[name].[contenthash:8].bundle.js',
+            // name: 'chunk-vuepress',
             priority: -8,
             test: /[\\/]@vuepress[\\/]/,
             reuseExistingChunk: true,
-          },
-          vuepressDev: { // vuepress 每次打包都会变化，不知道为什么
-            name: 'chunk-vuepress-dev',
-            priority: -9,
-            test: /[\\/].vuepress[\\/]/,
           },
           default: {
             name: 'chunk-common',

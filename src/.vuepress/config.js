@@ -49,7 +49,6 @@ module.exports = {
             name: 'chunk-default',
             test: /[\\/]node_modules[\\/](?!@vuepress)(.*)/,
             priority: -10,
-            minSize: 50000,
             reuseExistingChunk: true,
           },
           // vuetify: {

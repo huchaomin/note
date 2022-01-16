@@ -45,24 +45,25 @@ module.exports = {
         maxInitialRequests: 30,
         enforceSizeThreshold: 50000,
         cacheGroups: {
-          defaultVendors: {
+          defaultVendors: { // // vuepress 每次打包都会变化，不知道为什么
             name: 'chunk-default',
-            test: /[\\/]node_modules[\\/]/,
+            test: /[\\/]node_modules[\\/](?!@vuepress)(.*)/,
             priority: -10,
+            minSize: 50000,
             reuseExistingChunk: true,
           },
-          vuetify: { // vuepress 每次打包都会变化，不知道为什么
-            name: 'chunk-vuetify',
-            priority: -8,
-            test: /[\\/]node_modules[\\/]vuetify[\\/]/,
-            reuseExistingChunk: true,
-          },
-          vuepress: { // vuepress 每次打包都会变化，不知道为什么
-            name: 'chunk-vuepress',
-            priority: -8,
-            test: /[\\/]@vuepress[\\/]/,
-            reuseExistingChunk: true,
-          },
+          // vuetify: {
+          //   name: 'chunk-vuetify',
+          //   priority: -8,
+          //   test: /[\\/]node_modules[\\/]vuetify[\\/]/,
+          //   reuseExistingChunk: true,
+          // },
+          // vuepress: { // vuepress 这样子的写法会导致 css 顺序不正确
+          //   name: 'chunk-vuepress',
+          //   priority: -8,
+          //   test: /[\\/]@vuepress[\\/]/,
+          //   reuseExistingChunk: true,
+          // },
           default: {
             name: 'chunk-common',
             minChunks: 2,

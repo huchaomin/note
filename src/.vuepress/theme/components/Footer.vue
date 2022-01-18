@@ -1,7 +1,8 @@
 <template>
 <v-footer
+  v-if="!$vuetify.breakpoint.mobile"
   app
-  class="d-sm-flex d-none pr-3 justify-space-between"
+  class="d-flex pr-3 justify-space-between"
   padless>
   <v-btn
     depressed

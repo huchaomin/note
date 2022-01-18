@@ -79,5 +79,5 @@ export default {
 ### 待完善
 - Algolia 搜索（文档写的足够好）
 - js 垃圾回收机制
-- delete prefetch
 - queueWatcher 
+- 流程图

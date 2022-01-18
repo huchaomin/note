@@ -1,7 +1,7 @@
 <template>
 <v-app-bar
+  :app="!$vuetify.breakpoint.mobile"
   :elevation="0"
-  app
   clipped-left
   dense>
   <v-app-bar-nav-icon @click="$emit('toggleDrawer')"></v-app-bar-nav-icon>

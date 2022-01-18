@@ -8,6 +8,7 @@
   @mousedown.native="globalMousedown">
   <iframe v-if="!$vuetify.breakpoint.mobile && iframeSrc"
           :src="iframeSrc"
+          frameborder="0"
           height="100%"
           width="100%">
   </iframe>

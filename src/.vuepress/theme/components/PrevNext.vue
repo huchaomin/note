@@ -4,8 +4,10 @@
   class="prev-next d-none d-sm-flex justify-space-between mt-9">
   <v-btn
     v-if="prev"
+    :ripple="false"
+    class="ml-n4"
     color="primary"
-    depressed
+    plain
     @click="toPage(prev)">
     <v-icon dense>mdi-arrow-left</v-icon>
     <span>{{ prev.name }}</span>
@@ -13,8 +15,10 @@
   <v-spacer></v-spacer>
   <v-btn
     v-if="next"
+    :ripple="false"
+    class="mr-n4"
     color="primary"
-    depressed
+    plain
     @click="toPage(next)">
     <span>{{ next.name }}</span>
     <v-icon dense>mdi-arrow-right</v-icon>
@@ -79,3 +83,20 @@ export default {
   },
 }
 </script>
+<style lang="stylus" scoped>
+.v-btn
+  &:after
+    content ''
+    position absolute
+    bottom 0
+    left 50%
+    right 50%
+    height 2px
+    background $nprogressColor
+    transition all .3s
+
+  &:hover
+    &:after
+      left 16px
+      right 16px
+</style>

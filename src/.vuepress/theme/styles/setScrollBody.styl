@@ -1,8 +1,11 @@
 html
   overflow: auto
 
+.v-app-bar
+  flex-grow 0
+
 #scroll-body
-  min-height calc(100vh - 48px)
+  height 100%
 
 @media (min-width: 600px)
   .v-main
@@ -13,6 +16,5 @@ html
     flex-direction column
 
     #scroll-body
-      min-height auto
       flex 1
       overflow auto

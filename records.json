@@ -2432,7 +2432,29 @@
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/webpack/webpack之处理esmodule.md 56c8dff6137bc3f3c8be779ac9544032": 551,
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/webpack/webpack之模块路径解析规则.md c5b4b0012ab18a2a827af494e0511616": 552,
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/webpack/模块方法之requireContext.md 4b992a079a899058d120d678a17706d3": 553,
-      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/others/待整理的.md 85c0302756b6583f5a0723ea764ad806": 511
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/others/待整理的.md 85c0302756b6583f5a0723ea764ad806": 511,
+      "node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/layouts/GlobalLayout.vue 7d013dc9b92947e8c33e1d1e21357f5e": 1,
+      "node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/Header.vue?vue&type=style&index=0&id=9a400230&lang=stylus&scoped=true&": 210,
+      "node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/Footer.vue?vue&type=style&index=0&id=f436304e&lang=stylus&scoped=true&": 211,
+      "node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/layouts/GlobalLayout.vue?vue&type=style&index=0&id=c983d9c6&lang=stylus&scoped=true&": 215,
+      "node_modules/vue-loader/lib/loaders/pitcher.js??ref--4!node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/Header.vue?vue&type=style&index=0&id=9a400230&lang=stylus&scoped=true&": 391,
+      "node_modules/vue-loader/lib/loaders/pitcher.js??ref--4!node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/Footer.vue?vue&type=style&index=0&id=f436304e&lang=stylus&scoped=true&": 393,
+      "node_modules/vue-loader/lib/loaders/pitcher.js??ref--4!node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/layouts/GlobalLayout.vue?vue&type=style&index=0&id=c983d9c6&lang=stylus&scoped=true&": 398,
+      "node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/PrevNext.vue?vue&type=style&index=0&id=ba854f00&lang=stylus&scoped=true&": 483,
+      "node_modules/vue-loader/lib/loaders/pitcher.js??ref--4!node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/PrevNext.vue?vue&type=style&index=0&id=ba854f00&lang=stylus&scoped=true&": 485,
+      "node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/layouts/Layout.vue 4c580a0acf1acfb8655d92db6279f3f6": 554,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/vuepress.md a364548e759580867441382bbcdd5799": 555,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/01-入门（一）.md 18f0a82fd65a0927a4b9a415e0a8d69b": 556,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/02-入门（二）.md a8659ae42233f8bb65fcf216164fa027": 557,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/03-入门（三）.md 29f65a9752f3d222e46f21c72952c1af": 558,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/04-入门（四）.md 621d5c21b54ea2a56a0a84fe1799f2c0": 559,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/06-事件循环.md 49b0bb49719e95379714d6d6c09987f7": 560,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/05-全局变量.md 24a33d7dd5c1f99c0ad0eed698dae391": 561,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/nodejs之fs模块.md d53f605f0722767a4e4ef870d52de19d": 562,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/nodejs之module模块.md 3a0918e545d75fd647cc610dc6da444e": 563,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/nodejs之path模块.md d306b4e3203e998888d794e8421303d7": 564,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/nodejs之fs模块常用方法.md aa74bc9b9637a5fb4dc0695769a8d8bb": 565,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/nodejs/others.md 68a16896931417c29789c68a3a45cb47": 566
     },
     "usedIds": {
       "0": 0,
@@ -2988,7 +3010,20 @@
       "550": 550,
       "551": 551,
       "552": 552,
-      "553": 553
+      "553": 553,
+      "554": 554,
+      "555": 555,
+      "556": 556,
+      "557": 557,
+      "558": 558,
+      "559": 559,
+      "560": 560,
+      "561": 561,
+      "562": 562,
+      "563": 563,
+      "564": 564,
+      "565": 565,
+      "566": 566
     }
   },
   "chunks": {
@@ -3083,11 +3118,23 @@
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\脚手架工具\\webpack\\webpack之处理esmodule.md": 71,
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\脚手架工具\\webpack\\webpack之模块路径解析规则.md": 72,
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\脚手架工具\\webpack\\模块方法之requireContext.md": 73,
-      "3 app": 2
+      "3 app": 2,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\01-入门（一）.md": 4,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\02-入门（二）.md": 10,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\03-入门（三）.md": 77,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\04-入门（四）.md": 78,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\05-全局变量.md": 79,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\06-事件循环.md": 80,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\nodejs之fs模块.md": 81,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\nodejs之fs模块常用方法.md": 82,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\nodejs之module模块.md": 83,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\nodejs之path模块.md": 84,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\nodejs\\others.md": 85
     },
     "usedIds": [
       0,
       1,
+      10,
       11,
       12,
       13,
@@ -3119,6 +3166,7 @@
       37,
       38,
       39,
+      4,
       40,
       41,
       42,
@@ -3159,8 +3207,117 @@
       74,
       75,
       76,
+      77,
+      78,
+      79,
       8,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
       9
     ]
-  }
+  },
+  "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/layouts/GlobalLayout.vue?vue&type=style&index=0&id=c983d9c6&lang=stylus&scoped=true&": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/layouts/GlobalLayout.vue?vue&type=style&index=0&id=c983d9c6&lang=stylus&scoped=true&": 0,
+          "node_modules/css-loader/dist/runtime/api.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {
+          "0 mini-css-extract-plugin": 0
+        },
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/PrevNext.vue?vue&type=style&index=0&id=ba854f00&lang=stylus&scoped=true&": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/PrevNext.vue?vue&type=style&index=0&id=ba854f00&lang=stylus&scoped=true&": 0,
+          "node_modules/css-loader/dist/runtime/api.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {
+          "0 mini-css-extract-plugin": 0
+        },
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/Footer.vue?vue&type=style&index=0&id=f436304e&lang=stylus&scoped=true&": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/Footer.vue?vue&type=style&index=0&id=f436304e&lang=stylus&scoped=true&": 0,
+          "node_modules/css-loader/dist/runtime/api.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {
+          "0 mini-css-extract-plugin": 0
+        },
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/Header.vue?vue&type=style&index=0&id=9a400230&lang=stylus&scoped=true&": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/dist/cjs.js??ref--13-oneOf-1-1!node_modules/vue-loader/lib/loaders/stylePostLoader.js!node_modules/postcss-loader/src/index.js??ref--13-oneOf-1-2!node_modules/stylus-loader/index.js??ref--13-oneOf-1-3!node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/components/Header.vue?vue&type=style&index=0&id=9a400230&lang=stylus&scoped=true&": 0,
+          "node_modules/css-loader/dist/runtime/api.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {
+          "0 mini-css-extract-plugin": 0
+        },
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ]
 }

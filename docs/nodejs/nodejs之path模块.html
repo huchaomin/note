@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nodejs path 模块 | 木林子的笔记空间</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+    <meta name="description" content="nodejs path 模块初解">
+    <meta property="article:published_time" content="null">
+    <meta property="article:modified_time" content="2022-01-18T08:27:22.000Z">
+    <meta property="og:site_name" content="木林子的笔记空间">
+    <meta property="og:title" content="nodejs path 模块">
+    <meta property="og:description" content="nodejs path 模块初解">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/nodejs/nodejs%E4%B9%8Bpath%E6%A8%A1%E5%9D%97.html">
+    <meta name="twitter:title" content="nodejs path 模块">
+    <meta name="twitter:description" content="nodejs path 模块初解">
+    <meta name="twitter:url" content="/nodejs/nodejs%E4%B9%8Bpath%E6%A8%A1%E5%9D%97.html">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="mulinzi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="nodejs">
+    <meta property="article:tag" content="nodejs">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="theme-color" content="rgba(255, 255, 255, 0.95)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/9.styles.cf7d4acf.css" as="style"><link rel="preload" href="/assets/js/chunk-default.c958be83.js" as="script"><link rel="preload" href="/assets/css/0.styles.daafbb38.css" as="style"><link rel="preload" href="/assets/js/vendors~app.a91f16b8.js" as="script"><link rel="preload" href="/assets/css/styles.1cf3956c.css" as="style"><link rel="preload" href="/assets/js/app.40ef8acf.js" as="script"><link rel="preload" href="/assets/css/74.styles.430b7aad.css" as="style"><link rel="preload" href="/assets/js/74.920be48e.js" as="script"><link rel="preload" href="/assets/js/84.41253b5f.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.dc82a25b.js" as="script">
+    <link rel="stylesheet" href="/assets/css/9.styles.cf7d4acf.css"><link rel="stylesheet" href="/assets/css/0.styles.daafbb38.css"><link rel="stylesheet" href="/assets/css/styles.1cf3956c.css"><link rel="stylesheet" href="/assets/css/74.styles.430b7aad.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-c983d9c6><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-9a400230 data-v-c983d9c6><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-9a400230></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light" data-v-9a400230></i></span></button> <div class="spacer" data-v-9a400230></div> <div class="v-menu" data-v-9a400230><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-9a400230><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-9a400230><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-9a400230></div> <span data-v-9a400230>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-9a400230></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-62df6c56 data-v-c983d9c6><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-62df6c56><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-1179" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-1179" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview theme--light" data-v-62df6c56><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            javascript
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            css
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            nodejs
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            脚手架工具
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            tools
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            others
+          </div></span></div></div></div><!----></div></div></div><div class="v-navigation-drawer__border"></div></nav> <main class="v-main" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-c983d9c6><div class="v-main__wrap"><!----> <div id="scroll-body" class="theme-container py-sm-10 py-0" data-v-c983d9c6><div class="theme-default-content d-flex flex-column pa-sm-6 pa-2" data-v-c983d9c6><div class="content__default"><h3 id="作用"><a href="#作用" class="header-anchor">#</a> 作用</h3> <p>path模块提供了用于处理文件和目录路径的实用工具</p> <h3 id="系统与路径"><a href="#系统与路径" class="header-anchor">#</a> 系统与路径</h3> <ul><li>在 Linux 和 macOS 上，路径可能类似于<code>/users/joe/file.txt</code></li> <li>在 Windows 上则有所不同，具有类似以下的结构<code>\users\joe\file.txt</code></li></ul> <h3 id="windows与posix"><a href="#windows与posix" class="header-anchor">#</a> Windows与POSIX</h3> <p>path模块的默认操作因运行Node.js应用程序的操作系统而异</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// POSIX</span>
+path<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span><span class="token string">'C:\\temp\\myfile.html'</span><span class="token punctuation">)</span>
+<span class="token comment">// 'C:\\temp\\myfile.html'</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// Windows</span>
+path<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span><span class="token string">'C:\\temp\\myfile.html'</span><span class="token punctuation">)</span>
+<span class="token comment">// 'myfile.html'</span>
+</code></pre></div><p>要在任何操作系统上使用Windows文件路径时获得一致的结果，请使用<code>path.win32</code></p> <div class="language- extra-class"><pre class="language-text"><code>path.win32.basename('C:\\temp\\myfile.html')
+// 'myfile.html'
+</code></pre></div><p>要在任何操作系统上使用POSIX文件路径时获得一致的结果，请使用<code>path.posix</code></p> <div class="language- extra-class"><pre class="language-text"><code>path.posix.basename('C:\\temp\\myfile.html')
+// 'C:\\temp\\myfile.html'
+</code></pre></div><h3 id="path-basename-path-ext"><a href="#path-basename-path-ext" class="header-anchor">#</a> path.basename(path[, ext])</h3> <p>返回path的最后一部分</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span><span class="token string">'/foo/bar/baz/asdf/quux.html'</span><span class="token punctuation">)</span>
+<span class="token comment">// 'quux.html'</span>
+path<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span><span class="token string">'/foo/bar/baz/asdf/quux.html'</span><span class="token punctuation">,</span> <span class="token string">'.html'</span><span class="token punctuation">)</span>
+<span class="token comment">// 'quux'</span>
+</code></pre></div><p>Windows通常以不区分大小写的方式处理文件名，包括文件扩展名，但此功能不会</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span>win32<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span><span class="token string">'C:\\foo.html'</span><span class="token punctuation">,</span> <span class="token string">'.html'</span><span class="token punctuation">)</span>
+<span class="token comment">// 'foo'</span>
+path<span class="token punctuation">.</span>win32<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span><span class="token string">'C:\\foo.HTML'</span><span class="token punctuation">,</span> <span class="token string">'.html'</span><span class="token punctuation">)</span>
+<span class="token comment">// 'foo.HTML'</span>
+</code></pre></div><h3 id="path-delimiter"><a href="#path-delimiter" class="header-anchor">#</a> path.delimiter</h3> <p>提供特定于平台的路径定界符</p> <ul><li><code>;</code>对于Windows</li> <li><code>:</code>对于POSIX</li></ul> <h3 id="path-dirname-path"><a href="#path-dirname-path" class="header-anchor">#</a> path.dirname(path)</h3> <p>返回目录部分</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span><span class="token string">'C:\\foo.html'</span><span class="token punctuation">)</span>
+<span class="token comment">// 'C:\\'</span>
+</code></pre></div><h3 id="path-extname-path"><a href="#path-extname-path" class="header-anchor">#</a> path.extname(path)</h3> <p>返回扩展名</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">extname</span><span class="token punctuation">(</span><span class="token string">'index.html'</span><span class="token punctuation">)</span>
+<span class="token comment">// '.html'</span>
+path<span class="token punctuation">.</span><span class="token function">extname</span><span class="token punctuation">(</span><span class="token string">'index.coffee.md'</span><span class="token punctuation">)</span>
+<span class="token comment">// '.md'</span>
+path<span class="token punctuation">.</span><span class="token function">extname</span><span class="token punctuation">(</span><span class="token string">'index.'</span><span class="token punctuation">)</span>
+<span class="token comment">// '.'</span>
+path<span class="token punctuation">.</span><span class="token function">extname</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">)</span>
+<span class="token comment">// ''</span>
+path<span class="token punctuation">.</span><span class="token function">extname</span><span class="token punctuation">(</span><span class="token string">'.index'</span><span class="token punctuation">)</span>
+<span class="token comment">// ''</span>
+path<span class="token punctuation">.</span><span class="token function">extname</span><span class="token punctuation">(</span><span class="token string">'.index.md'</span><span class="token punctuation">)</span>
+<span class="token comment">// '.md'</span>
+</code></pre></div><h3 id="path-format-pathobject"><a href="#path-format-pathobject" class="header-anchor">#</a> path.format(pathObject)</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  dir<span class="token operator">:</span> <span class="token string">'C:\\path\\dir'</span><span class="token punctuation">,</span>
+  base<span class="token operator">:</span> <span class="token string">'file.txt'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 'C:\\path\\dir\\file.txt'</span>
+</code></pre></div><h3 id="path-isabsolute-path"><a href="#path-isabsolute-path" class="header-anchor">#</a> path.isAbsolute(path)</h3> <p>确定是否为绝对路径</p> <h3 id="path-join-paths"><a href="#path-join-paths" class="header-anchor">#</a> path.join([...paths])</h3> <p>使用特定于平台的分隔符作为分隔符将所有给定的段连接在一起，然后对结果路径进行规范化
+零长度段将被忽略</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/foo'</span><span class="token punctuation">,</span> <span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token string">'baz/asdf'</span><span class="token punctuation">,</span> <span class="token string">'quux'</span><span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">)</span>
+<span class="token comment">// '\\foo\\bar\\baz\\asdf'</span>
+path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/foo'</span><span class="token punctuation">,</span> <span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token string">'baz/asdf'</span><span class="token punctuation">,</span> <span class="token string">'quux'</span><span class="token punctuation">,</span> <span class="token string">'.'</span><span class="token punctuation">)</span>
+<span class="token comment">// '\\foo\\bar\\baz\\asdf\\quux'</span>
+</code></pre></div><h3 id="path-normalize-path"><a href="#path-normalize-path" class="header-anchor">#</a> path.normalize(path)</h3> <p>对给定的path进行规范化</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">normalize</span><span class="token punctuation">(</span><span class="token string">'C:\\temp\\\\foo\\bar\\..\\'</span><span class="token punctuation">)</span>
+<span class="token comment">// 'C:\\temp\\foo\\'</span>
+</code></pre></div><h3 id="path-parse-path"><a href="#path-parse-path" class="header-anchor">#</a> path.parse(path)</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token string">'C:\\path\\dir\\file.txt'</span><span class="token punctuation">)</span>
+<span class="token comment">// {</span>
+<span class="token comment">//  root: 'C:\\',</span>
+<span class="token comment">//  dir: 'C:\\path\\dir',</span>
+<span class="token comment">//  base: 'file.txt',</span>
+<span class="token comment">//  ext: '.txt',</span>
+<span class="token comment">//  name: 'file'</span>
+<span class="token comment">// }</span>
+<span class="token comment">// ┌─────────────────────┬────────────┐</span>
+<span class="token comment">// │          dir        │    base    │</span>
+<span class="token comment">// ├──────┬              ├──────┬─────┤</span>
+<span class="token comment">// │ root │              │ name │ ext │</span>
+<span class="token comment">// &quot; C:\      path\dir   \ file  .txt &quot;</span>
+<span class="token comment">// └──────┴──────────────┴──────┴─────┘</span>
+</code></pre></div><h3 id="path-relative-from-to"><a href="#path-relative-from-to" class="header-anchor">#</a> path.relative(from, to)</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">relative</span><span class="token punctuation">(</span><span class="token string">'/data/orandea/test/aaa'</span><span class="token punctuation">,</span> <span class="token string">'/data/orandea/impl/bbb'</span><span class="token punctuation">)</span>
+<span class="token comment">// Returns: '../../impl/bbb'</span>
+</code></pre></div><h3 id="path-resolve-paths"><a href="#path-resolve-paths" class="header-anchor">#</a> path.resolve([...paths])</h3> <ul><li>将一系列路径或路径段解析为绝对路径</li> <li>从右到左处理,直到构造出绝对路径为止</li> <li>处理到最后如果尚未生成绝对路径，则使用当前工作目录</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'/foo/bar'</span><span class="token punctuation">,</span> <span class="token string">'./baz'</span><span class="token punctuation">)</span>
+<span class="token comment">// '/foo/bar/baz'</span>
+
+path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'/foo/bar'</span><span class="token punctuation">,</span> <span class="token string">'/tmp/file/'</span><span class="token punctuation">)</span>
+<span class="token comment">// '/tmp/file'</span>
+
+path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'wwwroot'</span><span class="token punctuation">,</span> <span class="token string">'static_files/png/'</span><span class="token punctuation">,</span> <span class="token string">'../gif/image.gif'</span><span class="token punctuation">)</span>
+<span class="token comment">// If the current working directory is /home/myself/node,</span>
+<span class="token comment">// '/home/myself/node/wwwroot/static_files/gif/image.gif'</span>
+</code></pre></div><h3 id="path-sep"><a href="#path-sep" class="header-anchor">#</a> path.sep</h3> <p>提供特定于平台的路径段分隔符</p> <ul><li><code>\</code> 在Windows上</li> <li><code>/</code> 在POSIX上</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// posix
+'foo/bar/baz'.split(path.sep)
+// ['foo', 'bar', 'baz']
+
+// Windows
+'foo\\bar\\baz'.split(path.sep)
+// ['foo', 'bar', 'baz']
+</code></pre></div><div role="alert" class="v-alert v-sheet theme--light v-alert--text primary--text"><div class="v-alert__wrapper"><i aria-hidden="true" class="v-icon notranslate v-alert__icon mdi mdi-lightbulb-multiple theme--light primary--text"></i><div class="v-alert__content">提示
+<p>在Windows上，正斜杠（/）和反斜杠（\）均被接受为路径段分隔符。但是，这些path方法仅添加反斜杠（\）</p></div></div></div></div> <div class="spacer"></div> <div class="prev-next d-none d-sm-flex justify-space-between mt-9" data-v-ba854f00><button type="button" class="ml-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-ba854f00><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-left theme--light" data-v-ba854f00></i> <span data-v-ba854f00>nodejs之module模块</span></span></button> <div class="spacer" data-v-ba854f00 data-v-ba854f00></div> <button type="button" class="mr-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-ba854f00><span class="v-btn__content"><span data-v-ba854f00>others</span> <i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-right theme--light" data-v-ba854f00></i></span></button></div> <!----></div></div> <div class="v-menu" data-v-c983d9c6><!----></div> <button type="button" class="to-top v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--default" style="display:none;" data-v-c983d9c6 data-v-c983d9c6><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-up theme--light primary--text" data-v-c983d9c6></i></span></button></div></main> <!----></div></div><div class="global-ui"><div class="v-snack v-snack--bottom v-snack--has-background v-snack--right v-snack--vertical" style="padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;" data-v-fec8b358><div class="v-snack__wrapper v-sheet theme--dark" style="max-width:0px;display:none;"><div role="status" aria-live="polite" class="v-snack__content">
+    作者又有了新的笔记哟，点击刷新查看
+    </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
+        刷新
+      </span></button></div></div></div></div></div>
+    <script src="/assets/js/chunk-default.c958be83.js" defer></script><script src="/assets/js/74.920be48e.js" defer></script><script src="/assets/js/84.41253b5f.js" defer></script><script src="/assets/js/75.dc82a25b.js" defer></script><script src="/assets/js/vendors~app.a91f16b8.js" defer></script><script src="/assets/js/app.40ef8acf.js" defer></script>
+  </body>
+</html>

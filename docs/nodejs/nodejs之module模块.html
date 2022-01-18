@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nodejs module 模块 | 木林子的笔记空间</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+    <meta name="description" content="nodejs module 模块初解">
+    <meta property="article:published_time" content="null">
+    <meta property="article:modified_time" content="2022-01-18T08:27:22.000Z">
+    <meta property="og:site_name" content="木林子的笔记空间">
+    <meta property="og:title" content="nodejs module 模块">
+    <meta property="og:description" content="nodejs module 模块初解">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/nodejs/nodejs%E4%B9%8Bmodule%E6%A8%A1%E5%9D%97.html">
+    <meta name="twitter:title" content="nodejs module 模块">
+    <meta name="twitter:description" content="nodejs module 模块初解">
+    <meta name="twitter:url" content="/nodejs/nodejs%E4%B9%8Bmodule%E6%A8%A1%E5%9D%97.html">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="mulinzi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="nodejs">
+    <meta property="article:tag" content="nodejs">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="theme-color" content="rgba(255, 255, 255, 0.95)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/9.styles.cf7d4acf.css" as="style"><link rel="preload" href="/assets/js/chunk-default.c958be83.js" as="script"><link rel="preload" href="/assets/css/0.styles.daafbb38.css" as="style"><link rel="preload" href="/assets/js/vendors~app.a91f16b8.js" as="script"><link rel="preload" href="/assets/css/styles.1cf3956c.css" as="style"><link rel="preload" href="/assets/js/app.40ef8acf.js" as="script"><link rel="preload" href="/assets/css/74.styles.430b7aad.css" as="style"><link rel="preload" href="/assets/js/74.920be48e.js" as="script"><link rel="preload" href="/assets/js/83.9f034f6c.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.dc82a25b.js" as="script">
+    <link rel="stylesheet" href="/assets/css/9.styles.cf7d4acf.css"><link rel="stylesheet" href="/assets/css/0.styles.daafbb38.css"><link rel="stylesheet" href="/assets/css/styles.1cf3956c.css"><link rel="stylesheet" href="/assets/css/74.styles.430b7aad.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-c983d9c6><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-9a400230 data-v-c983d9c6><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-9a400230></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light" data-v-9a400230></i></span></button> <div class="spacer" data-v-9a400230></div> <div class="v-menu" data-v-9a400230><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-9a400230><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-9a400230><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-9a400230></div> <span data-v-9a400230>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-9a400230></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-62df6c56 data-v-c983d9c6><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-62df6c56><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-1131" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-1131" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview theme--light" data-v-62df6c56><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            javascript
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            css
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            nodejs
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            脚手架工具
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            tools
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            others
+          </div></span></div></div></div><!----></div></div></div><div class="v-navigation-drawer__border"></div></nav> <main class="v-main" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-c983d9c6><div class="v-main__wrap"><!----> <div id="scroll-body" class="theme-container py-sm-10 py-0" data-v-c983d9c6><div class="theme-default-content d-flex flex-column pa-sm-6 pa-2" data-v-c983d9c6><div class="content__default"><h3 id="本质为module的实例的构造函数"><a href="#本质为module的实例的构造函数" class="header-anchor">#</a> 本质为<code>Module</code>的实例的构造函数</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> Module <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'module'</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>module <span class="token keyword">instanceof</span> <span class="token class-name">Module</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div><h3 id="作用"><a href="#作用" class="header-anchor">#</a> 作用</h3> <p>与 Module 的实例交互时提供通用的实用方法，module 变量常见于 CommonJS 模块中<br>
+通过<code>import 'module'</code>或<code>require('module')</code>访问</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> Module <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'module'</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Module<span class="token punctuation">)</span>
+<span class="token comment">//  [Function: Module] {</span>
+<span class="token comment">//    builtinModules: [</span>
+<span class="token comment">//      '_http_agent',       '_http_client',        '_http_common',</span>
+<span class="token comment">//      '_http_incoming',    '_http_outgoing',      '_http_server',</span>
+<span class="token comment">//      '_stream_duplex',    '_stream_passthrough', '_stream_readable',</span>
+<span class="token comment">//      '_stream_transform', '_stream_wrap',        '_stream_writable',</span>
+<span class="token comment">//      '_tls_common',       '_tls_wrap',           'assert',</span>
+<span class="token comment">//      'async_hooks',       'buffer',              'child_process',</span>
+<span class="token comment">//      'cluster',           'console',             'constants',</span>
+<span class="token comment">//      'crypto',            'dgram',               'dns',</span>
+<span class="token comment">//      'domain',            'events',              'fs',</span>
+<span class="token comment">//      'http',              'http2',               'https',</span>
+<span class="token comment">//      'inspector',         'module',              'net',</span>
+<span class="token comment">//      'os',                'path',                'perf_hooks',</span>
+<span class="token comment">//      'process',           'punycode',            'querystring',</span>
+<span class="token comment">//      'readline',          'repl',                'stream',</span>
+<span class="token comment">//      'string_decoder',    'sys',                 'timers',</span>
+<span class="token comment">//      'tls',               'trace_events',        'tty',</span>
+<span class="token comment">//      'url',               'util',                'v8',</span>
+<span class="token comment">//      'vm',                'worker_threads',      'zlib'</span>
+<span class="token comment">//    ],</span>
+<span class="token comment">//    _cache: [Object: null prototype] {</span>
+<span class="token comment">//      'D:\\code\\myNote\\index.js': Module {</span>
+<span class="token comment">//        id: '.',</span>
+<span class="token comment">//        path: 'D:\\code\\myNote',</span>
+<span class="token comment">//        exports: {},</span>
+<span class="token comment">//        parent: null,</span>
+<span class="token comment">//        filename: 'D:\\code\\myNote\\index.js',</span>
+<span class="token comment">//        loaded: false,</span>
+<span class="token comment">//        children: [],</span>
+<span class="token comment">//        paths: [Array]</span>
+<span class="token comment">//      }</span>
+<span class="token comment">//    },</span>
+<span class="token comment">//    _pathCache: [Object: null prototype] {</span>
+<span class="token comment">//      'D:\\code\\myNote\\index.js\u0000': 'D:\\code\\myNote\\index.js'</span>
+<span class="token comment">//    },</span>
+<span class="token comment">//    _extensions: [Object: null prototype] {</span>
+<span class="token comment">//      '.js': [Function],</span>
+<span class="token comment">//      '.json': [Function],</span>
+<span class="token comment">//      '.node': [Function]</span>
+<span class="token comment">//    },</span>
+<span class="token comment">//    globalPaths: [</span>
+<span class="token comment">//      'C:\\Users\\hwx927218\\.node_modules',</span>
+<span class="token comment">//      'C:\\Users\\hwx927218\\.node_libraries',</span>
+<span class="token comment">//      'D:\\Program Files\\nodejs\\lib\\node'</span>
+<span class="token comment">//    ],</span>
+<span class="token comment">//    _debug: [Function: deprecated],</span>
+<span class="token comment">//    _findPath: [Function],</span>
+<span class="token comment">//    _nodeModulePaths: [Function],</span>
+<span class="token comment">//    _resolveLookupPaths: [Function],</span>
+<span class="token comment">//    _load: [Function],</span>
+<span class="token comment">//    _resolveFilename: [Function],</span>
+<span class="token comment">//    createRequireFromPath: [Function: createRequireFromPath],</span>
+<span class="token comment">//    createRequire: [Function: createRequire],</span>
+<span class="token comment">//    _initPaths: [Function],</span>
+<span class="token comment">//    _preloadModules: [Function],</span>
+<span class="token comment">//    syncBuiltinESMExports: [Function: syncBuiltinESMExports],</span>
+<span class="token comment">//    Module: [Circular],</span>
+<span class="token comment">//    runMain: [Function: executeUserEntryPoint]</span>
+<span class="token comment">//  }</span>
+</code></pre></div><p>在mjs文件中</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Module <span class="token keyword">from</span> <span class="token string">'module'</span>
+</code></pre></div><h3 id="module-builtinmodules"><a href="#module-builtinmodules" class="header-anchor">#</a> module.builtinModules</h3> <p>Node.js提供的所有模块的名称的列表。可用于验证模块是否由第三方维护。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// In an ECMAScript module</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> builtinModules <span class="token keyword">as</span> builtin <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'module'</span>
+<span class="token comment">// In a CommonJS module</span>
+<span class="token keyword">const</span> builtin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'module'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>builtinModules
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Module<span class="token punctuation">.</span>builtinModules <span class="token operator">===</span> builtin<span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div><h3 id="module-createrequire-filename"><a href="#module-createrequire-filename" class="header-anchor">#</a> module.createRequire(filename)</h3> <blockquote><p>我的理解：为<code>ECMAScript module</code>创建require函数,去引入<code>CommonJS module</code></p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createRequire <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'module'</span>
+<span class="token keyword">const</span> require <span class="token operator">=</span> <span class="token function">createRequire</span><span class="token punctuation">(</span><span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+
+<span class="token comment">// sibling-module.js is a CommonJS module.</span>
+<span class="token keyword">const</span> siblingModule <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./sibling-module'</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="module-syncbuiltinesmexports"><a href="#module-syncbuiltinesmexports" class="header-anchor">#</a> module.syncBuiltinESMExports()</h3> <p>更新内置的 ES 模块的所有实时绑定，以匹配 CommonJS 导出的属性。<br>
+它不会在 ES 模块中添加或删除导出的属性。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> assert <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'assert'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> syncBuiltinESMExports <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'module'</span><span class="token punctuation">)</span>
+
+fs<span class="token punctuation">.</span>readFile <span class="token operator">=</span> <span class="token keyword">null</span>
+<span class="token keyword">delete</span> fs<span class="token punctuation">.</span>readFileSync
+<span class="token keyword">const</span> <span class="token function-variable function">newAPI</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+fs<span class="token punctuation">.</span>newAPI <span class="token operator">=</span> newAPI
+
+<span class="token function">syncBuiltinESMExports</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">esmFS</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  assert<span class="token punctuation">.</span><span class="token function">strictEqual</span><span class="token punctuation">(</span>fs<span class="token punctuation">.</span>readFile<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+  assert<span class="token punctuation">.</span><span class="token function">strictEqual</span><span class="token punctuation">(</span>esmFS<span class="token punctuation">.</span>readFile<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+  assert<span class="token punctuation">.</span><span class="token function">strictEqual</span><span class="token punctuation">(</span><span class="token string">'readFileSync'</span> <span class="token keyword">in</span> fs<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+  assert<span class="token punctuation">.</span><span class="token function">strictEqual</span><span class="token punctuation">(</span><span class="token string">'readFileSync'</span> <span class="token keyword">in</span> esmFS<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+  assert<span class="token punctuation">.</span><span class="token function">strictEqual</span><span class="token punctuation">(</span>fs<span class="token punctuation">.</span>newAPI<span class="token punctuation">,</span> newAPI<span class="token punctuation">)</span>
+  assert<span class="token punctuation">.</span><span class="token function">strictEqual</span><span class="token punctuation">(</span>esmFS<span class="token punctuation">.</span>newAPI<span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <div class="spacer"></div> <div class="prev-next d-none d-sm-flex justify-space-between mt-9" data-v-ba854f00><button type="button" class="ml-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-ba854f00><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-left theme--light" data-v-ba854f00></i> <span data-v-ba854f00>nodejs之fs模块常用方法</span></span></button> <div class="spacer" data-v-ba854f00 data-v-ba854f00></div> <button type="button" class="mr-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-ba854f00><span class="v-btn__content"><span data-v-ba854f00>nodejs之path模块</span> <i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-right theme--light" data-v-ba854f00></i></span></button></div> <!----></div></div> <div class="v-menu" data-v-c983d9c6><!----></div> <button type="button" class="to-top v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--default" style="display:none;" data-v-c983d9c6 data-v-c983d9c6><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-up theme--light primary--text" data-v-c983d9c6></i></span></button></div></main> <!----></div></div><div class="global-ui"><div class="v-snack v-snack--bottom v-snack--has-background v-snack--right v-snack--vertical" style="padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;" data-v-fec8b358><div class="v-snack__wrapper v-sheet theme--dark" style="max-width:0px;display:none;"><div role="status" aria-live="polite" class="v-snack__content">
+    作者又有了新的笔记哟，点击刷新查看
+    </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
+        刷新
+      </span></button></div></div></div></div></div>
+    <script src="/assets/js/chunk-default.c958be83.js" defer></script><script src="/assets/js/74.920be48e.js" defer></script><script src="/assets/js/83.9f034f6c.js" defer></script><script src="/assets/js/75.dc82a25b.js" defer></script><script src="/assets/js/vendors~app.a91f16b8.js" defer></script><script src="/assets/js/app.40ef8acf.js" defer></script>
+  </body>
+</html>

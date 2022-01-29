@@ -71,15 +71,15 @@ Vue.component('icon', Icon)
 </template>
 <script>
 export default {
-  props: {
-    type: {
-      type: String,
-      required: true,
-    },
-    rotate: {
-      default: '0',
-    },
-  },
+  // props: { // props可选
+  //   type: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   rotate: {
+  //     default: '0',
+  //   },
+  // },
 }
 </script>
 <style scoped lang="scss">

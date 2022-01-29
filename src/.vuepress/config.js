@@ -173,5 +173,10 @@ module.exports = {
       before: info => `<v-alert type="warning" text icon="mdi-alert-outline">${info}\n`,
       after: () => '</v-alert>\n',
     }],
+    ['container', {
+      type: 'table',
+      before: () => '<simple-table>\n',
+      after: () => '</simple-table>\n',
+    }],
   ],
 }

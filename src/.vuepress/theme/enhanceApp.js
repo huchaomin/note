@@ -1,6 +1,7 @@
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.css'
 import '@mdi/font/css/materialdesignicons.css'
+import simpleTable from './global-components/simpleTable.js'
 
 function padStart (value, pad, bit = 2) {
   return String(value).padStart(bit, pad)
@@ -52,4 +53,5 @@ export default ({
       mobileBreakpoint: 'xs',
     },
   })
+  Vue.component('simple-table', simpleTable)
 }

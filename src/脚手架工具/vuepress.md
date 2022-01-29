@@ -73,6 +73,13 @@ export default {
 ### markdown 导入代码片段并高亮（无法使用路径别名）【也可以导入代码当中一部分】
 <<< src/index.md{2}
 
+### 渲染table
+::: table
+aaa|bbb|ccc
+a|b|c
+a|b|c
+:::
+
 ### 脚本和样式提升
 ...
 
@@ -81,3 +88,6 @@ export default {
 - js 垃圾回收机制
 - queueWatcher 
 - 流程图
+- JSON.string
+- 阻止body滚动
+- jsx语法

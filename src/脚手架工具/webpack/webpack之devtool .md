@@ -13,12 +13,13 @@ sourse-map 就是一份源码和转换后代码的映射文件
 [参考官网](https://webpack.docschina.org/configuration/devtool/)
 
 ### 总结
-| 参数     | 参数解释                                           |
-|:-------|:-----------------------------------------------|
-| eval   | 打包后的模块都使用 eval() 执行，行映射可能不准；不产生独立的 map 文件      |
-| cheap  | map 映射只显示行不显示列，忽略源自 loader 的 source map        |
-| inline | 映射文件以 base64 格式编码，加在 bundle 文件最后，不产生独立的 map 文件 |
-| module | 增加对 loader source map 和第三方模块的映射                |
+::: table
+参数    | 参数解释
+eval   | 打包后的模块都使用 eval() 执行，行映射可能不准；不产生独立的 map 文件
+cheap  | map 映射只显示行不显示列，忽略源自 loader 的 source map
+inline | 映射文件以 base64 格式编码，加在 bundle 文件最后，不产生独立的 map 文件
+module | 增加对 loader source map 和第三方模块的映射
+:::
 
 ### 例
  - `source-map`: 生成独立 map 文件，显示报错的行列信息

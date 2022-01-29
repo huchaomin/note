@@ -169,11 +169,11 @@ export default {
   },
   mounted () {
     const el = this.$el
-    el.ontouchstart = e => {
+    el.addEventListener('touchstart', e => {
       const arr = [...document.querySelectorAll('div[class*="language-"]')]
       this.isTouchCode = arr.some(parent => parent.contains(e.target))
       this.$bus.$emit('parentTouchstart', this.isTouchCode)
-    }
+    }, { passive: true })
   },
   methods: {
     toContainerTop () {

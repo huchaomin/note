@@ -91,3 +91,4 @@ a|b|c
 - JSON.string
 - 阻止body滚动
 - jsx语法
+- js 原型，运行练

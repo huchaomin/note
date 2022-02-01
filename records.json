@@ -2486,7 +2486,13 @@
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue2.x/渲染函数.md e2c882c9ef58bd575215eab149b7d2e8": 587,
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue2.x/表单元素.md 4bb237d41770bf6076a37c2c3fd6a02e": 588,
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/vue-cli/配置svg.md 5ce8174e05bb2e26f727eea8f305af11": 589,
-      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/webpack/webpack之devtool .md 3cdd3bc5d26d4537dd1777afa1d20cef": 590
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/webpack/webpack之devtool .md 3cdd3bc5d26d4537dd1777afa1d20cef": 590,
+      "node_modules/url-loader/dist/cjs.js??ref--4-0!src/assets/image/vue-transition.png": 546,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/vuepress.md 19c2beea8041ce0c85392b00f57fef6b": 574,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/others/interview/内存泄露.md e4fe851854e2fe7ca88971ee4ac666aa": 584,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/others/interview/闭包.md 2dafd73a7f6b057d07f3a85c4252557f": 591,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue2.x/transition.md 48399eee0fbfdf52c37c3a13f0327fee": 592,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue2.x/事件修饰符.md 1b244728963d54874cc4ea0aad4f1f8e": 593
     },
     "usedIds": {
       "0": 0,
@@ -3079,7 +3085,10 @@
       "587": 587,
       "588": 588,
       "589": 589,
-      "590": 590
+      "590": 590,
+      "591": 591,
+      "592": 592,
+      "593": 593
     }
   },
   "chunks": {
@@ -3207,7 +3216,9 @@
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue2.x\\事件修饰符.md": 104,
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue2.x\\插槽.md": 105,
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue2.x\\渲染函数.md": 106,
-      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue2.x\\表单元素.md": 107
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue2.x\\表单元素.md": 107,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\others\\interview\\内存泄露.md": 108,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\others\\interview\\闭包.md": 109
     },
     "usedIds": [
       0,
@@ -3221,6 +3232,8 @@
       105,
       106,
       107,
+      108,
+      109,
       11,
       12,
       13,

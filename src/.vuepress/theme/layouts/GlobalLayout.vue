@@ -170,7 +170,7 @@ export default {
   mounted () {
     const el = this.$el
     el.addEventListener('touchstart', e => {
-      const arr = [...document.querySelectorAll('div[class*="language-"]')]
+      const arr = [...document.querySelectorAll('div[class*="language-"], .v-data-table')]
       this.isTouchCode = arr.some(parent => parent.contains(e.target))
       this.$bus.$emit('parentTouchstart', this.isTouchCode)
     }, { passive: true })

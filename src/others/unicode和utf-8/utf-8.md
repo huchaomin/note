@@ -70,3 +70,5 @@ Unicode符号范围(十六进制)|UTF-8编码方式(二进制)
 
 #### 参考文献
 [各个进制之间如何转换](https://www.cnblogs.com/gaizai/p/4233780.html)
+[查询unicode编码](https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%E8%83%A1)
+[汉字与unicode对应表](http://www.chi2ko.com/tool/CJK.htm)

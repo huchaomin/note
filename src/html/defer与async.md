@@ -2,7 +2,7 @@
 date: '1641257636565'
 title: defer async
 description: script标签defer async使用详解
-tags: [defer async]
+tags: [html]
 ---
 
 ### 立即执行的脚本

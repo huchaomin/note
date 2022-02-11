@@ -3,7 +3,7 @@ const fs = require('fs')
 const resolve = dir => path.join(__dirname, dir)
 const docsRoot = resolve('../../')
 const uniqueId = require('./index.js').uniqueId
-const parentSort = ['javascript', 'css', 'vue', 'plugin', 'nodejs', '脚手架工具', 'tools', 'others']
+const parentSort = ['javascript', 'css', 'html', 'vue', 'plugin', 'nodejs', '脚手架工具', 'tools', 'others']
 
 function isIndex (fileName) {
   return ['README.md', 'index.md'].includes(fileName)

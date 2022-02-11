@@ -2,7 +2,7 @@
 date: '1641210646249'
 title: preload prefetch
 description: 浏览器预加载preload prefetch祥解
-tags: [preload prefetch]
+tags: [html]
 ---
 
 ### preload (提前加载)

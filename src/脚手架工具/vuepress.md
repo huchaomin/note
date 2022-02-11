@@ -82,14 +82,3 @@ a|b|c
 
 ### 脚本和样式提升
 ...
-
-### 待完善
-- Algolia 搜索（文档写的足够好）
-- js 垃圾回收机制
-- queueWatcher 
-- 流程图
-- JSON.string
-- 阻止body滚动
-- jsx语法
-- js 原型，运行练
-- 移动端开发注意的问题

@@ -39,7 +39,7 @@ Default value: ''
 <svg viewBox="0 0 100 100">
 ```
 ### 3、options.symbol
-就像options.svg一样，但会为每个生成的<symbol>添加属性。
+就像options.svg一样，但会为每个生成的symbol添加属性。
 Type: Object
 Default value: {}
 ### 4、options.includedemo
@@ -49,7 +49,7 @@ Default value: false
 ### 5、options.cleanup 
 清除所有自带的行内样式
 ### 6、options.cleanupdefs 
-设置为false时，不对<defs>元素执行清理。
+设置为false时，不对defs元素执行清理。
 ### 7、options.inheritviewbox
 viewbox继承
 ```

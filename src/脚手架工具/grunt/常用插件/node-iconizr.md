@@ -30,7 +30,7 @@ iconizr的渲染配置和输出格式行为与svg-sprite相同，所以请查看
 ### 2、level
 这是PNG文件的优化级别。 它必须介于0和11（含）之间，默认为4，0表示“无优化”，1表示“快速粗糙”，11表示“慢速和高质量”。 将此值设置为较高值可能会导致处理时间过长。 默认为3。
 ### 3、embed
-如果给定，iconizr将使用此值作为路径前缀将样式表嵌入到HTML文档中（用于JavaScript加载器片段）。 默认情况下，当前工作目录和主输出目录之间的路径段将用作根相对嵌入路径（即将path / to / css作为输出目录将导致加载器片段期望CSS样式表位于/path/to/css/<stylesheet-flavour>.css）。 您可以指定一个期间。 在这里制作相对于HTML文档的嵌入路径（即./<stylesheet-flavour>.css），或使用任何其他相对路径（例如../resources用于嵌入路径../ resources / <stylesheet-flavor>的CSS）。
+如果给定，iconizr将使用此值作为路径前缀将样式表嵌入到HTML文档中（用于JavaScript加载器片段）。 默认情况下，当前工作目录和主输出目录之间的路径段将用作根相对嵌入路径（即将path / to / css作为输出目录将导致加载器片段期望CSS样式表位于/path/to/css/stylesheet-flavour.css）。 您可以指定一个期间。 在这里制作相对于HTML文档的嵌入路径（即./stylesheet-flavour.css），或使用任何其他相对路径（例如../resources用于嵌入路径../ resources / <stylesheet-flavor>的CSS）。
 ### 4、svg
 这是SVG数据URI可能具有的最大长度。 如果只有一个图标超过此阈值，则此图标集的所有数据URI将更改为外部SVG精灵引用。 默认为1048576（1MB），最小值为1024（1kB）。
 ### 5、png

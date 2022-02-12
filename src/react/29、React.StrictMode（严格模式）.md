@@ -24,7 +24,6 @@ function ExampleApplication() {
 ```
 ##### 识别不安全的生命周期
 防止第三方库生命周期api过时
-![strict-mode-unsafe-lifecycles-warning-e4fdbff774b356881123e69ad](https://note.youdao.com/yws/res/4267/099CA6854ED94679ADFCB9CF71A06C51)
 ##### 关于使用过时字符串 ref API 的警告
 React 提供了两种方法管理 refs 的方式
 - 已过时的字符串 ref API 的形式 【弃用】
@@ -43,4 +42,3 @@ class TopLevelRoute extends React.Component {
 }
 ```
 ##### 检测过时的 context API
-![warn-legacy-context-in-strict-mode-fca5c5e1fb2ef2e2d59afb100b43](https://note.youdao.com/yws/res/4286/B20C398C5C2D4FEC8580E284E7C11BF8)

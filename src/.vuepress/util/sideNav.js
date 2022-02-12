@@ -8,6 +8,7 @@ const parentSort = [
   'css',
   'html',
   'vue',
+  'react',
   'plugin',
   'nodejs',
   '脚手架工具',

@@ -74,7 +74,7 @@ function ComponentWithTransition() {
 //并非所有的属性值都转化为px字符串，如（zoom,order,flex）
 ```
 ##### value
-1. <input> 和 <textarea> 组件支持 value 属性。你可以使用它为组件设置 value。
+1. input 和 textarea 组件支持 value 属性。你可以使用它为组件设置 value。
 2. 非受控组件用defaultValue
 ## 非小驼峰命名
 ```

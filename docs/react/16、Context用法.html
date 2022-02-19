@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>动态 Context | 木林子的笔记空间</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+    <meta name="description" content="My note space build with vuepress">
+    <meta property="article:modified_time" content="2022-02-12T06:30:21.000Z">
+    <meta property="og:site_name" content="木林子的笔记空间">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/react/16%E3%80%81Context%E7%94%A8%E6%B3%95.html">
+    <meta name="twitter:url" content="/react/16%E3%80%81Context%E7%94%A8%E6%B3%95.html">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="mulinzi">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="theme-color" content="rgba(255, 255, 255, 0.95)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/9.styles.cf7d4acf.css" as="style"><link rel="preload" href="/assets/js/chunk-default.c958be83.js" as="script"><link rel="preload" href="/assets/css/0.styles.d8532f7e.css" as="style"><link rel="preload" href="/assets/js/vendors~app.08c2c863.js" as="script"><link rel="preload" href="/assets/css/styles.c1b08e2d.css" as="style"><link rel="preload" href="/assets/js/app.72b217dd.js" as="script"><link rel="preload" href="/assets/css/74.styles.361c907f.css" as="style"><link rel="preload" href="/assets/js/74.5f7ac0c0.js" as="script"><link rel="preload" href="/assets/js/167.95916881.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.dc82a25b.js" as="script">
+    <link rel="stylesheet" href="/assets/css/9.styles.cf7d4acf.css"><link rel="stylesheet" href="/assets/css/0.styles.d8532f7e.css"><link rel="stylesheet" href="/assets/css/styles.c1b08e2d.css"><link rel="stylesheet" href="/assets/css/74.styles.361c907f.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-29e5c978><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-9a400230 data-v-29e5c978><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-9a400230></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light" data-v-9a400230></i></span></button> <div class="spacer" data-v-9a400230></div> <div class="v-menu" data-v-9a400230><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-9a400230><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-9a400230><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-9a400230></div> <span data-v-9a400230>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-9a400230></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-62df6c56 data-v-29e5c978><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-62df6c56><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-12165" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-12165" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview theme--light" data-v-62df6c56><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            javascript
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            css
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            html
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            vue
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            react
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            plugin
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            nodejs
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            脚手架工具
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            tools
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            others
+          </div></span></div></div></div><!----></div></div></div><div class="v-navigation-drawer__border"></div></nav> <main class="v-main" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-29e5c978><div class="v-main__wrap"><!----> <div id="scroll-body" class="theme-container py-sm-10 py-0" data-v-29e5c978><div class="theme-default-content d-flex flex-column pa-sm-6 pa-2" data-v-29e5c978><div class="content__default"><h2 id="动态-context"><a href="#动态-context" class="header-anchor">#</a> 动态 Context</h2> <h5 id="theme-context-js"><a href="#theme-context-js" class="header-anchor">#</a> theme-context.js</h5> <div class="language- extra-class"><pre class="language-text"><code>export const themes = {
+  light: {
+    foreground: '#000000',
+    background: '#eeeeee',
+  },
+  dark: {
+    foreground: '#ffffff',
+    background: '#222222',
+  },
+};
+
+export const ThemeContext = React.createContext(
+  themes.dark // 默认值
+);
+//输出一个Context组件
+</code></pre></div><h5 id="themed-button-js"><a href="#themed-button-js" class="header-anchor">#</a> themed-button.js</h5> <div class="language- extra-class"><pre class="language-text"><code>import {ThemeContext} from './theme-context';
+
+class ThemedButton extends React.Component {
+  render() {
+    let props = this.props;
+    let theme = this.context;
+    return (
+      &lt;button
+        {...props}
+        style={{backgroundColor: theme.background}}
+      /&gt;
+    );
+  }
+}
+ThemedButton.contextType = ThemeContext;
+export default ThemedButton;
+//最底层消费Context的组件
+</code></pre></div><h5 id="app-js"><a href="#app-js" class="header-anchor">#</a> app.js</h5> <div class="language- extra-class"><pre class="language-text"><code>import {ThemeContext, themes} from './theme-context';
+import ThemedButton from './themed-button';
+
+// 一个使用 ThemedButton 的中间组件
+function Toolbar(props) {
+  return (
+    &lt;ThemedButton onClick={props.changeTheme}&gt;
+      Change Theme
+    &lt;/ThemedButton&gt;
+  );
+}
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: themes.light,
+    };
+
+    this.toggleTheme = () =&gt; {
+      this.setState(state =&gt; ({
+        theme:
+          state.theme === themes.dark
+            ? themes.light
+            : themes.dark,
+      }));
+    };
+  }
+
+  render() {
+    // 在 ThemeProvider 内部的 ThemedButton 按钮组件使用 state 中的 theme 值，
+    // 而外部的组件使用默认的 theme 值
+    return (
+      &lt;Page&gt;
+        &lt;ThemeContext.Provider value={this.state.theme}&gt;
+          &lt;Toolbar changeTheme={this.toggleTheme} /&gt;    //点击之后，Provider的值随之改变
+        &lt;/ThemeContext.Provider&gt;
+        &lt;Section&gt;
+          &lt;ThemedButton /&gt;      //点击没有反应
+        &lt;/Section&gt;
+      &lt;/Page&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;App /&gt;, document.root);
+</code></pre></div><blockquote><p>思路是把上层组件的事件一层一层传递到下层</p></blockquote> <h2 id="在嵌套组件中更新-context"><a href="#在嵌套组件中更新-context" class="header-anchor">#</a> 在嵌套组件中更新 Context</h2> <h5 id="theme-context-js-2"><a href="#theme-context-js-2" class="header-anchor">#</a> theme-context.js</h5> <div class="language- extra-class"><pre class="language-text"><code>export const ThemeContext = React.createContext({
+  theme: themes.dark,
+  toggleTheme: () =&gt; {},
+});
+//输出一个Context组件
+</code></pre></div><h5 id="theme-toggler-button-js"><a href="#theme-toggler-button-js" class="header-anchor">#</a> theme-toggler-button.js</h5> <div class="language- extra-class"><pre class="language-text"><code>import {ThemeContext} from './theme-context';
+function ThemeTogglerButton() {
+  // Theme Toggler 按钮不仅仅只获取 theme 值，它也从 context 中获取到一个 toggleTheme 函数
+  return (
+    &lt;ThemeContext.Consumer&gt;
+      {({theme, toggleTheme}) =&gt; (
+        &lt;button
+          onClick={toggleTheme}
+          style={{backgroundColor: theme.background}}&gt;
+
+          Toggle Theme
+        &lt;/button&gt;
+      )}
+    &lt;/ThemeContext.Consumer&gt;
+  );
+}
+export default ThemeTogglerButton;
+//最底层消费Context的组件
+</code></pre></div><h5 id="app-js-2"><a href="#app-js-2" class="header-anchor">#</a> app.js</h5> <div class="language- extra-class"><pre class="language-text"><code>import {ThemeContext, themes} from './theme-context';
+import ThemeTogglerButton from './theme-toggler-button';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleTheme = () =&gt; {
+      this.setState(state =&gt; ({
+        theme:
+          state.theme === themes.dark
+            ? themes.light
+            : themes.dark,
+      }));
+    };
+
+    // State 也包含了更新函数，因此它会被传递进 context provider。
+    this.state = {
+      theme: themes.light,
+      toggleTheme: this.toggleTheme,
+    };
+  }
+
+  render() {
+    // 整个 state 都被传递进 provider
+    return (
+      &lt;ThemeContext.Provider value={this.state}&gt;
+        &lt;Content /&gt;
+      &lt;/ThemeContext.Provider&gt;
+    );
+  }
+}
+
+function Content() {        //中间件没干扰了
+  return (
+    &lt;div&gt;
+      &lt;ThemeTogglerButton /&gt;
+    &lt;/div&gt;
+  );
+}
+
+ReactDOM.render(&lt;App /&gt;, document.root);
+</code></pre></div><blockquote><p>只有上层组件和下层组件有监听事件（通过Context传递）</p></blockquote> <h2 id="消费多个-context"><a href="#消费多个-context" class="header-anchor">#</a> 消费多个 Context</h2> <div class="language- extra-class"><pre class="language-text"><code>// Theme context，默认的 theme 是 “light” 值
+const ThemeContext = React.createContext('light');
+
+// 用户登录 context
+const UserContext = React.createContext({
+  name: 'Guest',
+});
+
+class App extends React.Component {
+  render() {
+    const {signedInUser, theme} = this.props;
+
+    // 提供初始 context 值的 App 组件
+    return (
+      &lt;ThemeContext.Provider value={theme}&gt;
+        &lt;UserContext.Provider value={signedInUser}&gt;
+          &lt;Layout /&gt;
+        &lt;/UserContext.Provider&gt;
+      &lt;/ThemeContext.Provider&gt;
+    );
+  }
+}
+
+function Layout() {
+  return (
+    &lt;div&gt;
+      &lt;Sidebar /&gt;
+      &lt;Content /&gt;
+    &lt;/div&gt;
+  );
+}
+
+// 一个组件可能会消费多个 context
+function Content() {
+  return (
+    &lt;ThemeContext.Consumer&gt;
+      {theme =&gt; (
+        &lt;UserContext.Consumer&gt;
+          {user =&gt; (
+            &lt;ProfilePage user={user} theme={theme} /&gt;
+          )}
+        &lt;/UserContext.Consumer&gt;
+      )}
+    &lt;/ThemeContext.Consumer&gt;
+  );
+}
+</code></pre></div><h2 id="注意重复渲染"><a href="#注意重复渲染" class="header-anchor">#</a> 注意重复渲染</h2> <p>当每一次 Provider 重渲染时，以下的代码会重渲染所有下面的 consumers 组件，因为 value 属性总是被赋值为==新的对象==：</p> <div class="language- extra-class"><pre class="language-text"><code>class App extends React.Component {
+  render() {
+    return (
+      &lt;Provider value={{something: 'something'}}&gt;
+        &lt;Toolbar /&gt;
+      &lt;/Provider&gt;
+    );
+  }
+}
+</code></pre></div><p>为了防止这种情况，将 value 状态提升到父节点的 state 里：</p> <div class="language- extra-class"><pre class="language-text"><code>class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: {something: 'something'},
+    };
+  }
+
+  render() {
+    return (
+      &lt;Provider value={this.state.value}&gt;
+        &lt;Toolbar /&gt;
+      &lt;/Provider&gt;
+    );
+  }
+}
+//此时只要value的值（引用类型），没有发生改变就不会重新渲染
+</code></pre></div></div> <div class="spacer"></div> <div class="prev-next d-none d-sm-flex justify-space-between mt-9" data-v-2e60e2ec><button type="button" class="ml-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-left theme--light" data-v-2e60e2ec></i> <span data-v-2e60e2ec>15、Context(顶层变量)</span></span></button> <div class="spacer" data-v-2e60e2ec data-v-2e60e2ec></div> <button type="button" class="mr-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><span data-v-2e60e2ec>17、错误边界组件</span> <i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-right theme--light" data-v-2e60e2ec></i></span></button></div> <!----></div></div> <div class="v-menu" data-v-29e5c978><!----></div> <button type="button" class="to-top v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--default" style="display:none;" data-v-29e5c978 data-v-29e5c978><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-up theme--light primary--text" data-v-29e5c978></i></span></button></div></main> <!----></div></div><div class="global-ui"><div class="v-snack v-snack--bottom v-snack--has-background v-snack--right v-snack--vertical" style="padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;" data-v-fec8b358><div class="v-snack__wrapper v-sheet theme--dark" style="max-width:0px;display:none;"><div role="status" aria-live="polite" class="v-snack__content">
+    作者又有了新的笔记哟，点击刷新查看
+    </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
+        刷新
+      </span></button></div></div></div></div></div>
+    <script src="/assets/js/chunk-default.c958be83.js" defer></script><script src="/assets/js/74.5f7ac0c0.js" defer></script><script src="/assets/js/167.95916881.js" defer></script><script src="/assets/js/75.dc82a25b.js" defer></script><script src="/assets/js/vendors~app.08c2c863.js" defer></script><script src="/assets/js/app.72b217dd.js" defer></script>
+  </body>
+</html>

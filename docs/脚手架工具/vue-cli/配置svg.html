@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue-cli svg | 木林子的笔记空间</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+    <meta name="description" content="vue-cli使用svgo svgo-loader svg-sprite-loader处理svg文件，生成svg雪碧图">
+    <meta property="article:published_time" content="null">
+    <meta property="article:modified_time" content="2022-01-29T03:29:41.000Z">
+    <meta property="og:site_name" content="木林子的笔记空间">
+    <meta property="og:title" content="vue-cli svg">
+    <meta property="og:description" content="vue-cli使用svgo svgo-loader svg-sprite-loader处理svg文件，生成svg雪碧图">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E5%85%B7/vue-cli/%E9%85%8D%E7%BD%AEsvg.html">
+    <meta name="twitter:title" content="vue-cli svg">
+    <meta name="twitter:description" content="vue-cli使用svgo svgo-loader svg-sprite-loader处理svg文件，生成svg雪碧图">
+    <meta name="twitter:url" content="/%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E5%85%B7/vue-cli/%E9%85%8D%E7%BD%AEsvg.html">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="mulinzi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="svg-sprite-loader svgo svgo-loader">
+    <meta property="article:tag" content="svg-sprite-loader svgo svgo-loader">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="theme-color" content="rgba(255, 255, 255, 0.95)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/9.styles.cf7d4acf.css" as="style"><link rel="preload" href="/assets/js/chunk-default.c958be83.js" as="script"><link rel="preload" href="/assets/css/0.styles.d8532f7e.css" as="style"><link rel="preload" href="/assets/js/vendors~app.08c2c863.js" as="script"><link rel="preload" href="/assets/css/styles.c1b08e2d.css" as="style"><link rel="preload" href="/assets/js/app.72b217dd.js" as="script"><link rel="preload" href="/assets/css/74.styles.361c907f.css" as="style"><link rel="preload" href="/assets/js/74.5f7ac0c0.js" as="script"><link rel="preload" href="/assets/js/56.0d1d8ebd.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.dc82a25b.js" as="script">
+    <link rel="stylesheet" href="/assets/css/9.styles.cf7d4acf.css"><link rel="stylesheet" href="/assets/css/0.styles.d8532f7e.css"><link rel="stylesheet" href="/assets/css/styles.c1b08e2d.css"><link rel="stylesheet" href="/assets/css/74.styles.361c907f.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-29e5c978><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-9a400230 data-v-29e5c978><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-9a400230></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light" data-v-9a400230></i></span></button> <div class="spacer" data-v-9a400230></div> <div class="v-menu" data-v-9a400230><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-9a400230><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-9a400230><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-9a400230></div> <span data-v-9a400230>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-9a400230></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-62df6c56 data-v-29e5c978><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-62df6c56><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-21121" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-21121" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview theme--light" data-v-62df6c56><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            javascript
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            css
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            html
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            vue
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            react
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            plugin
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            nodejs
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            脚手架工具
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            tools
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            others
+          </div></span></div></div></div><!----></div></div></div><div class="v-navigation-drawer__border"></div></nav> <main class="v-main" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-29e5c978><div class="v-main__wrap"><!----> <div id="scroll-body" class="theme-container py-sm-10 py-0" data-v-29e5c978><div class="theme-default-content d-flex flex-column pa-sm-6 pa-2" data-v-29e5c978><div class="content__default"><h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span> <span class="token function">add</span> svg-sprite-loader svgo svgo-loader --dev
+</code></pre></div><h3 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function-variable function">chainWebpack</span><span class="token operator">:</span> <span class="token parameter">config</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 删除整个rule(会影响到其他svg文件的处理)</span>
+  <span class="token comment">// config.module.rules.delete(&quot;svg&quot;); </span>
+
+  <span class="token comment">// 或者新增一个rule,这样就不会影响其他的svg文件了</span>
+  <span class="token comment">// const iconPath = path.resolve(__dirname, 'src/components/common/svg-icon/svg')</span>
+  <span class="token comment">// config.module.rule('svg').exclude.add(iconPath)</span>
+  <span class="token comment">// const icon = config.module.rule('svg-icon').test(/\.svg$/)</span>
+  <span class="token comment">// icon.include.add(iconPath)</span>
+  <span class="token comment">// icon.use('svg-sprite-loader')</span>
+  <span class="token comment">// ...</span>
+
+  <span class="token keyword">const</span> svgRule <span class="token operator">=</span> config<span class="token punctuation">.</span>module<span class="token punctuation">.</span><span class="token function">rule</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span>
+  svgRule<span class="token punctuation">.</span>uses<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 作用同上delete</span>
+  svgRule
+    <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'svg-sprite-loader'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">loader</span><span class="token punctuation">(</span><span class="token string">'svg-sprite-loader'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">options</span><span class="token punctuation">(</span><span class="token punctuation">{</span>symbolId<span class="token operator">:</span> <span class="token string">'icon-[name]'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'svgo-loader'</span><span class="token punctuation">)</span> <span class="token comment">// 主要是简化svg文件，当然你也可以引入svg文件时手动处理</span>
+    <span class="token punctuation">.</span><span class="token function">loader</span><span class="token punctuation">(</span><span class="token string">'svgo-loader'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">options</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'removeAttrs'</span><span class="token punctuation">,</span>
+          params<span class="token operator">:</span> <span class="token punctuation">{</span> attrs<span class="token operator">:</span> <span class="token string">'(fill|stroke)'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>	<span class="token comment">// 配置参考svgo</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h3 id="引入svg文件"><a href="#引入svg文件" class="header-anchor">#</a> 引入svg文件</h3> <p>将svg文件放置在这里<code>@/assets/svg/</code></p> <h3 id="编写组件"><a href="#编写组件" class="header-anchor">#</a> 编写组件</h3> <p><code>@/components/common/svg-icon/index.js</code></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Icon <span class="token keyword">from</span> <span class="token string">'./icon'</span>
+
+<span class="token keyword">const</span> requireContext <span class="token operator">=</span> require<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token string">'@/assets/svg'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.svg$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span>
+<span class="token comment">// function importAll (r) {</span>
+<span class="token comment">//   r.keys().forEach(r)</span>
+<span class="token comment">// }</span>
+<span class="token comment">// importAll(requireContext)</span>
+requireContext<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>requireContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'icon'</span><span class="token punctuation">,</span> Icon<span class="token punctuation">)</span>
+</code></pre></div><p><code>@/components/common/svg-icon/icon.vue</code></p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">functional</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>`icon-${props.type}`<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{transform: `rotate(${props.rotate}deg)`}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>use</span> <span class="token attr-name">:xlink:href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">'</span>#icon-<span class="token punctuation">'</span> + props.type<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>use</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// props: { // props可选</span>
+  <span class="token comment">//   type: {</span>
+  <span class="token comment">//     type: String,</span>
+  <span class="token comment">//     required: true,</span>
+  <span class="token comment">//   },</span>
+  <span class="token comment">//   rotate: {</span>
+  <span class="token comment">//     default: '0',</span>
+  <span class="token comment">//   },</span>
+  <span class="token comment">// },</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scss<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">svg</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+  <span class="token property">fill</span><span class="token punctuation">:</span> currentColor<span class="token punctuation">;</span>
+  <span class="token property">stroke</span><span class="token punctuation">:</span> currentColor<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="引入"><a href="#引入" class="header-anchor">#</a> 引入</h3> <p><code>main.js</code></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token string">'@/components/common/svg-icon/index.js'</span>
+</code></pre></div><h3 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h3> <p><code>*.vue</code></p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>icon</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>check<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>icon</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div role="alert" class="v-alert v-sheet theme--light v-alert--text primary--text"><div class="v-alert__wrapper"><i aria-hidden="true" class="v-icon notranslate v-alert__icon mdi mdi-lightbulb-multiple theme--light primary--text"></i><div class="v-alert__content">提示
+<p>如果svg文件较多，想使用懒加载的话 可以尝试使用 https://mmf-fe.github.io/svgicon/</p></div></div></div></div> <div class="spacer"></div> <div class="prev-next d-none d-sm-flex justify-space-between mt-9" data-v-2e60e2ec><button type="button" class="ml-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-left theme--light" data-v-2e60e2ec></i> <span data-v-2e60e2ec>配置sass</span></span></button> <div class="spacer" data-v-2e60e2ec data-v-2e60e2ec></div> <!----></div> <!----></div></div> <div class="v-menu" data-v-29e5c978><!----></div> <button type="button" class="to-top v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--default" style="display:none;" data-v-29e5c978 data-v-29e5c978><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-up theme--light primary--text" data-v-29e5c978></i></span></button></div></main> <!----></div></div><div class="global-ui"><div class="v-snack v-snack--bottom v-snack--has-background v-snack--right v-snack--vertical" style="padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;" data-v-fec8b358><div class="v-snack__wrapper v-sheet theme--dark" style="max-width:0px;display:none;"><div role="status" aria-live="polite" class="v-snack__content">
+    作者又有了新的笔记哟，点击刷新查看
+    </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
+        刷新
+      </span></button></div></div></div></div></div>
+    <script src="/assets/js/chunk-default.c958be83.js" defer></script><script src="/assets/js/74.5f7ac0c0.js" defer></script><script src="/assets/js/56.0d1d8ebd.js" defer></script><script src="/assets/js/75.dc82a25b.js" defer></script><script src="/assets/js/vendors~app.08c2c863.js" defer></script><script src="/assets/js/app.72b217dd.js" defer></script>
+  </body>
+</html>

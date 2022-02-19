@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>es6 对象的拓展 | 木林子的笔记空间</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+    <meta name="description" content="es6 对象的拓展3">
+    <meta property="article:published_time" content="null">
+    <meta property="article:modified_time" content="2022-02-19T07:46:00.000Z">
+    <meta property="og:site_name" content="木林子的笔记空间">
+    <meta property="og:title" content="es6 对象的拓展">
+    <meta property="og:description" content="es6 对象的拓展3">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/javascript/es6/20-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%93%E5%B1%953.html">
+    <meta name="twitter:title" content="es6 对象的拓展">
+    <meta name="twitter:description" content="es6 对象的拓展3">
+    <meta name="twitter:url" content="/javascript/es6/20-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8B%93%E5%B1%953.html">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="mulinzi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="es6">
+    <meta property="article:tag" content="es6">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="theme-color" content="rgba(255, 255, 255, 0.95)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/9.styles.cf7d4acf.css" as="style"><link rel="preload" href="/assets/js/chunk-default.c958be83.js" as="script"><link rel="preload" href="/assets/css/0.styles.d8532f7e.css" as="style"><link rel="preload" href="/assets/js/vendors~app.08c2c863.js" as="script"><link rel="preload" href="/assets/css/styles.c1b08e2d.css" as="style"><link rel="preload" href="/assets/js/app.72b217dd.js" as="script"><link rel="preload" href="/assets/css/74.styles.361c907f.css" as="style"><link rel="preload" href="/assets/js/74.5f7ac0c0.js" as="script"><link rel="preload" href="/assets/js/262.2ad0c0a1.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.dc82a25b.js" as="script">
+    <link rel="stylesheet" href="/assets/css/9.styles.cf7d4acf.css"><link rel="stylesheet" href="/assets/css/0.styles.d8532f7e.css"><link rel="stylesheet" href="/assets/css/styles.c1b08e2d.css"><link rel="stylesheet" href="/assets/css/74.styles.361c907f.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-29e5c978><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-9a400230 data-v-29e5c978><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-9a400230></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light" data-v-9a400230></i></span></button> <div class="spacer" data-v-9a400230></div> <div class="v-menu" data-v-9a400230><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-9a400230><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-9a400230><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-9a400230></div> <span data-v-9a400230>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-9a400230></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-62df6c56 data-v-29e5c978><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-62df6c56><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-6209" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-6209" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview theme--light" data-v-62df6c56><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            javascript
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            css
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            html
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            vue
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            react
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            plugin
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            nodejs
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            脚手架工具
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            tools
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            others
+          </div></span></div></div></div><!----></div></div></div><div class="v-navigation-drawer__border"></div></nav> <main class="v-main" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-29e5c978><div class="v-main__wrap"><!----> <div id="scroll-body" class="theme-container py-sm-10 py-0" data-v-29e5c978><div class="theme-default-content d-flex flex-column pa-sm-6 pa-2" data-v-29e5c978><div class="content__default"><h3 id="对象的拓展3"><a href="#对象的拓展3" class="header-anchor">#</a> 对象的拓展3</h3> <ol><li>Object.getOwnPropertyDescriptors()</li></ol> <p>ES5:Object.getOwnPropertyDescriptor(obj, prop)方法会返回某个对象属性的描述对象
+ES6:Object.getOwnPropertyDescriptors(obj)返回指定对象所有自身属性（非继承属性）的描述对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  foo<span class="token operator">:</span> <span class="token number">123</span><span class="token punctuation">,</span>
+  <span class="token keyword">get</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">'abc'</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptors</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+<span class="token comment">// { </span>
+<span class="token comment">//   foo:</span>
+<span class="token comment">//    { value: 123,</span>
+<span class="token comment">//      writable: true,</span>
+<span class="token comment">//      enumerable: true,</span>
+<span class="token comment">//      configurable: true </span>
+<span class="token comment">//    },</span>
+<span class="token comment">//   bar:</span>
+<span class="token comment">//    { get: [Function: get bar],</span>
+<span class="token comment">//      set: undefined,</span>
+<span class="token comment">//      enumerable: true,</span>
+<span class="token comment">//      configurable: true </span>
+<span class="token comment">//    } </span>
+<span class="token comment">// }</span>
+</code></pre></div><ol start="2"><li><code>__proto__</code>属性</li></ol> <p>用来读取或设置当前对象的prototype对象</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//实现上，__proto__调用的是Object.prototype.__proto__，具体实现如下</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> <span class="token string">'__proto__'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> _thisObj <span class="token operator">=</span> <span class="token function">Object</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>_thisObj<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">set</span><span class="token punctuation">(</span>proto<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">||</span> <span class="token keyword">this</span> <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isObject</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">undefined</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isObject</span><span class="token punctuation">(</span>proto<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">undefined</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> status <span class="token operator">=</span> Reflect<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> proto<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">isObject</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">Object</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">===</span> value
+<span class="token punctuation">}</span>
+</code></pre></div><p>由于只有浏览器部署了该属性，故ES6推荐</p> <ul><li>Object.setPrototypeOf()（写操作）</li> <li>Object.getPrototypeOf()（读操作）</li> <li>Object.create()（生成操作）</li></ul> <ol start="3"><li>Object.setPrototypeOf()</li></ol> <p>设置一个对象的prototype对象,返回的是第一个参数</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> proto <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> x<span class="token operator">:</span> <span class="token number">10</span> <span class="token punctuation">}</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> proto<span class="token punctuation">)</span>
+proto<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">20</span>
+proto<span class="token punctuation">.</span>z <span class="token operator">=</span> <span class="token number">40</span>
+obj<span class="token punctuation">.</span>x <span class="token comment">// 10</span>
+obj<span class="token punctuation">.</span>y <span class="token comment">// 20</span>
+obj<span class="token punctuation">.</span>z <span class="token comment">// 40</span>
+</code></pre></div><ol start="4"><li>Object.getPrototypeOf()</li></ol> <p>读取一个对象的原型对象</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token class-name">Number</span><span class="token punctuation">.</span>prototype <span class="token comment">// true</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token class-name">String</span><span class="token punctuation">.</span>prototype <span class="token comment">// true</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token class-name">Boolean</span><span class="token punctuation">.</span>prototype <span class="token comment">// true</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+<span class="token comment">// TypeError: Cannot convert undefined or null to object</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span>
+<span class="token comment">// TypeError: Cannot convert undefined or null to object</span>
+</code></pre></div></div> <div class="spacer"></div> <div class="prev-next d-none d-sm-flex justify-space-between mt-9" data-v-2e60e2ec><button type="button" class="ml-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-left theme--light" data-v-2e60e2ec></i> <span data-v-2e60e2ec>19-对象的拓展2</span></span></button> <div class="spacer" data-v-2e60e2ec data-v-2e60e2ec></div> <button type="button" class="mr-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><span data-v-2e60e2ec>21-Symbol</span> <i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-right theme--light" data-v-2e60e2ec></i></span></button></div> <!----></div></div> <div class="v-menu" data-v-29e5c978><!----></div> <button type="button" class="to-top v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--default" style="display:none;" data-v-29e5c978 data-v-29e5c978><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-up theme--light primary--text" data-v-29e5c978></i></span></button></div></main> <!----></div></div><div class="global-ui"><div class="v-snack v-snack--bottom v-snack--has-background v-snack--right v-snack--vertical" style="padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;" data-v-fec8b358><div class="v-snack__wrapper v-sheet theme--dark" style="max-width:0px;display:none;"><div role="status" aria-live="polite" class="v-snack__content">
+    作者又有了新的笔记哟，点击刷新查看
+    </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
+        刷新
+      </span></button></div></div></div></div></div>
+    <script src="/assets/js/chunk-default.c958be83.js" defer></script><script src="/assets/js/74.5f7ac0c0.js" defer></script><script src="/assets/js/262.2ad0c0a1.js" defer></script><script src="/assets/js/75.dc82a25b.js" defer></script><script src="/assets/js/vendors~app.08c2c863.js" defer></script><script src="/assets/js/app.72b217dd.js" defer></script>
+  </body>
+</html>

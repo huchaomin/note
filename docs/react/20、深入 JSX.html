@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>木林子的笔记空间</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+    <meta name="description" content="My note space build with vuepress">
+    <meta property="article:modified_time" content="2022-02-12T06:30:21.000Z">
+    <meta property="og:site_name" content="木林子的笔记空间">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/react/20%E3%80%81%E6%B7%B1%E5%85%A5%20JSX.html">
+    <meta name="twitter:url" content="/react/20%E3%80%81%E6%B7%B1%E5%85%A5%20JSX.html">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="mulinzi">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="theme-color" content="rgba(255, 255, 255, 0.95)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/9.styles.cf7d4acf.css" as="style"><link rel="preload" href="/assets/js/chunk-default.c958be83.js" as="script"><link rel="preload" href="/assets/css/0.styles.d8532f7e.css" as="style"><link rel="preload" href="/assets/js/vendors~app.08c2c863.js" as="script"><link rel="preload" href="/assets/css/styles.c1b08e2d.css" as="style"><link rel="preload" href="/assets/js/app.72b217dd.js" as="script"><link rel="preload" href="/assets/css/74.styles.361c907f.css" as="style"><link rel="preload" href="/assets/js/74.5f7ac0c0.js" as="script"><link rel="preload" href="/assets/js/171.abb0731b.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.dc82a25b.js" as="script">
+    <link rel="stylesheet" href="/assets/css/9.styles.cf7d4acf.css"><link rel="stylesheet" href="/assets/css/0.styles.d8532f7e.css"><link rel="stylesheet" href="/assets/css/styles.c1b08e2d.css"><link rel="stylesheet" href="/assets/css/74.styles.361c907f.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-29e5c978><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-9a400230 data-v-29e5c978><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-9a400230></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light" data-v-9a400230></i></span></button> <div class="spacer" data-v-9a400230></div> <div class="v-menu" data-v-9a400230><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-9a400230><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-9a400230><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-9a400230></div> <span data-v-9a400230>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-9a400230></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-62df6c56 data-v-29e5c978><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-62df6c56><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-12513" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-12513" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview theme--light" data-v-62df6c56><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            javascript
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            css
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            html
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            vue
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            react
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            plugin
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            nodejs
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            脚手架工具
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            tools
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            others
+          </div></span></div></div></div><!----></div></div></div><div class="v-navigation-drawer__border"></div></nav> <main class="v-main" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-29e5c978><div class="v-main__wrap"><!----> <div id="scroll-body" class="theme-container py-sm-10 py-0" data-v-29e5c978><div class="theme-default-content d-flex flex-column pa-sm-6 pa-2" data-v-29e5c978><div class="content__default"><p>==实际上，JSX 仅仅只是 React.createElement(component, props, ...children) 函数的语法糖。==</p> <h2 id="如果没有子节点-你还可以使用自闭合的标签形式"><a href="#如果没有子节点-你还可以使用自闭合的标签形式" class="header-anchor">#</a> 如果没有子节点，你还可以使用自闭合的标签形式</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;div className=&quot;sidebar&quot; /&gt;
+</code></pre></div><h2 id="大写字母开头的-jsx-标签意味着它们是-react-组件"><a href="#大写字母开头的-jsx-标签意味着它们是-react-组件" class="header-anchor">#</a> 大写字母开头的 JSX 标签意味着它们是 React 组件</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;CustomButton color=&quot;red&quot; /&gt;
+</code></pre></div><h2 id="使用点语法"><a href="#使用点语法" class="header-anchor">#</a> 使用点语法</h2> <div class="language- extra-class"><pre class="language-text"><code>import React from 'react';
+const MyComponents = {
+  DatePicker: function DatePicker(props) {
+    return &lt;div&gt;Imagine a {props.color} datepicker here.&lt;/div&gt;;
+  }
+}
+
+function BlueDatePicker() {
+  return &lt;MyComponents.DatePicker color=&quot;blue&quot; /&gt;;
+}
+</code></pre></div><h2 id="在运行时选择类型"><a href="#在运行时选择类型" class="header-anchor">#</a> 在运行时选择类型</h2> <div class="language- extra-class"><pre class="language-text"><code>import React from 'react';
+import { PhotoStory, VideoStory } from './stories';
+
+const components = {
+  photo: PhotoStory,
+  video: VideoStory
+};
+
+function Story(props) {
+  // 错误！JSX 类型不能是一个表达式。
+  return &lt;components[props.storyType] story={props.story} /&gt;;
+  
+  // 正确！JSX 类型可以是大写字母开头的变量。
+  const SpecificStory = components[props.storyType];
+  return &lt;SpecificStory story={props.story} /&gt;;
+}
+</code></pre></div><h2 id="字符串字面量"><a href="#字符串字面量" class="header-anchor">#</a> 字符串字面量</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;MyComponent message=&quot;hello world&quot; /&gt;
+//等价的
+&lt;MyComponent message={'hello world'} /&gt;
+
+&lt;MyComponent message=&quot;&amp;lt;3&quot; /&gt;
+//等价的，未转义的
+&lt;MyComponent message={'&lt;3'} /&gt;
+</code></pre></div><h2 id="props-默认值为-true"><a href="#props-默认值为-true" class="header-anchor">#</a> Props 默认值为 “True”</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;MyTextBox autocomplete /&gt;      //推荐
+//等价的
+&lt;MyTextBox autocomplete={true} /&gt;
+</code></pre></div><h2 id="属性展开"><a href="#属性展开" class="header-anchor">#</a> ...属性展开</h2> <div class="language- extra-class"><pre class="language-text"><code>function App1() {
+  return &lt;Greeting firstName=&quot;Ben&quot; lastName=&quot;Hector&quot; /&gt;;
+}
+//等价的
+function App2() {
+  const props = {firstName: 'Ben', lastName: 'Hector'};
+  return &lt;Greeting {...props} /&gt;;
+}
+</code></pre></div><p>选择只保留当前组件需要接收的 props，并使用展开运算符将其他 props 传递下去。</p> <div class="language- extra-class"><pre class="language-text"><code>const Button = props =&gt; {
+  const { kind, ...other } = props;
+  const className = kind === &quot;primary&quot; ? &quot;PrimaryButton&quot; : &quot;SecondaryButton&quot;;
+  return &lt;button className={className} {...other} /&gt;;
+};
+
+const App = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Button kind=&quot;primary&quot; onClick={() =&gt; console.log(&quot;clicked!&quot;)}&gt;
+        Hello World!
+      &lt;/Button&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre></div><h2 id="jsx-中的子元素-props-children"><a href="#jsx-中的子元素-props-children" class="header-anchor">#</a> JSX 中的子元素(props.children)</h2> <p>SX 会移除行首尾的空格以及空行。与标签相邻的空行均会被删除，文本字符串之间的新行会被压缩为一个空格。因此以下的几种方式都是等价的：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;Hello World&lt;/div&gt;
+
+&lt;div&gt;
+  Hello World
+&lt;/div&gt;
+
+&lt;div&gt;
+  Hello
+  World
+&lt;/div&gt;
+
+&lt;div&gt;
+
+  Hello World
+&lt;/div&gt;
+</code></pre></div><p>子元素可由字符串、dom元素、子组件组成、JavaScript 表达式、函数</p> <h5 id="javascript-表达式"><a href="#javascript-表达式" class="header-anchor">#</a> JavaScript 表达式</h5> <div class="language- extra-class"><pre class="language-text"><code>&lt;ul&gt;
+    {todos.map((todo) =&gt; &lt;Item key={todo.id} todo={todo} /&gt;)}
+&lt;/ul&gt;
+
+//代替模板字符串
+&lt;div&gt;Hello {props.addressee}!&lt;/div&gt;
+</code></pre></div><h5 id="函数"><a href="#函数" class="header-anchor">#</a> 函数</h5> <div class="language- extra-class"><pre class="language-text"><code>// 调用子元素回调 numTimes 次，来重复生成组件
+function Repeat(props) {
+  let items = [];
+  for (let i = 0; i &lt; props.numTimes; i++) {
+    items.push(props.children(i));
+  }
+  return &lt;div&gt;{items}&lt;/div&gt;;
+}
+
+function ListOfTenThings() {
+  return (
+    &lt;Repeat numTimes={10}&gt;
+      {(index) =&gt; &lt;div key={index}&gt;This is item {index} in the list&lt;/div&gt;}
+    &lt;/Repeat&gt;
+  );
+}
+</code></pre></div><h5 id="布尔类型、null-以及-undefined-将会忽略"><a href="#布尔类型、null-以及-undefined-将会忽略" class="header-anchor">#</a> 布尔类型、Null 以及 Undefined 将会忽略</h5> <p>//以下的 JSX 表达式渲染结果相同：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div /&gt;
+
+&lt;div&gt;&lt;/div&gt;
+
+&lt;div&gt;{false}&lt;/div&gt;
+
+&lt;div&gt;{null}&lt;/div&gt;
+
+&lt;div&gt;{undefined}&lt;/div&gt;
+
+&lt;div&gt;{true}&lt;/div&gt;
+</code></pre></div><p>应用</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;
+  {showHeader &amp;&amp; &lt;Header /&gt;}
+  &lt;Content /&gt;
+&lt;/div&gt;
+</code></pre></div><p>值得注意的是有一些 “falsy” 值，如数字 0，仍然会被 React 渲染。例如，以下代码并不会像你预期那样工作，因为当 props.messages 是空数组时，0 仍然会被渲染：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;
+  {props.messages.length &amp;&amp;
+    &lt;MessageList messages={props.messages} /&gt;
+  }
+&lt;/div&gt;
+</code></pre></div><p>改</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;
+  {props.messages.length &gt; 0 &amp;&amp;     //确定是布尔值
+    &lt;MessageList messages={props.messages} /&gt;
+  }
+&lt;/div&gt;
+</code></pre></div></div> <div class="spacer"></div> <div class="prev-next d-none d-sm-flex justify-space-between mt-9" data-v-2e60e2ec><button type="button" class="ml-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-left theme--light" data-v-2e60e2ec></i> <span data-v-2e60e2ec>19、高阶组件</span></span></button> <div class="spacer" data-v-2e60e2ec data-v-2e60e2ec></div> <button type="button" class="mr-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><span data-v-2e60e2ec>21、性能优化</span> <i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-right theme--light" data-v-2e60e2ec></i></span></button></div> <!----></div></div> <div class="v-menu" data-v-29e5c978><!----></div> <button type="button" class="to-top v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--default" style="display:none;" data-v-29e5c978 data-v-29e5c978><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-up theme--light primary--text" data-v-29e5c978></i></span></button></div></main> <!----></div></div><div class="global-ui"><div class="v-snack v-snack--bottom v-snack--has-background v-snack--right v-snack--vertical" style="padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;" data-v-fec8b358><div class="v-snack__wrapper v-sheet theme--dark" style="max-width:0px;display:none;"><div role="status" aria-live="polite" class="v-snack__content">
+    作者又有了新的笔记哟，点击刷新查看
+    </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
+        刷新
+      </span></button></div></div></div></div></div>
+    <script src="/assets/js/chunk-default.c958be83.js" defer></script><script src="/assets/js/74.5f7ac0c0.js" defer></script><script src="/assets/js/171.abb0731b.js" defer></script><script src="/assets/js/75.dc82a25b.js" defer></script><script src="/assets/js/vendors~app.08c2c863.js" defer></script><script src="/assets/js/app.72b217dd.js" defer></script>
+  </body>
+</html>

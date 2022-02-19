@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nodejs 入门 | 木林子的笔记空间</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
+    <meta name="description" content="nodejs 入门系列（二）">
+    <meta property="article:published_time" content="null">
+    <meta property="article:modified_time" content="2022-01-18T08:27:22.000Z">
+    <meta property="og:site_name" content="木林子的笔记空间">
+    <meta property="og:title" content="nodejs 入门">
+    <meta property="og:description" content="nodejs 入门系列（二）">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/nodejs/02-%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89.html">
+    <meta name="twitter:title" content="nodejs 入门">
+    <meta name="twitter:description" content="nodejs 入门系列（二）">
+    <meta name="twitter:url" content="/nodejs/02-%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89.html">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="mulinzi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="nodejs">
+    <meta property="article:tag" content="nodejs">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="theme-color" content="rgba(255, 255, 255, 0.95)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/9.styles.cf7d4acf.css" as="style"><link rel="preload" href="/assets/js/chunk-default.c958be83.js" as="script"><link rel="preload" href="/assets/css/0.styles.d8532f7e.css" as="style"><link rel="preload" href="/assets/js/vendors~app.08c2c863.js" as="script"><link rel="preload" href="/assets/css/styles.c1b08e2d.css" as="style"><link rel="preload" href="/assets/js/app.72b217dd.js" as="script"><link rel="preload" href="/assets/css/74.styles.361c907f.css" as="style"><link rel="preload" href="/assets/js/74.5f7ac0c0.js" as="script"><link rel="preload" href="/assets/js/10.f5102b9f.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.dc82a25b.js" as="script">
+    <link rel="stylesheet" href="/assets/css/9.styles.cf7d4acf.css"><link rel="stylesheet" href="/assets/css/0.styles.d8532f7e.css"><link rel="stylesheet" href="/assets/css/styles.c1b08e2d.css"><link rel="stylesheet" href="/assets/css/74.styles.361c907f.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-29e5c978><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-9a400230 data-v-29e5c978><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-9a400230></i></span></button> <button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-9a400230><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light" data-v-9a400230></i></span></button> <div class="spacer" data-v-9a400230></div> <div class="v-menu" data-v-9a400230><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-9a400230><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-9a400230><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-9a400230></div> <span data-v-9a400230>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-9a400230></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-62df6c56 data-v-29e5c978><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-62df6c56><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-8404" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-8404" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview theme--light" data-v-62df6c56><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            javascript
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            css
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            html
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            vue
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            react
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            plugin
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            nodejs
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            脚手架工具
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            tools
+          </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-62df6c56></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-62df6c56><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-62df6c56>
+            others
+          </div></span></div></div></div><!----></div></div></div><div class="v-navigation-drawer__border"></div></nav> <main class="v-main" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" data-v-29e5c978><div class="v-main__wrap"><!----> <div id="scroll-body" class="theme-container py-sm-10 py-0" data-v-29e5c978><div class="theme-default-content d-flex flex-column pa-sm-6 pa-2" data-v-29e5c978><div class="content__default"><h3 id="命令行参数"><a href="#命令行参数" class="header-anchor">#</a> 命令行参数</h3> <h4 id="添加参数"><a href="#添加参数" class="header-anchor">#</a> 添加参数</h4> <ol><li>可以传入任意数量的参数</li> <li>参数可以是独立的，也可以具有键和值。</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code>node app.js joe
+node app.js <span class="token assign-left variable">name</span><span class="token operator">=</span>joe
+</code></pre></div><h4 id="获取参数"><a href="#获取参数" class="header-anchor">#</a> 获取参数</h4> <p>process.argv 属性是一个包含所有命令行调用参数的数组</p> <ul><li>第一个参数是 node 命令的完整路径</li> <li>第二个参数是正被执行的文件的完整路径</li> <li>其他的参数从第三个位置开始</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># index.js</span>
+console.log<span class="token punctuation">(</span>process.argv<span class="token punctuation">)</span>
+
+node index.js haha
+<span class="token comment">#  [</span>
+<span class="token comment">#    'D:\\Program Files\\nodejs\\node.exe',</span>
+<span class="token comment">#    'D:\\code\\myNote\\index.js',</span>
+<span class="token comment">#    'haha'</span>
+<span class="token comment">#  ]</span>
+</code></pre></div><p>process.argv.slice(2)</p> <div class="language-shell extra-class"><pre class="language-shell"><code>node index.js haha hehe
+<span class="token comment"># [haha, hehe]</span>
+node index.js <span class="token assign-left variable">haha</span><span class="token operator">=</span>hehe <span class="token assign-left variable">name</span><span class="token operator">=</span>joe
+<span class="token comment"># [haha=hehe, name=joe]</span>
+</code></pre></div><p>使用 minimist 库处理参数</p> <div class="language-shell extra-class"><pre class="language-shell"><code>node index.js --haha<span class="token operator">=</span>hehe --name<span class="token operator">=</span>joe
+
+const args <span class="token operator">=</span> require<span class="token punctuation">(</span><span class="token string">'minimist'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>process.argv.slice<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">))</span>
+<span class="token comment"># args.name = joe</span>
+<span class="token comment"># args.haha = hehe</span>
+</code></pre></div><div role="alert" class="v-alert v-sheet theme--dark v-alert--text warning--text"><div class="v-alert__wrapper"><i aria-hidden="true" class="v-icon notranslate v-alert__icon mdi mdi-alert-outline theme--dark warning--text"></i><div class="v-alert__content">警告
+<p>使用前一定要在参数面前加--</p></div></div></div> <h3 id="使用-node-js-输出到命令行"><a href="#使用-node-js-输出到命令行" class="header-anchor">#</a> 使用 Node.js 输出到命令行</h3> <p>Node.js 提供了 console 模块，该模块提供了大量非常有用的与命令行交互的方法。
+它基本上与浏览器中的 console 对象相同</p> <h4 id="基础输出"><a href="#基础输出" class="header-anchor">#</a> 基础输出</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token string">'x'</span>
+<span class="token keyword">const</span> y <span class="token operator">=</span> <span class="token string">'y'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+<span class="token comment">//  'x' 'y'</span>
+</code></pre></div><p>可以通过传入变量和格式说明符来格式化用语</p> <ul><li>%s 会格式化变量为字符串</li> <li>%d 会格式化变量为数字</li> <li>%i 会格式化变量为其整数部分</li> <li>%o 会格式化变量为对象</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'%i我的%s已经%d岁'</span><span class="token punctuation">,</span><span class="token number">29.5</span><span class="token punctuation">,</span> <span class="token string">'猫'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment">// 29我的猫已经2岁</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'%o'</span><span class="token punctuation">,</span> Number<span class="token punctuation">)</span>
+</code></pre></div><h4 id="清空控制台"><a href="#清空控制台" class="header-anchor">#</a> 清空控制台</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="元素计数-console-count"><a href="#元素计数-console-count" class="header-anchor">#</a> 元素计数 console.count()</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">const</span> y <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token keyword">const</span> z <span class="token operator">=</span> <span class="token number">3</span>
+console<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token comment">// 1:1</span>
+console<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token comment">// 1:2</span>
+console<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+<span class="token comment">// 2:1</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> oranges <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'橙子'</span><span class="token punctuation">,</span> <span class="token string">'橙子'</span><span class="token punctuation">,</span> <span class="token string">'石榴'</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> apples <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'苹果'</span><span class="token punctuation">,</span> <span class="token string">'石榴'</span><span class="token punctuation">]</span>
+oranges<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">fruit</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>fruit<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+oranges<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">fruit</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>fruit<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+apples<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">fruit</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>fruit<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">//  橙子: 1</span>
+<span class="token comment">//  橙子: 2</span>
+<span class="token comment">//  石榴: 1</span>
+<span class="token comment">//  橙子: 3</span>
+<span class="token comment">//  橙子: 4</span>
+<span class="token comment">//  石榴: 2</span>
+<span class="token comment">//  苹果: 1</span>
+<span class="token comment">//  石榴: 3</span>
+</code></pre></div><h4 id="打印堆栈踪迹"><a href="#打印堆栈踪迹" class="header-anchor">#</a> 打印堆栈踪迹</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">function2</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">trace</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token function-variable function">function1</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">function2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">function1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">//  Trace</span>
+<span class="token comment">//      at function2 (repl:1:33)</span>
+<span class="token comment">//      at function1 (repl:1:25)</span>
+<span class="token comment">//      at repl:1:1</span>
+<span class="token comment">//      at ContextifyScript.Script.runInThisContext (vm.js:44:33)</span>
+<span class="token comment">//      at REPLServer.defaultEval (repl.js:239:29)</span>
+<span class="token comment">//      at bound (domain.js:301:14)</span>
+<span class="token comment">//      at REPLServer.runBound [as eval] (domain.js:314:12)</span>
+<span class="token comment">//      at REPLServer.onLine (repl.js:440:10)</span>
+<span class="token comment">//      at emitOne (events.js:120:20)</span>
+<span class="token comment">//      at REPLServer.emit (events.js:210:7)</span>
+</code></pre></div><h4 id="计算耗时-time-和-timeend"><a href="#计算耗时-time-和-timeend" class="header-anchor">#</a> 计算耗时 time() 和 timeEnd()</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token function-variable function">doSomething</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'测试'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token function-variable function">measureDoingSomething</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'doSomething()'</span><span class="token punctuation">)</span>
+  <span class="token comment">//做点事，并测量所需的时间。</span>
+  <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'doSomething()'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">measureDoingSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//  doSomething(): 0.211ms</span>
+</code></pre></div><h4 id="stdout-和-stderr"><a href="#stdout-和-stderr" class="header-anchor">#</a> stdout 和 stderr</h4> <p>console.log 非常适合在控制台中打印消息。 这就是所谓的标准输出（或称为 stdout）。
+console.error 会打印到 stderr 流。
+它不会出现在控制台中，但是会出现在错误日志中。</p> <h4 id="为输出着色"><a href="#为输出着色" class="header-anchor">#</a> 为输出着色</h4> <p>使用转义序列在控制台中为文本的输出着色。 <a href="https://gist.github.com/iamnewton/8754917" target="_blank" rel="noopener noreferrer">转义序列是一组标识颜色的字符<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'\x1b[33m%s\x1b[0m'</span><span class="token punctuation">,</span> <span class="token string">'你好'</span><span class="token punctuation">)</span>  <span class="token comment">//  黄色</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'\x1b[34m%s\x1b[0m'</span><span class="token punctuation">,</span> <span class="token string">'你好'</span><span class="token punctuation">)</span>  <span class="token comment">//  蓝色</span>
+</code></pre></div><p>使用 Chalk 库（样式的设置：例如颜色、使文本变为粗体、斜体或带下划线）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// npm install chalk</span>
+<span class="token keyword">const</span> chalk <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'chalk'</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>chalk<span class="token punctuation">.</span><span class="token function">yellow</span><span class="token punctuation">(</span><span class="token string">'你好'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="progress-库创建进度条"><a href="#progress-库创建进度条" class="header-anchor">#</a> Progress 库创建进度条</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// npm install progress</span>
+<span class="token keyword">const</span> ProgressBar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'progress'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> bar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ProgressBar</span><span class="token punctuation">(</span><span class="token string">':bar'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> total<span class="token operator">:</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  bar<span class="token punctuation">.</span><span class="token function">tick</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>bar<span class="token punctuation">.</span>complete<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">clearInterval</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="中从命令行接收输入"><a href="#中从命令行接收输入" class="header-anchor">#</a> 中从命令行接收输入</h3> <p>Node.js CLI 程序具有交互性<br>
+Node.js 提供了 readline 模块来执行以下操作：每次一行地从可读流（例如 process.stdin 流，在 Node.js 程序执行期间该流就是终端输入）获取输入。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> readline <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'readline'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createInterface</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  input<span class="token operator">:</span> process<span class="token punctuation">.</span>stdin<span class="token punctuation">,</span>
+  output<span class="token operator">:</span> process<span class="token punctuation">.</span>stdout
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+readline<span class="token punctuation">.</span><span class="token function">question</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">你叫什么名字?</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token parameter">name</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">你好 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  readline<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// question() 方法会显示第一个参数（即问题），并等待用户的输入。 当按下回车键时，则它会调用回调函数。</span>
+</code></pre></div><p>其他如readline-sync、Inquirer.js等软件包则API更为丰富</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// npm install inquirer</span>
+<span class="token keyword">const</span> inquirer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'inquirer'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> questions <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'input'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
+    message<span class="token operator">:</span> <span class="token string">&quot;你叫什么名字?&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+
+inquirer<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span>questions<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">answers</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">你好 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>answers<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="使用-exports-从-node-js-文件中公开功能"><a href="#使用-exports-从-node-js-文件中公开功能" class="header-anchor">#</a> 使用 exports 从 Node.js 文件中公开功能</h3> <blockquote><p>默认情况下，文件中定义的任何其他对象或变量都是私有的，不会公开给外界。</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code>exports <span class="token operator">=</span> module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><ul><li>最终我们require的是module.exports指向的东西</li> <li>所以exports与module.exports指针指向的内存地址相同，否则exports不起作用</li></ul></div> <div class="spacer"></div> <div class="prev-next d-none d-sm-flex justify-space-between mt-9" data-v-2e60e2ec><button type="button" class="ml-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-left theme--light" data-v-2e60e2ec></i> <span data-v-2e60e2ec>01-入门（一）</span></span></button> <div class="spacer" data-v-2e60e2ec data-v-2e60e2ec></div> <button type="button" class="mr-n4 v-btn v-btn--plain theme--light v-size--default primary--text" data-v-2e60e2ec><span class="v-btn__content"><span data-v-2e60e2ec>03-入门（三）</span> <i aria-hidden="true" class="v-icon notranslate v-icon--dense mdi mdi-arrow-right theme--light" data-v-2e60e2ec></i></span></button></div> <!----></div></div> <div class="v-menu" data-v-29e5c978><!----></div> <button type="button" class="to-top v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--default" style="display:none;" data-v-29e5c978 data-v-29e5c978><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-arrow-expand-up theme--light primary--text" data-v-29e5c978></i></span></button></div></main> <!----></div></div><div class="global-ui"><div class="v-snack v-snack--bottom v-snack--has-background v-snack--right v-snack--vertical" style="padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;" data-v-fec8b358><div class="v-snack__wrapper v-sheet theme--dark" style="max-width:0px;display:none;"><div role="status" aria-live="polite" class="v-snack__content">
+    作者又有了新的笔记哟，点击刷新查看
+    </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
+        刷新
+      </span></button></div></div></div></div></div>
+    <script src="/assets/js/chunk-default.c958be83.js" defer></script><script src="/assets/js/74.5f7ac0c0.js" defer></script><script src="/assets/js/10.f5102b9f.js" defer></script><script src="/assets/js/75.dc82a25b.js" defer></script><script src="/assets/js/vendors~app.08c2c863.js" defer></script><script src="/assets/js/app.72b217dd.js" defer></script>
+  </body>
+</html>

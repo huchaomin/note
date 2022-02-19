@@ -50,11 +50,11 @@ export default {
     })
     this.$bus.$on('swipe', direction => {
       if (this.isTouchCode || !this.$vuetify.breakpoint.mobile) return
-      if (direction === 'Left') {
+      if (direction === 'Right') {
         if (this.prev) {
           this.toPage(this.prev)
         }
-      } else if (direction === 'Right') {
+      } else if (direction === 'Left') {
         if (this.next) {
           this.toPage(this.next)
         }

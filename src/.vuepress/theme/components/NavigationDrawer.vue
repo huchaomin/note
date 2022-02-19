@@ -78,12 +78,14 @@ export default {
     },
     'noScroll': {
       handler (value) {
-        const classList = document.querySelector('html').classList
-        if (value) {
-          !classList.contains('noScroll') && classList.add('noScroll')
-        } else {
-          classList.contains('noScroll') && classList.remove('noScroll')
-        }
+        this.$nextTick(() => {
+          const classList = window.document.querySelector('html').classList
+          if (value) {
+            !classList.contains('noScroll') && classList.add('noScroll')
+          } else {
+            classList.contains('noScroll') && classList.remove('noScroll')
+          }
+        })
       },
       immediate: true,
     },

@@ -30,11 +30,11 @@ div{
   padding:20px;
 }
 ```
-#####  box-shadow: 0 0 20px 20px red;
+####  box-shadow: 0 0 20px 20px red;
 ![box-shadow01.png](~@assets/image/box-shadow01.png)
-#####  box-shadow: 0 0 0 20px red;
+####  box-shadow: 0 0 0 20px red;
 ![box-shadow02.png](~@assets/image/box-shadow02.png)
-#####  box-shadow: 0 0 20px 0 red;
+####  box-shadow: 0 0 20px 0 red;
 ![box-shadow03.png](~@assets/image/box-shadow03.png)
-##### box-shadow: 0 0 20px 20px red inset;
+#### box-shadow: 0 0 20px 20px red inset;
 ![box-shadow04.png](~@assets/image/box-shadow04.png)

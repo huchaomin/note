@@ -64,28 +64,10 @@ export default {
       active: [],
     }
   },
-  computed: {
-    noScroll () {
-      return this.$vuetify.breakpoint.mobile && this.show
-    },
-  },
   watch: {
     '$page': {
       handler () {
         this.focusItem()
-      },
-      immediate: true,
-    },
-    'noScroll': {
-      handler (value) {
-        this.$nextTick(() => {
-          const classList = window.document.querySelector('html').classList
-          if (value) {
-            !classList.contains('noScroll') && classList.add('noScroll')
-          } else {
-            classList.contains('noScroll') && classList.remove('noScroll')
-          }
-        })
       },
       immediate: true,
     },

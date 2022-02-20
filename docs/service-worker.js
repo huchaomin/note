@@ -27,15 +27,15 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "2ef60c48f9720c57f8df768049d7aa96"
+    "revision": "387db217d59bd04de0a229e4472d0ae7"
   },
   {
-    "url": "assets/css/0.styles.c67f10a1.css",
-    "revision": "59f4b5a1b646809b1b8eefca7eba66af"
+    "url": "assets/css/0.styles.df01aa18.css",
+    "revision": "072eba72469430897dc75f01e7038f64"
   },
   {
-    "url": "assets/css/1.styles.eac5093d.css",
-    "revision": "169d6f7b23b70d80f3e60a762b518dd4"
+    "url": "assets/css/1.styles.e69121d0.css",
+    "revision": "efe092994e61420d0dcb0482d243048e"
   },
   {
     "url": "assets/css/6.styles.1cf475e5.css",
@@ -58,8 +58,8 @@ self.__precacheManifest = [
     "revision": "a6dcd78eef99476a6ba1ae0f4c01de62"
   },
   {
-    "url": "assets/css/styles.39c2bee2.css",
-    "revision": "5befb32ee97bc56853851533a34213a1"
+    "url": "assets/css/styles.c1b08e2d.css",
+    "revision": "6cba3e2c09403b55d9195ca3a1858269"
   },
   {
     "url": "assets/fonts/materialdesignicons-webfont.9cacdc87.eot",
@@ -132,6 +132,10 @@ self.__precacheManifest = [
   {
     "url": "assets/img/box-shadow04.e3a07ff6.png",
     "revision": "e3a07ff6fe6e54d5ef0da979b9b83886"
+  },
+  {
+    "url": "assets/img/data_genealogy.82e8821d.png",
+    "revision": "82e8821d7f0862da79cad86e41889ae5"
   },
   {
     "url": "assets/img/defer-async.dc5fe641.png",
@@ -218,8 +222,8 @@ self.__precacheManifest = [
     "revision": "18299b3bb8c932e35d7ac4589cfe9a36"
   },
   {
-    "url": "assets/js/1.7cae6ac9.js",
-    "revision": "4a3d17c27c249572172ccd995b7ae76c"
+    "url": "assets/js/1.3b0a18e7.js",
+    "revision": "b6f0976a604772a11b0d4c3354b72c8f"
   },
   {
     "url": "assets/js/10.f5102b9f.js",
@@ -296,6 +300,10 @@ self.__precacheManifest = [
   {
     "url": "assets/js/116.a113b5e8.js",
     "revision": "ce671a5a01257f267b7b5d12fd117aa2"
+  },
+  {
+    "url": "assets/js/117.47ca31e5.js",
+    "revision": "16906db1f8f74f7ac1553cc607f56dad"
   },
   {
     "url": "assets/js/119.b10d25c5.js",
@@ -378,12 +386,12 @@ self.__precacheManifest = [
     "revision": "d5c9c47f895ca1ff59ad9fe939977868"
   },
   {
-    "url": "assets/js/137.bc4a64df.js",
-    "revision": "9bf6986d1790a6927b28d43e928bc7d0"
+    "url": "assets/js/137.8d11af55.js",
+    "revision": "e618caaf8c8036730c20be02e86548c4"
   },
   {
-    "url": "assets/js/138.a248c162.js",
-    "revision": "68ad67e02e41670284977ecbfab3c737"
+    "url": "assets/js/138.50c98cac.js",
+    "revision": "83315eb800762e68f39775c2defd78dd"
   },
   {
     "url": "assets/js/139.34ba391c.js",
@@ -1006,8 +1014,8 @@ self.__precacheManifest = [
     "revision": "64de588debc53eff9b43116da79703ce"
   },
   {
-    "url": "assets/js/28.913325ed.js",
-    "revision": "0161d032d67f8ae193f5101619c9974c"
+    "url": "assets/js/28.bfaacbbc.js",
+    "revision": "cb3bb34675609a47e0c382cde3c6b1a0"
   },
   {
     "url": "assets/js/280.4e719f4e.js",
@@ -1330,16 +1338,16 @@ self.__precacheManifest = [
     "revision": "96242e3818c1219a268c061b0c1baee9"
   },
   {
-    "url": "assets/js/app.cfd3300b.js",
-    "revision": "c60285a24fd68cc77b99fe4c7734a89f"
+    "url": "assets/js/app.699cfbf4.js",
+    "revision": "3634825d33f6b25c2581d77da136bff3"
   },
   {
     "url": "assets/js/chunk-default.c958be83.js",
     "revision": "95499ace196fd8a3d588a23a62f8b15a"
   },
   {
-    "url": "assets/js/vendors~app.2b62ec4d.js",
-    "revision": "416e2a80cda58da15c65a8b998b3280d"
+    "url": "assets/js/vendors~app.c9e724ab.js",
+    "revision": "803b0c034e812cf7e86ac092f60251ea"
   },
   {
     "url": "bg/3Dparticles/index.html",
@@ -1375,39 +1383,39 @@ self.__precacheManifest = [
   },
   {
     "url": "css/css3/2D转换.html",
-    "revision": "acfc8b27cec76166dc0b421005e403b6"
+    "revision": "5582e617a74bd289c3b07816970a3c91"
   },
   {
     "url": "css/css3/background相关.html",
-    "revision": "217b4efa19fe1b05c7e74b15d123182a"
+    "revision": "b42d03ad512173c5d440a06410d4e570"
   },
   {
     "url": "css/css3/border-image.html",
-    "revision": "42b6240751adbe02560a7eba469f2d07"
+    "revision": "b8f119277b1c6b1b4023031f6cb4ee78"
   },
   {
     "url": "css/css3/box-shadow.html",
-    "revision": "6c3427d9fb0e59da24cbb89319828b03"
+    "revision": "5820d17c82af89cb927bff5a3246c439"
   },
   {
     "url": "css/css3/linear-gradient.html",
-    "revision": "d123224e0785dd1e8d7f62427f942a47"
+    "revision": "19bc2e52f06886f463562e250e46d89c"
   },
   {
     "url": "css/css选择器.html",
-    "revision": "5d4c6d02259fb89f60dabe0d3a6399e5"
+    "revision": "43b29b1d8f88e89f10986022d3387f68"
   },
   {
     "url": "css/others.html",
-    "revision": "d40e0a2d8e2cd1233224771c84b70b2f"
+    "revision": "b053c7ee702a8f7d4cb0d9a65fbade66"
   },
   {
     "url": "css/reset.html",
-    "revision": "9a004ae89345f3b802f4d3205c8eab0c"
+    "revision": "e19086b04a5630dfc1209997dcff11a1"
   },
   {
     "url": "css/scrollBar.html",
-    "revision": "a8dc4d1026e6bff099baec859e6c8b6f"
+    "revision": "c64017a39d3d5b687edd55cdb719113d"
   },
   {
     "url": "fonts/JetBrainsMonoNL-Light.ttf",
@@ -1415,23 +1423,23 @@ self.__precacheManifest = [
   },
   {
     "url": "html/api-drag.html",
-    "revision": "cbc45fe88390ed954fb4223b46f1cc9f"
+    "revision": "14f77259dffa56a581a598ed9b7e0d24"
   },
   {
     "url": "html/defer与async.html",
-    "revision": "d99a8f7ad462b8c363431d40a161fe5e"
+    "revision": "75899b9a1ae25f10dd84fe17b98f4c20"
   },
   {
     "url": "html/html特性与dom属性.html",
-    "revision": "d96086f0b2d9c0a3a129a17f0d2e46d6"
+    "revision": "10d94de1897d9d4e119d63800c8f1c2f"
   },
   {
     "url": "html/meta标签.html",
-    "revision": "556836e0bc616ddb5f456515c18cdc9e"
+    "revision": "b477d1a8b1be07473a9991db20382400"
   },
   {
     "url": "html/preload与prefetch.html",
-    "revision": "69131e10391a5af12437d00d3c273c7b"
+    "revision": "085fe4893faa1476445cef9f234a33f9"
   },
   {
     "url": "icons/icon-114x114.png",
@@ -1487,1035 +1495,1039 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1b6ab9485aae25764f9302ed04df6b6a"
+    "revision": "983754ef37ade67c831251c241d5514f"
   },
   {
     "url": "javascript/Array/01-总结.html",
-    "revision": "7d02ac54e88fb2f7850a0dd358901386"
+    "revision": "10a2d26217f71b7c62b20d793b921f34"
   },
   {
     "url": "javascript/Array/去重.html",
-    "revision": "96483c68dc481161350ebfb65e92cc67"
+    "revision": "9fa5b2b53680b1d99a0cd3588ca5a8d9"
   },
   {
     "url": "javascript/bom/Navigator.sendBeacon.html",
-    "revision": "2f5de928fbbafc5228177a2ac91e782e"
+    "revision": "12ca355135a31d15536425191f5e89be"
   },
   {
     "url": "javascript/bom/webstorage/index.html",
-    "revision": "49e593a61f63f1575c11e609c55f6aef"
+    "revision": "d7677be9195ee63f11cab0d62039d05d"
   },
   {
     "url": "javascript/bom/webstorage/sessionStorage-设置过期时间.html",
-    "revision": "4e3e2c0ac336d816ef58319a65e5c4ea"
+    "revision": "4b7bb24ac30c90762cdf22bd902b90b0"
   },
   {
     "url": "javascript/bom/常用宽高度.html",
-    "revision": "89e81dd27fb1d242be164f3827ac7c6d"
+    "revision": "82d0c950a6fb4525491d87f49799fed7"
   },
   {
     "url": "javascript/bom/浏览器内核.html",
-    "revision": "876aaf5034004de2619e0a919f1185b7"
+    "revision": "4850319bff9cbe120c4377843172ab5a"
   },
   {
     "url": "javascript/commonJS/01-概述.html",
-    "revision": "61e7d1d6cc4d667df9426dc3c07dbfeb"
+    "revision": "d0920dcd4b54eda7cb3bf0527e38556c"
   },
   {
     "url": "javascript/commonJS/02-module对象.html",
-    "revision": "c8ded66506312e646b0f8c6b873b1797"
+    "revision": "8565b23100e03877a4f5716f32ab1c51"
   },
   {
     "url": "javascript/commonJS/03-module.exports属性.html",
-    "revision": "c47b412812ce648aca3909a238bf9bb9"
+    "revision": "d33b758e62f0b5c6d3e5a2a0e8625fb2"
   },
   {
     "url": "javascript/commonJS/04-require命令.html",
-    "revision": "7cd5c5c1407a782a59927cd48ad05905"
+    "revision": "a17ff863b6094016eea6bf4f83ce25cf"
   },
   {
     "url": "javascript/commonJS/05-模块的加载机制.html",
-    "revision": "30d3d88ed0e441ca2f2342179e00783c"
+    "revision": "121c694efb79141360acfe4ecec5d56a"
   },
   {
     "url": "javascript/commonJS/06-AMD规范与CommonJS规范的兼容性.html",
-    "revision": "935d51b7f39010f6e41ab86489026df7"
+    "revision": "dc461562ef01b2d91bb84a6f3139ba09"
   },
   {
     "url": "javascript/dom/ajax/前端接口时间缓存.html",
-    "revision": "5c4deee5498f120132a02b20ff3aab82"
+    "revision": "ada898974653809a0d997799a0d813c1"
   },
   {
     "url": "javascript/dom/ajax/前端接口结果缓存.html",
-    "revision": "e6bd761843ae19749900f74f41ef4cc2"
+    "revision": "b8f19c422f1cf07a3ea2f5026472c6e7"
   },
   {
     "url": "javascript/dom/滚动相关.html",
-    "revision": "59c64dc373e1ee9edea3775a6af767c8"
+    "revision": "0b0a311a3c91f741c6ce9a466bfd7dbb"
   },
   {
     "url": "javascript/dom/获取元素宽度.html",
-    "revision": "7c049e3fb5186deb56923641dbb76a69"
+    "revision": "8b2c84f44a13fafe930ff9cf80a77c06"
   },
   {
     "url": "javascript/es6/01-箭头函数.html",
-    "revision": "00f79f0381562e42f6ac9c40b91f48b5"
+    "revision": "31a662438461355767646fe009d8e239"
   },
   {
     "url": "javascript/es6/02-let命令.html",
-    "revision": "63c1253611d6f4dc4da52d4da12313b4"
+    "revision": "ad29975adb3420399c37c97c94d1ca93"
   },
   {
     "url": "javascript/es6/03-剩余参数.html",
-    "revision": "7ffd92190fb13416704ffca22ce82770"
+    "revision": "42c17aecd7dae0a0799031e9ef82dc07"
   },
   {
     "url": "javascript/es6/04-块级作用域.html",
-    "revision": "2adf03af44fbaea7b417a807dc75438b"
+    "revision": "ffede5662b743120a5c90d62dc162bdf"
   },
   {
     "url": "javascript/es6/05-const命令.html",
-    "revision": "336a52e77a021f177051ac78d14ff2b2"
+    "revision": "79213fd9f4779fb3754c7b12492c40a3"
   },
   {
     "url": "javascript/es6/06-顶层对象.html",
-    "revision": "8a72624bf7013304bb8ada866c08dda5"
+    "revision": "d9fd6751fe0a572768a3c7c57a986c4f"
   },
   {
     "url": "javascript/es6/07-变量的解构赋值.html",
-    "revision": "defa01e740b85c074f04a50628c32bc2"
+    "revision": "2d9f1656db1d79be4f571067aad0d42d"
   },
   {
     "url": "javascript/es6/08-变量解构赋值的用途.html",
-    "revision": "1884fa7dfb6d0a7fbe8c306121489fb0"
+    "revision": "39fe91a3e5bf1a53eaaac71578bd8ccf"
   },
   {
     "url": "javascript/es6/09-字符串的扩展1.html",
-    "revision": "1c0ee391da4c091d948a1387fed8561a"
+    "revision": "85c14c00f3889be8cfb6714d7d8ec05c"
   },
   {
     "url": "javascript/es6/10-字符窜的拓展2.html",
-    "revision": "32d80ecaae6a59f04dd32d547846777e"
+    "revision": "13e5815d80bf38f56c1894c14280b17a"
   },
   {
     "url": "javascript/es6/11-正则的拓展1.html",
-    "revision": "2638b02cc363107a7927351e0f58ba53"
+    "revision": "5a5b6967da05e17852aeb415c0e9669c"
   },
   {
     "url": "javascript/es6/12-正则的拓展2.html",
-    "revision": "0e90d19e44eb06061984c2def9cb015c"
+    "revision": "5fdaa5e61a40d7d14b99465cfb2aca8c"
   },
   {
     "url": "javascript/es6/13-数值的扩展.html",
-    "revision": "85c29e922d7a5a81d9995cf5fcbc0aec"
+    "revision": "aec503f141da6de51a6d422c81ad8fbb"
   },
   {
     "url": "javascript/es6/14-Math对象的扩展.html",
-    "revision": "3ec744ae9b48259cd2a3e289e9a57cd3"
+    "revision": "2c6a2c9118f7c8bceb9bd01dc8db82e2"
   },
   {
     "url": "javascript/es6/15-函数的拓展.html",
-    "revision": "0b66ccd701941f478dd1f69f2f853489"
+    "revision": "f1030b518cf9e1ea5207f3863a6508d3"
   },
   {
     "url": "javascript/es6/16-数组的拓展1.html",
-    "revision": "ddfbdbe7f8f8b6910ff710385c51bdba"
+    "revision": "e8a468d9cdda98b649324c3d54015e37"
   },
   {
     "url": "javascript/es6/17-数组的拓展2.html",
-    "revision": "e31c508f54b124488f45833d2e091eb1"
+    "revision": "19f3c26a15f243c772c0a81eced072ff"
   },
   {
     "url": "javascript/es6/18-对象的拓展1.html",
-    "revision": "0fa249b759a0af460759e69d6f7de4fa"
+    "revision": "464d6fcf32b116b608ea4e76a92eab8f"
   },
   {
     "url": "javascript/es6/19-对象的拓展2.html",
-    "revision": "033a3236c2284ef547a17ec65748589c"
+    "revision": "cc7a5bb7bca21c5d252d536f484aac42"
   },
   {
     "url": "javascript/es6/20-对象的拓展3.html",
-    "revision": "62f34339abefee9f856cae165a55cc8c"
+    "revision": "09419071d14a934d82911962b41c6230"
   },
   {
     "url": "javascript/es6/21-Symbol.html",
-    "revision": "5618796eaa632e9d703f248b662d063f"
+    "revision": "78bcfb83b36bdd051894a77c2150c86c"
   },
   {
     "url": "javascript/es6/22-内置的Symbol值.html",
-    "revision": "2b92821ff2d0ea67958590c755256acc"
+    "revision": "384b7db0a9594e2b233c858e480741ab"
   },
   {
     "url": "javascript/es6/23-Set数据结构.html",
-    "revision": "86a8c7a949b977190e542da4babf330d"
+    "revision": "c38a283f4ed8aa6c53ec4f8eca9fd75b"
   },
   {
     "url": "javascript/es6/24-WeakSet数据结构.html",
-    "revision": "4d83efa661e8bfd7d5895b41d80fb6bc"
+    "revision": "cb9d7758ac6a23b7da530a820856499f"
   },
   {
     "url": "javascript/es6/25-Map数据结构.html",
-    "revision": "b2439aeb153aa06e920ab7c1215152b5"
+    "revision": "ae85b2ecb21bda71536c0be62967f98b"
   },
   {
     "url": "javascript/es6/26-WeakMap数据结构.html",
-    "revision": "f156b949f85860f7a995d986cf65a847"
+    "revision": "b970fe269a0cc1894ae3c51a9a54dc58"
   },
   {
     "url": "javascript/es6/27-Proxy.html",
-    "revision": "0dbb08579f68380e277e2f7269ac9f10"
+    "revision": "0ecc76b2c862010c204c8bfd768ab0da"
   },
   {
     "url": "javascript/es6/28-Reflect.html",
-    "revision": "10f2cd4882c13cd5f721a87412a50dd4"
+    "revision": "409b7185c1c91c6c7162be654f2aa2f4"
   },
   {
     "url": "javascript/es6/29-Promise.html",
-    "revision": "09642fa65a1d0f0985fb715e03acfc89"
+    "revision": "9030dcb716a1205aeb2cd813df506914"
   },
   {
     "url": "javascript/es6/30-Iterator.html",
-    "revision": "458d4822949ba017b077aa43ff52048b"
+    "revision": "4d3aa448c685e7449423bbb194d9355a"
   },
   {
     "url": "javascript/es6/31-Generator函数.html",
-    "revision": "92ed1c5c767e94fdb3a774a086234891"
+    "revision": "4a2cd0f8bb6f40ee25e75d5701058036"
   },
   {
     "url": "javascript/es6/32-async函数.html",
-    "revision": "6cbd321741e0e048c2767b6b3bd83284"
+    "revision": "e320449080e499962d61d9f19a87de9e"
   },
   {
     "url": "javascript/es6/33-Class.html",
-    "revision": "2084f3d8c635bc799ce884615fcb4cac"
+    "revision": "f3bf136d82bf0875250a0a3b25b045d7"
   },
   {
     "url": "javascript/es6/34-Class的继承.html",
-    "revision": "e7d003e556387648c9bf2fac4f00545f"
+    "revision": "760ecd106dbdc9357705004d07702c91"
   },
   {
     "url": "javascript/es6/35-Module的语法.html",
-    "revision": "c14e4b0b62fb006accfed1c674c15689"
+    "revision": "b0817247f2e3d094dfbcf44c53562717"
   },
   {
     "url": "javascript/es6/36-Module的加载实现.html",
-    "revision": "8105988b911e4a89f2254e8bf6c874d6"
+    "revision": "b456a03ff141eac2b99b38fdfc4f6cd8"
   },
   {
     "url": "javascript/es6/37-es6与node.html",
-    "revision": "6a03d92a2327f6406774f09b53a5e4dc"
+    "revision": "444956206551236e3958c7966d4bc531"
   },
   {
     "url": "javascript/es6/38-es6模块的转码.html",
-    "revision": "de751b859b4a93bfd250f280bd138752"
+    "revision": "ac92c51f96461f6945dfdbdabf372ed4"
   },
   {
     "url": "javascript/es6/39-编程风格的改变.html",
-    "revision": "9abf0aae90373667623af37527ae1729"
+    "revision": "ff51a29f5fd4a9f60b03d12b6b012d8b"
   },
   {
     "url": "javascript/ESM与现代浏览器.html",
-    "revision": "f78aa59cf00269e8145e82bba272e874"
+    "revision": "0deb4a7127a761ffb43f55e5df6d283c"
   },
   {
     "url": "javascript/Function/call，apply 和 bind.html",
-    "revision": "5400346871c8a7ed5b6362df49fae8c9"
+    "revision": "37308c4319f98ca02f5c994e5e26e9fc"
   },
   {
     "url": "javascript/Function/函数创建.html",
-    "revision": "ccf51114e15607f7f709328a25f9486f"
+    "revision": "92834b4d08855d2789dce2230d204a48"
   },
   {
     "url": "javascript/Function/函数的递归.html",
-    "revision": "57cc4acb3ba6927f5fc356dfb2cf0da5"
+    "revision": "562b1d0c88469811555e6ac423d4efb8"
   },
   {
     "url": "javascript/Function/函数表达式与函数声明语句.html",
-    "revision": "715afedc42d5f40eda4ee56afebc129b"
+    "revision": "5c5a4785b8c5cb80de5b6c839d824684"
   },
   {
     "url": "javascript/Object/01-Object原型方法.html",
-    "revision": "33b136c7c16c24ed46cb5a87bcfdbe12"
+    "revision": "8f3bdf67d51a9c3703008f2109c007d8"
   },
   {
     "url": "javascript/Object/02-Object属性描述符.html",
-    "revision": "129d8f574cce380279ed6d68b3622892"
+    "revision": "d92898b9de234f8ee983f8b54b29c6a1"
   },
   {
     "url": "javascript/Object/03-Object静态方法/01-总结.html",
-    "revision": "76042f7e772c6b72b9d3807835c0dbc5"
+    "revision": "b80262412c69f274b64c2984dc2744e3"
   },
   {
     "url": "javascript/Object/03-Object静态方法/02-get.html",
-    "revision": "7e4a22d679b886e5dbe863a49cd69f9e"
+    "revision": "7964798caba7d78acce2d555e35b6f88"
   },
   {
     "url": "javascript/Object/03-Object静态方法/03-冻结.html",
-    "revision": "310a9378f1cd7f3bc4d5b4ce6bd56c4d"
+    "revision": "4e3ac1fb585129fd1db6d6d38334eb11"
   },
   {
     "url": "javascript/Object/03-Object静态方法/04-枚举.html",
-    "revision": "dc43d87cabe296aae7448bbf213d66c2"
+    "revision": "6ef880a3a9107d0a4c091d4123cc5c7a"
   },
   {
     "url": "javascript/Object/03-Object静态方法/05-判断.html",
-    "revision": "d090e451aa10eaf92485ffc2985267bb"
+    "revision": "bfd46dae2a7dd2872771e79d519e27b4"
   },
   {
     "url": "javascript/Object/new操作符.html",
-    "revision": "d4440e4638a746f1c23a81f7daf69fcd"
+    "revision": "40ed733054af4b5892e89befd2ff8291"
   },
   {
     "url": "javascript/Object/属性的可枚举性.html",
-    "revision": "b2d92e1a577beae57d6fdcb066ca433c"
+    "revision": "f168a8d659be5d4733ccf06495c1d5cf"
   },
   {
     "url": "javascript/RegExp/01-总结.html",
-    "revision": "bdc9c39d065793140bf530b1bbf001c3"
+    "revision": "a009d67c6a1e1c0ee9a85e29e2dc03b0"
   },
   {
     "url": "javascript/RegExp/02-RegExp原型.html",
-    "revision": "6280d135e6fc210b695d9271faa9c2c5"
+    "revision": "560ca5033f5f4aced1c6c148f2ab267c"
   },
   {
     "url": "javascript/RegExp/03-与String相关.html",
-    "revision": "d101f036fa38cef3ae59cb3f06d50e50"
+    "revision": "e821447b5d847646746a1abe3a7f11c3"
   },
   {
     "url": "javascript/RegExp/常用的正则表达式.html",
-    "revision": "96a84449e2e9a075c95d6b39b552c381"
+    "revision": "ffe2c069ea687b7931914d2418aa5a82"
   },
   {
     "url": "javascript/严格模式.html",
-    "revision": "ef2e1171e01683da08b205dbb7d0b55a"
+    "revision": "ca0e134ab036b9709766e0220c6c4981"
   },
   {
     "url": "javascript/微任务宏任务执行顺序.html",
-    "revision": "87fe96dbd9cab6fba35af3a7b000b099"
+    "revision": "6088fc4607caf1ba114112775a38c311"
+  },
+  {
+    "url": "javascript/数据族谱.html",
+    "revision": "4de975e5774b87621f4825cfc0641d18"
   },
   {
     "url": "javascript/数据的循环.html",
-    "revision": "113fb19572a25a2f86291ee8d0792d0b"
+    "revision": "83515f8fb9a933013e94d003135f62ca"
   },
   {
     "url": "javascript/数据的截取、切割与填充.html",
-    "revision": "9fb8a8bcf4f3030a466e6af32c8b99d4"
+    "revision": "498bb045d45a9847a074355f7a210f05"
   },
   {
     "url": "javascript/数据的相等性判断.html",
-    "revision": "3282b50a3685ec0e24480bf0318a4fce"
+    "revision": "4cd9ba0322694d745757469984359cca"
   },
   {
     "url": "javascript/数据的类型判断.html",
-    "revision": "8827dbfdf6fdbf0f2dc9fe26335d1d32"
+    "revision": "aa6bb80ce1d07ce2566b467423f0ec98"
   },
   {
     "url": "javascript/数据的运算符.html",
-    "revision": "62563d179f09e211b395a8487b56b0c5"
+    "revision": "af2b2f502fedec234aec8eaf8901734f"
   },
   {
     "url": "javascript/模块通常的写法.html",
-    "revision": "cdc4d8dcc154822ac855b130eda0a455"
+    "revision": "109dc81577496af5e91d25f92e72b09b"
   },
   {
     "url": "nodejs/01-入门（一）.html",
-    "revision": "c2bd8a5040b51d0073245f253a4c64dc"
+    "revision": "8d05261dfeafd5cfd1983e3690b3c6ae"
   },
   {
     "url": "nodejs/02-入门（二）.html",
-    "revision": "a8e3015e72083e8f3fb03e631bc70c17"
+    "revision": "4bc543c8a31c601216891b491426c9e2"
   },
   {
     "url": "nodejs/03-入门（三）.html",
-    "revision": "5869f5920699980da9b9c377047a0ab1"
+    "revision": "c888a7b6a8ceeae4e6e4c1b57c05d82d"
   },
   {
     "url": "nodejs/04-入门（四）.html",
-    "revision": "0c7935724f6efbd80b641c483c840dc5"
+    "revision": "aaa9fd4721c2a6b8389fd7cc093b2621"
   },
   {
     "url": "nodejs/05-全局变量.html",
-    "revision": "3d597b38fe3be24ac9ecfd42dfe5aadb"
+    "revision": "9dabc519e96a52fe2ac081b141efb07d"
   },
   {
     "url": "nodejs/06-事件循环.html",
-    "revision": "7ced36021c34e8075f537cff508735e6"
+    "revision": "76208749d2285095ab58a6231034d2f7"
   },
   {
     "url": "nodejs/nodejs之fs模块.html",
-    "revision": "42a966a6d50327705dedd2c426c53822"
+    "revision": "4107785df27fa1d7096436569c26fb13"
   },
   {
     "url": "nodejs/nodejs之fs模块常用方法.html",
-    "revision": "dc024874c9e28484d0d9148b4c72cee8"
+    "revision": "bcce9dd107ed3f674f028e33e3339da0"
   },
   {
     "url": "nodejs/nodejs之module模块.html",
-    "revision": "9e2688c929851985fbaadaac177e9c4b"
+    "revision": "d493c9fe7613ebf7ce7cae601b99b651"
   },
   {
     "url": "nodejs/nodejs之path模块.html",
-    "revision": "b7e531d32862f41e020723e36b98c116"
+    "revision": "4bae58b90bb4161195c96656a9268006"
   },
   {
     "url": "nodejs/others.html",
-    "revision": "7769a47480eed1b9ac61fe13762ebf69"
+    "revision": "ef6086e23b2bac529f8f97639146473f"
   },
   {
     "url": "others/interview/a == 1 && a == 2 && a == 3.html",
-    "revision": "a946fc274c6f505cde7dd518176b6608"
+    "revision": "bc47d66327b89d8b716433aaa052d3ac"
   },
   {
     "url": "others/interview/this指向问题.html",
-    "revision": "b1ba724d28affba21fc7c38fce9ad34f"
+    "revision": "3cca117ef878a1943846dad9a49c496c"
   },
   {
     "url": "others/interview/内存泄露.html",
-    "revision": "6a693afc1db5dd2f532387d6ba809f92"
+    "revision": "d54e8e85c1d9d0424a2150dd1ddf5094"
   },
   {
     "url": "others/interview/实现深拷贝.html",
-    "revision": "a90ebf1182e49e74f6f6aee2f577b10f"
+    "revision": "48cf78c078c7b685390b4dc09784a702"
   },
   {
     "url": "others/interview/继承的方式.html",
-    "revision": "40b9617f4eded07a6161e8dc054c04bc"
+    "revision": "cbdff8d7685616531aa6f618bb121ee2"
   },
   {
     "url": "others/interview/遍历的异步写法.html",
-    "revision": "56b05094a125c9bcb2433dbe03a5071b"
+    "revision": "174706221472322d2a50c84bc17dc000"
   },
   {
     "url": "others/interview/闭包.html",
-    "revision": "dff86c8ad6969cff3cb8ef895581b838"
+    "revision": "dd75b61209c5a41868d5272832ad98cd"
   },
   {
     "url": "others/interview/防抖和节流.html",
-    "revision": "13dbcdfd71d300676bf19afed737d48c"
+    "revision": "838e72577a7f00c8d0c4167523a98f45"
   },
   {
     "url": "others/interview/面试题.html",
-    "revision": "27d6864cb8e628551f9e9f90d8781790"
+    "revision": "365146d525aa1e3034c8221e09bf207a"
   },
   {
     "url": "others/JSON.html",
-    "revision": "8c55e74d89072c5370a220ab6639299c"
+    "revision": "a1711fe6548a9a493594f89abdb49081"
   },
   {
     "url": "others/unicode和utf-8/unicode.html",
-    "revision": "b8f3a1599ce39926cfc2bc7e2b8d75b7"
+    "revision": "f0ab34ed646d0cd5e267eea62b994be7"
   },
   {
     "url": "others/unicode和utf-8/utf-8.html",
-    "revision": "5a71e229feb28eb5c46ab1f0964ac7c6"
+    "revision": "d4db6ed6aa7b62d61e34a15932c61873"
   },
   {
     "url": "others/web安全.html",
-    "revision": "2c7b6a8fec55ae05b9875687bb03d08f"
+    "revision": "96b299d63926c2cdee5003c898e63d59"
   },
   {
     "url": "others/前后端鉴权方式.html",
-    "revision": "d97df4d5afbb66525f2c978b0672ab1c"
+    "revision": "2dbe08385d8e5726138a6fe3a99d1497"
   },
   {
     "url": "others/动态设置根字体.html",
-    "revision": "fa86059013488fa99e6eb5e01d51fabd"
+    "revision": "78568251887a732ce4ae547c2b492fa2"
   },
   {
     "url": "others/待整理的.html",
-    "revision": "0ad4d4b702c2bf3d0593103516a8180a"
+    "revision": "8d4599f3112ca3256a01ace5be38f839"
   },
   {
     "url": "others/跨域问题.html",
-    "revision": "7a3d8032ccb63133b5ae650b733614e6"
+    "revision": "2e6b4157ccefd4d8ccd227b104c39f52"
   },
   {
     "url": "plugin/axios/honor-hus/apis.html",
-    "revision": "09c46a7be6fd57b8dca374038e1a8d4d"
+    "revision": "d2838d9ab63b4c86b234ff9d4565a74f"
   },
   {
     "url": "plugin/axios/honor-hus/index.html",
-    "revision": "17b7fa564e62d9e754900d7987f1e6fa"
+    "revision": "a2db4e545c97212077b8eb7d322b1249"
   },
   {
     "url": "plugin/axios/honor-hus/url.html",
-    "revision": "2ced195d72975c6c51a42dd808395b2d"
+    "revision": "661c7bd701e6d4ca1fa0502910e94383"
   },
   {
     "url": "plugin/axios/常规封装.html",
-    "revision": "f7dd4f1c1d38f7531d8932a2b1fb3809"
+    "revision": "a6dec5cd68487866ec27df1b2c28dba7"
   },
   {
     "url": "plugin/domResizeSensor.html",
-    "revision": "966cc07fb559ba4a3f2fd6170dbef9f9"
+    "revision": "4daae33a618bb6a00b26583a74b20b08"
   },
   {
     "url": "react/01、直接使用.html",
-    "revision": "336c6a31af61dcaa8298ece7dccf0bcc"
+    "revision": "34c348a394022105d8adb5fa85ea97f1"
   },
   {
     "url": "react/02、jsx.html",
-    "revision": "eeafa3ace68cd3832c132d77132ad5ac"
+    "revision": "b69ba4bd871092c94f8b84bac2b2dceb"
   },
   {
     "url": "react/03、使用create-react-app创建react开发环境.html",
-    "revision": "1882793f50cf6f871c63edec5f572452"
+    "revision": "48a74aae054665433a68ad116b3acc23"
   },
   {
     "url": "react/04、元素渲染.html",
-    "revision": "2a256efadd25f0620b3d54de1dbf495d"
+    "revision": "b14bdb25e4a07b3fb40ffd44ab145a72"
   },
   {
     "url": "react/05、组件和props.html",
-    "revision": "f13213f97852b388d38a52dce60679ac"
+    "revision": "2e61f2eaeeb6ae2f73815c23f702dce6"
   },
   {
     "url": "react/06、State & 生命周期.html",
-    "revision": "a1a2abe3f444075932295a9321334a88"
+    "revision": "4035de3d7b06b2fc6a7735f81a167a2a"
   },
   {
     "url": "react/07、事件处理.html",
-    "revision": "054c7c6f264858a68e7279d16774fa6b"
+    "revision": "391f102e0f514e74a099c0d426face1e"
   },
   {
     "url": "react/08、条件渲染.html",
-    "revision": "23e8412142ce6e911a6957e0b16e05fa"
+    "revision": "e3e00bc8b3d037682fa04a9e9d5d469f"
   },
   {
     "url": "react/09、列表 & Key.html",
-    "revision": "85374c1191225452fc7151ad65f9e12d"
+    "revision": "ec9950db2c6db4e6eae0b9008a9a9eee"
   },
   {
     "url": "react/10、表单.html",
-    "revision": "172664e178ece13444ff08927737e718"
+    "revision": "e13e7d5f34f5dda902278bedea600c8c"
   },
   {
     "url": "react/11、状态提升.html",
-    "revision": "70be2ed12a7243065b69a4a37828b9ac"
+    "revision": "23eb40b85ec0807d08cfc91e9b14ffc4"
   },
   {
     "url": "react/12、组件的组合 vs 继承.html",
-    "revision": "ad2f60c6b7918d965b87c8cc8c73cc64"
+    "revision": "2dbc9ae3edff8573caa5b4a0870ed0f4"
   },
   {
     "url": "react/13、Fragment（透明标签）.html",
-    "revision": "9b6cf7c51a91408ddd77cfdb0e95aded"
+    "revision": "a05c461b2c4bb39bc9666007c2187fcf"
   },
   {
     "url": "react/14、代码分割.html",
-    "revision": "661d9c4b2f0cc33ea606b8c2757a5c54"
+    "revision": "e862b737f2942199752771bc9a996d93"
   },
   {
     "url": "react/15、Context(顶层变量).html",
-    "revision": "b360d5432010a538deaa0f93331ed02b"
+    "revision": "8de6a58f2055d138c1b5d0393d94b779"
   },
   {
     "url": "react/16、Context用法.html",
-    "revision": "5d2226dc8d8d33c4cead683ca599710b"
+    "revision": "01b520f5056942d663c5d39fab5e75eb"
   },
   {
     "url": "react/17、错误边界组件.html",
-    "revision": "def3b6feee5506c2d1378c7512559911"
+    "revision": "dac2716fdbbdf4fabdf18ba2f8698c17"
   },
   {
     "url": "react/18、ref转发.html",
-    "revision": "c2dab74e50aacc076c0c866c1084b62d"
+    "revision": "21302895f5715c140ac7b236ba0c1263"
   },
   {
     "url": "react/19、高阶组件.html",
-    "revision": "297dd743fcc6e2c25333a6b5fd89a26b"
+    "revision": "710c940b559196df1b2498102c385271"
   },
   {
     "url": "react/20、深入 JSX.html",
-    "revision": "9baa81988ec436a0e5a5d1cc2ca988a0"
+    "revision": "74b5442b8e469cc66eb932cda3847e8f"
   },
   {
     "url": "react/21、性能优化.html",
-    "revision": "718259148846cdf73d5a384e78304e24"
+    "revision": "06839b06d7cb0b80adef85ac20df0dea"
   },
   {
     "url": "react/22、React.PureComponent.html",
-    "revision": "1fa52a151c8e6f4c62d8065a3307dc8e"
+    "revision": "d2879fd2c7985b7163b9d08d7bebfc61"
   },
   {
     "url": "react/23、Portals（dom放在其他地方）.html",
-    "revision": "823e0eec6ebd31c79a28b86631354832"
+    "revision": "2e70e88649f9eeb50242568f23ca8f84"
   },
   {
     "url": "react/24、Profiler API.html",
-    "revision": "084779e4c74f9a3cf24206342e828acf"
+    "revision": "f4cb0cb707caff2c9748a5f4371157c8"
   },
   {
     "url": "react/25、组件Diffing算法.html",
-    "revision": "69618f350f62511c0383ebbfa504217b"
+    "revision": "200d2d367e4c5047463a93ea931a63d1"
   },
   {
     "url": "react/26、Refs and the DOM.html",
-    "revision": "8481242c415423be0dbe2dc77758511a"
+    "revision": "932d193aac006f1ed88724f339929ab5"
   },
   {
     "url": "react/27、Render Props（横切关注，共享行为）.html",
-    "revision": "d4b90594d32f4c0ef21778aa637b8ed8"
+    "revision": "ae2ddd619b590b0cfda30ac757d15e5d"
   },
   {
     "url": "react/28、静态类型检查.html",
-    "revision": "66819da52dd22830d2103ffc70f36b1a"
+    "revision": "684b43b307891bbbb37a76a271bd690e"
   },
   {
     "url": "react/29、React.StrictMode（严格模式）.html",
-    "revision": "05be1db12a6ca6762201d84adf28326c"
+    "revision": "91e0c6fd1d16ab35edda3338dcc4429d"
   },
   {
     "url": "react/30、PropTypes 进行类型检查.html",
-    "revision": "a29c36023de5d6f54256495e16d55c9f"
+    "revision": "281d701aea7fbb9a772788e4e9bc92aa"
   },
   {
     "url": "react/31、非受控组件.html",
-    "revision": "79f3ddda5b137cf4bd07cb240cbcdb1d"
+    "revision": "f3971400d24deb17fda73bf7c4192e85"
   },
   {
     "url": "react/API/01、React 顶层 API.html",
-    "revision": "52c4fb231e0d1ea4036bd480549146f4"
+    "revision": "9b6e7c12f6fdc96171b1dee1b1efdca0"
   },
   {
     "url": "react/API/02、顶层API之--React.Component（一）.html",
-    "revision": "5d935f24f8c22b150090d89010c333b8"
+    "revision": "65dd164e50a3f731e98b260bc9943aad"
   },
   {
     "url": "react/API/03、顶层API之--React.Component（二）.html",
-    "revision": "3f351b1f067c55b863d0f92be502fbe1"
+    "revision": "655d982d460e86aa011be9a999c8f7a6"
   },
   {
     "url": "react/API/04、顶层API之--React.Component（三）.html",
-    "revision": "9763f52b3943fb6151cd2ee8ff564aff"
+    "revision": "6a70385b0402d846069b34294f71698f"
   },
   {
     "url": "react/API/05、ReactDOM.html",
-    "revision": "844d82ab1ea0276a4892445725c4e9fe"
+    "revision": "0ac5e6fbf15d986a043cb8bc6e671ec9"
   },
   {
     "url": "react/API/06、DOM 元素.html",
-    "revision": "b472a03c49552353c83f455b166f6783"
+    "revision": "2d6100f5954f7ec1ecef7f07d028ddf7"
   },
   {
     "url": "react/react-router/01、安装.html",
-    "revision": "4debc1797ee718ea006db73791a303f5"
+    "revision": "951d4869f65d10de34e91e028f70ee78"
   },
   {
     "url": "react/react-router/02、基本.html",
-    "revision": "a05962542c0d371a43b49b3a39710f59"
+    "revision": "89893256c722430d75db0c3aa4717b3c"
   },
   {
     "url": "react/react-router/03、路由器.html",
-    "revision": "ca5e73fa6012c9347aa95ad43f508d79"
+    "revision": "a0bd81793a6bfb09ec7aabeff4cfd82a"
   },
   {
     "url": "react/react-router/04、路线匹配器Route.html",
-    "revision": "0e8b753363a4a18bb13622f03b4830e7"
+    "revision": "bd15d14d4597e2d849c26780fb4ee105"
   },
   {
     "url": "react/react-router/05、导航.html",
-    "revision": "cbb1a75553662786b566ba22db012467"
+    "revision": "74f107350bcbf1bb112267ae9fc55928"
   },
   {
     "url": "react/react-router/06、特殊.html",
-    "revision": "8dba12adf4abbf20129e8a9e922f0c18"
+    "revision": "ea69f163fad4d8bcfd6c7f94d02a100c"
   },
   {
     "url": "react/react-router/注意.html",
-    "revision": "b192adf7f2ce266ccb3829c5b0d16bad"
+    "revision": "c5354ee373fe7cde0eb4954c11af3f67"
   },
   {
     "url": "react/redux/01、安装 (1).html",
-    "revision": "d1a36ab2d9b010a6209f752544c7259c"
+    "revision": "f39b09df0982841c25d66ad282bde9e6"
   },
   {
     "url": "react/redux/注意.html",
-    "revision": "755a58149808b277f1bf160d4c73e229"
+    "revision": "b9dbbd0b764f33edd0c6e9be8767fffe"
   },
   {
     "url": "react/插件使用/01、scss.html",
-    "revision": "6ddb88084bfe16fd7f7e9d8373914426"
+    "revision": "df90dbf5d47cc474f016abaf5d69529d"
   },
   {
     "url": "react/注意.html",
-    "revision": "36bddfb5a1e856d904e0469f29a09335"
+    "revision": "5df7123dfc317a85ea9950c932ae869d"
   },
   {
     "url": "react/组件api一览.html",
-    "revision": "9c3a56759c93be5237402c0d7343824b"
+    "revision": "18926f8ebb1162a5fb055ec8c38c2f47"
   },
   {
     "url": "tools/alias.config.js.html",
-    "revision": "79f7b3cd8deade22de61252a2ac4c450"
+    "revision": "fcc0e59246e1713a0957bc39888aafbf"
   },
   {
     "url": "tools/editorconfig.html",
-    "revision": "0eb1d8d893d650fc5fa15349c3d26ef8"
+    "revision": "f7fe5a23e273660d0c8a2fac7233ad51"
   },
   {
     "url": "tools/prettierrc.html",
-    "revision": "9468428c6ff88897ae0c3a28f2a24b24"
+    "revision": "f15b49098b5e126bd492ea1c4bd0728a"
   },
   {
     "url": "tools/typora快捷键.html",
-    "revision": "7cab632a8fcf46ab26e412a410916b0e"
+    "revision": "71363e2d599bee0b6425b80b0265ad3c"
   },
   {
     "url": "tools/webstorm/创建宏.html",
-    "revision": "428c77e76f67e87809b07fd89f5cb36b"
+    "revision": "92385c57fa329a94bc515e78bc6cc70f"
   },
   {
     "url": "tools/webstorm/快捷键.html",
-    "revision": "77733595ae6491f2bc8c791864558e9c"
+    "revision": "36fd7a63c4a292ff7575e01ee08eb629"
   },
   {
     "url": "tools/yarn.html",
-    "revision": "a805e92f6bd3a46c26ffb25c17116fc3"
+    "revision": "018c875271be02d41c5de33b61bd204d"
   },
   {
     "url": "tools/yed-graph-editor快捷键.html",
-    "revision": "69388b3960536a952bec22a68a61864a"
+    "revision": "88c549ab9efccc2f1d4812e97bd9ef5a"
   },
   {
     "url": "tools/微信小程序/01、配置.html",
-    "revision": "0df8bc7c6e1700941bfb7dd364322eb8"
+    "revision": "638ca62a14fb969b3003947f8e95a2da"
   },
   {
     "url": "tools/微信小程序/02、程序的生命周期.html",
-    "revision": "c592f2a01e23feef0b118c210dca07a3"
+    "revision": "cc31650f08daac46dbf915f646e0309b"
   },
   {
     "url": "tools/微信小程序/03、page（页面构造器）的生命周期.html",
-    "revision": "7058a356f7316151b27f3e1c5b0c5e12"
+    "revision": "86a8091927ac7394062c77708aff6df2"
   },
   {
     "url": "tools/微信小程序/04、behaviors.html",
-    "revision": "4f3c23c392198abb854d0a8e961997ca"
+    "revision": "5c0ff671f27925a9c157f4fb588d7bca"
   },
   {
     "url": "tools/微信小程序/05、路由.html",
-    "revision": "9068ba5bc49ae53bcd8b9c7ad998391a"
+    "revision": "5ce05b4a2e901bc4e67e4e5c2b04a8cf"
   },
   {
     "url": "tools/微信小程序/06、事件（一）.html",
-    "revision": "1d1eedfce7af38df03de0d06eceb5ebf"
+    "revision": "59d128dffad4e51372052831b0364dda"
   },
   {
     "url": "tools/微信小程序/07、事件（二）.html",
-    "revision": "f76779afff4cc4003466ba72708f4567"
+    "revision": "6b93388f595553efe7bbc7f5c29f8610"
   },
   {
     "url": "tools/微信小程序/08、事件（三）.html",
-    "revision": "8da9d07d272b948623470f739ddfbda7"
+    "revision": "ca8053737e8ca564e121f98694df27ff"
   },
   {
     "url": "tools/微信小程序/09、wxl.html",
-    "revision": "a56f6efbc551fd1aed9de93884032c29"
+    "revision": "3cda4eddfc1763f645786a3be5563546"
   },
   {
     "url": "tools/微信小程序/10、获取wxml节点信息.html",
-    "revision": "35db6c251be8d96a53238e6d77d9b260"
+    "revision": "dae6f68b73b88af30115a89b8e3d6e0d"
   },
   {
     "url": "tools/微信小程序/11、显示区域与旋转.html",
-    "revision": "4f2755a50c44d40a5386c159939801f6"
+    "revision": "4a1a8c747196243e82d5d6fb8676a520"
   },
   {
     "url": "tools/微信小程序/注意.html",
-    "revision": "501a70d8316447a887248cb019f29444"
+    "revision": "80f88e66eec822dee982e092639690a3"
   },
   {
     "url": "tools/版本管理工具-git/基础.html",
-    "revision": "015513ce95a86c430c95220e63b9c23f"
+    "revision": "f15de23f1e55d2a9de2e2bde46382157"
   },
   {
     "url": "tools/版本管理工具-git/需要掌握的.html",
-    "revision": "5ee69baa61026a1eb2ec501a2ccbfbf3"
+    "revision": "af0620e74486c4f1fa1e7bfb97c6cc82"
   },
   {
     "url": "vue/components/TextOverflowEllipsis.vue.html",
-    "revision": "7ab200ed880ef6581c94f983ca8d16ed"
+    "revision": "143267e9325db95a96e93ba381c71e6c"
   },
   {
     "url": "vue/components/TooltipInput.vue.html",
-    "revision": "b099f86e1c399a6e9e049292959c3011"
+    "revision": "1179823ff26b9f8c8f46ad39f07f0117"
   },
   {
     "url": "vue/vue2.x/$attrs与$listeners.html",
-    "revision": "679845afadb02f2eedb0d2330e9aff0f"
+    "revision": "4175781eb941d7d229bdf65a5effc11d"
   },
   {
     "url": "vue/vue2.x/eventBus.html",
-    "revision": "a74d7c79a8bd70e6bcc96de41875a791"
+    "revision": "e50eac2037b44c36f46a52a918b93a56"
   },
   {
     "url": "vue/vue2.x/transition.html",
-    "revision": "d8ed6a7562de971347f6211a4ffc26c7"
+    "revision": "233da12fbbca26efa01c5b1b6b8bd204"
   },
   {
     "url": "vue/vue2.x/v-for.html",
-    "revision": "c070e100eb5702bf2d4f13aa509fd3a5"
+    "revision": "c79e6cc3b619da68ebb64dd8c906d0de"
   },
   {
     "url": "vue/vue2.x/v-model.html",
-    "revision": "eb807b0c0b1aae2e99b1ebbc38c59be3"
+    "revision": "61dca86c46c366b406afecb20d981ff2"
   },
   {
     "url": "vue/vue2.x/vue-router3.x/index.html",
-    "revision": "7b87f48622efcf79d1a7b074531cd31e"
+    "revision": "0518035dbd3b9a824b15dacec93cca27"
   },
   {
     "url": "vue/vue2.x/vue-router3.x/导航守卫.html",
-    "revision": "0d0f45caa41078ef8f624252bc5b7822"
+    "revision": "0c931e907459af079f2060716995d53b"
   },
   {
     "url": "vue/vue2.x/Vue.extend.html",
-    "revision": "514bf8f0dddf05535d09ee9e2bc71fd7"
+    "revision": "fcda9439a04248feb355d1b56b026599"
   },
   {
     "url": "vue/vue2.x/vuex3.x/01-index.html",
-    "revision": "b49a286469c12075a5d17e2afa475a42"
+    "revision": "7c923fa99d173491a7fd666f4878d892"
   },
   {
     "url": "vue/vue2.x/vuex3.x/02-moduleA.html",
-    "revision": "3f50af5d5e40ab21caf7141c04994643"
+    "revision": "e01f7e8c6483fc7114082409bab6bf1b"
   },
   {
     "url": "vue/vue2.x/vuex3.x/03-createNamespacedHelpers.html",
-    "revision": "b08a0903c34cc5139ae2211617f9bc56"
+    "revision": "cfab053b638cf0b957b5762738586b8a"
   },
   {
     "url": "vue/vue2.x/vuex3.x/表单处理.html",
-    "revision": "d758391e358c418d2d711bb26324cba8"
+    "revision": "4f2239313e7d2172b160c164fdb18bd9"
   },
   {
     "url": "vue/vue2.x/x-template.html",
-    "revision": "3df9b1e8a500a32049a789e57d1d3777"
+    "revision": "84c35f20b7211c5dd50aeeeda44e8775"
   },
   {
     "url": "vue/vue2.x/事件修饰符.html",
-    "revision": "79c70e8d2f2ad55fc624d9a8781c96c4"
+    "revision": "e37bab53ac45849785a1b42e8afb9522"
   },
   {
     "url": "vue/vue2.x/函数式组件.html",
-    "revision": "ddb874b698e61bc8cf34ba9bf3a5c2a5"
+    "revision": "4b920273131b08ffdbdc61b7630c134c"
   },
   {
     "url": "vue/vue2.x/插槽.html",
-    "revision": "c2e7f420cba9018ba083aeba2567c475"
+    "revision": "67e5093612bea7768f7056f69911f7bf"
   },
   {
     "url": "vue/vue2.x/渲染函数.html",
-    "revision": "dcd33080d02b05c89e60f5ee4614fa33"
+    "revision": "8ac00013ef8b28bc9ef60f459427ca39"
   },
   {
     "url": "vue/vue2.x/表单元素.html",
-    "revision": "e275cebeaa24975c19092e6fd5045d03"
+    "revision": "b430236db7eb937cdb03bfa8293c17e6"
   },
   {
     "url": "脚手架工具/bower.html",
-    "revision": "fd87edc59128ec99340b730bcbd529ad"
+    "revision": "00cf0c0a1dbaa9376b01aa318e3abae5"
   },
   {
     "url": "脚手架工具/browserslist.html",
-    "revision": "e17b4641b4b7c2770c83acb1fd5a553f"
+    "revision": "8954bc5807dec2cbdd4aa1eeb7748321"
   },
   {
     "url": "脚手架工具/eslint/01-安装.html",
-    "revision": "f0392dbbdc254dbf41c12073bc72acdb"
+    "revision": "60322e0d3a70879d102412bf439c901d"
   },
   {
     "url": "脚手架工具/eslint/02-使用.html",
-    "revision": "bf1d93edcee53cefd42c92f2c0dcbb89"
+    "revision": "762598ca20018adf32ea0323a595657c"
   },
   {
     "url": "脚手架工具/eslint/03-vue开发通用的配置.html",
-    "revision": "ec8c2cdc853b0600d61a07dce6e08273"
+    "revision": "6bf92c1ce25a062c6280b8424387db59"
   },
   {
     "url": "脚手架工具/eslint/04-配合husky与lint-staged.html",
-    "revision": "ff1a6d8c0a1f76074c637770321501eb"
+    "revision": "5d92069e314cf514319c88551bdfa65f"
   },
   {
     "url": "脚手架工具/eslint/05-@babel下的eslint-parser.html",
-    "revision": "5c085bbc1e15f6b5ed386cfbf53b4360"
+    "revision": "488be4255f1a036aa4ab0ba98c6db48f"
   },
   {
     "url": "脚手架工具/grunt/01、入门.html",
-    "revision": "7aca661e44b45c5d3e061c352a956040"
+    "revision": "1522287a4a6f58f178f8a35e1c69bb1f"
   },
   {
     "url": "脚手架工具/grunt/02、配置.html",
-    "revision": "bdbff3aefc2c29d79142c8125bee9088"
+    "revision": "77dcdf9ca7675d99416ee95eee51fe21"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-connect-proxy.html",
-    "revision": "b0522692023738aa16277efd3b1b0157"
+    "revision": "98b0bf9237fa7233fd3fab4db617fe5f"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-contrib-clean.html",
-    "revision": "07d76e533999901c77295513b3c1d43c"
+    "revision": "ceab92eefad2e0df305536d0d12326ce"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-contrib-connect.html",
-    "revision": "626e557c38093915dd1ac387d30f9dba"
+    "revision": "b44e65354776a5dad98813ab7a8d4e5f"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-contrib-sass.html",
-    "revision": "3a468011eed46b155b7eaf1f21a30f56"
+    "revision": "2282adfc673ac9f3de9d63c2b3d1c1e9"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-contrib-watch.html",
-    "revision": "2a54647db6fda746f7f48d904a83db0f"
+    "revision": "39b9bd1bc2567b0df145a275cb1bb810"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-html-build.html",
-    "revision": "197c185a4e3da92a715b048582866258"
+    "revision": "b6b9cde7c18e1deb8bf2be7d0d782b45"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-iconizr.html",
-    "revision": "c57df381d4dd262ac8cd2f0727b1cca6"
+    "revision": "eb098cd92e668bae5d0994335a75e9bf"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-svg-symbols.html",
-    "revision": "37ff6f62b808f2aa5ccbb13a2aba6533"
+    "revision": "3db6a7f66a5f57c09cacdc8145bb254d"
   },
   {
     "url": "脚手架工具/grunt/常用插件/grunt-svgstore.html",
-    "revision": "a7aaf29bf3faa95abea048713bdc2a84"
+    "revision": "77bbba6beb4531d7e925eaf82cf52fb4"
   },
   {
     "url": "脚手架工具/grunt/常用插件/node-iconizr.html",
-    "revision": "51caa1a3490661a82f72890a082edd27"
+    "revision": "7df39745f9c24057f27c1ed5d8301446"
   },
   {
     "url": "脚手架工具/grunt/常用插件/svg-sprite.html",
-    "revision": "9bf5e485fe74a3bb203f46c838b5bd5d"
+    "revision": "c1467eec05da07d854a402993a38cb7b"
   },
   {
     "url": "脚手架工具/umd模块打包方法.html",
-    "revision": "d5129ca6fdc831e239c0018be9649f48"
+    "revision": "e99dd9394f927259f9b39f41b67e7b82"
   },
   {
     "url": "脚手架工具/vue-cli/01-基本配置.html",
-    "revision": "618d28d47b71668e47270ccf811c485d"
+    "revision": "5edc9fee3657cd2e9d18b24b743dd3a1"
   },
   {
     "url": "脚手架工具/vue-cli/02-loader.html",
-    "revision": "db88d1bbba853892ebe9c72141f55106"
+    "revision": "4a8f1d0192fbefb5b8007fb76e735861"
   },
   {
     "url": "脚手架工具/vue-cli/03-plugin.html",
-    "revision": "18afb1bd7f766ccd5f96948fb33b7fb0"
+    "revision": "ef05e76718a8eee1b5d11ae695735ad8"
   },
   {
     "url": "脚手架工具/vue-cli/env.html",
-    "revision": "099a65ef7cce1e1f64fb083e8b9388b3"
+    "revision": "7fab8ea38341ffaa16d3ce492aa429f4"
   },
   {
     "url": "脚手架工具/vue-cli/loader之image-webpack-loader.html",
-    "revision": "7f72f0587eba9a473c4b47f3e1d31d78"
+    "revision": "cbc039b1a9162b2cbc9f8e639106a514"
   },
   {
     "url": "脚手架工具/vue-cli/others.html",
-    "revision": "a2dee4c98bc0aca49ee84cf46bda455c"
+    "revision": "358f38d85f6a52cb81670c3471450163"
   },
   {
     "url": "脚手架工具/vue-cli/webpack-chain.html",
-    "revision": "c2fccb31cf020814951833b953294973"
+    "revision": "58bb1c85dbdf20a8daf3003c39a43937"
   },
   {
     "url": "脚手架工具/vue-cli/新增webpack配置.html",
-    "revision": "66e1d8aaeaf85579d8676be433df9aa9"
+    "revision": "e34f7468eab2e73716d53c2622a05c8a"
   },
   {
     "url": "脚手架工具/vue-cli/查看webpack配置.html",
-    "revision": "de20b0563f4a14f8b131888496d707ac"
+    "revision": "ec7cdd9873a48ffe8758128a7675bb1c"
   },
   {
     "url": "脚手架工具/vue-cli/配置sass.html",
-    "revision": "494095e5bc935c249cddaa6ba406db31"
+    "revision": "dbfcc50b12c51aecc60193457cc44cb7"
   },
   {
     "url": "脚手架工具/vue-cli/配置svg.html",
-    "revision": "347445918160ea9f0344d05c8e784e35"
+    "revision": "a9cfaac87fd3603bb6dc022dd29246ac"
   },
   {
     "url": "脚手架工具/vuepress.html",
-    "revision": "72fcb6a54a798d5e25a03a61e476b8a1"
+    "revision": "d3ac3d0faffc749f1d24e8862b1918be"
   },
   {
     "url": "脚手架工具/webpack/01-entry.html",
-    "revision": "fbd5a270d8ae8c424ce0a9ce25bd8823"
+    "revision": "097272ee2222d053b628ae083c9feb9b"
   },
   {
     "url": "脚手架工具/webpack/02-output.html",
-    "revision": "2d50cb82d76325a441b87cfa03286f05"
+    "revision": "77becc660aee80e515087be04293f864"
   },
   {
     "url": "脚手架工具/webpack/03-plugin.html",
-    "revision": "e433f3acc92464f9a661654eec949b78"
+    "revision": "a39cb386533c80cc88696c9260ab8d3b"
   },
   {
     "url": "脚手架工具/webpack/04-module.html",
-    "revision": "a5d44c4925fe394b91ad3a65ee9d152f"
+    "revision": "91c5c64836327ef42954dd464d622e79"
   },
   {
     "url": "脚手架工具/webpack/05-resolve.html",
-    "revision": "febf2d6cf46047d934ab09f018c2c11e"
+    "revision": "1c1fa0a534a40111802bc77ab71f999a"
   },
   {
     "url": "脚手架工具/webpack/06-optimization/others.html",
-    "revision": "afb374c36945cfa4ad4c73d9019e7352"
+    "revision": "242ff7b9e89968ac01ffd5bafe8c9a28"
   },
   {
     "url": "脚手架工具/webpack/06-optimization/splitChunks.html",
-    "revision": "408b41f52e071d63f1149a55cd8f5b94"
+    "revision": "3de56793ae9c33c973541dc9708c0fb0"
   },
   {
     "url": "脚手架工具/webpack/07-其他配置.html",
-    "revision": "7421330846ea999bec3da8c0dd351517"
+    "revision": "99ddbd0294b7bbab38074473640cceea"
   },
   {
     "url": "脚手架工具/webpack/loader之webpack-bundle-analyzer.html",
-    "revision": "235d1d27aeb791531997fbbdd90191ef"
+    "revision": "8f7481699a2e9334ddbd94be32144a81"
   },
   {
     "url": "脚手架工具/webpack/others.html",
-    "revision": "589623732446dbfd8ccc045f090b11a6"
+    "revision": "7cf22cbe9f67379fc3ffdab1dad51030"
   },
   {
     "url": "脚手架工具/webpack/webpack之devtool .html",
-    "revision": "eed2f98e1ee3dcdd82d8b87333f67aa0"
+    "revision": "3ea55d324571e1da8d42732910798b41"
   },
   {
     "url": "脚手架工具/webpack/webpack之hash.html",
-    "revision": "6bac3957a2e2d10dacce5bed952fdc9c"
+    "revision": "dd694d31492f75c48cbc3855fa95993a"
   },
   {
     "url": "脚手架工具/webpack/webpack之magic-comments.html",
-    "revision": "b668be1e0ce7dc06b2d1982a629836c9"
+    "revision": "dd31bf735cc4479da4965d6a3c33301e"
   },
   {
     "url": "脚手架工具/webpack/webpack之runtime与manifest.html",
-    "revision": "3ce639464f6151a7ad6c861694f66300"
+    "revision": "36f9fd8ac9d7e8cd9635d8c9862f5df6"
   },
   {
     "url": "脚手架工具/webpack/webpack之处理commonjs.html",
-    "revision": "53ea779252bbe6abefd8d908e2f7f9f8"
+    "revision": "b026cb247763a7df004364657cac847f"
   },
   {
     "url": "脚手架工具/webpack/webpack之处理esmodule.html",
-    "revision": "c0c6a755400820eeebe5e588ca59138d"
+    "revision": "62e3d95513a9bea6f80910243c258d61"
   },
   {
     "url": "脚手架工具/webpack/webpack之模块路径解析规则.html",
-    "revision": "3952adb89a6029ebfcdf9df3b61bf32e"
+    "revision": "585af6d89f1013a8ed5c72d625edc97a"
   },
   {
     "url": "脚手架工具/webpack/模块方法之requireContext.html",
-    "revision": "8ff5e475e8da9282fcaf5c584f03a267"
+    "revision": "c77438c7e261dd4ca8b8dfb52eaec428"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

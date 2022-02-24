@@ -9,17 +9,15 @@ tags: [es6]
 用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
 ```javascript
 for (let i = 0; i < 10; i++) {
-  // ...
+  setTimeout(function() { console.log(i) }) // 0 1 2 3 4 5 6 ...
 }
-console.log(i)
-// ReferenceError: i is not defined
+console.log(i) // ReferenceError: i is not defined
 ```
-```
-for (var i = 0 i < 10 i++) {
-  // ...
+```javascript
+for (var i = 0; i < 10; i++) {
+  setTimeout(function() { console.log(i) }) // 10 10 10 ...
 }
-console.log(i)
-// 10
+console.log(i) // 10
 ```   
 #### 不存在声明提前
 let和const会先查找所有的声明，但不提前
@@ -76,6 +74,14 @@ bar() // [2, 2]
 
 var x = x // 不报错
 let x = x // ReferenceError: x is not defined
+```
+这个不属于“死区”
+```javascript
+function foo() {
+  return a
+}
+let a
+foo()
 ```
 #### 不允许重复声明
 ```javascript

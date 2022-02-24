@@ -9,6 +9,7 @@ const parentSort = [
   'html',
   'vue',
   'react',
+  'typescript',
   'plugin',
   'nodejs',
   '脚手架工具',

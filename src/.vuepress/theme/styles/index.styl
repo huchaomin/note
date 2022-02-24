@@ -35,10 +35,10 @@ body
       margin-bottom 8px
 
     p
-      margin 4px 0
+      margin-bottom 8px
 
-    p + p
-      margin-top 8px
+      &:last-child
+        margin-bottom 0
 
     img
       margin 8px 0
@@ -71,9 +71,6 @@ blockquote
   padding .5rem 1rem
   border-radius 0 4px 4px 0
 
-  & > p
-    margin 0
-
 ul, ol
   padding-left 1.2em
 
@@ -101,7 +98,11 @@ a.header-anchor
   display none
 
 ul, ol
-  line-height 1.9
+  line-height 1.5
+
+  li
+    margin 6px 0
+
 
 hr
   border 0

@@ -1,25 +1,15 @@
 <template>
-<div ref="docsearch"></div>
+<div></div>
 </template>
 <script>
 import '@docsearch/css'
 import docsearch from '@docsearch/js'
 
-function isSpecialClick (event) {
-  return (
-    event.button === 1 ||
-    event.altKey ||
-    event.ctrlKey ||
-    event.metaKey ||
-    event.shiftKey
-  )
-}
-
 export default {
   name: 'DocSearch',
   mounted () {
     docsearch({
-      container: this.$refs.docsearch,
+      container: this.$el,
       appId: 'ZHEDSTO6YB',
       indexName: 'mulinzi',
       apiKey: 'cf3cbb81b4cef999e99a7f5d8967f8da',

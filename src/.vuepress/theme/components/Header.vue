@@ -5,10 +5,8 @@
   clipped-left
   dense>
   <v-app-bar-nav-icon @click="$emit('toggleDrawer')"></v-app-bar-nav-icon>
-  <v-btn icon>
-    <v-icon>mdi-magnify</v-icon>
-  </v-btn>
   <v-spacer></v-spacer>
+  <doc-search></doc-search>
   <v-menu
     v-model="showMyProfile"
     :close-on-content-click="false"
@@ -107,7 +105,12 @@
 </v-app-bar>
 </template>
 <script>
+import DocSearch from './DocSearch.vue'
+
 export default {
+  components: {
+    DocSearch,
+  },
   data () {
     return {
       showMyProfile: false,

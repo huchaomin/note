@@ -27,6 +27,7 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', href: '/icons/icon-152x152.png' }],
     ['meta', { name: 'msapplication-TileImage', content: '/icons/icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+    ['link', { rel: 'preconnect', href: 'https://ZHEDSTO6YB-dsn.algolia.net', crossorigin: true }],
   ],
   markdown: {
     lineNumbers: false, // 是否显示行号，默认为false

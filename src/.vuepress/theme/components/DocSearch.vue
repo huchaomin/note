@@ -39,4 +39,8 @@ export default {
   --docsearch-highlight-color: var(--docsearch-primary-color);
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
 }
+
+.DocSearch-Input {
+  height: calc(100% - 4px);
+}
 </style>

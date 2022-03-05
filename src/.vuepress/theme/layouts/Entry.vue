@@ -4,9 +4,7 @@
     v-for="(item, index) in newestDocs" :key="index"
     :class="{ 'rounded': !$vuetify.breakpoint.mobile }"
     class="theme-default-content px-4 py-3 mb-4">
-    <a href="#" @click.prevent="toPage(item)">
-      {{ item.frontmatter.title || item.relativePath }}
-    </a>
+    <a href="#" @click.prevent="toPage(item)">{{ item.frontmatter.title || item.relativePath }}</a>
     <p
       v-if="item.frontmatter.description"
       class="text--disabled text-truncate description">{{ item.frontmatter.description }}

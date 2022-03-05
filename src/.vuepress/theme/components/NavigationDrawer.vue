@@ -22,6 +22,7 @@
     :open.sync="open"
     :search="search"
     activatable
+    hoverable
     open-on-click
     transition
     @update:active="leafClick">
@@ -39,11 +40,20 @@
         right>
         <template v-slot:activator="{ on, attrs }">
           <div
+            v-if="item.isDirectory"
             class="leaf-label"
             v-bind="attrs"
             v-on="on">
             {{ item.name }}
           </div>
+          <a v-else
+             :href="item.routerPath"
+             class="leaf-label"
+             v-bind="attrs"
+             v-on="on"
+             @click.prevent="">
+            {{ item.name }}
+          </a>
         </template>
         <span>{{ item.name }}</span>
       </v-tooltip>

@@ -154,5 +154,6 @@ export default {
   min-height: inherit;
   display: flex;
   align-items: center;
+  color: inherit;
 }
 </style>

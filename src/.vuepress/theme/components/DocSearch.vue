@@ -1,5 +1,5 @@
 <template>
-<div></div>
+<div class="mr-2"></div>
 </template>
 <script>
 import '@docsearch/css'
@@ -32,5 +32,11 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style lang="scss">
+.DocSearch {
+  --docsearch-primary-color: #02a95e;
+  --docsearch-logo-color: var(--docsearch-primary-color);
+  --docsearch-highlight-color: var(--docsearch-primary-color);
+  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
+}
 </style>

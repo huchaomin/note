@@ -37,5 +37,8 @@ Vue.createApp({...}).component('my-component-name', {
 ```vue
 <blog-post v-bind="post"></blog-post>
 ```
+ - ES6 解构，它会消除 vue 响应式数据的响应性
+ - 如果我们需要通过名称来解析一个组件，那么我们可以调用 `resolveComponent`
+ - Vue 3 提供了一个 globalProperties 对象，用来添加可以被任意组件实例访问的全局 property。
 
 

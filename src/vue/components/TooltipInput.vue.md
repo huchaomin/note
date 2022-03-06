@@ -2,7 +2,7 @@
 date: '1642561731502'
 title: input 输入错误显示 tooltip
 description: input 输入错误显示 tooltip
-tags: [input tooltip]
+tags: [vue]
 ---
 ### input 输入错误显示 tooltip
 ```vue

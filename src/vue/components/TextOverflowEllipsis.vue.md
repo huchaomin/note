@@ -2,7 +2,7 @@
 date: '1642504001532'
 title: 文字超长显示tooltip
 description: 文字超长显示tooltip，不超长不显示
-tags: [tooltip]
+tags: [vue]
 ---
 ### 文字超长显示tooltip，不超长不显示
 ```vue

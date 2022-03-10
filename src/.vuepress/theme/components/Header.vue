@@ -73,7 +73,7 @@
           <v-list-item-avatar>
             <v-icon>mdi-heart</v-icon>
           </v-list-item-avatar>
-          <v-list-item-content>爬山，旧地旅行，晒女友，钓鱼</v-list-item-content>
+          <v-list-item-content>爬山，旧地旅行，钓鱼，晒女友</v-list-item-content>
         </v-list-item>
         <v-list-item>
           <v-list-item-avatar>

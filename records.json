@@ -3267,7 +3267,10 @@
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue3.x/生命周期.md bffa906bf2da298c2bd5eb328e955ee0": 920,
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue3.x/移除v-on.native修饰符.md fba129bfbf2fbbef4e83a5b8347d17f1": 921,
       "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue3.x/自定义事件.md 15d6d57d2f8e3ef9bdb0c15c55d5d1d9": 922,
-      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue3.x/自定义指令.md 9244573eec1c3ab9c92170bdd3a00e9f": 923
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/vue/vue3.x/自定义指令.md 9244573eec1c3ab9c92170bdd3a00e9f": 923,
+      "node_modules/cache-loader/dist/cjs.js??ref--0-0!node_modules/vue-loader/lib/index.js??vue-loader-options!src/.vuepress/theme/global-components/CountUp.vue 47e28ebdc53340d976f4a777d6c92a4f": 487,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/tools/vscode/快捷键.md 89602d5257323ecbd24d28b15d810bde": 521,
+      "node_modules/cache-loader/dist/cjs.js??ref--1-0!node_modules/vue-loader/lib/index.js??ref--1-1!node_modules/@vuepress/markdown-loader/index.js??ref--1-2!src/脚手架工具/eslint/03-vue开发通用的配置.md fe2229115ae090bc482ed9d68b2c35ed": 924
     },
     "usedIds": {
       "0": 0,
@@ -4193,7 +4196,8 @@
       "920": 920,
       "921": 921,
       "922": 922,
-      "923": 923
+      "923": 923,
+      "924": 924
     }
   },
   "chunks": {
@@ -4580,7 +4584,8 @@
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue3.x\\生命周期.md": 350,
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue3.x\\移除v-on.native修饰符.md": 351,
       "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue3.x\\自定义事件.md": 352,
-      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue3.x\\自定义指令.md": 353
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\vue\\vue3.x\\自定义指令.md": 353,
+      "0 node_modules/cache-loader/dist/cjs.js??ref--3-0!node_modules/babel-loader/lib/index.js??ref--3-1!node_modules/@vuepress/core/.temp/internal/page-components.js D:\\code\\note\\src\\tools\\vscode\\快捷键.md": 354
     },
     "usedIds": [
       0,
@@ -4867,6 +4872,7 @@
       351,
       352,
       353,
+      354,
       36,
       37,
       38,

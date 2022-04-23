@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Vue 渲染函数 | 木林子的笔记空间</title>
-    <meta name="generator" content="VuePress 1.8.2">
+    <meta name="generator" content="VuePress 1.9.7">
     <link rel="icon" href="/favicon.ico">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/icons/icon-152x152.png">
@@ -32,11 +32,11 @@
     <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
     <meta name="msapplication-TileColor" content="#000000">
     
-    <link rel="preload" href="/assets/css/303.styles.f20b5f67.css" as="style"><link rel="preload" href="/assets/js/chunk-default.b17bdaac.js" as="script"><link rel="preload" href="/assets/css/0.styles.5133dab0.css" as="style"><link rel="preload" href="/assets/js/vendors~app.1bfb673c.js" as="script"><link rel="preload" href="/assets/css/styles.dc44e8a2.css" as="style"><link rel="preload" href="/assets/js/app.c00c7d0a.js" as="script"><link rel="preload" href="/assets/css/74.styles.361c907f.css" as="style"><link rel="preload" href="/assets/js/74.5f7ac0c0.js" as="script"><link rel="preload" href="/assets/js/106.4170b16d.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.dc82a25b.js" as="script">
-    <link rel="stylesheet" href="/assets/css/303.styles.f20b5f67.css"><link rel="stylesheet" href="/assets/css/0.styles.5133dab0.css"><link rel="stylesheet" href="/assets/css/styles.dc44e8a2.css"><link rel="stylesheet" href="/assets/css/74.styles.361c907f.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
+    <link rel="preload" href="/assets/css/303.styles.e158f30f.css" as="style"><link rel="preload" href="/assets/js/chunk-default.32783f7f.js" as="script"><link rel="preload" href="/assets/css/0.styles.5133dab0.css" as="style"><link rel="preload" href="/assets/js/vendors~app.4e3a7f7c.js" as="script"><link rel="preload" href="/assets/css/styles.dc44e8a2.css" as="style"><link rel="preload" href="/assets/js/app.85fb8a73.js" as="script"><link rel="preload" href="/assets/css/74.styles.361c907f.css" as="style"><link rel="preload" href="/assets/js/74.9fac9e8d.js" as="script"><link rel="preload" href="/assets/js/106.5e845383.js" as="script"><link rel="preload" href="/assets/css/75.styles.875f7ca2.css" as="style"><link rel="preload" href="/assets/js/75.a0d6a7ba.js" as="script">
+    <link rel="stylesheet" href="/assets/css/303.styles.e158f30f.css"><link rel="stylesheet" href="/assets/css/0.styles.5133dab0.css"><link rel="stylesheet" href="/assets/css/styles.dc44e8a2.css"><link rel="stylesheet" href="/assets/css/74.styles.361c907f.css"><link rel="stylesheet" href="/assets/css/75.styles.875f7ca2.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-1834354a><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-0be01f68 data-v-1834354a><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-0be01f68><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-0be01f68></i></span></button> <div class="spacer" data-v-0be01f68></div> <div class="mr-2" data-v-0be01f68></div> <div class="v-menu" data-v-0be01f68><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-0be01f68><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-0be01f68><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-0be01f68></div> <span data-v-0be01f68>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-0be01f68></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-f9e46ca8 data-v-1834354a><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-f9e46ca8><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-23622" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-23622" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview v-treeview--hoverable theme--light" data-v-f9e46ca8><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-f9e46ca8></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-f9e46ca8><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-f9e46ca8>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="doc" class="v-application v-application--is-ltr theme--light" data-v-1834354a><div class="v-application--wrap"><!----> <header class="v-sheet theme--light elevation-0 v-toolbar v-toolbar--dense v-app-bar v-app-bar--clipped" style="height:48px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;" data-v-0be01f68 data-v-1834354a><div class="v-toolbar__content" style="height:48px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-0be01f68><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light" data-v-0be01f68></i></span></button> <div class="spacer" data-v-0be01f68></div> <div class="mr-2" data-v-0be01f68></div> <div class="v-menu" data-v-0be01f68><button type="button" class="v-btn v-btn--text theme--light v-size--large" data-v-0be01f68><span class="v-btn__content"><div class="v-avatar mr-2" style="height:36px;min-width:36px;width:36px;" data-v-0be01f68><img src="/assets/img/me.fb408776.png" alt="mulinzi" data-v-0be01f68></div> <span data-v-0be01f68>木林子</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light" data-v-0be01f68></i></span></button><!----></div></div></header> <nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0px;transform:translateX(-100%);width:300px;" data-v-f9e46ca8 data-v-1834354a><div class="v-navigation-drawer__content"><div class="v-input mx-2 mt-3 v-input--hide-details v-input--dense theme--light v-text-field v-text-field--enclosed v-text-field--outlined" data-v-f9e46ca8><div class="v-input__control"><div class="v-input__slot"><fieldset aria-hidden="true"><legend style="width:0px;"><span class="notranslate">&#8203;</span></legend></fieldset><div class="v-text-field__slot"><label for="input-23616" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">查找笔记文件</label><input id="input-23616" type="text"></div><div class="v-input__append-inner"><div></div></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-magnify theme--light"></i></div></div></div></div></div> <div class="v-treeview v-treeview--hoverable theme--light" data-v-f9e46ca8><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-f9e46ca8></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-f9e46ca8><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-f9e46ca8>
             javascript
           </div></span></div></div></div><!----></div><div aria-expanded="false" class="v-treeview-node v-treeview-node--click"><div class="v-treeview-node__root"><button type="button" class="v-icon notranslate v-treeview-node__toggle v-icon--link mdi mdi-menu-down theme--light"></button><div class="v-treeview-node__content"><div class="v-treeview-node__prepend"><i aria-hidden="true" class="v-icon notranslate mdi mdi-folder theme--light" data-v-f9e46ca8></i></div><div class="v-treeview-node__label"><span class="v-tooltip v-tooltip--right" data-v-f9e46ca8><!----><div aria-haspopup="true" aria-expanded="false" class="leaf-label" data-v-f9e46ca8>
             css
@@ -63,71 +63,71 @@
 </code></pre></div><h4 id="params1"><a href="#params1" class="header-anchor">#</a> params1</h4> <p><code>String | Object | Function</code>: 一个 HTML 标签名 | 组件选项对象 | 或者resolve 了上述任何一种的一个 async 函数。<strong>必填项</strong></p> <h4 id="params2"><a href="#params2" class="header-anchor">#</a> params2</h4> <p><code>Object</code>: 模板中 attribute 对应的数据对象。<strong>可选</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
   <span class="token comment">// 与 `v-bind:class` 的 API 相同，</span>
   <span class="token comment">// 接受一个字符串、对象或字符串和对象组成的数组</span>
-  <span class="token string">'class'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    foo<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    bar<span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token string-property property">'class'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">foo</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">bar</span><span class="token operator">:</span> <span class="token boolean">false</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// 与 `v-bind:style` 的 API 相同，</span>
   <span class="token comment">// 接受一个字符串、对象，或对象组成的数组</span>
-  style<span class="token operator">:</span> <span class="token punctuation">{</span>
-    color<span class="token operator">:</span> <span class="token string">'red'</span><span class="token punctuation">,</span>
-    fontSize<span class="token operator">:</span> <span class="token string">'14px'</span>
+  <span class="token literal-property property">style</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'red'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token string">'14px'</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// HTML 特性</span>
-  attrs<span class="token operator">:</span> <span class="token punctuation">{</span>
-    id<span class="token operator">:</span> <span class="token string">'foo'</span>
+  <span class="token literal-property property">attrs</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'foo'</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// 组件 prop</span>
-  props<span class="token operator">:</span> <span class="token punctuation">{</span>
-    myProp<span class="token operator">:</span> <span class="token string">'bar'</span>
+  <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">myProp</span><span class="token operator">:</span> <span class="token string">'bar'</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// dom 属性</span>
-  domProps<span class="token operator">:</span> <span class="token punctuation">{</span>
-    innerHTML<span class="token operator">:</span> <span class="token string">'baz'</span>
+  <span class="token literal-property property">domProps</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">innerHTML</span><span class="token operator">:</span> <span class="token string">'baz'</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// 事件监听器在 `on` 内，</span>
   <span class="token comment">// 但不再支持如 `v-on:keyup.enter` 这样的修饰器。</span>
   <span class="token comment">// 需要在处理函数中手动检查 keyCode。</span>
-  on<span class="token operator">:</span> <span class="token punctuation">{</span>
-    click<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>clickHandler
+  <span class="token literal-property property">on</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">click</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>clickHandler
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// 仅用于组件，用于监听原生事件，而不是组件内部使用</span>
   <span class="token comment">// `vm.$emit` 触发的事件。</span>
-  nativeOn<span class="token operator">:</span> <span class="token punctuation">{</span>
-    click<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>nativeClickHandler
+  <span class="token literal-property property">nativeOn</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">click</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>nativeClickHandler
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// 自定义指令。注意，你无法对 `binding` 中的 `oldValue`</span>
   <span class="token comment">// 赋值，因为 Vue 已经自动为你进行了同步。</span>
-  directives<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token literal-property property">directives</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
-      name<span class="token operator">:</span> <span class="token string">'my-custom-directive'</span><span class="token punctuation">,</span>
-      value<span class="token operator">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span>
-      expression<span class="token operator">:</span> <span class="token string">'1 + 1'</span><span class="token punctuation">,</span>
-      arg<span class="token operator">:</span> <span class="token string">'foo'</span><span class="token punctuation">,</span>
-      modifiers<span class="token operator">:</span> <span class="token punctuation">{</span>
-        bar<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'my-custom-directive'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">expression</span><span class="token operator">:</span> <span class="token string">'1 + 1'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">arg</span><span class="token operator">:</span> <span class="token string">'foo'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">modifiers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">bar</span><span class="token operator">:</span> <span class="token boolean">true</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token comment">// 作用域插槽的格式为</span>
   <span class="token comment">// { name: props =&gt; VNode | Array&lt;VNode&gt; }</span>
-  scopedSlots<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">scopedSlots</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token parameter">props</span> <span class="token operator">=&gt;</span> <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">,</span> props<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// 如果组件是其它组件的子组件，需为插槽指定名称</span>
-  slot<span class="token operator">:</span> <span class="token string">'name-of-slot'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">slot</span><span class="token operator">:</span> <span class="token string">'name-of-slot'</span><span class="token punctuation">,</span>
   <span class="token comment">// 其它特殊顶层 property</span>
-  key<span class="token operator">:</span> <span class="token string">'myKey'</span><span class="token punctuation">,</span>
-  ref<span class="token operator">:</span> <span class="token string">'myRef'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">key</span><span class="token operator">:</span> <span class="token string">'myKey'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">ref</span><span class="token operator">:</span> <span class="token string">'myRef'</span><span class="token punctuation">,</span>
   <span class="token comment">// 如果你在渲染函数中给多个元素都应用了相同的 ref 名，</span>
   <span class="token comment">// 那么 `$refs.myRef` 会变成一个数组。</span>
-  refInFor<span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token literal-property property">refInFor</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span class="token punctuation">}</span>
 </code></pre></div><h4 id="params3"><a href="#params3" class="header-anchor">#</a> params3</h4> <p><code>Array | String</code>: 子级虚拟节点 (VNodes array)，由 <code>createElement()</code> 构建而成 | 也可以使用字符串来生成“文本虚拟节点”。<strong>可选</strong></p> <h3 id="使用-javascript-代替模板功能"><a href="#使用-javascript-代替模板功能" class="header-anchor">#</a> 使用 JavaScript 代替模板功能</h3> <h4 id="v-if-和-v-for"><a href="#v-if-和-v-for" class="header-anchor">#</a> v-if 和 v-for</h4> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>items.length<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item in items<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ item.name }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">v-else</span><span class="token punctuation">&gt;</span></span>No items found.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code>props<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'items'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'items'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">createElement</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -137,14 +137,14 @@
     <span class="token keyword">return</span> <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'p'</span><span class="token punctuation">,</span> <span class="token string">'No items found.'</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><h4 id="v-model"><a href="#v-model" class="header-anchor">#</a> v-model</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>props<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre></div><h4 id="v-model"><a href="#v-model" class="header-anchor">#</a> v-model</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">createElement</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span>
   <span class="token keyword">return</span> <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-    domProps<span class="token operator">:</span> <span class="token punctuation">{</span>
-      value<span class="token operator">:</span> self<span class="token punctuation">.</span>value
+    <span class="token literal-property property">domProps</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> self<span class="token punctuation">.</span>value
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    on<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">on</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       <span class="token function-variable function">input</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         self<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
@@ -156,11 +156,11 @@
   <span class="token comment">// 或者 return createElement('div', this.$scopedSlots.default())</span>
 <span class="token punctuation">}</span>
 <span class="token comment">// `&lt;div&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/div&gt;`</span>
-</code></pre></div><p><code>this.$scopedSlots</code> 编写作用域插槽,每个作用域插槽都是一个返回若干 VNode array 的函数</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>props<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'message'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre></div><p><code>this.$scopedSlots</code> 编写作用域插槽,每个作用域插槽都是一个返回若干 VNode array 的函数</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'message'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">createElement</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>$scopedSlots<span class="token punctuation">.</span><span class="token function">default</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      text<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>message
+      <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>message
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
@@ -170,7 +170,7 @@
     <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'child'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
       <span class="token comment">// 在数据对象中传递 `scopedSlots`</span>
       <span class="token comment">// 格式为 { name: props =&gt; VNode | Array&lt;VNode&gt; }</span>
-      scopedSlots<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">scopedSlots</span><span class="token operator">:</span> <span class="token punctuation">{</span>
         <span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
           <span class="token keyword">return</span> <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">,</span> props<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
         <span class="token punctuation">}</span>
@@ -184,6 +184,6 @@
     </div><div class="v-snack__action "><button type="button" class="v-btn v-btn--text theme--dark v-size--default v-snack__btn"><span class="v-btn__content">
         刷新
       </span></button></div></div></div></div></div>
-    <script src="/assets/js/chunk-default.b17bdaac.js" defer></script><script src="/assets/js/74.5f7ac0c0.js" defer></script><script src="/assets/js/106.4170b16d.js" defer></script><script src="/assets/js/75.dc82a25b.js" defer></script><script src="/assets/js/vendors~app.1bfb673c.js" defer></script><script src="/assets/js/app.c00c7d0a.js" defer></script>
+    <script src="/assets/js/chunk-default.32783f7f.js" defer></script><script src="/assets/js/74.9fac9e8d.js" defer></script><script src="/assets/js/106.5e845383.js" defer></script><script src="/assets/js/75.a0d6a7ba.js" defer></script><script src="/assets/js/vendors~app.4e3a7f7c.js" defer></script><script src="/assets/js/app.85fb8a73.js" defer></script>
   </body>
 </html>

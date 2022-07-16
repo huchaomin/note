@@ -96,7 +96,6 @@ module.exports = {
     },
   },
   plugins: [
-    'vuepress-plugin-element-tabs',
     [
       '@vuepress/last-updated',
       {

@@ -12,9 +12,9 @@
     "@vssue/api-github-v3": "^1.4.7",
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "countup.js": "^2.0.8",
+    "sass-loader": "^13.0.2",
     "vuepress": "^1.8.2",
     "vuepress-plugin-demo-code": "^0.6.0",
-    "vuepress-plugin-element-tabs": "^0.2.8",
     "vuepress-plugin-nprogress": "^1.1.8",
     "vuetify": "^2.6.1"
   },

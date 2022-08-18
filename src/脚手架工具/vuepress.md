@@ -37,17 +37,6 @@ button {
 }
 </style>
 :::
-
-### markdown tabs
-:::: tabs type:card
-::: tab title
-__markdown content__
-:::
-::: tab title2
-__markdown content__2__
-:::
-::::
-
 ### markdown 使用外部组件
 <v-alert
   outlined

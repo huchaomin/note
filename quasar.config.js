@@ -36,7 +36,7 @@ module.exports = configure((ctx) => {
         utils: resolvePath('src/utils'),
       },
       vueRouterMode: 'history',
-      distDir: 'doc',
+      distDir: 'docs',
       useFilenameHashes: false,
       analyze: true,
       env: {

@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@quasar/app-vite': ^1.1.3
   '@quasar/extras': ^1.15.9
+  '@quasar/fastclick': ^1.1.5
   autoprefixer: ^10.4.13
   axios: ^1.2.2
   cross-spawn: ^7.0.3
@@ -22,6 +23,7 @@ specifiers:
   markdown-it-container: ^3.0.0
   prismjs: ^1.26.0
   quasar: ^2.11.2
+  register-service-worker: ^1.7.2
   toml: ^3.0.0
   unplugin-auto-import: ^0.12.1
   vite-auto-import-resolvers: ^3.0.3
@@ -32,6 +34,7 @@ specifiers:
 
 dependencies:
   '@quasar/extras': 1.15.9
+  '@quasar/fastclick': 1.1.5
   prismjs: 1.29.0
   quasar: 2.11.4
   vue: 3.2.45
@@ -56,6 +59,7 @@ devDependencies:
   markdown-ast: 0.2.1
   markdown-it: 12.3.2
   markdown-it-container: 3.0.0
+  register-service-worker: 1.7.2
   toml: 3.0.0
   unplugin-auto-import: 0.12.1
   vite-auto-import-resolvers: 3.0.3_62y5aj5zvuvew62wu3a3cbmfqu
@@ -1413,7 +1417,6 @@ packages:
 
   /@quasar/fastclick/1.1.5:
     resolution: {integrity: sha512-p3JKgTjRlJ1YQXbqTw3Bsa4j0mQdt5dq+WfYvyb7MgKGdephHCKdR/kxA5PCTAmJanGJuDKqRdyGYX/hYN4KGw==}
-    dev: true
 
   /@quasar/vite-plugin/1.3.0_rkc46mw22scfo5bxypiw32zegy:
     resolution: {integrity: sha512-wd7b/QrKu/WB53l+vxo6GLbkoEwh5FFKLtLl3fM8TXrDDRB1qsKKkRa/vwTU4dpuyBaOZDjycmYuAsOlTdNp8w==}

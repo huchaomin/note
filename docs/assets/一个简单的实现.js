@@ -1,4 +1,4 @@
-import{r as o,o as i,c as r,f as c,g as n,a8 as e}from"./vendor.js";const p=e("p",null,"plugins/store/index.js",-1),u=e("p",null,"store/index.js",-1),m=e("p",null,"main.js",-1),y={__name:"\u4E00\u4E2A\u7B80\u5355\u7684\u5B9E\u73B0",setup(d){const s=[{id:"doc-title",title:"\u7B80\u5355\u5B9E\u73B0\u4E00\u4E2A Store"}];return(l,_)=>{const t=o("doc-code"),a=o("doc-page");return i(),r(a,{desc:"",toc:s},{default:c(()=>[p,n(t,{code:`let Vue
+import{r as o,o as i,c as r,f as c,g as n,a9 as e}from"./vendor.js";const p=e("p",null,"plugins/store/index.js",-1),u=e("p",null,"store/index.js",-1),m=e("p",null,"main.js",-1),y={__name:"\u4E00\u4E2A\u7B80\u5355\u7684\u5B9E\u73B0",setup(d){const s=[{id:"doc-title",title:"\u7B80\u5355\u5B9E\u73B0\u4E00\u4E2A Store"}];return(l,_)=>{const t=o("doc-code"),a=o("doc-page");return i(),r(a,{desc:"",toc:s},{default:c(()=>[p,n(t,{code:`let Vue
 
 class Store {
   constructor (options = {}) {

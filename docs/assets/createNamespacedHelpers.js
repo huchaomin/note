@@ -1,4 +1,4 @@
-import{r as e,o as s,c as d,f as c,g as a,a8 as p}from"./vendor.js";const m=p("p",null,"\u5982\u679Ca\u7684namespaced\u8BBE\u7F6E\u4E3Afalse",-1),A={__name:"createNamespacedHelpers",setup(r){const o=[{id:"doc-title",title:"createNamespacedHelpers"}];return(i,u)=>{const t=e("doc-code"),n=e("doc-page");return s(),d(n,{desc:"",toc:o},{default:c(()=>[a(t,{code:`<script>
+import{r as e,o as s,c as d,f as c,g as a,a9 as p}from"./vendor.js";const m=p("p",null,"\u5982\u679Ca\u7684namespaced\u8BBE\u7F6E\u4E3Afalse",-1),A={__name:"createNamespacedHelpers",setup(r){const o=[{id:"doc-title",title:"createNamespacedHelpers"}];return(i,u)=>{const t=e("doc-code"),n=e("doc-page");return s(),d(n,{desc:"",toc:o},{default:c(()=>[a(t,{code:`<script>
 import {createNamespacedHelpers, mapActions, mapGetters, mapMutations, mapState} from 'vuex'
 const {
   mapState: aMapState,

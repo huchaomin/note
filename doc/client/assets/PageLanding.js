@@ -1,1 +1,0 @@
-import{u as a}from"./index.js";import{az as e,o as s,A as o}from"./vendor.js";import{g as r}from"./get-meta.js";const c={class:"q-px-lg"},l={__name:"PageLanding",setup(n){const t=a();return t.state.toc=[],e({title:"quasar",meta:r("quasar","life is but a span, and the world is but a div")}),(i,u)=>(s(),o("div",c," \u9996\u9875 "))}};export{l as default};

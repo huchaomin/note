@@ -8,7 +8,8 @@
     "glt": "node build/autoLeftTree.js",
     "dev": "quasar dev",
     "dev:ssr": "quasar dev -m ssr",
-    "build": "pnpm glt && quasar build -m ssr",
+    "build": "pnpm glt && quasar build",
+    "build:ssr": "pnpm glt && quasar build -m ssr",
     "lint": "eslint --ext .js,.vue ./ --fix",
     "test": "echo \"No test specified\" && exit 0"
   },

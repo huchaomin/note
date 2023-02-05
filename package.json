@@ -2,7 +2,7 @@
   "name": "note",
   "version": "1.0.0",
   "description": "木林子的笔记-记住自己的点滴",
-  "productName": "quasar",
+  "productName": "刘晓的笔记空间",
   "private": true,
   "scripts": {
     "glt": "node build/autoLeftTree.js",

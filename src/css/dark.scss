@@ -1,0 +1,64 @@
+body.body--dark {
+  color: $dark-text;
+  background: $dark-bg;
+  .q-header,.q-drawer{
+    color: $dark-text;
+    background-color: $dark-bg;
+  }
+  .doc-note {
+    &:not(.doc-note--tip):not(.doc-note--warning):not(.doc-note--danger) {
+      background-color: $dark-p-bg;
+      border-color: scale-color($primary, $lightness: -20%);
+      .doc-token {
+        border-color: #ddd;
+        color: #ddd;
+      }
+    }
+    &--tip {
+      border-color: $positive;
+      background-color: scale-color($positive, $lightness: -85%);
+      .doc-note__title,
+      .doc-link,
+      .doc-token {
+        color: $positive;
+      }
+      .doc-token {
+        border-color: $positive;
+      }
+    }
+    &--warning {
+      border-color: $warning;
+      background-color: scale-color($warning, $lightness: -85%);
+      .doc-note__title,
+      .doc-link,
+      .doc-token {
+        color: $warning;
+      }
+      .doc-token {
+        border-color: $warning;
+      }
+    }
+    &--danger {
+      border-color: $negative;
+      background-color: scale-color($negative, $lightness: -80%);
+    }
+  }
+  .doc-card-title {
+    background: $dark-p-bg;
+    color: $dark-text;
+    &:after {
+      border-top-color: scale-color($dark-p-bg, $lightness: -30%);
+    }
+  }
+  kbd {
+    box-shadow: inset 0 -2px 0 0 #cdcde6,inset 0 0 1px 1px #fff,0 1px 2px 1px #fff;
+  }
+  .q-page-sticky{
+      .q-btn:before {
+        box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2), 0 2px 2px rgba(255, 255, 255, 0.14), 0 3px 1px -2px rgba(255, 255, 255, 0.12);
+    }
+  }
+}
+.q-list--dark, .q-item--dark{
+  color: inherit;
+}

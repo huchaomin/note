@@ -1,27 +1,53 @@
 {
-  "name": "my-note",
+  "name": "note",
   "version": "1.0.0",
-  "license": "MIT",
+  "description": "木林子的笔记-记住自己的点滴",
+  "productName": "quasar",
+  "private": true,
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "glt": "node build/autoLeftTree.js",
+    "dev": "quasar dev",
+    "dev:ssr": "quasar dev -m ssr",
+    "build": "pnpm glt && quasar build -m ssr",
+    "lint": "eslint --ext .js,.vue ./ --fix",
+    "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@docsearch/js": "3",
-    "@mdi/font": "^6.5.95",
-    "@vssue/api-github-v3": "^1.4.7",
-    "@vssue/vuepress-plugin-vssue": "^1.4.8",
-    "countup.js": "^2.0.8",
-    "sass-loader": "^13.0.2",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-demo-code": "^0.6.0",
-    "vuepress-plugin-nprogress": "^1.1.8",
-    "vuetify": "^2.6.1"
+    "@quasar/extras": "^1.15.9",
+    "prismjs": "^1.26.0",
+    "quasar": "^2.11.2",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.8.3",
-    "@vuepress/plugin-pwa": "^1.8.3",
-    "vuepress-plugin-seo": "^0.1.4",
-    "webpack-bundle-analyzer": "^4.5.0"
+    "@quasar/app-vite": "^1.1.3",
+    "autoprefixer": "^10.4.13",
+    "axios": "^1.2.2",
+    "cross-spawn": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-quasar": "^1.1.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "fast-glob": "^3.2.12",
+    "gray-matter": "^4.0.2",
+    "markdown-ast": "^0.2.1",
+    "markdown-it": "^12.3.2",
+    "markdown-it-container": "^3.0.0",
+    "toml": "^3.0.0",
+    "unplugin-auto-import": "^0.12.1",
+    "vite-auto-import-resolvers": "^3.0.3",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "workbox-build": "^6.5.1"
+  },
+  "engines": {
+    "node": ">= 14.19.0",
+    "npm": ">= 6.14.12",
+    "yarn": ">= 1.17.3",
+    "pnpm": ">= 7.18.1"
   }
 }

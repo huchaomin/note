@@ -1,0 +1,21 @@
+$primary: #1976d2;
+
+$positive: #67c23a;
+$negative: #f89898;
+$info: #909399;
+$warning: #e6a23c;
+
+$light-code-bg: #e4e4e4;
+$dark-code-bg: #002433;
+
+$light-text: #1d1d1d;
+$light-bg: #fafafa;
+$dark-text: #cdcdcd;
+$dark-bg: #1a1b1e;
+
+$dark-p-bg: scale-color($primary, $lightness: -40%); // 黑色状态下，背景还能突出显示的
+
+$font-family: 'jinbuti';
+$font-family-code: 'JetBrainsMono';
+
+$toolbar-min-height: 60px;

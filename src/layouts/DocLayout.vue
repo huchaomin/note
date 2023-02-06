@@ -4,7 +4,9 @@ import DocHeader from './DocHeader.vue';
 import DocDrawerMenu from './DocDrawerMenu.vue';
 import DocDrawerToc from './DocDrawerToc.vue';
 
-const docStore = provideDocStore();
+const platform = inject('platform');
+const cookies = inject('cookies');
+const docStore = provideDocStore(platform, cookies);
 const cScroll = ref(null);
 
 docStore.state.scrollArea = computed(() => cScroll.value?.instance);

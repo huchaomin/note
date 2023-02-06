@@ -81,7 +81,7 @@ function showBottomSheet() {
       </q-btn>
       <q-space></q-space>
       <q-btn
-        v-if="$q.platform.is.mobile"
+        v-if="docStore.platform.is.mobile"
         stretch
         size="lg"
         flat

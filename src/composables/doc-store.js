@@ -7,19 +7,20 @@ export function useDocStore() {
   return inject(docStoreKey);
 }
 
-export function provideDocStore() {
+export function provideDocStore(platform, cookies) {
   const $q = useQuasar();
   const $route = useRoute();
   const $router = useRouter();
+  const isMobile = platform.is.mobile;
 
   const store = {
     $q,
     $route,
     $router,
-
+    platform,
     state: {
-      dark: $q.cookies.get('theme') === 'dark',
-      menuDrawer: true,
+      dark: cookies.get('theme') === 'dark',
+      menuDrawer: !isMobile,
     },
 
     toggleDark() {
@@ -29,22 +30,19 @@ export function provideDocStore() {
     toggleMenuDrawer() {
       store.state.menuDrawer = store.state.menuDrawer === false;
     },
+
+    hasRightDrawer: computed(() => store.state.toc.length > 0 && !isMobile),
   };
 
   injectToc(store);
   injectScroll(store);
 
   if (!process.env.SERVER) {
-    const isMobile = $q.platform.is.mobile;
-    if (isMobile) {
-      store.state.menuDrawer = false;
-    }
     store.state = reactive(store.state);
-    store.hasRightDrawer = computed(() => store.state.toc.length > 0 && !isMobile);
   }
 
   watch(() => store.state.dark, (val) => {
-    $q.cookies.set('theme', val ? 'dark' : 'light', { path: '/', sameSite: 'Strict' });
+    cookies.set('theme', val ? 'dark' : 'light', { path: '/', sameSite: 'Strict' });
     $q.addressbarColor.set(`${val ? '#1a1b1e' : '#fafafa'}`);
     $q.dark.set(val);
   }, { immediate: true });

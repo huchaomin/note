@@ -121,7 +121,7 @@ module.exports = configure((ctx) => {
     animations: ['fadeIn', 'fadeOut'],
 
     ssr: {
-    // pwa: ctx.prod,
+      pwa: ctx.prod,
       prodPort: 3111,
       middlewares: [
         'render',

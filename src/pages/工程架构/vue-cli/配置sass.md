@@ -5,7 +5,7 @@ desc: vue-cli使用dart-sass
 
 ## 1. vue-cli构建时选择dart-sass,node-sass依赖包有时很难下下来
 
-```shell
+```sh
 css pre-processors use dart-sass as default
 ```
 

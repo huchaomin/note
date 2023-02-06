@@ -10,13 +10,13 @@ title: es6模块的转码
 是 square 公司开源的一个转码器，可以将 ES6 模块转为 CommonJS 模块或 AMD 模块的写法，从而在浏览器中使用。
 安装
 
-```shell
+```sh
 npm install -g es6-module-transpiler
 ```
 
 将 ES6 模块文件转码
 
-```shell
+```sh
 compile-modules convert file1.js file2.js
 ```
 

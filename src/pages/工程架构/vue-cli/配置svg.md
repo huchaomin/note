@@ -5,7 +5,7 @@ desc: vue-cli使用svgo svgo-loader svg-sprite-loader处理svg文件，生成svg
 
 ## 安装
 
-```shell
+```sh
 yarn add svg-sprite-loader svgo svgo-loader --dev
 ```
 

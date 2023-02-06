@@ -6,7 +6,7 @@ title: npm 包管理器
 
 安装所有依赖
 
-```shell
+```sh
 # 如果项目具有 package.json 文件
 npm install
 npm install --production # 只安装dependencies下面的包
@@ -14,7 +14,7 @@ npm install --production # 只安装dependencies下面的包
 
 安装单个软件包
 
-```shell
+```sh
 npm install <package-name>
 ```
 
@@ -25,14 +25,14 @@ npm install <package-name>
 
 更新软件包
 
-```shell
+```sh
 npm update
 npm update <package-name>
 ```
 
 ## 运行任务
 
-```shell
+```sh
 npm run <task-name> # start-dev or start
 
 # package.json
@@ -48,7 +48,7 @@ npm run <task-name> # start-dev or start
 
 ### npm 将软件包安装到哪里
 
-```shell
+```sh
 npm install lodash # 当前node_modules 子文件夹下、dependencies中
 npm install -g lodash #全局node_modules 子文件夹下
 npm root -g # 全局的位置(C:\Users\hwx927218\AppData\Roaming\npm\node_modules)
@@ -58,7 +58,7 @@ npm root -g # 全局的位置(C:\Users\hwx927218\AppData\Roaming\npm\node_module
 
 所有依赖
 
-```shell
+```sh
 npm list
 npm list -g # 全局
 npm list --depth=0 # 仅查看顶层（也就是package.json里面的）
@@ -68,7 +68,7 @@ npm list <package-name> # 特定包的版本(也适用于依赖包)
 
 ### 查看包的远程版本
 
-```shell
+```sh
 npm view [package_name] version # 最新版
 npm view [package_name] versions # 所有历史版本
 ```
@@ -77,14 +77,14 @@ npm view [package_name] versions # 所有历史版本
 
 使用'@'符号安装固定版本
 
-```shell
+```sh
 npm install <package-name>@<version>
 npm install -g <package-name>@<version>
 ```
 
 ## 更新包
 
-```shell
+```sh
 npm update # package.json不会改变，package-lock.json可能会改变
 npm install # 同上
 npm outdated # 查看哪些顶层包有更新
@@ -92,7 +92,7 @@ npm outdated # 查看哪些顶层包有更新
 
 强制包所有的包更新到最新（包括主版本，不推荐）
 
-```shell
+```sh
 npm install -g npm-check-updates
 ncu -u
 npm update # 更推荐 rimraf node_modules,然后npm install
@@ -100,7 +100,7 @@ npm update # 更推荐 rimraf node_modules,然后npm install
 
 ## 卸载包
 
-```shell
+```sh
 npm uninstall <package-name> # 卸载包，不改变package.json
 npm uninstall <package-name> --save # 卸载包，改变package.json中的dependencies
 npm uninstall <package-name> --save-dev # 卸载包，改变package.json中的devDependencies
@@ -119,7 +119,7 @@ npm uninstall -g <package-name> # 卸载全局的包
 
 不需要安装任何东西。
 
-```shell
+```sh
 #  我电脑没有安装npx和cowsay
 npx cowsay "你好"
 #  自动全局安装和npm相同版本的npx
@@ -130,20 +130,20 @@ npx cowsay "你好"
 
 ### 场景
 
-```shell
+```sh
 npx vue create my-vue-app # 运行 vue CLI 工具以创建新的应用程序并运行它们
 npx create-react-app my-react-app # 使用 create-react-app 创建新的 React 应用
 ```
 
 可以使用 @version 语法运行同一命令的不同版本
 
-```shell
+```sh
 npx node@10 -v #v10.18.1
 npx node@12 -v #v12.14.1
 ```
 
 直接从 URL 运行任意代码片段
 
-```shell
+```sh
 npx https://gist.github.com/zkat/4bc19503fe9e9309e2bfaa2c58074d32
 ```

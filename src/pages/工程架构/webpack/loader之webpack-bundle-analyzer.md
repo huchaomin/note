@@ -4,7 +4,7 @@ desc: webpack webpack-bundle-analyzer 打包分析工具的使用
 ---
 ## 安装
 
-```shell
+```sh
 yarn add -D webpack-bundle-analyzer
 ```
 

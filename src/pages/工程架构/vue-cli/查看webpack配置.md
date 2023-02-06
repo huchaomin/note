@@ -5,13 +5,13 @@ desc: 查看vue.config.js最终的webpack配置
 
 ## 查看webpack完整配置
 
-```shell
+```sh
 vue inspect > webpack_config.json
 ```
 
 ## 查看rules
 
-```shell
+```sh
 vue inspect --rules
 # [
 #   'vue',
@@ -33,7 +33,7 @@ vue inspect --rules
 
 ## 查看某一个rule
 
-```shell
+```sh
 vue inspect --rule vue
 # /* config.module.rule('vue') */
 # {
@@ -64,7 +64,7 @@ vue inspect --rule vue
 
 ## 查看plugins
 
-```shell
+```sh
 vue inspect --plugins
 # [
 #   'vue-loader',
@@ -79,7 +79,7 @@ vue inspect --plugins
 
 ## 查看某一个plugin
 
-```shell
+```sh
 vue inspect --plugin vue-loader
 # /* config.plugin('vue-loader') */
 # new VueLoaderPlugin()

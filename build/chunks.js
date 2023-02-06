@@ -16,7 +16,7 @@ function manualChunks(id) {
 
 // 如果为ssr模式，可以删掉此方法
 function chunkFileNames(chunkInfo) {
-  const { name, type } = chunkInfo;
+  const { name } = chunkInfo;
   let chunkName = name;
   if (name.startsWith('_')) {
     chunkName = `$${name.slice(1)}`;

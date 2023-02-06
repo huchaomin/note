@@ -91,7 +91,7 @@ import './x'
 import './y'
 ```
 
-```shell
+```sh
 $ babel-node main.js
 1
 ```

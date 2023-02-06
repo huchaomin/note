@@ -3,13 +3,13 @@ title: yarn 的基础用法
 ---
 ## 初始化
 
-```shell
+```sh
 yarn init
 ```
 
 ## 添加依赖包
 
-```shell
+```sh
 yarn add [package]
 yarn add [package]@[version]
 yarn add [package]@[tag]
@@ -17,7 +17,7 @@ yarn add [package]@[tag]
 
 ## 添加到不同依赖项类别中
 
-```shell
+```sh
 yarn add [package] --dev // devDependencies
 yarn add [package] --peer // peerDependencies
 yarn add [package] --optional // optionalDependencies
@@ -25,7 +25,7 @@ yarn add [package] --optional // optionalDependencies
 
 ## 升级
 
-```shell
+```sh
 yarn upgrade [package]
 yarn upgrade [package]@[version]
 yarn upgrade [package]@[tag]
@@ -33,13 +33,13 @@ yarn upgrade [package]@[tag]
 
 ## 移除
 
-```shell
+```sh
 yarn remove [package]
 ```
 
 ## 安装项目的全部依赖
 
-```shell
+```sh
 yarn
 // 或者
 yarn install

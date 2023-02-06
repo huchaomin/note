@@ -148,7 +148,7 @@ console.log('b.js ', require('./a.js').x)
 exports.x = 'b2'
 ```
 
-```shell
+```sh
 // main.js
 console.log('main.js ', require('./a.js').x)
 console.log('main.js ', require('./b.js').x)
@@ -160,7 +160,7 @@ main.js  a2
 main.js  b2
 ```
 
-```shell
+```sh
 //修改main.js
 console.log('main.js ', require('./a.js').x)
 console.log('main.js ', require('./b.js').x)

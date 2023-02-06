@@ -5,14 +5,14 @@ desc: eslint配合husky与lint-staged,为代码洁癖保驾护航
 
 ## 安装husky和lint-staged
 
-```shell
+```sh
 yarn add husky lint-staged -D
 npx husky-init
 ```
 
 ## .husky\pre-commit 文件修改
 
-```shell
+```sh
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 

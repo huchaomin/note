@@ -15,7 +15,7 @@ background: url('~@/assets/img/logo.png');
 
 - 本地预览dist
 
-```shell
+```sh
 npm install -g serve
 serve -s dist
 # -s 参数的意思是将其架设在 Single-Page Application 模式下
@@ -24,7 +24,7 @@ serve -s dist
 
 - 使用环境变量
 
-```shell
+```sh
 VUE_APP_* | NODE_ENV | BASE_URL
 # .env 文件里面配置的环境变量只有以VUE_APP开头的才会被vue-cli使用
 ```

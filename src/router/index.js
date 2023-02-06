@@ -16,7 +16,7 @@ import routes from './routes';
 export default () => {
   const createHistory = process.env.SERVER
     ? createMemoryHistory
-    : createWebHashHistory;
+    : createWebHashHistory; // 如果支持 ssr，替换成 createWebHistory
 
   const Router = createRouter({
     routes,

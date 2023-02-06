@@ -7,7 +7,7 @@ const { createSvgIconsPlugin } = require('vite-plugin-svg-icons');
 const env = require('dotenv').config().parsed;
 const mdPlugin = require('./build/md');
 const examplesPlugin = require('./build/examples');
-const manualChunks = require('./build/chunks');
+const { manualChunks, chunkFileNames } = require('./build/chunks');
 const { productName, description } = require('./package.json');
 
 const resolvePath = (p) => path.resolve(__dirname, p);
@@ -85,7 +85,10 @@ module.exports = configure((ctx) => {
         if (ctx.prod && isClient) {
           config.build.chunkSizeWarningLimit = 650;
           config.build.rollupOptions = {
-            output: { manualChunks },
+            output: {
+              manualChunks,
+              chunkFileNames,
+            },
           };
         }
       },

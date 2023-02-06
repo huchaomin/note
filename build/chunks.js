@@ -14,6 +14,7 @@ function manualChunks(id) {
   }
 }
 
+// 如果为ssr模式，可以删掉此方法
 function chunkFileNames(chunkInfo) {
   const { name, type } = chunkInfo;
   let chunkName = name;
@@ -23,8 +24,7 @@ function chunkFileNames(chunkInfo) {
   if (name.startsWith('.')) {
     chunkName = name.slice(1);
   }
-  console.log(name, type);
-  return `chunk/${chunkName}.js`;
+  return `chunk/${chunkName}-[hash].js`;
 }
 
 module.exports = {

@@ -35,9 +35,9 @@ module.exports = configure((ctx) => {
         img: resolvePath('src/assets/img'),
         utils: resolvePath('src/utils'),
       },
-      vueRouterMode: 'history',
+      vueRouterMode: 'hash',
       distDir: 'docs',
-      useFilenameHashes: false,
+      // useFilenameHashes: false,
       analyze: true,
       env: {
         DOC_NAME: productName,

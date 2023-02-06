@@ -1,5 +1,5 @@
 import {
-  createRouter, createMemoryHistory, createWebHashHistory, START_LOCATION,
+  createRouter, createMemoryHistory, createWebHistory, createWebHashHistory, START_LOCATION,
 } from 'vue-router';
 import { LoadingBar } from 'quasar';
 import routes from './routes';
@@ -16,7 +16,7 @@ import routes from './routes';
 export default () => {
   const createHistory = process.env.SERVER
     ? createMemoryHistory
-    : createWebHashHistory; // 如果支持 ssr，替换成 createWebHistory
+    : (process.env.VUE_ROUTER_MODE === 'history' ? createWebHistory : createWebHashHistory);
 
   const Router = createRouter({
     routes,

@@ -28,15 +28,15 @@ module.exports = (md) => {
       .children
       .reduce((acc, t) => acc + t.content, '');
     const { id, title } = parseContent(content);
-    const uniqueId = `${md.$data.toc.length}-${id}`;
+    const uniqueId = `${md.$toc.length}-${id}`;
     if (['h2', 'h3'].includes(token.tag)) {
       token.attrSet('id', uniqueId);
     }
     token.attrSet('class', 'doc-heading');
     if (token.tag === 'h2') {
-      md.$data.toc.push({ id: uniqueId, title });
+      md.$toc.push({ id: uniqueId, title });
     } else if (token.tag === 'h3') {
-      md.$data.toc.push({ id: uniqueId, title, sub: true });
+      md.$toc.push({ id: uniqueId, title, sub: true });
     }
     return self.renderToken(tokens, idx, options);
   };

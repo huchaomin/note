@@ -12,9 +12,9 @@ module.exports = (code) => {
     });
   }
   data.components = new Set(data.components || []);
-  md.$data = data;
+  md.$toc = data.toc;
   const mdPageContent = md.render(content);
-  md.$data = null; // free up memory
+  md.$toc = null; // free up memory
 
   return getVueComponent(data, mdPageContent);
 };

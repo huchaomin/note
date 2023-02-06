@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const sortFolderMap = require('../src/constant/sortFolderMap.json');
 const getLastUpdate = require('./getLastUpdate.js');
+const getAlgoliaRecords = require('./getAlgoliaRecords.js');
 
 const newSortFolderMap = {};
 const resolvePath = (p) => path.resolve(__dirname, p);
@@ -23,14 +24,17 @@ function walk(uri, parentUri, filter, tree) {
   if (filter(uri)) {
     const stat = fs.lstatSync(uri);
     if (stat.isFile()) {
+      const routeName = getName(uri);
       tree.children.push({
-        name: getName(uri),
+        name: routeName,
         path: getPath(parentUri, uri),
         component: getComponent(uri),
         meta: {
           lastUpdate: getLastUpdate(uri),
         },
       });
+      const code = fs.readFileSync(uri, 'utf-8');
+      getAlgoliaRecords(code, routeName);
     }
     if (stat.isDirectory()) {
       const obj = {

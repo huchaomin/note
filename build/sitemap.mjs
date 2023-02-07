@@ -31,7 +31,7 @@ function handleLeftTree(pPath, arr) {
 handleLeftTree('/', leftTree);
 
 const stream = new SitemapStream({
-  hostname: 'https://mulinzi.cn',
+  hostname: process.env.DOC_LOCATION,
 });
 
 streamToPromise(Readable.from(links).pipe(stream)).then((data) => {

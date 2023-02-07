@@ -79,6 +79,7 @@ function showBottomSheet() {
         :label="name"
       >
       </q-btn>
+      <doc-search></doc-search>
       <q-space></q-space>
       <q-btn
         v-if="docStore.platform.is.mobile"

@@ -61,7 +61,7 @@ b.js  a1
 a.js  b2
 main.js  a2
 main.js  b2
-`,lang:"shell"}),o(n,{code:`//\u4FEE\u6539main.js
+`,lang:"sh"}),o(n,{code:`//\u4FEE\u6539main.js
 console.log('main.js ', require('./a.js').x)
 console.log('main.js ', require('./b.js').x)
 console.log('main.js ', require('./a.js').x)
@@ -74,6 +74,6 @@ main.js  a2
 main.js  b2
 main.js  a2     //\u7F13\u5B58\u4E2D\u8BFB\u53D6
 main.js  b2     //\u7F13\u5B58\u4E2D\u8BFB\u53D6
-`,lang:"shell"}),H,P,o(n,{code:`require.main === module
+`,lang:"sh"}),H,P,o(n,{code:`require.main === module
 // true
 `,lang:"javascript"}),B]),_:1})}}};export{w as default};

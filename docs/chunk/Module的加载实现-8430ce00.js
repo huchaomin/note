@@ -35,4 +35,4 @@ import './x'
 import './y'
 `,lang:"javascript"}),t(n,{code:`$ babel-node main.js
 1
-`,lang:"shell"}),C]),_:1})}}};export{B as default};
+`,lang:"sh"}),C]),_:1})}}};export{B as default};

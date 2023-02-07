@@ -8,7 +8,6 @@ import docsearch from '@docsearch/js';
 
 const router = useRouter();
 const route = useRoute();
-debugger;
 
 function initialize() {
   const options = {

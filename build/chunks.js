@@ -14,7 +14,7 @@ function manualChunks(id) {
   }
 }
 
-// 如果为ssr模式，可以删掉此方法
+// 如果为ssr模式，可以删掉此方法 TODO
 function chunkFileNames(chunkInfo) {
   const { name } = chunkInfo;
   let chunkName = name;

@@ -9,7 +9,7 @@ title: todos
 - typescript
 - react
 - 微信小程序
-- sass 语法
+- sass/scss 语法
 - imgView 图片放大 换一个图片预览插件
 - 替换 笔记工程里面的svg文件 不能为透明
 - stylelint

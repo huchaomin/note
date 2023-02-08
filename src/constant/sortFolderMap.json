@@ -99,7 +99,6 @@
     "javascript-es6-Class的继承",
     "javascript-es6-Module的语法",
     "javascript-es6-Module的加载实现",
-    "javascript-es6-es6与node",
     "javascript-es6-es6模块的转码",
     "javascript-es6-编程风格的改变"
   ],
@@ -197,7 +196,8 @@
     "others-前后端鉴权方式",
     "others-JSON",
     "others-思考",
-    "others-todos"
+    "others-todos",
+    "others-xxx"
   ],
   "plugin-axios-honor-hus_": [
     "plugin-axios-honor-hus-apis_js",
@@ -258,7 +258,11 @@
     "工程架构-nodejs-fs模块",
     "工程架构-nodejs-fs模块常用方法",
     "工程架构-nodejs-module模块",
-    "工程架构-nodejs-path模块"
+    "工程架构-nodejs-path模块",
+    "工程架构-nodejs-es6与node"
+  ],
+  "工程架构-vite_": [
+    "工程架构-vite-注意"
   ],
   "工程架构-vue-cli_": [
     "工程架构-vue-cli-基本配置",
@@ -302,6 +306,7 @@
     "工程架构-webpack_",
     "工程架构-vue-cli_",
     "工程架构-eslint_",
+    "工程架构-vite_",
     "工程架构-bower",
     "工程架构-browserslist",
     "工程架构-umd模块打包方法",
@@ -431,7 +436,6 @@
     "框架_",
     "plugin_",
     "tools_",
-    "others_",
-    "md"
+    "others_"
   ]
 }

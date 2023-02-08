@@ -64,7 +64,7 @@ const isNotModuleScript = this !== undefined
 ES6 export通过接口，输出的是同一个值。不同的脚本加载这个接口，得到的都是同样的实例。
 
 ```javascript
-// mod.js
+// mod.mjs
 function C() {
   this.sum = 0
   this.add = function () {

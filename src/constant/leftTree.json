@@ -788,14 +788,6 @@
             }
           },
           {
-            "name": "javascript-es6-es6与node",
-            "path": "es6与node",
-            "component": "./javascript/es6/es6与node.md",
-            "meta": {
-              "lastUpdate": "2023/2/5 19:39:44"
-            }
-          },
-          {
             "name": "javascript-es6-es6模块的转码",
             "path": "es6模块的转码",
             "component": "./javascript/es6/es6模块的转码.md",
@@ -1079,6 +1071,14 @@
             "component": "./工程架构/nodejs/path模块.md",
             "meta": {
               "lastUpdate": "2023/2/5 19:39:44"
+            }
+          },
+          {
+            "name": "工程架构-nodejs-es6与node",
+            "path": "es6与node",
+            "component": "./工程架构/nodejs/es6与node.md",
+            "meta": {
+              "lastUpdate": ""
             }
           }
         ],
@@ -1454,6 +1454,24 @@
         ],
         "redirect": {
           "name": "工程架构-eslint-安装"
+        }
+      },
+      {
+        "name": "工程架构-vite_",
+        "path": "vite_",
+        "component": "Empty",
+        "children": [
+          {
+            "name": "工程架构-vite-注意",
+            "path": "注意",
+            "component": "./工程架构/vite/注意.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          }
+        ],
+        "redirect": {
+          "name": "工程架构-vite-注意"
         }
       },
       {
@@ -2777,18 +2795,18 @@
         "meta": {
           "lastUpdate": "2023/2/5 19:39:44"
         }
+      },
+      {
+        "name": "others-xxx",
+        "path": "xxx",
+        "component": "./others/xxx.md",
+        "meta": {
+          "lastUpdate": ""
+        }
       }
     ],
     "redirect": {
       "name": "others-数据_"
-    }
-  },
-  {
-    "name": "md",
-    "path": "md",
-    "component": "./md.md",
-    "meta": {
-      "lastUpdate": "2023/2/5 19:39:44"
     }
   }
 ]

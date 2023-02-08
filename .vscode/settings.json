@@ -5,6 +5,12 @@
     "MD040": false,
     "MD041": false
   },
+  "search.exclude": {
+    ".zip": true,
+    "**/node_modules": true,
+    "**/docs": true,
+    "**/vuepress": true
+  },
   "cSpell.words": [
     "algoliasearch"
   ],

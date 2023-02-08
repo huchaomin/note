@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const { Readable } = require('stream');
 const { SitemapStream, streamToPromise, EnumChangefreq } = require('sitemap');
-const leftTree = require('../src/constant/leftTree.json');
 
 const resolvePath = (p) => path.resolve(__dirname, p);
 
@@ -22,13 +21,13 @@ function handleLeftTree(pPath, arr) {
   });
 }
 
-handleLeftTree('/', leftTree);
-
-const stream = new SitemapStream({
-  hostname: 'https://www.mulinzi.cn',
-});
-
-module.export = streamToPromise(Readable.from(links).pipe(stream)).then((data) => {
-  fs.writeFileSync(resolvePath('../public/sitemap.xml'), data.toString());
-  console.log('sitemap.xml generated');
-});
+module.exports = (leftTree) => {
+  handleLeftTree('/', leftTree);
+  const stream = new SitemapStream({
+    hostname: 'https://www.mulinzi.cn',
+  });
+  streamToPromise(Readable.from(links).pipe(stream)).then((data) => {
+    fs.writeFileSync(resolvePath('../public/sitemap.xml'), data.toString());
+    console.log('sitemap.xml generated');
+  });
+};

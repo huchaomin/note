@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const sortFolderMap = require('../src/constant/sortFolderMap.json');
 const getLastUpdate = require('./getLastUpdate.js');
+const gSiteMap = require('./sitemap.js');
 
 const newSortFolderMap = {};
 const resolvePath = (p) => path.resolve(__dirname, p);
@@ -103,5 +104,7 @@ const fn = (rootDir, filter = defaultFilter) => {
   fs.writeFileSync(resolvePath('../src/constant/sortFolderMap.json'), JSON.stringify(newSortFolderMap, null, 2));
   return tree.children[0].children;
 };
-fs.writeFileSync(resolvePath('../src/constant/leftTree.json'), JSON.stringify(fn(pages), null, 2));
+const leftTree = fn(pages);
+fs.writeFileSync(resolvePath('../src/constant/leftTree.json'), JSON.stringify(leftTree, null, 2));
 console.log('leftTree.json 已更新');
+gSiteMap(leftTree);

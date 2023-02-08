@@ -30,8 +30,8 @@ watchEffect(() => {
   docStore.state.toc = props.toc;
 });
 onMounted(() => {
-  const { getEleByHash, scrollToEle } = docStore;
-  const ele = getEleByHash();
+  const { getEleBySearch, scrollToEle } = docStore;
+  const ele = getEleBySearch();
   setTimeout(() => {
     scrollToEle(ele);
   }, 500); // 有些页面组件还没加载完，需要延迟一下 not perfect

@@ -20,7 +20,7 @@ const show = computed(() => docStore.hasRightDrawer.value);
           clickable
           dense
           :active="docStore.state.activeToc === tocItem.id"
-          @click="docStore.scrollTo(tocItem.id)"
+          @click.prevent="docStore.scrollTo(tocItem.id)"
         >
           <q-item-section v-if="tocItem.sub === true" side></q-item-section>
           <q-item-section>{{ tocItem.title }}</q-item-section>

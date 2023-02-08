@@ -1,13 +1,18 @@
+// hash 模式下，$route.hash 始终为’‘，获取hash可以通过$route.path获取
 export default function injectScroll(store) {
   Object.assign(store.state, {
     scrollArea: null,
   });
-  const { $route, $router } = store;
+  const { $route } = store;
 
-  function getEleByHash() {
-    const hash = decodeURIComponent(window.location.hash || '');
-    return hash.length > 1
-      ? document.getElementById(hash.substring(1))
+  function getCurrentSearchId() {
+    return decodeURIComponent($route.query.id || '');
+  }
+
+  function getEleBySearch() {
+    const id = getCurrentSearchId();
+    return id
+      ? document.getElementById(id)
       : null;
   }
 
@@ -26,20 +31,25 @@ export default function injectScroll(store) {
   }
 
   function scrollTo(id) {
-    const hash = `#${id}`;
-    if ($route.hash === hash) {
-      scrollToEle(getEleByHash());
+    const currentId = getCurrentSearchId();
+    if (currentId === id) {
+      scrollToEle(getEleBySearch());
     } else {
-      // 触发hash变化
-      $router.replace({ hash });
+      // 触发$route.fullPath变化
+      const enId = encodeURIComponent(id);
+      if (currentId) {
+        window.location.hash = window.location.hash.replace(encodeURIComponent(currentId), enId);
+      } else {
+        window.location.hash += `?id=${enId}`;
+      }
     }
   }
 
   watch(() => $route.fullPath, (newVal, oldVal) => {
-    const newArr = newVal.split('#');
-    const oldArr = oldVal.split('#');
+    const newArr = newVal.split('?id=');
+    const oldArr = oldVal.split('?id=');
     if (newArr[0] === oldArr[0] && newArr[1] !== oldArr[1]) {
-      const ele = getEleByHash();
+      const ele = getEleBySearch();
       nextTick(() => {
         scrollToEle(ele);
       });
@@ -47,7 +57,7 @@ export default function injectScroll(store) {
   });
 
   Object.assign(store, {
-    getEleByHash,
+    getEleBySearch,
     scrollToEle,
     scrollTo,
   });

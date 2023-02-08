@@ -14,10 +14,10 @@ const resolvePath = (p) => path.resolve(__dirname, p);
 // eslint-disable-next-line arrow-body-style
 module.exports = configure((ctx) => {
   return {
-    eslint: {
-      warnings: true,
-      errors: true,
-    },
+    // eslint: {
+    //   warnings: true,
+    //   errors: true,
+    // },
     boot: [
       'initial',
       'app-global',

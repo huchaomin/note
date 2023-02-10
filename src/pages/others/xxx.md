@@ -23,4 +23,28 @@ var foo = 5;
 // And a single line comment http://google.com
 ```
 
-`inline code`
+## previewers
+
+```css
+.a{
+  color: red;
+}
+.example-angle {
+  transform: rotate(10deg);
+}
+```
+
+## treeview
+
+```treeview
+├── a first folder/
+|   ├── holidays.mov
+|   ├── javascript-file.js
+|   └── some_picture.jpg
+├── documents/
+|   ├── spreadsheet.xls
+|   ├── manual.pdf
+|   ├── document.docx
+|   └── presentation.ppt
+└── etc.
+```

@@ -1,6 +1,8 @@
 <script setup>
 import Prism from 'prismjs';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+import 'prismjs/plugins/previewers/prism-previewers.css';
+import 'prismjs/plugins/treeview/prism-treeview.css';
 
 Prism.manual = true; // 手动渲染，不需要自动全局通过class去查找渲染
 
@@ -76,8 +78,8 @@ onMounted(() => {
   <c-scroll-area :fit-content-height="!fullScreen">
     <!-- eslint-disable vue/no-v-html -->
     <pre
-      class="doc-code line-numbers"
-      :class="`language-${la}`"
+      class="doc-code"
+      :class="`language-${la}${ la === 'treeview' ? '' : ' line-numbers'}`"
       :style="`${fullScreen ? `min-height: ${qPageHeight}px; border-radius: 0` : ''}`"
     ><code ref="highlightEle">{{ code }}</code></pre> <!-- 这里不能换行 -->
   </c-scroll-area>

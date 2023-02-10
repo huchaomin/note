@@ -27,7 +27,7 @@ git checkout <commit-id> -- test.txt
 git checkout \u2013- test.txt
 `,lang:"sh"}),k,e(i,{code:`git checkout <branch-name>
 `,lang:"sh"}),f,e(i,{code:`git commit --amend --allow-empty -m \u63D0\u4EA4\u8BED\u53E5
-`,lang:""}),v,e(i,{code:`git branch -u origin/mybranch
+`,lang:"markup"}),v,e(i,{code:`git branch -u origin/mybranch
 // \u6216
 git push origin/mybranch -u
 `,lang:"sh"}),x,y,A,e(i,{code:`git checkout -b branch_name tag_name

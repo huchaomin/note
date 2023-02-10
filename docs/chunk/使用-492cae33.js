@@ -3,7 +3,7 @@ const exp = /\\d/g
 // \u4F7F\u7528RegExp\u5BF9\u8C61\u521B\u5EFA
 const exp = new RegExp('\\d', 'g')
 `,lang:"javascript"}),p,g,n(d,{code:`( [ { \\ ^ $ | ) ? * + . ] }
-`,lang:""}),m,n(s,{"fit-content-height":"",class:"q-mt-md q-mb-sm","content-style":{paddingBottom:"10px"}},{default:e(()=>[n(o,{flat:"",bordered:"",dense:""},{default:e(()=>[x,f]),_:1})]),_:1}),b,n(d,{code:`/^\\uD83D/.test('\\uD83D\\uDC2A') // true
+`,lang:"markup"}),m,n(s,{"fit-content-height":"",class:"q-mt-md q-mb-sm","content-style":{paddingBottom:"10px"}},{default:e(()=>[n(o,{flat:"",bordered:"",dense:""},{default:e(()=>[x,f]),_:1})]),_:1}),b,n(d,{code:`/^\\uD83D/.test('\\uD83D\\uDC2A') // true
 /^\\uD83D/u.test('\\uD83D\\uDC2A') //  false
 `,lang:"javascript"}),t("p",null,[n(u,{to:"https://www.bookstack.cn/read/es6-3rd/spilt.3.docs-regex.md"},{default:e(()=>[l("\u53C2\u8003\u962E\u4E00\u5CF0\u8001\u5E08")]),_:1})]),k,n(d,{code:`/foo.bar/.test('foo\\nbar') // false
 /foo.bar/s.test('foo\\nbar') // true

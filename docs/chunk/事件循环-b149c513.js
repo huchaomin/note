@@ -44,4 +44,4 @@ foo()
 `,lang:"javascript"}),v,f,n(t,{code:`setImmediate(() => {
   // \u5728\u4E8B\u4EF6\u5FAA\u73AF\u7684\u4E0B\u4E00\u4E2A\u6EF4\u7B54\u4E2D\u6267\u884C\u7684\u56DE\u8C03
 })
-`,lang:""}),o("p",null,[e("setTimeout() \u56DE\u8C03\u4E0E setImmediate() \u975E\u5E38\u76F8\u4F3C\u3002"),k,n(a,{to:"https://juejin.cn/post/6844904100195205133"},{default:c(()=>[e("\u6267\u884C\u987A\u5E8F\u53D6\u51B3\u4E8E\u5404\u79CD\u56E0\u7D20")]),_:1})])]),_:1})}}};export{j as default};
+`,lang:"markup"}),o("p",null,[e("setTimeout() \u56DE\u8C03\u4E0E setImmediate() \u975E\u5E38\u76F8\u4F3C\u3002"),k,n(a,{to:"https://juejin.cn/post/6844904100195205133"},{default:c(()=>[e("\u6267\u884C\u987A\u5E8F\u53D6\u51B3\u4E8E\u5404\u79CD\u56E0\u7D20")]),_:1})])]),_:1})}}};export{j as default};

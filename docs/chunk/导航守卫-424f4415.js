@@ -62,4 +62,4 @@ beforeRouteLeave (to, from, next) {
 })
 `,lang:"javascript"}),m,t(n,{code:`beforeRouterLeave --> beforeEach --> beforeEnter --> beforeRouteEnter --> beforeResolve --> afterEach -->
 created --> beforeRouteEnter\u7684next\u56DE\u8C03 --> mounted
-`,lang:""})]),_:1})}}};export{x as default};
+`,lang:"markup"})]),_:1})}}};export{x as default};

@@ -10,7 +10,7 @@ Node
 EventTarget
   \u2193
 Object
-`,lang:""}),p,_,h,n(l,{code:`const el = document.getElementById('name')
+`,lang:"markup"}),p,_,h,n(l,{code:`const el = document.getElementById('name')
 el.foo = 'bar'
 el.user = { name: 'jjc', age: '18'}
 `,lang:"javascript"}),b,g,n(l,{code:`<input id="name" value="qwerty" foo="bar"/>

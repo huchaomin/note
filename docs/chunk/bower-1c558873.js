@@ -1,4 +1,4 @@
-import{r as e,o as s,c as a,f as r,g as c,a9 as p}from"./vendor-585b19a3.js";const d=p("h2",{id:"1-bower-\u7684\u7B80\u5355\u4F7F\u7528",class:"doc-heading"},"bower \u7684\u7B80\u5355\u4F7F\u7528",-1),b={__name:"bower",setup(i){const o=[{id:"doc-title",title:"bower \u7684\u7B80\u5355\u4F7F\u7528"},{id:"1-bower-\u7684\u7B80\u5355\u4F7F\u7528",title:"1. bower \u7684\u7B80\u5355\u4F7F\u7528"}];return(l,w)=>{const n=e("doc-code"),t=e("doc-page");return s(),a(t,{desc:"bower \u7684\u7B80\u5355\u4F7F\u7528",toc:o},{default:r(()=>[d,c(n,{code:`npm install -g bower
+import{r as e,o as s,c as a,f as r,g as c,a9 as p}from"./vendor-585b19a3.js";const d=p("h2",{id:"1-bower-\u7684\u7B80\u5355\u4F7F\u7528",class:"doc-heading"},"bower \u7684\u7B80\u5355\u4F7F\u7528",-1),b={__name:"bower",setup(i){const o=[{id:"doc-title",title:"bower \u7684\u7B80\u5355\u4F7F\u7528"},{id:"1-bower-\u7684\u7B80\u5355\u4F7F\u7528",title:"1. bower \u7684\u7B80\u5355\u4F7F\u7528"}];return(l,m)=>{const n=e("doc-code"),t=e("doc-page");return s(),a(t,{desc:"bower \u7684\u7B80\u5355\u4F7F\u7528",toc:o},{default:r(()=>[d,c(n,{code:`npm install -g bower
 
 bower init(\u751F\u6210bower.json)
 
@@ -23,4 +23,4 @@ bower update <name> [<name> ..] [<options>]\uFF08\u66F4\u65B0\u5305\uFF09
 bower uninstall <name> [<name> ..] [<options>]\uFF08\u5378\u8F7D\u5305\uFF09
 -S, --save: Remove uninstalled packages from the project\u2019s bower.json dependencies
 -D, --save-dev: Remove uninstalled packages from the project\u2019s bower.json devDependencies
-`,lang:""})]),_:1})}}};export{b as default};
+`,lang:"markup"})]),_:1})}}};export{b as default};

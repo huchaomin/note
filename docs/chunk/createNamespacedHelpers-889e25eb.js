@@ -42,4 +42,4 @@ this.$store.state.a.count
 // \u5176\u4ED6
 ...mapGetters(['doneTodos'\uFF0C'doubleCount']),
 ...mapActions(['addTodosAsync'\uFF0C'incrementIfOddOnRootSum']),
-`,lang:""})]),_:1})}}};export{A as default};
+`,lang:"markup"})]),_:1})}}};export{A as default};

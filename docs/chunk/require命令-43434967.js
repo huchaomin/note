@@ -43,7 +43,7 @@ Object.keys(require.cache).forEach(function(key) {
   "author": "",
   "license": "ISC"
 }
-`,lang:""}),T,D,o(n,{code:`// a.js
+`,lang:"markup"}),T,D,o(n,{code:`// a.js
 exports.x = 'a1'
 console.log('a.js ', require('./b.js').x)
 exports.x = 'a2'

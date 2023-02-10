@@ -79,8 +79,8 @@ function showBottomSheet() {
         :label="name"
       >
       </q-btn>
-      <doc-search></doc-search>
       <q-space></q-space>
+      <doc-search></doc-search>
       <q-btn
         v-if="docStore.platform.is.mobile"
         stretch

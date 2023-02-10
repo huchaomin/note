@@ -1,6 +1,11 @@
 <script setup>
 import Prism from 'prismjs';
 
+Prism.manual = true; // 手动渲染，不需要自动全局通过class去查找渲染
+
+// https://prismjs.com/docs/Prism.html#.highlight
+// autolinker 注册的是 before-highlight 事件
+// 而只有 highlightElement 才会触发 before-highlight 事件 坑爹啊
 function getLangCodeFromExtension(extension) {
   const extensionMap = {
     vue: 'markup',
@@ -52,19 +57,29 @@ const props = defineProps({
     default: false,
   },
 });
-const la = computed(() => getLangCodeFromExtension(props.lang.toLowerCase()));
-const html = computed(() => Prism.highlight(props.code, Prism.languages[la.value] || Prism.languages.markup, la.value));
+const la = computed(() => {
+  const l = getLangCodeFromExtension(props.lang.toLowerCase());
+  if (Prism.languages[l]) {
+    return l;
+  }
+  return 'markup';
+});
+// const html = computed(() => Prism.highlight(props.code, Prism.languages[la.value], la.value));
 const qPageHeight = inject('qPageHeight');
 
+const pre = ref(null);
+onMounted(() => {
+  Prism.highlightElement(pre.value);
+});
 </script>
 <template>
   <c-scroll-area :fit-content-height="!fullScreen">
     <!-- eslint-disable vue/no-v-html -->
     <pre
+      ref="pre"
       class="doc-code"
       :class="`language-${la}`"
       :style="`${fullScreen ? `min-height: ${qPageHeight}px; border-radius: 0` : ''}`"
-      v-html="html"
-    ></pre>
+    ><code>{{ code }}</code></pre> <!-- 这里不能换行 -->
   </c-scroll-area>
 </template>

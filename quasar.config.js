@@ -4,6 +4,7 @@ const { configure } = require('quasar/wrappers'); // better IDE autocomplete exp
 const AutoImport = require('unplugin-auto-import/vite');
 const { dirResolver, DirResolverHelper, AutoGenerateImports } = require('vite-auto-import-resolvers');
 const { createSvgIconsPlugin } = require('vite-plugin-svg-icons');
+const prismjs = require('vite-plugin-prismjs');
 const env = require('dotenv').config().parsed;
 const mdPlugin = require('./build/md');
 const examplesPlugin = require('./build/examples');
@@ -78,6 +79,13 @@ module.exports = configure((ctx) => {
         createSvgIconsPlugin({
           iconDirs: [resolvePath('src/assets/svg')],
           symbolId: 'icon-[dir]-[name]',
+        }),
+        prismjs.default({
+          languages: ['bash', 'html', 'css', 'ejs', 'git', 'nginx', 'json', 'js-templates', 'http',
+            'markdown', 'yaml', 'uri', 'typescript', 'toml', 'scss', 'jsx', 'tsx'],
+          plugins: ['line-numbers'], // TODO
+          // theme: 'solarizedlight',
+          // css: true,
         }),
       ],
 

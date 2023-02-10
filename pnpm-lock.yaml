@@ -22,13 +22,14 @@ specifiers:
   markdown-ast: ^0.2.1
   markdown-it: ^12.3.2
   markdown-it-container: ^3.0.0
-  prismjs: ^1.26.0
+  prismjs: ^1.29.0
   quasar: ^2.11.2
   register-service-worker: ^1.7.2
   sitemap: ^7.1.1
   toml: ^3.0.0
   unplugin-auto-import: ^0.12.1
   vite-auto-import-resolvers: ^3.0.3
+  vite-plugin-prismjs: ^0.0.8
   vite-plugin-svg-icons: ^2.0.1
   vue: ^3.2.45
   vue-router: ^4.1.6
@@ -67,6 +68,7 @@ devDependencies:
   toml: 3.0.0
   unplugin-auto-import: 0.12.1
   vite-auto-import-resolvers: 3.0.3_62y5aj5zvuvew62wu3a3cbmfqu
+  vite-plugin-prismjs: 0.0.8_prismjs@1.29.0
   vite-plugin-svg-icons: 2.0.1
   workbox-build: 6.5.4
 
@@ -2166,6 +2168,14 @@ packages:
       '@babel/helper-define-polyfill-provider': 0.3.3_@babel+core@7.20.12
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /babel-plugin-prismjs/2.1.0_prismjs@1.29.0:
+    resolution: {integrity: sha512-ehzSKYfeAz4U78zi/sfwsjDPlq0LvDKxNefcZTJ/iKBu+plsHsLqZhUeGf1+82LAcA35UZGbU6ksEx2Utphc/g==}
+    peerDependencies:
+      prismjs: ^1.18.0
+    dependencies:
+      prismjs: 1.29.0
     dev: true
 
   /balanced-match/1.0.2:
@@ -5196,7 +5206,6 @@ packages:
   /prismjs/1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
-    dev: false
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -6323,6 +6332,17 @@ packages:
     dependencies:
       local-pkg: 0.4.2
       unplugin-auto-import: 0.12.1
+    dev: true
+
+  /vite-plugin-prismjs/0.0.8_prismjs@1.29.0:
+    resolution: {integrity: sha512-mBPPMS/hwVUArdqCtp/oajZT7iq1qwJDDCciNZ3R5+Q5tQUuUHXtDKuZHYnklPLElNbENf2FyuOtC4FrgxQRAA==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      '@babel/core': 7.20.12
+      babel-plugin-prismjs: 2.1.0_prismjs@1.29.0
+    transitivePeerDependencies:
+      - prismjs
+      - supports-color
     dev: true
 
   /vite-plugin-svg-icons/2.0.1:

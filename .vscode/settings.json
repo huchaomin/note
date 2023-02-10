@@ -12,6 +12,7 @@
     "**/vuepress": true
   },
   "cSpell.words": [
-    "algoliasearch"
+    "algoliasearch",
+    "prismjs"
   ],
 }

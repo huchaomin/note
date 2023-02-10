@@ -17,7 +17,7 @@
     "@docsearch/js": "3",
     "@quasar/extras": "^1.15.9",
     "@quasar/fastclick": "^1.1.5",
-    "prismjs": "^1.26.0",
+    "prismjs": "^1.29.0",
     "quasar": "^2.11.2",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
@@ -45,6 +45,7 @@
     "toml": "^3.0.0",
     "unplugin-auto-import": "^0.12.1",
     "vite-auto-import-resolvers": "^3.0.3",
+    "vite-plugin-prismjs": "^0.0.8",
     "vite-plugin-svg-icons": "^2.0.1",
     "workbox-build": "^6.5.1"
   },

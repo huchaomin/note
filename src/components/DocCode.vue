@@ -6,7 +6,7 @@ const props = defineProps({
   },
   lang: {
     type: String,
-    default: 'js',
+    required: true,
   },
 });
 const docStore = useDocStore();

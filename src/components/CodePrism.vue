@@ -1,5 +1,6 @@
 <script setup>
 import Prism from 'prismjs';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 Prism.manual = true; // 手动渲染，不需要自动全局通过class去查找渲染
 
@@ -66,20 +67,18 @@ const la = computed(() => {
 });
 // const html = computed(() => Prism.highlight(props.code, Prism.languages[la.value], la.value));
 const qPageHeight = inject('qPageHeight');
-
-const pre = ref(null);
+const highlightEle = ref(null);
 onMounted(() => {
-  Prism.highlightElement(pre.value);
+  Prism.highlightElement(highlightEle.value);
 });
 </script>
 <template>
   <c-scroll-area :fit-content-height="!fullScreen">
     <!-- eslint-disable vue/no-v-html -->
     <pre
-      ref="pre"
-      class="doc-code"
+      class="doc-code line-numbers"
       :class="`language-${la}`"
       :style="`${fullScreen ? `min-height: ${qPageHeight}px; border-radius: 0` : ''}`"
-    ><code>{{ code }}</code></pre> <!-- 这里不能换行 -->
+    ><code ref="highlightEle">{{ code }}</code></pre> <!-- 这里不能换行 -->
   </c-scroll-area>
 </template>

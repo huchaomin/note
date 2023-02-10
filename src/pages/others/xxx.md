@@ -7,7 +7,7 @@ title: 其他小知识
 - 在控制台程序里，回车的本意是将光标移动到屏幕最左边（此时光标的横坐标没有变）
 - 换行就是将光标移动到下一行（此时光标的纵坐标没有变），两者结合起来就实现了回车（省略说法）效果。
 
-## autolinker
+## autolinker line-numbers
 
 ```javascript
 // [Text you want to see](http://url-goes-here.com)

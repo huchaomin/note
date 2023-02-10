@@ -1,6 +1,5 @@
 .doc-code {
   margin: 0;
-  font-family: $font-family-code;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -11,6 +10,10 @@
   hyphens: none;
   border-radius: $generic-border-radius;
   padding:16px 1em;
+
+  > code{
+    font-family: $font-family-code;
+  }
 
   // autolinker
   .token a {

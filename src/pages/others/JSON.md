@@ -81,3 +81,7 @@ console.log(JSONStr === str) // true
     ```javascript
     console.log(eval("[]")) // []
     ```
+
+::: tip
+打印深层次对象`console.log(JSON.stringify(obj, null, 2))`,其中2是用于缩进的空格数
+:::

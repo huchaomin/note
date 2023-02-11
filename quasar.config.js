@@ -22,6 +22,7 @@ module.exports = configure((ctx) => {
     boot: [
       'initial',
       'app-global',
+      'baiduAnalytics',
     ],
     css: [
       'app.scss',

@@ -115,6 +115,7 @@ module.exports = configure((ctx) => {
 
       components: [
         'QBadge',
+        'QCheckbox',
         'QMarkupTable',
       ],
 

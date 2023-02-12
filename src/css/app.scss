@@ -192,3 +192,11 @@ h6 {
     background-color: scale-color($primary, $lightness: 80%);
   }
 }
+
+.contains-task-list{
+ list-style: none;
+ padding-left: 0 !important;
+ > li{
+  margin-bottom: 0 !important;
+ }
+}

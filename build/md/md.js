@@ -20,7 +20,8 @@ const md = markdownIt(opts)
   .use(require('./md-plugin-image'))
   .use(require('./md-plugin-containers'))
   .use(require('./md-plugin-table'))
-  .use(require('./md-plugin-fence'));
+  .use(require('./md-plugin-fence'))
+  .use(require('./markdown-it-task-lists'));
 
 module.exports = md;
 

@@ -46,11 +46,36 @@ X-UA-Compatible是自从IE8新加的一个设置，对于IE8以下的浏览器�
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 ```
 
+## format-detection （格式检测）
+
+主要是有以下几个设置：
+
+- content="telephone=no"
+- content="email=no"
+- content="address=no"
+
+### telephone
+
+telephone=no就禁止了把数字转化为拨号链接
+telephone=yes就开启了把数字转化为拨号链接，要开启转化功能（默认）
+
+### email
+
+email=no禁止作为邮箱地址
+email=yes就开启了把文字默认为邮箱地址（默认）
+
+### address
+
+address=no禁止跳转至地图！
+address=yes就开启了点击地址直接跳转至地图的功能
+
 ## 综上所述,现在常用的
 
 ```html
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!-- 下面可选 -->
+<meta name="format-detection" content="telephone=no,email=no,address=no">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 ```

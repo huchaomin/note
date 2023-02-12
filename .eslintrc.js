@@ -17,6 +17,7 @@ module.exports = {
     'airbnb-base', // 不包括 react
     'eslint:recommended',
     'plugin:vue/vue3-recommended', // 更为严格一点
+    'plugin:quasar/standard',
     './.eslintrc-auto-import.json',
   ],
 

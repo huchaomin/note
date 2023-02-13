@@ -9,6 +9,7 @@ title: tip
 - 想解构 store，可以使用 `const { name, doubleCount } = storeToRefs(store)`
 - compositon api 不支持 $reset方法： setup syntax and does not implement $reset()
 - 你可以在pinia实例上侦听整个 state
+- 事件订阅 可以尝试使用 pinia 的 $onAction
 
   ```javascript
   watch(

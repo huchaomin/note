@@ -1,1 +1,0 @@
-import{r as o,o as s,c as a,f as i,a9 as n,g as p}from"./vendor-585b19a3.js";const l={__name:"compositionApi",setup(_){const t=[{id:"doc-title",title:"composition api"}];return(r,m)=>{const c=o("doc-img"),e=o("doc-page");return s(),a(e,{desc:"",toc:t},{default:i(()=>[n("p",null,[p(c,{src:"composition-api.svg",alt:"composition-api.svg"})])]),_:1})}}};export{l as default};

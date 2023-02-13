@@ -212,7 +212,9 @@
   "plugin_": [
     "plugin-axios_",
     "plugin-前端接口时间缓存_js",
-    "plugin-domResizeSensor_js"
+    "plugin-domResizeSensor_js",
+    "plugin-百度统计",
+    "plugin-escapeHTML和unescapeHTML"
   ],
   "tools-git_": [
     "tools-git-基础",

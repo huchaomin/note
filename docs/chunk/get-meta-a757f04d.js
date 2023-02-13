@@ -1,1 +1,0 @@
-var n=(t,e)=>({title:{name:"title",content:t},ogTitle:{property:"og:title",content:t},twitterTitle:{name:"twitter:title",content:t},description:{name:"description",content:e},ogDesc:{property:"og:description",content:e},twitterDesc:{name:"twitter:description",content:e}});export{n as g};

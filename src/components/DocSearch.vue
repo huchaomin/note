@@ -6,9 +6,9 @@ import docsearch from '@docsearch/js';
 onMounted(() => {
   docsearch({
     container: '#docsearch',
-    appId: 'ZHEDSTO6YB',
-    apiKey: 'cf3cbb81b4cef999e99a7f5d8967f8da',
-    indexName: 'mulinzi',
+    appId: 'VAOT8ETVIP',
+    apiKey: '0ef1096cfa74a3fad269ba4af7a5612c',
+    indexName: 'mulinzi_note',
     placeholder: '搜索笔记...',
     // startUrls: [origin], // TODO
     // sitemaps: [`${origin}/sitemap.xml`],

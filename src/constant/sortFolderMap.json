@@ -196,8 +196,9 @@
     "others-前后端鉴权方式",
     "others-JSON",
     "others-思考",
-    "others-todos",
-    "others-xxx"
+    "others-markdown",
+    "others-小知识点",
+    "others-todos"
   ],
   "plugin-axios-honor-hus_": [
     "plugin-axios-honor-hus-apis_js",
@@ -231,7 +232,8 @@
     "tools-webstorm_",
     "tools-typora快捷键",
     "tools-yarn",
-    "tools-yed-graph-editor快捷键"
+    "tools-yed-graph-editor快捷键",
+    "tools-others"
   ],
   "工程架构-commonJS_": [
     "工程架构-commonJS-概述",
@@ -307,6 +309,7 @@
     "工程架构-vue-cli_",
     "工程架构-eslint_",
     "工程架构-vite_",
+    "工程架构-pnpm",
     "工程架构-bower",
     "工程架构-browserslist",
     "工程架构-umd模块打包方法",
@@ -341,6 +344,7 @@
     "框架-quasar(vue3)-prefetchData",
     "框架-quasar(vue3)-sass-scss-variables",
     "框架-quasar(vue3)-ssr",
+    "框架-quasar(vue3)-icongenie",
     "框架-quasar(vue3)-tips",
     "框架-quasar(vue3)-utils",
     "框架-quasar(vue3)-others",
@@ -420,7 +424,8 @@
     "框架-vue3.x-template-key",
     "框架-vue3.x-v-for",
     "框架-vue3.x-v-model",
-    "框架-vue3.x-v-bind-object排序敏感"
+    "框架-vue3.x-v-bind-object排序敏感",
+    "框架-vue3.x-ref"
   ],
   "框架_": [
     "框架-vue2.x_",

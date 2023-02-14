@@ -84,7 +84,7 @@ module.exports = configure((ctx) => {
         prismjs.default({
           languages: ['bash', 'html', 'css', 'ejs', 'git', 'nginx', 'json', 'js-templates', 'http',
             'markdown', 'yaml', 'uri', 'typescript', 'toml', 'scss', 'jsx', 'tsx'],
-          plugins: ['line-numbers', 'autolinker', 'previewers', 'treeview'],
+          plugins: ['line-numbers', 'autolinker', 'previewers', 'match-braces', 'treeview'],
           // theme: 'solarizedlight',
           // css: true,
         }),

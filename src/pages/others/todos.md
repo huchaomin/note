@@ -32,3 +32,4 @@ title: todos
 - vue-devtools
 - 收藏夹管理
 - onBeforeRouteUpdate 的触发方法
+- 升级package.json

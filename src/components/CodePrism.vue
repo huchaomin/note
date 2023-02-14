@@ -3,6 +3,7 @@ import Prism from 'prismjs';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import 'prismjs/plugins/previewers/prism-previewers.css';
 import 'prismjs/plugins/treeview/prism-treeview.css';
+import 'prismjs/plugins/match-braces/prism-match-braces.css';
 
 Prism.manual = true; // 手动渲染，不需要自动全局通过class去查找渲染
 
@@ -61,6 +62,6 @@ onMounted(() => {
       class="doc-code"
       :class="`language-${la}${ la === 'treeview' ? '' : ' line-numbers'}`"
       :style="`${fullScreen ? `min-height: ${qPageHeight}px; border-radius: 0` : ''}`"
-    ><code ref="highlightEle">{{ code }}</code></pre> <!-- 这里不能换行 -->
+    ><code ref="highlightEle" class="match-braces rainbow-braces">{{ code }}</code></pre> <!-- 这里不能换行 -->
   </c-scroll-area>
 </template>

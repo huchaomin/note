@@ -54,3 +54,11 @@ var foo = 5;
 - [ ] Uranus
 - [ ] Neptune
 - [ ] Comet Haley
+
+## match-braces 和 rainbow-braces
+
+```js
+(defun factorial (n)
+ (if (= n 0) 1
+  (* n (factorial (- n 1)))))
+```

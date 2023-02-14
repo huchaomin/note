@@ -3,9 +3,9 @@
 // https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments
 // https://github.com/blog/1825-task-lists-in-all-markdown-documents
 
-let disableCheckboxes = true;
-let useLabelWrapper = false;
-let useLabelAfter = false;
+// let disableCheckboxes = true;
+// let useLabelWrapper = false;
+// let useLabelAfter = false;
 
 function isInline(token) { return token.type === 'inline'; }
 function isParagraph(token) { return token.type === 'paragraph_open'; }
@@ -84,6 +84,7 @@ function attrSet(token, name, value) {
   if (index < 0) {
     token.attrPush(attr);
   } else {
+    // eslint-disable-next-line no-param-reassign
     token.attrs[index] = attr;
   }
 }
@@ -99,11 +100,11 @@ function parentToken(tokens, index) {
 }
 
 module.exports = (md, options) => {
-  if (options) {
-    disableCheckboxes = !options.enabled;
-    useLabelWrapper = !!options.label;
-    useLabelAfter = !!options.labelAfter;
-  }
+  // if (options) {
+  //   disableCheckboxes = !options.enabled;
+  //   useLabelWrapper = !!options.label;
+  //   useLabelAfter = !!options.labelAfter;
+  // }
 
   md.core.ruler.after('inline', 'github-task-lists', (state) => {
     const { tokens } = state;

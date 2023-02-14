@@ -2,6 +2,7 @@
 import Prism from 'prismjs';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import 'prismjs/plugins/previewers/prism-previewers.css';
+import 'prismjs/plugins/inline-color/prism-inline-color.css';
 import 'prismjs/plugins/treeview/prism-treeview.css';
 import 'prismjs/plugins/match-braces/prism-match-braces.css';
 

@@ -18,7 +18,7 @@ var foo = 5;
 // And a single line comment http://google.com
 ```
 
-## previewers
+## inline-color 和 previewers
 
 ```css
 .a{

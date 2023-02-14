@@ -19,6 +19,7 @@ specifiers:
   eslint-plugin-vue: ^8.5.0
   fast-glob: ^3.2.12
   gray-matter: ^4.0.2
+  html-escaper: ^3.0.3
   markdown-ast: ^0.2.1
   markdown-it: ^12.3.2
   markdown-it-container: ^3.0.0
@@ -27,6 +28,7 @@ specifiers:
   register-service-worker: ^1.7.2
   sitemap: ^7.1.1
   toml: ^3.0.0
+  unescape-html: ^1.1.0
   unplugin-auto-import: ^0.12.1
   vite-auto-import-resolvers: ^3.0.3
   vite-plugin-prismjs: ^0.0.8
@@ -40,8 +42,10 @@ dependencies:
   '@docsearch/js': 3.3.3
   '@quasar/extras': 1.15.9
   '@quasar/fastclick': 1.1.5
+  html-escaper: 3.0.3
   prismjs: 1.29.0
   quasar: 2.11.4
+  unescape-html: 1.1.0
   vue: 3.2.45
   vue-router: 4.1.6_vue@3.2.45
 
@@ -3987,6 +3991,10 @@ packages:
     hasBin: true
     dev: true
 
+  /html-escaper/3.0.3:
+    resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
+    dev: false
+
   /html-minifier/4.0.0:
     resolution: {integrity: sha512-aoGxanpFPLg7MkIl/DDFYtb0iWz7jMFGqFhvEDZga6/4QTjneiD8I/NXL1x5aaoCp7FSIT6h/OhykDdPsbtMig==}
     engines: {node: '>=6'}
@@ -6162,6 +6170,10 @@ packages:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
     dev: true
+
+  /unescape-html/1.1.0:
+    resolution: {integrity: sha512-O9/yBNqIkArjS597iHez5hAaAdn7b8/230SX8IncgXAX5tWI9XlEQYaz6Qbou0Sloa9n6lx9G5s6hg5qhJyzGg==}
+    dev: false
 
   /unicode-canonical-property-names-ecmascript/2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}

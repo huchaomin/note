@@ -105,9 +105,7 @@ module.exports = configure((ctx) => {
 
     devServer: {
       port: 9090,
-      open: {
-        app: { name: 'google chrome' },
-      },
+      open: false
     },
 
     framework: {

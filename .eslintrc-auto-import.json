@@ -1,7 +1,14 @@
 {
   "globals": {
     "$vImg": "readonly",
+    "Component": "readonly",
+    "ComponentPublicInstance": "readonly",
+    "ComputedRef": "readonly",
     "EffectScope": "readonly",
+    "InjectionKey": "readonly",
+    "PropType": "readonly",
+    "Ref": "readonly",
+    "VNode": "readonly",
     "computed": "readonly",
     "createApp": "readonly",
     "customRef": "readonly",
@@ -39,7 +46,6 @@
     "readonly": "readonly",
     "ref": "readonly",
     "resolveComponent": "readonly",
-    "resolveDirective": "readonly",
     "shallowReactive": "readonly",
     "shallowReadonly": "readonly",
     "shallowRef": "readonly",

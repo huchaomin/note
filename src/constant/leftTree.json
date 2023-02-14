@@ -396,6 +396,14 @@
             "meta": {
               "lastUpdate": "2023/2/5 19:39:44"
             }
+          },
+          {
+            "name": "javascript-Object-Object构造函数",
+            "path": "Object构造函数",
+            "component": "./javascript/Object/Object构造函数.md",
+            "meta": {
+              "lastUpdate": "2023/2/14 18:16:58"
+            }
           }
         ],
         "redirect": {
@@ -2438,7 +2446,15 @@
             "path": "快捷键",
             "component": "./tools/vscode/快捷键.md",
             "meta": {
-              "lastUpdate": "2023/2/5 19:39:44"
+              "lastUpdate": "2023/2/14 18:16:58"
+            }
+          },
+          {
+            "name": "tools-vscode-git",
+            "path": "git",
+            "component": "./tools/vscode/git.md",
+            "meta": {
+              "lastUpdate": "2023/2/14 16:07:49"
             }
           }
         ],
@@ -2841,7 +2857,7 @@
         "path": "markdown",
         "component": "./others/markdown.md",
         "meta": {
-          "lastUpdate": "2023/2/13 10:32:30"
+          "lastUpdate": "2023/2/14 16:07:49"
         }
       },
       {
@@ -2857,7 +2873,7 @@
         "path": "todos",
         "component": "./others/todos.md",
         "meta": {
-          "lastUpdate": "2023/2/13 11:51:29"
+          "lastUpdate": "2023/2/14 18:16:58"
         }
       }
     ],

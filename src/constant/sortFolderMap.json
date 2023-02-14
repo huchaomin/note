@@ -127,7 +127,8 @@
     "javascript-Object-静态方法_",
     "javascript-Object-属性描述符",
     "javascript-Object-属性的可枚举性",
-    "javascript-Object-new操作符"
+    "javascript-Object-new操作符",
+    "javascript-Object-Object构造函数"
   ],
   "javascript-RegExp_": [
     "javascript-RegExp-使用",
@@ -221,7 +222,8 @@
     "tools-git-需要掌握的"
   ],
   "tools-vscode_": [
-    "tools-vscode-快捷键"
+    "tools-vscode-快捷键",
+    "tools-vscode-git"
   ],
   "tools-webstorm_": [
     "tools-webstorm-创建宏",

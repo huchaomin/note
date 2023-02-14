@@ -1,0 +1,1 @@
+import{r as c,o as n,c as a,f as p,aa as e}from"./vendor-774b84b8.js";const s=e("ul",null,[e("li",null,"\u5347\u7EA7pnpm \u8BF7\u4F7F\u7528 npm add -g pnpm")],-1),m={__name:"pnpm",setup(_){const t=[{id:"doc-title",title:"pnpm \u7684\u57FA\u672C\u7528\u6CD5"}];return(l,r)=>{const o=c("doc-page");return n(),a(o,{desc:"",toc:t},{default:p(()=>[s]),_:1})}}};export{m as default};

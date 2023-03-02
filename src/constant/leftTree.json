@@ -1070,7 +1070,7 @@
             "path": "module模块",
             "component": "./工程架构/nodejs/module模块.md",
             "meta": {
-              "lastUpdate": "2023/2/5 19:39:44"
+              "lastUpdate": ""
             }
           },
           {
@@ -1170,7 +1170,7 @@
             "path": "output",
             "component": "./工程架构/webpack/output.md",
             "meta": {
-              "lastUpdate": "2023/2/5 19:39:44"
+              "lastUpdate": ""
             }
           },
           {
@@ -2053,6 +2053,14 @@
             "component": "./框架/vue3.x/v-bind-object排序敏感.md",
             "meta": {
               "lastUpdate": "2023/2/5 19:39:44"
+            }
+          },
+          {
+            "name": "框架-vue3.x-v-bind绑定v-model指令",
+            "path": "v-bind绑定v-model指令",
+            "component": "./框架/vue3.x/v-bind绑定v-model指令.md",
+            "meta": {
+              "lastUpdate": ""
             }
           },
           {

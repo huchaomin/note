@@ -429,6 +429,7 @@
     "框架-vue3.x-v-for",
     "框架-vue3.x-v-model",
     "框架-vue3.x-v-bind-object排序敏感",
+    "框架-vue3.x-v-bind绑定v-model指令",
     "框架-vue3.x-ref"
   ],
   "框架_": [

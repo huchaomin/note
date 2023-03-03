@@ -26,10 +26,19 @@ defineExpose({
   <q-scroll-area
     ref="instance"
     :thumb-style="thumbStyle"
-    :class="{ fit: !fitContentHeight }"
+    :class="{ fit: !fitContentHeight, fitContentHeight }"
     :style="`${ fitContentHeight ? 'height:'+height+'px;' : '' }`"
   >
     <slot></slot>
     <q-resize-observer v-if="fitContentHeight" @resize="onResize"></q-resize-observer>
   </q-scroll-area>
 </template>
+<style lang="scss" scoped>
+  .fitContentHeight{
+    :deep() {
+      .q-scrollarea__content{
+        min-height: auto;
+      }
+    }
+  }
+</style>

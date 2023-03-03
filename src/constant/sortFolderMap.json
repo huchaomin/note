@@ -176,7 +176,8 @@
   ],
   "others-浏览器_": [
     "others-浏览器-内核",
-    "others-浏览器-缓存"
+    "others-浏览器-缓存",
+    "others-浏览器-performance"
   ],
   "others-移动端_": [
     "others-移动端-单位",
@@ -268,7 +269,8 @@
     "工程架构-nodejs-es6与node"
   ],
   "工程架构-vite_": [
-    "工程架构-vite-注意"
+    "工程架构-vite-注意",
+    "工程架构-vite-预构建的简单理解"
   ],
   "工程架构-vue-cli_": [
     "工程架构-vue-cli-基本配置",

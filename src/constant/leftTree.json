@@ -1070,7 +1070,7 @@
             "path": "module模块",
             "component": "./工程架构/nodejs/module模块.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/2/5 19:39:44"
             }
           },
           {
@@ -1170,7 +1170,7 @@
             "path": "output",
             "component": "./工程架构/webpack/output.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/2/5 19:39:44"
             }
           },
           {
@@ -1284,7 +1284,7 @@
             "path": "hash",
             "component": "./工程架构/webpack/hash.md",
             "meta": {
-              "lastUpdate": "2023/2/5 19:39:44"
+              "lastUpdate": ""
             }
           },
           {
@@ -1476,6 +1476,14 @@
             "meta": {
               "lastUpdate": "2023/2/8 17:12:39"
             }
+          },
+          {
+            "name": "工程架构-vite-预构建的简单理解",
+            "path": "预构建的简单理解",
+            "component": "./工程架构/vite/预构建的简单理解.md",
+            "meta": {
+              "lastUpdate": ""
+            }
           }
         ],
         "redirect": {
@@ -1487,7 +1495,7 @@
         "path": "pnpm",
         "component": "./工程架构/pnpm.md",
         "meta": {
-          "lastUpdate": "2023/2/11 21:20:38"
+          "lastUpdate": "2023/3/2 13:43:36"
         }
       },
       {
@@ -2060,7 +2068,7 @@
             "path": "v-bind绑定v-model指令",
             "component": "./框架/vue3.x/v-bind绑定v-model指令.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/2 13:43:36"
             }
           },
           {
@@ -2462,7 +2470,7 @@
             "path": "git",
             "component": "./tools/vscode/git.md",
             "meta": {
-              "lastUpdate": "2023/2/14 16:07:49"
+              "lastUpdate": "2023/3/2 13:43:36"
             }
           }
         ],
@@ -2631,6 +2639,14 @@
             "component": "./others/浏览器/缓存.md",
             "meta": {
               "lastUpdate": "2023/2/5 19:39:44"
+            }
+          },
+          {
+            "name": "others-浏览器-performance",
+            "path": "performance",
+            "component": "./others/浏览器/performance.md",
+            "meta": {
+              "lastUpdate": ""
             }
           }
         ],

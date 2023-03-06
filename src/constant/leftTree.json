@@ -1284,7 +1284,7 @@
             "path": "hash",
             "component": "./工程架构/webpack/hash.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/2/5 19:39:44"
             }
           },
           {
@@ -1482,7 +1482,7 @@
             "path": "预构建的简单理解",
             "component": "./工程架构/vite/预构建的简单理解.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/3 17:07:30"
             }
           }
         ],
@@ -2646,7 +2646,7 @@
             "path": "performance",
             "component": "./others/浏览器/performance.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/3 17:07:30"
             }
           }
         ],

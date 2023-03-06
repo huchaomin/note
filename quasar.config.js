@@ -37,6 +37,7 @@ module.exports = configure((ctx) => {
         img: resolvePath('src/assets/img'),
         utils: resolvePath('src/utils'),
       },
+      publicPath: 'https://cdn.jsdelivr.net/gh/huchaomin/note/docs/',
       vueRouterMode: ctx.mode.spa ? 'hash' : 'history',
       distDir: 'docs',
       // useFilenameHashes: false, // TODO
@@ -105,7 +106,7 @@ module.exports = configure((ctx) => {
 
     devServer: {
       port: 9090,
-      open: false
+      open: false,
     },
 
     framework: {

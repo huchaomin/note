@@ -1,1 +1,1 @@
-var a="/assets/linear-gradient03.a978e724.png";export{a as default};
+var e="https://cdn.jsdelivr.net/gh/huchaomin/note/docs/assets/linear-gradient03.a978e724.png";export{e as default};

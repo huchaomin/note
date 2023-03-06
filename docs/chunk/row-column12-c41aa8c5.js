@@ -1,1 +1,1 @@
-var a="/assets/row-column12.b9d89fae.png";export{a as default};
+var o="https://cdn.jsdelivr.net/gh/huchaomin/note/docs/assets/row-column12.b9d89fae.png";export{o as default};

@@ -1,1 +1,1 @@
-var s="https://cdn.jsdelivr.net/gh/huchaomin/note/docs/assets/git-areas.86c16db0.png";export{s as default};
+var a="/assets/git-areas.86c16db0.png";export{a as default};

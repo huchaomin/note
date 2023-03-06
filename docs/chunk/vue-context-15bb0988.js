@@ -1,1 +1,1 @@
-var t="https://cdn.jsdelivr.net/gh/huchaomin/note/docs/assets/vue-context.c966fa95.png";export{t as default};
+var e="/assets/vue-context.c966fa95.png";export{e as default};

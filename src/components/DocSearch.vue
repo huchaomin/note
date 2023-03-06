@@ -6,12 +6,10 @@ import docsearch from '@docsearch/js';
 onMounted(() => {
   docsearch({
     container: '#docsearch',
-    appId: 'VAOT8ETVIP',
-    apiKey: '0ef1096cfa74a3fad269ba4af7a5612c',
+    appId: 'ZHEDSTO6YB',
+    apiKey: 'bf9a80447707675386acb0c5d2f8be66',
     indexName: 'mulinzi_note',
     placeholder: '搜索笔记...',
-    // startUrls: [origin], // TODO
-    // sitemaps: [`${origin}/sitemap.xml`],
     transformItems(items) {
       console.log(items);
       return items.map((item) => ({

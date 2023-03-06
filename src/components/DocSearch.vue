@@ -8,7 +8,7 @@ onMounted(() => {
     container: '#docsearch',
     appId: 'ZHEDSTO6YB',
     apiKey: 'bf9a80447707675386acb0c5d2f8be66',
-    indexName: 'mulinzi_note',
+    indexName: 'mulinzi',
     placeholder: '搜索笔记...',
     transformItems(items) {
       console.log(items);

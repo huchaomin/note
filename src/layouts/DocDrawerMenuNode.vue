@@ -11,7 +11,7 @@ defineProps({
   },
 });
 
-const acceptExt = ['js', 'vue', 'json', 'file'];
+const acceptExt = ['js', 'ts', 'vue', 'json', 'file'];
 function getFileIcon(name) {
   if (name === '*editorconfig') {
     return 'file-editorconfig';

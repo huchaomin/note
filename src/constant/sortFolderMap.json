@@ -37,7 +37,8 @@
     "html-defer与async",
     "html-html特性与dom属性",
     "html-meta标签",
-    "html-preload与prefetch"
+    "html-preload与prefetch",
+    "html-form标签"
   ],
   "javascript-Array_": [
     "javascript-Array-去重",
@@ -223,7 +224,8 @@
   ],
   "tools-vscode_": [
     "tools-vscode-快捷键",
-    "tools-vscode-git"
+    "tools-vscode-git",
+    "tools-vscode-搜索"
   ],
   "tools-webstorm_": [
     "tools-webstorm-创建宏",
@@ -267,15 +269,20 @@
     "工程架构-nodejs-path模块",
     "工程架构-nodejs-es6与node"
   ],
+  "工程架构-ssr-vite_": [
+    "工程架构-ssr-vite-others"
+  ],
   "工程架构-ssr-vue_": [
     "工程架构-ssr-vue-ClientOnly_js"
   ],
   "工程架构-ssr_": [
-    "工程架构-ssr-vue_"
+    "工程架构-ssr-vue_",
+    "工程架构-ssr-vite_"
   ],
   "工程架构-vite_": [
     "工程架构-vite-注意",
-    "工程架构-vite-预构建的简单理解"
+    "工程架构-vite-预构建的简单理解",
+    "工程架构-vite-静态资源处理"
   ],
   "工程架构-vue-cli_": [
     "工程架构-vue-cli-基本配置",
@@ -326,6 +333,7 @@
     "工程架构-browserslist",
     "工程架构-umd模块打包方法",
     "工程架构-jsconfig_json",
+    "工程架构-fast-glob",
     "工程架构-.editorconfig",
     "工程架构-.prettierrc"
   ],
@@ -413,7 +421,11 @@
     "框架-vue2.x-Vue.extend",
     "框架-vue2.x-x-template"
   ],
+  "框架-vue3.x-vue-router_": [
+    "框架-vue3.x-vue-router-others"
+  ],
   "框架-vue3.x_": [
+    "框架-vue3.x-vue-router_",
     "框架-vue3.x-$attrs",
     "框架-vue3.x-插槽统一",
     "框架-vue3.x-多根节点",
@@ -438,7 +450,9 @@
     "框架-vue3.x-v-model",
     "框架-vue3.x-v-bind-object排序敏感",
     "框架-vue3.x-v-bind绑定v-model指令",
-    "框架-vue3.x-ref"
+    "框架-vue3.x-ref",
+    "框架-vue3.x-lazyLoadView",
+    "框架-vue3.x-triggerRef"
   ],
   "框架_": [
     "框架-vue2.x_",

@@ -14,3 +14,6 @@ title: 其他
 - [Transition 作为根节点](https://v3.cn.vuejs.org/guide/migration/transition-as-root.html)
 - [Transition Group 根元素](https://v3.cn.vuejs.org/guide/migration/transition-group.html#%E6%A6%82%E8%A7%88)
 - The props, slots and attrs objects here are proxies, so they will always be pointing to the latest values when used in render functions.
+- vue 在 3.2.34 或以上的版本中, 使用 `<script setup>` 的单文件组件会自动根据文件名生成对应的 name 选项，无需再手动声明。前提是解析后 Component.type.__name 有值
+- v-bind 绑定的对象里面如果包含 ref, 是不会自动解构到模板上面的
+- onMounted 早于 onActivated

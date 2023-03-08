@@ -25,4 +25,4 @@ git reset --hard HEAD^
 git cherry-pick <commit-id>
 ```
 
-![cherry-pick](cherry-pick)
+![cherry-pick](cherry-pick.png)

@@ -34,3 +34,7 @@ function getParentProxy(proxy) {
   }
 }
 ```
+
+## 如果存在多个引用，则为数组格式
+
+比如在循环里面引用

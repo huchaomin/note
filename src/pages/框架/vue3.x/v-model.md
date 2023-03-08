@@ -161,3 +161,12 @@ app.component('my-component', {
   }
 })
 ```
+
+## 直接修改reactive 或 ref 的值
+
+```vue
+const { locale } = useI18n({ useScope: 'global' })
+
+// template
+v-model="locale"
+```

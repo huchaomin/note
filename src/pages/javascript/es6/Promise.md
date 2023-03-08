@@ -231,6 +231,10 @@ getJSON('/post/1.json').then(function (post) {
 })
 ```
 
+::: warning
+promise 外层catch  能catch到里层，里层必须return
+:::
+
 ### 一般来说，不要在then方法里面定义 Reject 状态的回调函数（即then的第二个参数），总是使用catch方法
 
 ```javascript

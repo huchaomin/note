@@ -3,7 +3,8 @@
     "MD024": false,
     "MD033": false,
     "MD040": false,
-    "MD041": false
+    "MD041": false,
+    "MD025": false,
   },
   "search.exclude": {
     ".zip": true,
@@ -13,6 +14,7 @@
   },
   "cSpell.words": [
     "algoliasearch",
+    "markmap",
     "prismjs"
   ],
 }

@@ -1,7 +1,6 @@
 <script setup>
-import getMeta from 'utils/get-meta.js';
+import useDocMeta from 'composables/useDocMeta.js';
 
-const route = useRoute();
 const props = defineProps({
   desc: {
     type: String,
@@ -14,17 +13,7 @@ const props = defineProps({
 });
 
 const title = computed(() => props.toc[0]?.title);
-const metaTitle = computed(() => {
-  if (title.value) {
-    return `${route.name} | ${title.value}`;
-  }
-  return route.name;
-});
-useMeta({
-  title: metaTitle.value,
-  titleTemplate: (t) => `${t} | ${process.env.DOC_NAME}`,
-  meta: getMeta(metaTitle.value, props.desc || metaTitle.value),
-});
+useDocMeta(title, props);
 const docStore = useDocStore();
 watchEffect(() => {
   docStore.state.toc = props.toc;

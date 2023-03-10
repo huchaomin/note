@@ -59,6 +59,20 @@ module.exports = {
     </template>
   `,
 
+  getMarkMapComponent: (frontMatterData, rawContent) => `
+    <script setup>
+      const content = ${`\`${rawContent}\``}
+      const data = ${JSON.stringify(frontMatterData)}
+    </script>
+    <template>
+      <doc-mark-map
+        :content="content"
+        :data="data"
+      >
+      </doc-mark-map>
+    </template>
+  `,
+
   parseFrontMatter: (content) => matter(content, {
     // excerpt_separator: '<!-- more -->', // 摘要的分隔符
     engines: {

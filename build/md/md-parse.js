@@ -1,8 +1,12 @@
 const md = require('./md');
-const { getVueComponent, parseFrontMatter } = require('./md-parse-utils');
+const { getMarkMapComponent, getVueComponent, parseFrontMatter } = require('./md-parse-utils');
 
 module.exports = (code) => {
   const { data, content } = parseFrontMatter(code);
+
+  if (data.markmap) {
+    return getMarkMapComponent(data, content);
+  }
 
   data.toc = [];
   if (data.title) {

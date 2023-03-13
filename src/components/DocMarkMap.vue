@@ -17,12 +17,12 @@ const props = defineProps({
 const title = computed(() => props.data?.title);
 useDocMeta(title, props);
 
-const transformer = new Transformer();
+const transformer = new Transformer([]); // 不需要prism和katex plugins
 const svgRef = ref();
 
 onMounted(() => {
   const mm = Markmap.create(svgRef.value);
-  const { root } = transformer.transform(props.content);
+  const { root } = transformer.transform(unescape(props.content));
   mm.setData(root);
   mm.fit();
 });

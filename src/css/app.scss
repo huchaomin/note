@@ -1,10 +1,10 @@
 @import './prism-theme.scss';
+@import './markmap-foreign.scss';
 @import './dark.scss';
 /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
   font-family: "jinbuti";
   src: url("assets/font/DingTalk_JinBuTi_Regular.woff2") format("woff2"),
-    url("assets/font/DingTalk_JinBuTi_Regular.woff") format("woff");
 }
 
 @font-face {
@@ -23,6 +23,10 @@ body {
   background-color: $light-bg;
   font-family: 'jinbuti';
   font-feature-settings: "liga" 0, "calt" 0; // 不使用连体字
+}
+
+code, kbd, pre, samp {
+  font-family: $font-family-code;
 }
 
 .q-loading-bar{
@@ -49,7 +53,6 @@ strong {
 }
 // blockquotes
 .doc-note {
-  font-family: $font-family-code;
   border-radius: $generic-border-radius;
   margin: 16px 0;
   padding: 16px;

@@ -2180,6 +2180,14 @@
             "meta": {
               "lastUpdate": "2023/3/8 18:09:16"
             }
+          },
+          {
+            "name": "框架-vue3.x-compositionApi2",
+            "path": "compositionApi2",
+            "component": "./框架/vue3.x/compositionApi2.md",
+            "meta": {
+              "lastUpdate": ""
+            }
           }
         ],
         "redirect": {
@@ -3019,9 +3027,9 @@
         }
       },
       {
-        "name": "others-test",
-        "path": "test",
-        "component": "./others/test.md",
+        "name": "others-markdown-markmap",
+        "path": "markdown-markmap",
+        "component": "./others/markdown-markmap.md",
         "meta": {
           "lastUpdate": ""
         }

@@ -11,10 +11,6 @@
   border-radius: $generic-border-radius;
   padding:16px 1em;
 
-  > code{
-    font-family: $font-family-code;
-  }
-
   // autolinker
   .token a {
     color: $primary;

@@ -61,7 +61,7 @@ module.exports = {
 
   getMarkMapComponent: (frontMatterData, rawContent) => `
     <script setup>
-      const content = ${`\`${rawContent}\``}
+      const content = "${escape(rawContent)}"
       const data = ${JSON.stringify(frontMatterData)}
     </script>
     <template>

@@ -198,9 +198,9 @@
     "others-JSON",
     "others-思考",
     "others-markdown",
+    "others-markdown-markmap",
     "others-小知识点",
-    "others-todos",
-    "others-test"
+    "others-todos"
   ],
   "plugin-axios-honor-hus_": [
     "plugin-axios-honor-hus-apis_js",
@@ -453,7 +453,8 @@
     "框架-vue3.x-v-bind绑定v-model指令",
     "框架-vue3.x-ref",
     "框架-vue3.x-lazyLoadView",
-    "框架-vue3.x-triggerRef"
+    "框架-vue3.x-triggerRef",
+    "框架-vue3.x-compositionApi2"
   ],
   "框架_": [
     "框架-vue2.x_",

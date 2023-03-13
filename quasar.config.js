@@ -20,6 +20,7 @@ module.exports = configure((ctx) => {
     //   errors: true,
     // },
     boot: [
+      'font',
       'initial',
       'app-global',
       'baiduAnalytics',

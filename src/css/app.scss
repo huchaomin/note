@@ -1,16 +1,6 @@
 @import './prism-theme.scss';
 @import './markmap-foreign.scss';
 @import './dark.scss';
-/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
-@font-face {
-  font-family: "jinbuti";
-  src: url("assets/font/DingTalk_JinBuTi_Regular.woff2") format("woff2"),
-}
-
-@font-face {
-  font-family: "JetBrainsMono";
-  src: url("assets/font/JetBrainsMono-Medium.woff2") format("woff2");
-}
 
 html{
   font-size: clamp(12px, 1.1vw , 15px);

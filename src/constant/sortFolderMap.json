@@ -453,8 +453,7 @@
     "框架-vue3.x-v-bind绑定v-model指令",
     "框架-vue3.x-ref",
     "框架-vue3.x-lazyLoadView",
-    "框架-vue3.x-triggerRef",
-    "框架-vue3.x-compositionApi2"
+    "框架-vue3.x-triggerRef"
   ],
   "框架_": [
     "框架-vue2.x_",

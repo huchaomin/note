@@ -21,7 +21,9 @@ const transformer = new Transformer([]); // 不需要prism和katex plugins
 const svgRef = ref();
 
 onMounted(() => {
-  const mm = Markmap.create(svgRef.value);
+  const mm = Markmap.create(svgRef.value, {
+    duration: 200,
+  });
   const { root } = transformer.transform(unescape(props.content));
   mm.setData(root);
   mm.fit();

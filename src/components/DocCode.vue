@@ -21,6 +21,6 @@ const qPageHeight = inject('qPageHeight');
     :style="`${ fullScreen ? `height: ${qPageHeight}px;` : '' }`"
   >
     <code-prism :lang="props.lang" :code="props.code" :full-screen="fullScreen"></code-prism>
-    <copy-button class="absolute-top-right q-ma-xs" :text="props.code"></copy-button>
+    <copy-button class="absolute-top-right q-ma-xs"></copy-button>
   </div>
 </template>

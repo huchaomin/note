@@ -4,7 +4,7 @@ module.exports = (md) => {
     const token = tokens[idx];
     const info = token.info ? md.utils.unescapeAll(token.info).trim() : '';
     return `
-      <doc-code code="${md.utils.escapeHtml(token.content)}" lang="${info.split(/(\s+)/g)[0] || 'markup'}"></doc-code>
+      <doc-code code="${escape(token.content)}" lang="${info.split(/(\s+)/g)[0] || 'markup'}"></doc-code>
     `;
   };
 };

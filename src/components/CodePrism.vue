@@ -55,6 +55,7 @@ const highlightEle = ref(null);
 onMounted(() => {
   Prism.highlightElement(highlightEle.value);
 });
+const fCode = computed(() => unescape(props.code));
 </script>
 <template>
   <c-scroll-area :fit-content-height="!fullScreen">
@@ -63,6 +64,6 @@ onMounted(() => {
       class="doc-code"
       :class="`language-${la}${ la === 'treeview' ? '' : ' line-numbers'}`"
       :style="`${fullScreen ? `min-height: ${qPageHeight}px; border-radius: 0` : ''}`"
-    ><code ref="highlightEle" class="match-braces rainbow-braces">{{ code }}</code></pre> <!-- 这里不能换行 -->
+    ><code ref="highlightEle" class="match-braces rainbow-braces" v-html="fCode"></code></pre> <!-- 这里不能换行 -->
   </c-scroll-area>
 </template>

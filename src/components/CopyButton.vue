@@ -5,7 +5,9 @@
     icon="content_copy"
     @click="copy"
   >
-    <q-tooltip>{{ copied ? '已复制！' : '复制' }}</q-tooltip>
+    <q-tooltip :hide-delay="copied ? 1500 : 0">
+      {{ copied ? '已复制！' : '复制' }}
+    </q-tooltip>
   </q-btn>
 </template>
 
@@ -15,14 +17,21 @@ import { copyToClipboard } from 'quasar';
 const props = defineProps({
   text: {
     type: String,
-    required: true,
+    default: undefined,
   },
 });
 
 let timer;
 const copied = ref(false);
+const instance = getCurrentInstance();
 function copy() {
-  copyToClipboard(props.text).then(() => {
+  let { text } = props;
+  if (text === undefined) {
+    const parentEl = instance.parent.ctx.$el;
+    text = parentEl.querySelector('.doc-code code')?.textContent;
+  }
+  if (!text) return;
+  copyToClipboard(text).then(() => {
     copied.value = true;
     clearTimeout(timer);
     timer = setTimeout(() => {

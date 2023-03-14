@@ -2082,7 +2082,7 @@
             "path": "compositionApi",
             "component": "./框架/vue3.x/compositionApi.md",
             "meta": {
-              "lastUpdate": "2023/2/5 19:39:44"
+              "lastUpdate": "2023/3/14 09:48:39"
             }
           },
           {
@@ -2766,6 +2766,14 @@
             "meta": {
               "lastUpdate": "2023/3/3 17:07:30"
             }
+          },
+          {
+            "name": "others-浏览器-缓存2",
+            "path": "缓存2",
+            "component": "./others/浏览器/缓存2.md",
+            "meta": {
+              "lastUpdate": ""
+            }
           }
         ],
         "redirect": {
@@ -2999,7 +3007,7 @@
         "path": "markdown",
         "component": "./others/markdown.md",
         "meta": {
-          "lastUpdate": "2023/2/14 16:07:49"
+          "lastUpdate": "2023/3/14 11:52:59"
         }
       },
       {

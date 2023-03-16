@@ -64,6 +64,6 @@ const fCode = computed(() => unescape(props.code));
       class="doc-code"
       :class="`language-${la}${ la === 'treeview' ? '' : ' line-numbers'}`"
       :style="`${fullScreen ? `min-height: ${qPageHeight}px; border-radius: 0` : ''}`"
-    ><code ref="highlightEle" class="match-braces rainbow-braces" v-html="fCode"></code></pre> <!-- 这里不能换行 -->
+    ><code ref="highlightEle" class="match-braces rainbow-braces">{{ fCode }}</code></pre> <!-- 这里不能换行 -->
   </c-scroll-area>
 </template>

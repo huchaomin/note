@@ -62,14 +62,3 @@ var foo = 5;
  (if (= n 0) 1
   (* n (factorial (- n 1)))))
 ```
-
-## keep-markup
-
-```css
-@media <mark>screen</mark> {
- div {
-  <mark>text</mark>-decoration: <mark><mark>under</mark>line</mark>;
-  back<mark>ground: url</mark>('foo.png');
- }
-}
-```

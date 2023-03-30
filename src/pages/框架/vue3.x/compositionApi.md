@@ -94,7 +94,8 @@ markmap: true
 ##### getter 函数（非直接）
 
 ```js
-// 注意 一个返回响应式对象的 getter 函数，只有在返回不同的对象时，才会触发回调
+// 注意 一个返回响应式对象的 getter 函数，
+// 只有在返回不同的对象时，才会触发回调
 watch(
   () => state.someObject,
   () => {

@@ -134,6 +134,7 @@ kbd {
 // 标题
 .doc-heading {
   color: $primary;
+  word-break: break-all;
 }
 h1 {
   font-size: 2.2rem;

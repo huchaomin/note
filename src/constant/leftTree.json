@@ -794,7 +794,7 @@
             "path": "Class",
             "component": "./javascript/es6/Class.md",
             "meta": {
-              "lastUpdate": "2023/2/5 19:39:44"
+              "lastUpdate": "2023/3/31 15:49:27"
             }
           },
           {
@@ -1046,7 +1046,7 @@
             "path": "前言",
             "component": "./工程架构/typescript/前言.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/31 15:49:27"
             }
           },
           {
@@ -1054,13 +1054,45 @@
             "path": "基础类型",
             "component": "./工程架构/typescript/基础类型.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/31 15:49:27"
             }
           },
           {
             "name": "工程架构-typescript-interface",
             "path": "interface",
             "component": "./工程架构/typescript/interface.md",
+            "meta": {
+              "lastUpdate": "2023/3/31 15:49:27"
+            }
+          },
+          {
+            "name": "工程架构-typescript-class",
+            "path": "class",
+            "component": "./工程架构/typescript/class.md",
+            "meta": {
+              "lastUpdate": "2023/3/31 15:49:27"
+            }
+          },
+          {
+            "name": "工程架构-typescript-class与interface",
+            "path": "class与interface",
+            "component": "./工程架构/typescript/class与interface.md",
+            "meta": {
+              "lastUpdate": "2023/3/31 15:49:27"
+            }
+          },
+          {
+            "name": "工程架构-typescript-function",
+            "path": "function",
+            "component": "./工程架构/typescript/function.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-typescript-泛型",
+            "path": "泛型",
+            "component": "./工程架构/typescript/泛型.md",
             "meta": {
               "lastUpdate": ""
             }
@@ -1070,7 +1102,7 @@
             "path": "类型断言",
             "component": "./工程架构/typescript/类型断言.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/31 15:49:27"
             }
           },
           {
@@ -1078,21 +1110,13 @@
             "path": "others",
             "component": "./工程架构/typescript/others.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/31 15:49:27"
             }
           },
           {
-            "name": "工程架构-typescript-class",
-            "path": "class",
-            "component": "./工程架构/typescript/class.md",
-            "meta": {
-              "lastUpdate": ""
-            }
-          },
-          {
-            "name": "工程架构-typescript-class与interface",
-            "path": "class与interface",
-            "component": "./工程架构/typescript/class与interface.md",
+            "name": "工程架构-typescript-enum",
+            "path": "enum",
+            "component": "./工程架构/typescript/enum.md",
             "meta": {
               "lastUpdate": ""
             }
@@ -1619,7 +1643,7 @@
                 "path": "ClientOnly_js",
                 "component": "./工程架构/ssr/vue/ClientOnly_js.md",
                 "meta": {
-                  "lastUpdate": "2023/3/7 16:35:40"
+                  "lastUpdate": ""
                 }
               }
             ],

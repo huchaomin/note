@@ -1,13 +1,14 @@
-### 函数的类型
+---
+title: 函数
+---
 
-
-#### 函数声明
+## 函数声明
 
 注意，**输入多余的（或者少于要求的）参数，是不被允许的**：
 
 ```ts
 function sum(x: number, y: number): number {
-    return x + y;
+  return x + y;
 }
 sum(1, 2, 3);
 
@@ -16,20 +17,20 @@ sum(1, 2, 3);
 
 ```ts
 function sum(x: number, y: number): number {
-    return x + y;
+  return x + y;
 }
 sum(1);
 
 // index.ts(4,1): error TS2346: Supplied parameters do not match any signature of call target.
 ```
 
-#### 函数表达式
+## 函数表达式
 
 如果要我们现在写一个对函数表达式（Function Expression）的定义，可能会写成这样：
 
 ```ts
 let mySum = function (x: number, y: number): number {
-    return x + y;
+  return x + y;
 };
 ```
 
@@ -37,7 +38,7 @@ let mySum = function (x: number, y: number): number {
 
 ```ts
 let mySum: (x: number, y: number) => number = function (x: number, y: number): number {
-    return x + y;
+  return x + y;
 };
 ```
 
@@ -45,34 +46,34 @@ let mySum: (x: number, y: number) => number = function (x: number, y: number): n
 
 在 TypeScript 的类型定义中，`=>` 用来表示函数的定义，左边是输入类型，需要用括号括起来，右边是输出类型。
 
-#### 用接口定义函数的形状
+## 用接口定义函数的形状
 
 我们也可以使用接口的方式来定义一个函数需要符合的形状：
 
 ```ts
 interface SearchFunc {
-    (source: string, subString: string): boolean;
+  (source: string, subString: string): boolean;
 }
 
 let mySearch: SearchFunc;
 mySearch = function(source: string, subString: string) {
-    return source.search(subString) !== -1;
+  return source.search(subString) !== -1;
 }
 ```
 
 采用函数表达式|接口定义函数的方式时，对等号左侧进行类型限制，可以保证以后对函数名赋值时保证参数个数、参数类型、返回值类型不变。
 
-#### 可选参数
+## 可选参数
 
 与接口中的可选属性类似，我们用 `?` 表示可选的参数：
 
 ```ts
 function buildName(firstName: string, lastName?: string) {
-    if (lastName) {
-        return firstName + ' ' + lastName;
-    } else {
-        return firstName;
-    }
+  if (lastName) {
+    return firstName + ' ' + lastName;
+  } else {
+    return firstName;
+  }
 }
 let tomcat = buildName('Tom', 'Cat');
 let tom = buildName('Tom');
@@ -82,11 +83,11 @@ let tom = buildName('Tom');
 
 ```ts
 function buildName(firstName?: string, lastName: string) {
-    if (firstName) {
-        return firstName + ' ' + lastName;
-    } else {
-        return lastName;
-    }
+  if (firstName) {
+    return firstName + ' ' + lastName;
+  } else {
+    return lastName;
+  }
 }
 let tomcat = buildName('Tom', 'Cat');
 let tom = buildName(undefined, 'Tom');
@@ -94,43 +95,44 @@ let tom = buildName(undefined, 'Tom');
 // index.ts(1,40): error TS1016: A required parameter cannot follow an optional parameter.
 ```
 
-#### 参数默认值
+## 参数默认值
 
 在 ES6 中，我们允许给函数的参数添加默认值，**TypeScript 会将添加了默认值的参数识别为可选参数**：
 
 ```ts
 function buildName(firstName: string, lastName: string = 'Cat') {
-    return firstName + ' ' + lastName;
+  return firstName + ' ' + lastName;
 }
 let tomcat = buildName('Tom', 'Cat');
 let tom = buildName('Tom');
 ```
 
-此时就不受「可选参数必须接在必需参数后面」的限制了：
+此时就不受**可选参数必须接在必需参数后面**的限制了：
 
 ```ts
 function buildName(firstName: string = 'Tom', lastName: string) {
-    return firstName + ' ' + lastName;
+  return firstName + ' ' + lastName;
 }
 let tomcat = buildName('Tom', 'Cat');
 let cat = buildName(undefined, 'Cat');
 ```
 
-#### 剩余参数
+## 剩余参数
 
 ```ts
 function push(array: any[], ...items: any[]) {
-    items.forEach(function(item) {
-        array.push(item);
-    });
+  items.forEach(function(item) {
+    array.push(item);
+  });
 }
 
 let a = [];
 push(a, 1, 2, 3);
 ```
+
 注意，rest 参数只能是最后一个参数
 
-#### 重载
+## 重载
 
 重载允许一个函数接受不同数量或类型的参数时，作出不同的处理。
 
@@ -140,11 +142,11 @@ push(a, 1, 2, 3);
 
 ```ts
 function reverse(x: number | string): number | string | void {
-    if (typeof x === 'number') {
-        return Number(x.toString().split('').reverse().join(''));
-    } else if (typeof x === 'string') {
-        return x.split('').reverse().join('');
-    }
+  if (typeof x === 'number') {
+    return Number(x.toString().split('').reverse().join(''));
+  } else if (typeof x === 'string') {
+    return x.split('').reverse().join('');
+  }
 }
 ```
 
@@ -156,11 +158,11 @@ function reverse(x: number | string): number | string | void {
 function reverse(x: number): number;
 function reverse(x: string): string;
 function reverse(x: number | string): number | string | void {
-    if (typeof x === 'number') {
-        return Number(x.toString().split('').reverse().join(''));
-    } else if (typeof x === 'string') {
-        return x.split('').reverse().join('');
-    }
+  if (typeof x === 'number') {
+    return Number(x.toString().split('').reverse().join(''));
+  } else if (typeof x === 'string') {
+    return x.split('').reverse().join('');
+  }
 }
 ```
 
@@ -168,4 +170,3 @@ function reverse(x: number | string): number | string | void {
 ::: tip
 TypeScript 会优先从最前面的函数定义开始匹配，所以多个函数定义如果有包含关系，需要优先把精确的定义写在前面。
 :::
-

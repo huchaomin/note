@@ -295,25 +295,25 @@ Bar.classMethod() // "hello, too"
 ```javascript
 class IncreasingCounter {
   constructor() {
-    this._count = 0
+    this.count = 0
   }
   get value() {
     console.log('Getting the current value!')
-    return this._count
+    return this.count
   }
   increment() {
-    this._count++
+    this.count++
   }
 }
 //等同于
 class IncreasingCounter {
-  _count = 0
+  count = 0
   get value() {
     console.log('Getting the current value!')
-    return this._count
+    return this.count
   }
   increment() {
-    this._count++
+    this.count++
   }
 }
 ```
@@ -424,6 +424,10 @@ var y = new Rectangle(3, 4)  // 正确
 
 ```javascript
 class Rectangle {
+  // 实例属性 可写可不写
+  // height = 0
+  // width = 0
+
   // constructor
   constructor(height, width) {
     // 实例属性(必须定义在类的方法里)

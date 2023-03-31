@@ -302,7 +302,7 @@
             "path": "others",
             "component": "./javascript/Number/others.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/16 11:42:51"
             }
           }
         ],
@@ -978,7 +978,7 @@
             "path": "运算符一览",
             "component": "./javascript/运算符/运算符一览.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/16 11:42:51"
             }
           },
           {
@@ -986,7 +986,7 @@
             "path": "可选链运算符",
             "component": "./javascript/运算符/可选链运算符.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/16 11:42:51"
             }
           },
           {
@@ -994,7 +994,7 @@
             "path": "空值合并运算符",
             "component": "./javascript/运算符/空值合并运算符.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/16 11:42:51"
             }
           },
           {
@@ -1002,7 +1002,7 @@
             "path": "其他运算符",
             "component": "./javascript/运算符/其他运算符.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/3/16 11:42:51"
             }
           }
         ],
@@ -1036,6 +1036,72 @@
     "path": "工程架构_",
     "component": "Empty",
     "children": [
+      {
+        "name": "工程架构-typescript_",
+        "path": "typescript_",
+        "component": "Empty",
+        "children": [
+          {
+            "name": "工程架构-typescript-前言",
+            "path": "前言",
+            "component": "./工程架构/typescript/前言.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-typescript-基础类型",
+            "path": "基础类型",
+            "component": "./工程架构/typescript/基础类型.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-typescript-interface",
+            "path": "interface",
+            "component": "./工程架构/typescript/interface.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-typescript-类型断言",
+            "path": "类型断言",
+            "component": "./工程架构/typescript/类型断言.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-typescript-others",
+            "path": "others",
+            "component": "./工程架构/typescript/others.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-typescript-class",
+            "path": "class",
+            "component": "./工程架构/typescript/class.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-typescript-class与interface",
+            "path": "class与interface",
+            "component": "./工程架构/typescript/class与interface.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          }
+        ],
+        "redirect": {
+          "name": "工程架构-typescript-前言"
+        }
+      },
       {
         "name": "工程架构-nodejs_",
         "path": "nodejs_",
@@ -1650,7 +1716,7 @@
       }
     ],
     "redirect": {
-      "name": "工程架构-nodejs_"
+      "name": "工程架构-typescript_"
     }
   },
   {
@@ -2116,7 +2182,7 @@
             "path": "compositionApi",
             "component": "./框架/vue3.x/compositionApi.md",
             "meta": {
-              "lastUpdate": "2023/3/14 09:48:39"
+              "lastUpdate": "2023/3/30 10:46:48"
             }
           },
           {
@@ -2756,7 +2822,7 @@
             "path": "转换",
             "component": "./others/数据/转换.md",
             "meta": {
-              "lastUpdate": "2023/2/5 19:39:44"
+              "lastUpdate": "2023/3/16 11:42:51"
             }
           }
         ],
@@ -3025,7 +3091,7 @@
         "path": "markdown",
         "component": "./others/markdown.md",
         "meta": {
-          "lastUpdate": "2023/3/14 11:52:59"
+          "lastUpdate": "2023/3/16 16:10:52"
         }
       },
       {

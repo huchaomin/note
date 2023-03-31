@@ -1,12 +1,13 @@
-### 类
+---
+title: 类
+---
 
-传统方法中，JavaScript 通过构造函数实现类的概念，通过原型链实现继承。而在 ES6 中，我们终于迎来了 `class`。
+## 前言
 
+传统方法中，JavaScript 通过构造函数实现类的概念，通过原型链实现继承。而在 ES6 中，我们终于迎来了 `class`
 TypeScript 除了实现了所有 ES6 中的类的功能以外，还添加了一些新的用法。
 
-这一节主要介绍类的用法，下一节再介绍如何定义类的类型。
-
-### 类的概念
+## 类的概念
 
 虽然 JavaScript 中有类的概念，但是可能大多数 JavaScript 程序员并不是非常熟悉类，这里对类相关的概念做一个简单的介绍。
 
@@ -21,30 +22,29 @@ TypeScript 除了实现了所有 ES6 中的类的功能以外，还添加了一�
 - 抽象类（Abstract Class）：抽象类是供其他类继承的基类，抽象类不允许被实例化。抽象类中的抽象方法必须在子类中被实现
 - 接口（Interfaces）：不同类之间公有的属性或方法，可以抽象成一个接口。接口可以被类实现（implements）。一个类只能继承自另一个类，但是可以实现多个接口
 
-### ES6 中类的用法
+## ES6 中类的用法
 
-#### 属性和方法
+### 属性和方法
 
 使用 `class` 定义类，使用 `constructor` 定义构造函数。
-
 通过 `new` 生成新实例的时候，会自动调用构造函数。
 
 ```js
 class Animal {
-    name;
-    constructor(name) {
-        this.name = name;
-    }
-    sayHi() {
-        return `My name is ${this.name}`;
-    }
+  name;
+  constructor(name) {
+    this.name = name;
+  }
+  sayHi() {
+    return `My name is ${this.name}`;
+  }
 }
 
 let a = new Animal('Jack');
 console.log(a.sayHi()); // My name is Jack
 ```
 
-#### 类的继承
+### 类的继承
 
 使用 `extends` 关键字实现继承，子类中使用 `super` 关键字来调用父类的构造函数和方法。
 
@@ -63,7 +63,7 @@ let c = new Cat('Tom'); // Tom
 console.log(c.sayHi()); // Meow, My name is Tom
 ```
 
-#### 存取器
+### 存取器
 
 使用 getter 和 setter 可以改变属性的赋值和读取行为：
 
@@ -85,7 +85,7 @@ a.name = 'Tom'; // setter: Tom
 console.log(a.name); // Jack
 ```
 
-#### 静态方法
+### 静态方法
 
 使用 `static` 修饰符修饰的方法称为静态方法，它们不需要实例化，而是直接通过类来调用：
 
@@ -101,18 +101,17 @@ Animal.isAnimal(a); // true
 a.isAnimal(a); // TypeError: a.isAnimal is not a function
 ```
 
-### ES7 中类的用法
+## ES7 中类的用法
 
 ES7 中有一些关于类的提案，TypeScript 也实现了它们，这里做一个简单的介绍。
 
-#### 实例属性
+### 实例属性
 
 ES6 中实例的属性只能通过构造函数中的 `this.xxx` 来定义，ES7 提案中可以直接在类里面定义：
 
 ```js
 class Animal {
   name = 'Jack';
-
   constructor() {
     // ...
   }
@@ -122,14 +121,13 @@ let a = new Animal();
 console.log(a.name); // Jack
 ```
 
-#### 静态属性
+### 静态属性
 
 ES7 提案中，可以使用 `static` 定义一个静态属性：
 
 ```js
 class Animal {
   static num = 42;
-
   constructor() {
     // ...
   }
@@ -138,9 +136,9 @@ class Animal {
 console.log(Animal.num); // 42
 ```
 
-### TypeScript 中类的用法
+## TypeScript 中类的用法
 
-#### public private 和 protected
+### public private 和 protected
 
 TypeScript 可以使用三种访问修饰符（Access Modifiers），分别是 `public`、`private` 和 `protected`。
 
@@ -165,7 +163,6 @@ console.log(a.name); // Tom
 ```
 
 上面的例子中，`name` 被设置为了 `public`，所以直接访问实例的 `name` 属性是允许的。
-
 很多时候，我们希望有的属性是无法直接存取的，这时候就可以用 `private` 了：
 
 ```ts
@@ -185,7 +182,6 @@ a.name = 'Tom';
 ```
 
 需要注意的是，TypeScript 编译之后的代码中，并没有限制 `private` 属性在外部的可访问性。
-
 上面的例子编译后的代码是：
 
 ```js
@@ -279,7 +275,7 @@ let a = new Animal('Jack');
 // index.ts(13,9): TS2674: Constructor of class 'Animal' is protected and only accessible within the class declaration.
 ```
 
-#### 参数属性
+### 参数属性
 
 修饰符和`readonly`还可以使用在构造函数参数中，等同于类中定义该属性同时给该属性赋值，使代码更简洁。
 
@@ -292,7 +288,7 @@ class Animal {
 }
 ```
 
-#### readonly
+### readonly
 
 只读属性关键字，只允许出现在属性声明或索引签名或构造函数中。
 
@@ -322,12 +318,9 @@ class Animal {
 }
 ```
 
-#### 抽象类
+### 抽象类
 
 `abstract` 用于定义抽象类和其中的抽象方法。
-
-什么是抽象类？
-
 首先，抽象类是不允许被实例化的：
 
 ```ts
@@ -345,7 +338,6 @@ let a = new Animal('Jack');
 ```
 
 上面的例子中，我们定义了一个抽象类 `Animal`，并且定义了一个抽象方法 `sayHi`。在实例化抽象类的时候报错了。
-
 其次，抽象类中的抽象方法必须被子类实现：
 
 ```ts
@@ -364,21 +356,19 @@ class Cat extends Animal {
 }
 
 let cat = new Cat('Tom');
-
 // index.ts(9,7): error TS2515: Non-abstract class 'Cat' does not implement inherited abstract member 'sayHi' from class 'Animal'.
 ```
 
 上面的例子中，我们定义了一个类 `Cat` 继承了抽象类 `Animal`，但是没有实现抽象方法 `sayHi`，所以编译报错了。
-
 下面是一个正确使用抽象类的例子：
 
 ```ts
 abstract class Animal {
   public name;
-  public constructor(name) {
+  public constructor(name:string) {
     this.name = name;
   }
-  public abstract sayHi();
+  public abstract sayHi():void;
 }
 
 class Cat extends Animal {
@@ -391,39 +381,23 @@ let cat = new Cat('Tom');
 ```
 
 上面的例子中，我们实现了抽象方法 `sayHi`，编译通过了。
-
 需要注意的是，即使是抽象方法，TypeScript 的编译结果中，仍然会存在这个类，上面的代码的编译结果是：
 
 ```js
-var __extends =
-  (this && this.__extends) ||
-  function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() {
-      this.constructor = d;
-    }
-    d.prototype = b === null ? Object.create(b) : ((__.prototype = b.prototype), new __());
-  };
-var Animal = (function () {
-  function Animal(name) {
+class Animal {
+  constructor(name) {
     this.name = name;
   }
-  return Animal;
-})();
-var Cat = (function (_super) {
-  __extends(Cat, _super);
-  function Cat() {
-    _super.apply(this, arguments);
+}
+class Cat extends Animal {
+  sayHi() {
+    console.log(`Meow, My name is ${this.name}`);
   }
-  Cat.prototype.sayHi = function () {
-    console.log('Meow, My name is ' + this.name);
-  };
-  return Cat;
-})(Animal);
-var cat = new Cat('Tom');
+}
+let cat = new Cat('Tom');
 ```
 
-### 类的类型
+## 类的类型
 
 给类加上 TypeScript 的类型很简单，与接口类似：
 
@@ -442,7 +416,32 @@ let a: Animal = new Animal('Jack');
 console.log(a.sayHi()); // My name is Jack
 ```
 
-### 参考
+## 高级用法
+
+```ts
+class Greeter {
+  static standardGreeting = "Hello, there";
+  greeting: string;
+  greet() {
+    if (this.greeting) {
+      return "Hello, " + this.greeting;
+    } else {
+      return Greeter.standardGreeting;
+    }
+  }
+}
+
+let greeter1: Greeter; // 实例部分
+greeter1 = new Greeter();
+console.log(greeter1.greet()); // Hello, there
+
+let greeterMaker: typeof Greeter = Greeter; // 静态部分
+greeterMaker.standardGreeting = "Hey there!";
+let greeter2: Greeter = new greeterMaker();
+console.log(greeter2.greet()); // Hey, there
+```
+
+## 参考
 
 - [Classes](http://www.typescriptlang.org/docs/handbook/classes.html)（[中文版](https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Classes.html)）
 - [ECMAScript 6 入门 - Class]

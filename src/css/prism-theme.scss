@@ -27,7 +27,7 @@
 
 }
 body.body--light {
-  .doc-code {
+  .doc-code, .doc-token {
     color: $grey-9;
     background-color: $light-code-bg;
   }
@@ -112,6 +112,10 @@ body.body--dark {
   .doc-code {
     color: #f8f8f2;
     background-color: $dark-code-bg;
+  }
+  .doc-token {
+    color: #f8f8f2;
+    background-color: $dark-p-bg;
   }
 /**
  * okaidia theme for JavaScript, CSS and HTML

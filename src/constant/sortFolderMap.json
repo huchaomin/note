@@ -285,6 +285,15 @@
     "工程架构-ssr-vue_",
     "工程架构-ssr-vite_"
   ],
+  "工程架构-typescript_": [
+    "工程架构-typescript-前言",
+    "工程架构-typescript-基础类型",
+    "工程架构-typescript-interface",
+    "工程架构-typescript-class",
+    "工程架构-typescript-class与interface",
+    "工程架构-typescript-类型断言",
+    "工程架构-typescript-others"
+  ],
   "工程架构-vite_": [
     "工程架构-vite-注意",
     "工程架构-vite-预构建的简单理解",
@@ -327,6 +336,7 @@
     "工程架构-webpack-others"
   ],
   "工程架构_": [
+    "工程架构-typescript_",
     "工程架构-nodejs_",
     "工程架构-commonJS_",
     "工程架构-webpack_",

@@ -23,7 +23,7 @@ const svgRef = ref();
 onMounted(() => {
   const mm = Markmap.create(svgRef.value, {
     duration: 200,
-    maxWidth: 500,
+    maxWidth: 700,
   });
   const { root } = transformer.transform(unescape(props.content));
   mm.setData(root);

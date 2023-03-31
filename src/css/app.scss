@@ -36,10 +36,7 @@ strong {
 .doc-token {
   display: inline-block;
   padding: 0 4px;
-  border-radius: 5px;
-  font-family: inherit;
-  color: $primary;
-  border: 1px solid currentColor;
+  border-radius: $generic-border-radius;
 }
 // blockquotes
 .doc-note {

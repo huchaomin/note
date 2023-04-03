@@ -88,3 +88,13 @@ alert("card: " + pickedCard.card + " of " + pickedCard.suit);
 ```
 
 ## declare 定义的类型只会用于编译时的检查，编译结果中会被删除
+
+## [类型推论](https://www.tslang.cn/docs/handbook/type-inference.html)
+
+## [类型兼容性](https://www.tslang.cn/docs/handbook/type-compatibility.html)
+
+## null 的类型保护和类型断言
+
+## 类型别名
+
+## 可辨识联合

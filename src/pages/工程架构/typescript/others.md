@@ -2,6 +2,10 @@
 title: 其他一些关于typescript的知识点
 ---
 
+## [模块的按需加载](https://www.tslang.cn/docs/handbook/modules.html)
+
+## [附加的模块解析标记](https://www.tslang.cn/docs/handbook/module-resolution.html)
+
 ## 属性重命名
 
 ```ts

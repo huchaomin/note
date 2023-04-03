@@ -292,11 +292,17 @@
     "工程架构-typescript-class",
     "工程架构-typescript-class与interface",
     "工程架构-typescript-function",
+    "工程架构-typescript-enum",
     "工程架构-typescript-泛型",
     "工程架构-typescript-类型断言",
-    "工程架构-typescript-others",
-    "工程架构-typescript-enum",
-    "工程架构-typescript-类型推论"
+    "工程架构-typescript-类型保护",
+    "工程架构-typescript-类型别名",
+    "工程架构-typescript-模块",
+    "工程架构-typescript-命名空间",
+    "工程架构-typescript-模块解析",
+    "工程架构-typescript-声明合并",
+    "工程架构-typescript-拓展模块",
+    "工程架构-typescript-others"
   ],
   "工程架构-vite_": [
     "工程架构-vite-注意",

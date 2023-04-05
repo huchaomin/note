@@ -1,11 +1,6 @@
 ---
 title: 其他一些关于typescript的知识点
 ---
-
-## [模块的按需加载](https://www.tslang.cn/docs/handbook/modules.html)
-
-## [附加的模块解析标记](https://www.tslang.cn/docs/handbook/module-resolution.html)
-
 ## 属性重命名
 
 ```ts
@@ -20,7 +15,7 @@ let {a, b}: {a: string, b: number} = o;
 
 ## ReadonlyArray
 
-与Array<T>相似，只是把所有可变方法去掉了
+与 `Array<T>` 相似，只是把所有可变方法去掉了
 
 ```ts
 let a: number[] = [1, 2, 3, 4];
@@ -97,8 +92,16 @@ alert("card: " + pickedCard.card + " of " + pickedCard.suit);
 
 ## [类型兼容性](https://www.tslang.cn/docs/handbook/type-compatibility.html)
 
-## null 的类型保护和类型断言
+## [可辨识联合](https://www.tslang.cn/docs/handbook/advanced-types.html)
 
-## 类型别名
+## [模块的按需加载](https://www.tslang.cn/docs/handbook/modules.html)
 
-## 可辨识联合
+## TODO [附加的模块解析标记](https://www.tslang.cn/docs/handbook/module-resolution.html)
+
+## jsx 用法
+
+## [装饰器](https://www.tslang.cn/docs/handbook/decorators.html)
+
+## [mixins](https://www.tslang.cn/docs/handbook/mixins.html)
+
+## [JavaScript文件类型检查](https://www.tslang.cn/docs/handbook/type-checking-javascript-files.html)

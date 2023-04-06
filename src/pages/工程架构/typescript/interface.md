@@ -7,10 +7,28 @@ title: interface
 ```ts
 interface SquareConfig {
   color?: string; // 可选属性
-  readonly width: number; // 只读属性
-  [propName: string]: any; // 任意数量的其它属性
+  readonly width: number; // 只读属性 只能在创建的时候被赋值
+  [propName: string]: any; // 任意数量的其它属性 一个接口中只能定义一个任意属性
 }
 ```
+
+需要注意的是，**一旦定义了任意属性，那么确定属性和可选属性的类型都必须是它的类型的子集**：
+
+```ts
+interface Person {
+  name: string;
+  age?: number;
+  [propName: string]: string;
+}
+
+let tom: Person = {
+  name: 'Tom',
+  age: 25,
+  gender: 'male'
+};
+```
+
+上例中，任意属性的值允许是 `string`，但是可选属性 `age` 的值却是 `number`，`number` 不是 `string` 的子属性，所以报错了。
 
 ## 函数类型
 

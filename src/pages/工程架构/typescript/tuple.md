@@ -1,8 +1,10 @@
-### 元组
+---
+title: 元组
+---
 
 数组合并了相同类型的对象，而元组（Tuple）合并了不同类型的对象。
 
-#### 简单的例子
+## 简单的例子
 
 定义一对值分别为 `string` 和 `number` 的元组：
 
@@ -42,7 +44,7 @@ tom = ['Tom'];
 // Property '1' is missing in type '[string]' but required in type '[string, number]'.
 ```
 
-#### 越界的元素
+## 越界的元素
 
 当添加越界的元素时，它的类型会被限制为元组中每个类型的联合类型：
 
@@ -55,6 +57,6 @@ tom.push(true);
 // Argument of type 'true' is not assignable to parameter of type 'string | number'.
 ```
 
-#### 参考
+## 参考
 
 - [Basic Types # Tuple](http://www.typescriptlang.org/docs/handbook/basic-types.html#tuple)（[中文版](https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Basic%20Types.html#元组-tuple)）

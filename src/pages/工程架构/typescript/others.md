@@ -105,3 +105,40 @@ alert("card: " + pickedCard.card + " of " + pickedCard.suit);
 ## [mixins](https://www.tslang.cn/docs/handbook/mixins.html)
 
 ## [JavaScript文件类型检查](https://www.tslang.cn/docs/handbook/type-checking-javascript-files.html)
+
+## package.json
+
+### 指定主声明文件
+
+```json
+{
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts"
+}
+```
+
+- `"typings"` 与 `"types"` 具有相同的意义，也可以使用它
+- 省略 `"types"`： 如果 `"main"` 指向一个 `.js` 文件，那么 TypeScript 将会尝试查找一个同名的 `.d.ts` 文件。 如果 `"main"` 指向一个 `.json` 文件，那么 TypeScript 将会尝试查找一个 `index.d.ts` 文件。 如果 `"main"` 指向一个目录，那么 TypeScript 将会尝试查找一个该目录下的 `index.d.ts` 文件。
+
+### 指定依赖
+
+```json
+{
+  "dependencies": {
+    "browserify": "latest",
+    "@types/browserify": "latest",
+    "typescript": "next"
+  }
+}
+```
+
+这里，我们的包依赖于 `browserify` 和 `typescript`包。
+`browserify` 没有把它的声明文件捆绑在它的npm包里，所以我们需要依赖于 `@types/browserify` 得到它的声明文件。
+`typescript` 相反，它把声明文件放在了npm包里，因此我们不需要依赖额外的包
+
+## 不要在声明文件里使用 `/// <reference path="..." />`, 应该使用 `/// <reference types="..." />` 代替
+
+## 查找自己需要的包
+
+大多数情况下，类型声明包的名字总是与它们在npm上的包的名字相同，但是有 `@types/` 前缀
+但如果你需要的话，你可以在 [https://aka.ms/types](https://www.typescriptlang.org/dt/search) 这里查找你喜欢的库。

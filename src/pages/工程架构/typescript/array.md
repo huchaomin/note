@@ -1,7 +1,11 @@
-### 数组的类型
+---
+title: array
+---
 
-#### 类型 + 方括号 表示法
+## 类型 + 方括号 表示法
+
 数组的一些方法的参数也会根据数组在定义时约定的类型进行限制：
+
 ```ts
 let fibonacci: number[] = [1, 1, 2, 3, 5];
 fibonacci.push('8');
@@ -9,17 +13,17 @@ fibonacci.push('8');
 // Argument of type '"8"' is not assignable to parameter of type 'number'.
 ```
 
-#### 数组泛型
+## 数组泛型
 
 ```ts
 let fibonacci: Array<number> = [1, 1, 2, 3, 5];
 ```
 
-#### 用接口表示数组
+## 用接口表示数组
 
 ```ts
 interface NumberArray {
-    [index: number]: number;
+  [index: number]: number;
 }
 let fibonacci: NumberArray = [1, 1, 2, 3, 5];
 ```
@@ -30,13 +34,13 @@ let fibonacci: NumberArray = [1, 1, 2, 3, 5];
 
 不过有一种情况例外，那就是它常用来表示类数组。
 
-#### 类数组对象
+## 类数组对象
 
 类数组（Array-like Object）不是数组类型，比如 `arguments`：
 
 ```ts
 function sum() {
-    let args: number[] = arguments;
+  let args: number[] = arguments;
 }
 
 // Type 'IArguments' is missing the following properties from type 'number[]': pop, push, concat, join, and 24 more.
@@ -46,11 +50,11 @@ function sum() {
 
 ```ts
 function sum() {
-    let args: {
-        [index: number]: number;
-        length: number;
-        callee: Function;
-    } = arguments;
+  let args: {
+    [index: number]: number;
+    length: number;
+    callee: Function;
+  } = arguments;
 }
 ```
 
@@ -60,7 +64,7 @@ function sum() {
 
 ```ts
 function sum() {
-    let args: IArguments = arguments;
+  let args: IArguments = arguments;
 }
 ```
 
@@ -68,8 +72,8 @@ function sum() {
 
 ```ts
 interface IArguments {
-    [index: number]: any;
-    length: number;
-    callee: Function;
+  [index: number]: any;
+  length: number;
+  callee: Function;
 }
 ```

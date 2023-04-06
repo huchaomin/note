@@ -5,6 +5,11 @@ title: 枚举
 
 枚举（Enum）类型用于取值被限定在一定范围内的场景，比如一周只能有七天，颜色限定为红绿蓝等。
 
+::: warning 注意
+`declare enum Days {Sun, Mon, Tue, Wed, Thu, Fri, Sat}`
+这种方式定义的枚举类型，不会被编译到 JavaScript 代码中，只会在编译时进行检查。
+:::
+
 ## 简单的例子
 
 枚举使用 `enum` 关键字来定义：

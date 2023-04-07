@@ -38,12 +38,13 @@ const internal = computed(() => props.to.charAt(0) === '/');
   border-bottom: 1px solid currentColor;
   outline: 0;
   transition: background-color .28s;
+  display: inline-flex;
+  align-items: center;
 
   &:hover {
     background-color: scale-color($primary, $lightness: 85%);
   }
   .q-icon {
-    margin-top: -2px;
     margin-left: 4px;
   }
 }

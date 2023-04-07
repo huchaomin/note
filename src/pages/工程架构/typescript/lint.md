@@ -1,4 +1,6 @@
-### 代码检查
+---
+title: lint 代码检查
+---
 
 2019 年 1 月，[TypeScirpt 官方决定全面采用 ESLint](https://www.oschina.net/news/103818/future-typescript-eslint) 作为代码检查的工具，并创建了一个新项目 [typescript-eslint][]，提供了 TypeScript 文件的解析器 [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/parser) 和相关的配置选项 [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin) 等。而之前的两个 lint 解决方案都将弃用：
 
@@ -7,13 +9,13 @@
 
 综上所述，目前以及将来的 TypeScript 的代码检查方案就是 [typescript-eslint][]。
 
-#### 什么是代码检查
+## 什么是代码检查
 
 代码检查主要是用来发现代码错误、统一代码风格。
 
 在 JavaScript 项目中，我们一般使用 [ESLint][] 来进行代码检查，它通过插件化的特性极大的丰富了适用范围，搭配 [typescript-eslint][] 之后，甚至可以用来检查 TypeScript 代码。
 
-#### 为什么需要代码检查
+## 为什么需要代码检查
 
 有人会觉得，JavaScript 非常灵活，所以需要代码检查。而 TypeScript 已经能够在编译阶段检查出很多问题了，为什么还需要代码检查呢？
 
@@ -70,7 +72,7 @@ console.log(`My name is ${myName.toStrng()}`);
 
 ### 在 TypeScript 中使用 ESLint
 
-#### 安装 ESLint
+## 安装 ESLint
 
 ESLint 可以安装在当前项目中或全局环境下，因为代码检查是项目的重要组成部分，所以我们一般会将它安装在当前项目中。可以运行下面的脚本来安装：
 
@@ -90,7 +92,7 @@ npm install --save-dev typescript @typescript-eslint/parser
 npm install --save-dev @typescript-eslint/eslint-plugin
 ```
 
-#### 创建配置文件
+## 创建配置文件
 
 ESLint 需要一个配置文件来决定对哪些规则进行检查，配置文件的名称一般是 `.eslintrc.js` 或 `.eslintrc.json`。
 
@@ -100,17 +102,17 @@ ESLint 需要一个配置文件来决定对哪些规则进行检查，配置文�
 
 ```js
 module.exports = {
-    parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint'],
-    rules: {
-        // 禁止使用 var
-        'no-var': "error",
-        // 优先使用 interface 而不是 type
-        '@typescript-eslint/consistent-type-definitions': [
-            "error",
-            "interface"
-        ]
-    }
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  rules: {
+    // 禁止使用 var
+    'no-var': "error",
+    // 优先使用 interface 而不是 type
+    '@typescript-eslint/consistent-type-definitions': [
+      "error",
+      "interface"
+    ]
+  }
 }
 ```
 
@@ -126,7 +128,7 @@ module.exports = {
 - 警告：代码检查时输出错误信息，但是不会影响到 exit code
 - 报错：发现错误时，不仅会输出错误信息，而且 exit code 将被设为 1（一般 exit code 不为 0 则表示执行出现错误）
 
-#### 检查一个 ts 文件
+## 检查一个 ts 文件
 
 创建了配置文件之后，我们来创建一个 ts 文件看看是否能用 ESLint 去检查它。
 
@@ -163,9 +165,9 @@ type Foo = {};
 
 ```json
 {
-    "scripts": {
-        "eslint": "eslint index.ts"
-    }
+  "scripts": {
+    "eslint": "eslint index.ts"
+  }
 }
 ```
 
@@ -177,15 +179,15 @@ type Foo = {};
 
 ```json
 {
-    "scripts": {
-        "eslint": "eslint src --ext .ts"
-    }
+  "scripts": {
+    "eslint": "eslint src --ext .ts"
+  }
 }
 ```
 
 此时执行 `npm run eslint` 即会检查 `src` 目录下的所有 `.ts` 后缀的文件。
 
-#### 在 VSCode 中集成 ESLint 检查
+## 在 VSCode 中集成 ESLint 检查
 
 在编辑器中集成 ESLint 检查，可以在开发过程中就发现错误，甚至可以在保存时自动修复错误，极大的增加了开发效率。
 
@@ -195,12 +197,12 @@ VSCode 中的 ESLint 插件默认是不会检查 `.ts` 后缀的，需要在「�
 
 ```json
 {
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "typescript"
-    ],
-    "typescript.tsdk": "node_modules/typescript/lib"
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
 ```
 
@@ -208,16 +210,16 @@ VSCode 中的 ESLint 插件默认是不会检查 `.ts` 后缀的，需要在「�
 
 ```json
 {
-    "eslint.autoFixOnSave": true,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        {
-            "language": "typescript",
-            "autoFix": true
-        },
-    ],
-    "typescript.tsdk": "node_modules/typescript/lib"
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
 ```
 
@@ -229,7 +231,7 @@ let myName = 'Tom';
 interface Foo {}
 ```
 
-#### 使用 Prettier 修复格式错误
+## 使用 Prettier 修复格式错误
 
 ESLint 包含了一些代码格式的检查，比如空格、分号等。但前端社区中有一个更先进的工具可以用来格式化代码，那就是 [Prettier](https://prettier.io/)。
 
@@ -246,41 +248,41 @@ npm install --save-dev prettier
 ```js
 // prettier.config.js or .prettierrc.js
 module.exports = {
-    // 一行最多 100 字符
-    printWidth: 100,
-    // 使用 4 个空格缩进
-    tabWidth: 4,
-    // 不使用缩进符，而使用空格
-    useTabs: false,
-    // 行尾需要有分号
-    semi: true,
-    // 使用单引号
-    singleQuote: true,
-    // 对象的 key 仅在必要时用引号
-    quoteProps: 'as-needed',
-    // jsx 不使用单引号，而使用双引号
-    jsxSingleQuote: false,
-    // 末尾不需要逗号
-    trailingComma: 'none',
-    // 大括号内的首尾需要空格
-    bracketSpacing: true,
-    // jsx 标签的反尖括号需要换行
-    jsxBracketSameLine: false,
-    // 箭头函数，只有一个参数的时候，也需要括号
-    arrowParens: 'always',
-    // 每个文件格式化的范围是文件的全部内容
-    rangeStart: 0,
-    rangeEnd: Infinity,
-    // 不需要写文件开头的 @prettier
-    requirePragma: false,
-    // 不需要自动在文件开头插入 @prettier
-    insertPragma: false,
-    // 使用默认的折行标准
-    proseWrap: 'preserve',
-    // 根据显示样式决定 html 要不要折行
-    htmlWhitespaceSensitivity: 'css',
-    // 换行符使用 lf
-    endOfLine: 'lf'
+  // 一行最多 100 字符
+  printWidth: 100,
+  // 使用 4 个空格缩进
+  tabWidth: 4,
+  // 不使用缩进符，而使用空格
+  useTabs: false,
+  // 行尾需要有分号
+  semi: true,
+  // 使用单引号
+  singleQuote: true,
+  // 对象的 key 仅在必要时用引号
+  quoteProps: 'as-needed',
+  // jsx 不使用单引号，而使用双引号
+  jsxSingleQuote: false,
+  // 末尾不需要逗号
+  trailingComma: 'none',
+  // 大括号内的首尾需要空格
+  bracketSpacing: true,
+  // jsx 标签的反尖括号需要换行
+  jsxBracketSameLine: false,
+  // 箭头函数，只有一个参数的时候，也需要括号
+  arrowParens: 'always',
+  // 每个文件格式化的范围是文件的全部内容
+  rangeStart: 0,
+  rangeEnd: Infinity,
+  // 不需要写文件开头的 @prettier
+  requirePragma: false,
+  // 不需要自动在文件开头插入 @prettier
+  insertPragma: false,
+  // 使用默认的折行标准
+  proseWrap: 'preserve',
+  // 根据显示样式决定 html 要不要折行
+  htmlWhitespaceSensitivity: 'css',
+  // 换行符使用 lf
+  endOfLine: 'lf'
 };
 ```
 
@@ -288,20 +290,20 @@ module.exports = {
 
 ```json
 {
-    "files.eol": "\n",
-    "editor.tabSize": 4,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "eslint.autoFixOnSave": true,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        {
-            "language": "typescript",
-            "autoFix": true
-        }
-    ],
-    "typescript.tsdk": "node_modules/typescript/lib"
+  "files.eol": "\n",
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    }
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
 ```
 
@@ -309,7 +311,7 @@ module.exports = {
 
 需要注意的是，由于 ESLint 也可以检查一些代码格式的问题，所以在和 Prettier 配合使用时，我们一般会把 ESLint 中的代码格式相关的规则禁用掉，否则就会有冲突了。
 
-#### 使用 AlloyTeam 的 ESLint 配置
+## 使用 AlloyTeam 的 ESLint 配置
 
 ESLint 原生的规则和 `@typescript-eslint/eslint-plugin` 的规则太多了，而且原生的规则有一些在 TypeScript 中支持的不好，需要禁用掉。
 
@@ -325,30 +327,30 @@ npm install --save-dev eslint typescript @typescript-eslint/parser @typescript-e
 
 ```js
 module.exports = {
-    extends: [
-        'alloy',
-        'alloy/typescript',
-    ],
-    env: {
-        // 您的环境变量（包含多个预定义的全局变量）
-        // Your environments (which contains several predefined global variables)
-        //
-        // browser: true,
-        // node: true,
-        // mocha: true,
-        // jest: true,
-        // jquery: true
-    },
-    globals: {
-        // 您的全局变量（设置为 false 表示它不允许被重新赋值）
-        // Your global variables (setting to false means it's not allowed to be reassigned)
-        //
-        // myGlobal: false
-    },
-    rules: {
-        // 自定义您的规则
-        // Customize your rules
-    }
+  extends: [
+    'alloy',
+    'alloy/typescript',
+  ],
+  env: {
+    // 您的环境变量（包含多个预定义的全局变量）
+    // Your environments (which contains several predefined global variables)
+    //
+    // browser: true,
+    // node: true,
+    // mocha: true,
+    // jest: true,
+    // jquery: true
+  },
+  globals: {
+    // 您的全局变量（设置为 false 表示它不允许被重新赋值）
+    // Your global variables (setting to false means it's not allowed to be reassigned)
+    //
+    // myGlobal: false
+  },
+  rules: {
+    // 自定义您的规则
+    // Customize your rules
+  }
 };
 ```
 
@@ -358,48 +360,48 @@ module.exports = {
 
 如果需要同时支持对 tsx 文件的检查，则需要对以上步骤做一些调整：
 
-#### 安装 `eslint-plugin-react`
+## 安装 `eslint-plugin-react`
 
 ```bash
 npm install --save-dev eslint-plugin-react
 ```
 
-#### package.json 中的 scripts.eslint 添加 `.tsx` 后缀
+## package.json 中的 scripts.eslint 添加 `.tsx` 后缀
 
 ```json
 {
-    "scripts": {
-        "eslint": "eslint src --ext .ts,.tsx"
+  "scripts": {
+    "eslint": "eslint src --ext .ts,.tsx"
+  }
+}
+```
+
+## VSCode 的配置中新增 typescriptreact 检查
+
+```json
+{
+  "files.eol": "\\n",
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
     }
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
 ```
 
-#### VSCode 的配置中新增 typescriptreact 检查
-
-```json
-{
-    "files.eol": "\\n",
-    "editor.tabSize": 4,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "eslint.autoFixOnSave": true,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        {
-            "language": "typescript",
-            "autoFix": true
-        },
-        {
-            "language": "typescriptreact",
-            "autoFix": true
-        }
-    ],
-    "typescript.tsdk": "node_modules/typescript/lib"
-}
-```
-
-#### 使用 AlloyTeam ESLint 规则中的 TypeScript React 版本
+## 使用 AlloyTeam ESLint 规则中的 TypeScript React 版本
 
 [AlloyTeam ESLint 规则中的 TypeScript React 版本](https://github.com/AlloyTeam/eslint-config-alloy#typescript-react)
 

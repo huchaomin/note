@@ -106,6 +106,8 @@ alert("card: " + pickedCard.card + " of " + pickedCard.suit);
 
 ## [JavaScript文件类型检查](https://www.tslang.cn/docs/handbook/type-checking-javascript-files.html)
 
+## [错误信息列表](https://www.tslang.cn/docs/handbook/error.html)
+
 ## package.json
 
 ### 指定主声明文件

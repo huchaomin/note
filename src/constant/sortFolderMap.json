@@ -312,6 +312,9 @@
     "工程架构-typescript-JSX",
     "工程架构-typescript-三斜线指令",
     "工程架构-typescript-深入理解",
+    "工程架构-typescript-lint",
+    "工程架构-typescript-tsconfig_json",
+    "工程架构-typescript-compiler-options",
     "工程架构-typescript-others"
   ],
   "工程架构-vite_": [

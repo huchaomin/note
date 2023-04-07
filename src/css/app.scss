@@ -38,6 +38,14 @@ strong {
   padding: 0 4px;
   border-radius: $generic-border-radius;
 }
+.doc-link {
+  .doc-token{
+    color: inherit !important;
+    background-color: inherit !important;
+    padding: 0;
+    border-radius: 0;
+  }
+}
 // blockquotes
 .doc-note {
   border-radius: $generic-border-radius;

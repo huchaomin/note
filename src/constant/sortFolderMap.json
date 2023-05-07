@@ -409,6 +409,14 @@
     "框架-quasar(vue3)-others",
     "框架-quasar(vue3)-quasar.config_js"
   ],
+  "框架-react_": [
+    "框架-react-state",
+    "框架-react-props",
+    "框架-react-渲染",
+    "框架-react-hooks",
+    "框架-react-others",
+    "框架-react-组件"
+  ],
   "框架-vue2.x-components-form组件_": [
     "框架-vue2.x-components-form组件-Index_vue",
     "框架-vue2.x-components-form组件-FormWrapper_vue",
@@ -497,7 +505,8 @@
     "框架-vue2.x_",
     "框架-vue3.x_",
     "框架-quasar(vue3)_",
-    "框架-pinia_"
+    "框架-pinia_",
+    "框架-react_"
   ],
   "_": [
     "html_",

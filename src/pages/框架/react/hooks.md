@@ -411,3 +411,345 @@ function Task({ task }) {
   );
 }
 ```
+
+## useRef 记住组件的信息
+
+### 让一个组件记住一些信息，但又不想让这些信息触发新的渲染
+
+React 会在每次重新渲染之间保留 ref
+
+```jsx
+import { useRef } from 'react';
+
+export default function Counter() {
+  let ref = useRef(0);
+
+  function handleClick() {
+    ref.current = ref.current + 1; // 访问该 ref 的当前值
+    alert('You clicked ' + ref.current + ' times!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click me!
+    </button>
+  );
+}
+```
+
+### 引用DOM
+
+```jsx
+import { useRef } from 'react';
+
+export default function Form() {
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.focus();
+  }
+
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={handleClick}>
+        Focus the input
+      </button>
+    </>
+  );
+}
+```
+
+### 不能直接引用子组件
+
+```jsx
+import { useRef } from 'react';
+
+function MyInput(props) {
+  return <input {...props} />;
+}
+
+export default function MyForm() {
+  const inputRef = useRef(null);
+
+  return (
+    <>
+      <MyInput ref={inputRef} />
+    </>
+  );
+}
+
+// Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()
+```
+
+### forwardRef 转发引用
+
+接着上例
+
+```jsx
+import { forwardRef, useRef } from 'react';
+
+const MyInput = forwardRef((props, ref) => {
+  return <input {...props} ref={ref} />;
+});
+
+export default function Form() {
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.focus();
+  }
+
+  return (
+    <>
+      <MyInput ref={inputRef} />
+      <button onClick={handleClick}>
+        聚焦输入框
+      </button>
+    </>
+  );
+}
+```
+
+### ref 和 state 的不同之处
+
+[参考链接](https://zh-hans.react.dev/learn/referencing-values-with-refs#differences-between-refs-and-state)
+
+## useImperativeHandle 限制暴露的功能
+
+```jsx
+import { forwardRef, useRef, useImperativeHandle } from 'react';
+
+const MyInput = forwardRef((props, ref) => {
+  const realInputRef = useRef(null);
+  useImperativeHandle(ref, () => ({
+    // 只暴露 focus，没有别的
+    focus() {
+      realInputRef.current.focus();
+    },
+  }));
+  return <input {...props} ref={realInputRef} />;
+});
+
+export default function Form() {
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.focus();
+  }
+
+  return (
+    <>
+      <MyInput ref={inputRef} />
+      <button onClick={handleClick}>
+        聚焦输入框
+      </button>
+    </>
+  );
+}
+```
+
+这里，MyInput 中的 realInputRef 保存了实际的 input DOM 节点。
+但是，useImperativeHandle 指示 React 将你自己指定的对象作为父组件的 ref 值。
+所以 Form 组件内的 inputRef.current 将只有 focus 方法。
+在这种情况下，ref “句柄”不是 DOM 节点，而是你在 useImperativeHandle 调用中创建的自定义对象
+
+## useEffect 副作用
+
+### 让您在渲染后运行一些代码
+
+```jsx
+import { useState, useRef, useEffect } from 'react';
+
+function VideoPlayer({ src, isPlaying }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (isPlaying) {
+      ref.current.play();
+    } else {
+      ref.current.pause();
+    }
+  }, [isPlaying]);
+  // 也可以依赖 props
+  // ref 可依赖可不依赖，但是如果是父组件传过来的 ref，那么就必须依赖
+  return <video ref={ref} src={src} loop playsInline />;
+}
+```
+
+```jsx
+useEffect(() => {
+  // This runs after every render
+});
+
+useEffect(() => {
+  // This runs only on mount (when the component appears)
+}, []);
+
+useEffect(() => {
+  // This runs on mount *and also* if either a or b have changed since the last render
+  // 如果有依赖列表，但是列表中的值和自动收集的依赖值不一样（Object.is比较）eslint会报错
+}, [a, b]);
+```
+
+### 返回一个函数，以在组件卸载时或者重新运行该effect时运行清理
+
+```jsx
+import { useState, useEffect } from 'react';
+import { createConnection } from './chat.js';
+
+export default function ChatRoom() {
+  useEffect(() => {
+    const connection = createConnection();
+    connection.connect();
+    return () => connection.disconnect();
+  }, []);
+  return <h1>Welcome to the chat!</h1>;
+}
+```
+
+::: warning
+在开发中，React 将立即运行并额外清理一次 Effect。这就是您看到"✅ Connecting..."打印两次, "❌ Disconnected."打印一次的原因（组件还未卸载）。这确保您不会忘记实现清理功能
+
+在生产中不会立即运行并额外清理一次
+:::
+
+### 控制非 React 小部件
+
+```jsx
+useEffect(() => {
+  const map = mapRef.current;
+  map.setZoomLevel(zoomLevel);
+  // 不需要清理
+}, [zoomLevel]);
+
+useEffect(() => {
+  const dialog = dialogRef.current;
+  dialog.showModal();
+  return () => dialog.close();
+  // 需要清理，生产应该没问题
+}, []);
+```
+
+### 订阅事件
+
+```jsx
+useEffect(() => {
+  function handleScroll(e) {
+    console.log(window.scrollX, window.scrollY);
+  }
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+```
+
+### 触发动画
+
+```jsx
+useEffect(() => {
+  const node = ref.current;
+  node.style.opacity = 1; // Trigger the animation
+  return () => {
+    node.style.opacity = 0; // Reset to the initial value
+  };
+}, []);
+```
+
+### 获取数据
+
+```jsx
+// 如果您的 Effect 获取了一些东西，清理函数应该中止获取或忽略其结果
+useEffect(() => {
+  let ignore = false;
+
+  async function startFetching() {
+    const json = await fetchTodos(userId);
+    if (!ignore) { // 额外清理时 ignore = true
+      setTodos(json);
+    }
+  }
+
+  startFetching();
+
+  return () => {
+    ignore = true;
+  };
+}, [userId]);
+```
+
+## useEffectEvent 副作用事件处理 （实验特性）
+
+```jsx
+import { useState, useEffect } from 'react';
+import { experimental_useEffectEvent as useEffectEvent } from 'react';
+import { createConnection, sendMessage } from './chat.js';
+import { showNotification } from './notifications.js';
+
+const serverUrl = 'https://localhost:1234';
+
+function ChatRoom({ roomId, theme }) {
+  const onConnected = useEffectEvent(() => {
+    showNotification('Connected!', theme);
+  });
+
+  useEffect(() => {
+    const connection = createConnection(serverUrl, roomId);
+    connection.on('connected', onConnected); // theme 不能放在依赖列表中，所以只能写在上面
+    connection.connect();
+    return () => connection.disconnect();
+  }, [roomId]);
+
+  return <h1>Welcome to the {roomId} room!</h1>
+}
+
+export default function App() {
+  const [roomId, setRoomId] = useState('general');
+  const [isDark, setIsDark] = useState(false);
+  return (
+    <>
+      <label>
+        Choose the chat room:{' '}
+        <select
+          value={roomId}
+          onChange={e => setRoomId(e.target.value)}
+        >
+          <option value="general">general</option>
+          <option value="travel">travel</option>
+          <option value="music">music</option>
+        </select>
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={isDark}
+          onChange={e => setIsDark(e.target.checked)}
+        />
+        Use dark theme
+      </label>
+      <hr />
+      <ChatRoom
+        roomId={roomId}
+        theme={isDark ? 'dark' : 'light'}
+      />
+    </>
+  );
+}
+```
+
+## useMemo 记忆
+
+```jsx
+import { useMemo, useState } from 'react';
+
+function TodoList({ todos, filter }) {
+  const [newTodo, setNewTodo] = useState('');
+  // ✅ Does not re-run getFilteredTodos() unless todos or filter change
+  const visibleTodos = useMemo(() => getFilteredTodos(todos, filter), [todos, filter]);
+  // ...
+}
+```
+
+这告诉 React 你不希望内部函数重新运行，除非todosorfilter已经改变。getFilteredTodos()React 会记住初始渲染期间的返回值。
+在下一次渲染期间，它将检查todos或 是否filter不同。
+如果它们与上次相同，useMemo将返回它存储的最后一个结果。
+但如果它们不同，React 将再次调用内部函数（并存储其结果)

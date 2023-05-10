@@ -29,6 +29,10 @@ JSX 虽然看起来很像 HTML，但在底层其实被转化为了 JavaScript �
 
 ## [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 
+## [useSWR](https://swr.vercel.app/zh-CN)
+
+## [TanStack Query](https://tanstack.com/query/latest)
+
 ## react 脚手架需要注意的地方
 
 - eslint-config-react-app

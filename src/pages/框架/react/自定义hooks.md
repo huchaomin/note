@@ -16,7 +16,7 @@ title: 自定义hooks
 1. 只能在函数最外层调用hooks，不要在循环、条件判断或者子函数中调用
 2. 只能在React的函数组件中调用hooks，不要在其他的JavaScript函数中调用
 
-## 自定义hooks的实现
+## 简单的例子
 
 usePointerPosition.js
 
@@ -51,5 +51,38 @@ export function useDelayedValue(value, delay) {
   }, [value, delay]);
 
   return delayedValue;
+}
+```
+
+### ajax 请求
+
+```jsx
+function SearchResults({ query }) {
+  const [page, setPage] = useState(1);
+  const params = new URLSearchParams({ query, page });
+  const results = useData(`/api/search?${params}`);
+
+  function handleNextPageClick() {
+    setPage(page + 1);
+  }
+  // ...
+}
+
+function useData(url) {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    let ignore = false;
+    fetch(url)
+      .then(response => response.json())
+      .then(json => {
+        if (!ignore) {
+          setData(json);
+        }
+      });
+    return () => {
+      ignore = true;
+    };
+  }, [url]);
+  return data;
 }
 ```

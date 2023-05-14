@@ -2,7 +2,7 @@
   "name": "note",
   "version": "1.0.0",
   "description": "木林子的笔记-记住自己的点滴",
-  "productName": "刘晓的笔记空间",
+  "productName": "木林子的笔记空间",
   "private": true,
   "scripts": {
     "dev": "quasar dev",

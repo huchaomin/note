@@ -165,6 +165,46 @@ function ChatRoom({ roomId, selectedServerUrl }) { // roomId is reactive
 }
 ```
 
+## 依赖项为对象或函数
+
+```jsx
+const options = {};
+useEffect(() => {
+}, [options]);
+// 每次渲染都会重新渲染一次副作用
+```
+
+## 使用更新函数删除依赖
+
+```jsx
+function ChatRoom({ roomId }) {
+const [messages, setMessages] = useState([]);
+useEffect(() => {
+  const connection = createConnection();
+  connection.connect();
+  connection.on('message', (receivedMessage) => {
+    setMessages([...messages, receivedMessage]);
+  });
+  return () => connection.disconnect();
+}, [roomId, messages]); // 此处不能依赖 messages
+```
+
+我们可以传入更新函数
+
+```jsx
+function ChatRoom({ roomId }) {
+const [messages, setMessages] = useState([]);
+useEffect(() => {
+  const connection = createConnection();
+  connection.connect();
+  connection.on('message', (receivedMessage) => {
+    // 当然也可以放到 useEffectEvent 里面
+    setMessages(msgs => [...msgs, receivedMessage]);
+  });
+  return () => connection.disconnect();
+}, [roomId]);
+```
+
 ## useEffectEvent 副作用事件处理 （实验特性）
 
 ```jsx
@@ -221,6 +261,100 @@ export default function App() {
       />
     </>
   );
+}
+```
+
+### 另一个例子
+
+```jsx
+const onVisit = useEffectEvent(visitedUrl => {
+  // 调用日志会用到 numberOfItems，所以放到event里面
+  logVisit(visitedUrl, numberOfItems);
+});
+// url 改变时触发日志调用
+useEffect(() => {
+  onVisit(url);
+}, [url]);
+```
+
+可不可以这么写呢
+
+```jsx
+const onVisit = useEffectEvent(() => {
+  logVisit(url, numberOfItems);
+});
+
+useEffect(() => {
+  onVisit();
+}, [url]);
+```
+
+上面的写法虽然可以工作但是不推荐，尤其是遇到异步的情况
+
+```jsx
+const onVisit = useEffectEvent(() => {
+  logVisit(url, numberOfItems);
+});
+
+useEffect(() => {
+  setTimeout(() => {
+    onVisit();
+  }, 5000);
+}, [url]);
+// TODO 此处的url会不会是一样的呢？
+```
+
+### 使用方式非常有限
+
+- 只能从 Effects 内部调用它们。
+- 永远不要将它们传递给其他组件或 Hooks
+
+```jsx
+function Timer() {
+  const [count, setCount] = useState(0);
+  const onTick = useEffectEvent(() => {
+    setCount(count + 1);
+  });
+  useTimer(onTick, 1000); // 🔴 Avoid: Passing Effect Events
+  return <h1>{count}</h1>
+}
+
+function useTimer(callback, delay) {
+  useEffect(() => {
+    const id = setInterval(() => {
+      callback();
+    }, delay);
+    return () => {
+      clearInterval(id);
+    };
+  }, [delay, callback]); // Need to specify "callback" in dependencies
+}
+```
+
+相反，始终直接在使用它们的效果旁边声明效果事件
+
+```jsx
+function Timer() {
+  const [count, setCount] = useState(0);
+  useTimer(() => {
+    setCount(count + 1);
+  }, 1000);
+  return <h1>{count}</h1>
+}
+
+function useTimer(callback, delay) {
+  const onTick = useEffectEvent(() => {
+    callback();
+  });
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      onTick(); // ✅ Good: Only called locally inside an Effect
+    }, delay);
+    return () => {
+      clearInterval(id);
+    };
+  }, [delay]); // No need to specify "onTick" (an Effect Event) as a dependency
 }
 ```
 
@@ -287,5 +421,23 @@ function List({ items }) {
   const [selectedId, setSelectedId] = useState(null);
   // ✅ Best: Calculate everything during rendering
   const selection = items.find(item => item.id === selectedId) ?? null;
+}
+```
+
+## 仅在客户端上运行。它们不会在服务器渲染期间运行
+
+```jsx
+function MyComponent() {
+  const [didMount, setDidMount] = useState(false);
+
+  useEffect(() => {
+    setDidMount(true);
+  }, []);
+
+  if (didMount) {
+    // ... return client-only JSX ...
+  }  else {
+    // ... return initial JSX ...
+  }
 }
 ```

@@ -409,24 +409,24 @@
     "框架-quasar(vue3)-others",
     "框架-quasar(vue3)-quasar.config_js"
   ],
-  "框架-react-hooks_": [
-    "框架-react-hooks-一览",
-    "框架-react-hooks-useEffect",
-    "框架-react-hooks-useSyncExternalStore",
-    "框架-react-hooks-自定义hooks",
-    "框架-react-hooks-others"
+  "框架-react18-hooks_": [
+    "框架-react18-hooks-一览",
+    "框架-react18-hooks-useEffect",
+    "框架-react18-hooks-useSyncExternalStore",
+    "框架-react18-hooks-自定义hooks",
+    "框架-react18-hooks-others"
   ],
-  "框架-react-react-dom_": [
-    "框架-react-react-dom-一览"
+  "框架-react18-react-dom_": [
+    "框架-react18-react-dom-一览"
   ],
-  "框架-react_": [
-    "框架-react-state",
-    "框架-react-props",
-    "框架-react-渲染",
-    "框架-react-组件",
-    "框架-react-hooks_",
-    "框架-react-react-dom_",
-    "框架-react-others"
+  "框架-react18_": [
+    "框架-react18-props",
+    "框架-react18-state",
+    "框架-react18-组件",
+    "框架-react18-渲染",
+    "框架-react18-hooks_",
+    "框架-react18-react-dom_",
+    "框架-react18-others"
   ],
   "框架-vue2.x-components-form组件_": [
     "框架-vue2.x-components-form组件-Index_vue",
@@ -517,7 +517,7 @@
     "框架-vue3.x_",
     "框架-quasar(vue3)_",
     "框架-pinia_",
-    "框架-react_"
+    "框架-react18_"
   ],
   "_": [
     "html_",

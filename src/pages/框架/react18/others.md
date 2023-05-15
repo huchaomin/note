@@ -88,5 +88,3 @@ JavaScript 会自动将左侧的值转换成布尔类型以判断条件成立与
 ## 事件
 
 - 在 React 中所有事件都会传播，除了 onScroll，它仅适用于你附加到的 JSX 标签
-- `onClickCapture` 捕获阶段触发事件
-- `onPointerMove` 鼠标移动事件

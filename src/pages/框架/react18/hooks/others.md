@@ -2,9 +2,6 @@
 title: others hooks
 ---
 
-- 以 use 开头的函数
-- 只能在组件或自定义 Hook 的最顶层调用, 类似于在文件顶部“导入”模块
-
 ## useState
 
 - State 变量 用于保存渲染间的数据

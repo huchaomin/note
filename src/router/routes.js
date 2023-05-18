@@ -21,12 +21,11 @@ const routes = [
     children: [
       {
         path: '',
-        component: () => import('layouts/PageLanding.vue'),
+        component: () => import('layouts/PageLanding.md'),
       },
       ...handleLeftTree(leftTree),
     ],
   },
-  // Always leave this as last one
   {
     path: '/:catchAll(.*)*',
     component: DocLayout,

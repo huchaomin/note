@@ -3,88 +3,50 @@ title: 首页
 markmap: true
 ---
 
-## 框架
+## 项目
 
 ### backbone.js
+
+#### grunt
+
+#### requireJs
+
+#### bootstrap
+
+#### underscore
+
+#### jquery
 
 ### vue
 
 #### vue2
 
-##### vue-router
+##### webpack/vue-cli/nuxt
+
+##### mint-ui/element-ui/vuetify
 
 ##### vuex
 
 #### vue3
 
-##### vue-router
+##### vite/quasar-cli
+
+##### element-plus/quasar
 
 ##### pinia
 
 ### react
 
+#### create-react-app
+
+#### ant-design-react
+
 #### react-router
 
 #### redux
 
-## ui 框架
+### 其他
 
-### bootstrap
+#### 微信小程序
 
-### mint-ui
-
-### element-ui
-
-### element-plus
-
-### ant-design-react
-
-### vuetify
-
-### quasar
-
-## 脚手架
-
-### grunt
-
-### webpack
-
-### create-react-app
-
-### vue-cli
-
-### nuxt
-
-### vite
-
-### quasar-cli
-
-## css
-
-### less
-
-### scss
-
-### postcss
-
-## 其他
-
-### requireJs
-
-### underscore
-
-### lodash
-
-### jquery
-
-### axios
-
-### vxe-table
-
-### ag-grid
-
-### antv-G6
-
-### echarts
-
-### vssue
+#### 安卓快应用

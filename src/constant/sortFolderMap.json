@@ -275,6 +275,9 @@
     "工程架构-nodejs-path模块",
     "工程架构-nodejs-es6与node"
   ],
+  "工程架构-nuxt_": [
+    "工程架构-nuxt-基本知识"
+  ],
   "工程架构-ssr-vite_": [
     "工程架构-ssr-vite-others"
   ],
@@ -367,6 +370,7 @@
     "工程架构-eslint_",
     "工程架构-vite_",
     "工程架构-ssr_",
+    "工程架构-nuxt_",
     "工程架构-pnpm",
     "工程架构-bower",
     "工程架构-browserslist",

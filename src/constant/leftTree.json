@@ -1835,6 +1835,24 @@
         }
       },
       {
+        "name": "工程架构-nuxt_",
+        "path": "nuxt_",
+        "component": "Empty",
+        "children": [
+          {
+            "name": "工程架构-nuxt-基本知识",
+            "path": "基本知识",
+            "component": "./工程架构/nuxt/基本知识.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          }
+        ],
+        "redirect": {
+          "name": "工程架构-nuxt-基本知识"
+        }
+      },
+      {
         "name": "工程架构-pnpm",
         "path": "pnpm",
         "component": "./工程架构/pnpm.md",

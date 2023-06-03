@@ -23,7 +23,7 @@ markmap: true
 
 ##### webpack/vue-cli/nuxt
 
-##### mint-ui/element-ui/vuetify
+##### mint-ui/element-ui/vuetify/vant
 
 ##### vuex
 

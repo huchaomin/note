@@ -216,7 +216,7 @@ function Message({ messageColor }) {
 
 `messageColor` 变化时 `color` 状态变量将不会更新
 
-## 用 flushSync 同步更新 state
+## 用 flushSync 同步刷新提供的回调中的任何更新
 
 ```jsx
 import { useState, useRef } from 'react';

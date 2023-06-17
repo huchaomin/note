@@ -195,6 +195,7 @@
     "others-unicode和utf-8_",
     "others-ms_",
     "others-移动端_",
+    "others-SEO优化",
     "others-模块通常的写法",
     "others-微任务宏任务执行顺序",
     "others-严格模式",
@@ -485,7 +486,8 @@
     "框架-vue2.x-v-for",
     "框架-vue2.x-v-model",
     "框架-vue2.x-Vue.extend",
-    "框架-vue2.x-x-template"
+    "框架-vue2.x-x-template",
+    "框架-vue2.x-源码走读"
   ],
   "框架-vue3.x-vue-router_": [
     "框架-vue3.x-vue-router-others"
@@ -525,7 +527,8 @@
     "框架-vue3.x_",
     "框架-quasar(vue3)_",
     "框架-pinia_",
-    "框架-react18_"
+    "框架-react18_",
+    "框架-vue与react的区别"
   ],
   "_": [
     "html_",

@@ -31,9 +31,9 @@ onMounted(() => {
   <div>
     <h1 v-if="title" id="doc-title" class="doc-heading">
       {{ title }}
-      <q-badge v-if="$route.meta.lastUpdate" align="top">
+      <!-- <q-badge v-if="$route.meta.lastUpdate" align="top">
         {{ `最后更新时间：${$route.meta.lastUpdate}` }}
-      </q-badge>
+      </q-badge> -->
     </h1>
     <slot></slot>
   </div>

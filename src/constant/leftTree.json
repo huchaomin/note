@@ -2868,6 +2868,24 @@
     }
   },
   {
+    "name": "微信小程序_",
+    "path": "微信小程序_",
+    "component": "Empty",
+    "children": [
+      {
+        "name": "微信小程序-生命周期",
+        "path": "生命周期",
+        "component": "./微信小程序/生命周期.md",
+        "meta": {
+          "lastUpdate": ""
+        }
+      }
+    ],
+    "redirect": {
+      "name": "微信小程序-生命周期"
+    }
+  },
+  {
     "name": "plugin_",
     "path": "plugin_",
     "component": "Empty",

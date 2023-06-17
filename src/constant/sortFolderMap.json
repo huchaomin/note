@@ -380,6 +380,9 @@
     "工程架构-.editorconfig",
     "工程架构-.prettierrc"
   ],
+  "微信小程序_": [
+    "微信小程序-生命周期"
+  ],
   "框架-pinia_": [
     "框架-pinia-state",
     "框架-pinia-getters",
@@ -533,6 +536,7 @@
     "javascript_",
     "工程架构_",
     "框架_",
+    "微信小程序_",
     "plugin_",
     "tools_",
     "others_"

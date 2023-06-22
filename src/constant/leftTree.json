@@ -2238,14 +2238,6 @@
             "meta": {
               "lastUpdate": "2023/2/5 19:39:44"
             }
-          },
-          {
-            "name": "框架-vue2.x-源码走读",
-            "path": "源码走读",
-            "component": "./框架/vue2.x/源码走读.md",
-            "meta": {
-              "lastUpdate": ""
-            }
           }
         ],
         "redirect": {
@@ -2752,7 +2744,7 @@
             "path": "state",
             "component": "./框架/react18/state.md",
             "meta": {
-              "lastUpdate": "2023/5/15 19:31:01"
+              "lastUpdate": "2023/6/17 12:14:14"
             }
           },
           {
@@ -2875,7 +2867,7 @@
         "path": "vue与react的区别",
         "component": "./框架/vue与react的区别.md",
         "meta": {
-          "lastUpdate": ""
+          "lastUpdate": "2023/6/17 12:14:14"
         }
       }
     ],
@@ -2893,7 +2885,15 @@
         "path": "生命周期",
         "component": "./微信小程序/生命周期.md",
         "meta": {
-          "lastUpdate": ""
+          "lastUpdate": "2023/6/17 16:14:15"
+        }
+      },
+      {
+        "name": "微信小程序-路由跳转",
+        "path": "路由跳转",
+        "component": "./微信小程序/路由跳转.md",
+        "meta": {
+          "lastUpdate": "2023/6/17 16:14:15"
         }
       }
     ],
@@ -3230,18 +3230,18 @@
             "meta": {
               "lastUpdate": "2023/3/3 17:07:30"
             }
+          },
+          {
+            "name": "others-浏览器-ESM与现代浏览器",
+            "path": "ESM与现代浏览器",
+            "component": "./others/浏览器/ESM与现代浏览器.md",
+            "meta": {
+              "lastUpdate": ""
+            }
           }
         ],
         "redirect": {
           "name": "others-浏览器-内核"
-        }
-      },
-      {
-        "name": "others-SEO优化",
-        "path": "SEO优化",
-        "component": "./others/SEO优化.md",
-        "meta": {
-          "lastUpdate": ""
         }
       },
       {
@@ -3411,6 +3411,14 @@
         }
       },
       {
+        "name": "others-SEO优化",
+        "path": "SEO优化",
+        "component": "./others/SEO优化.md",
+        "meta": {
+          "lastUpdate": "2023/6/17 12:14:14"
+        }
+      },
+      {
         "name": "others-模块通常的写法",
         "path": "模块通常的写法",
         "component": "./others/模块通常的写法.md",
@@ -3430,14 +3438,6 @@
         "name": "others-严格模式",
         "path": "严格模式",
         "component": "./others/严格模式.md",
-        "meta": {
-          "lastUpdate": "2023/2/5 19:39:44"
-        }
-      },
-      {
-        "name": "others-ESM与现代浏览器",
-        "path": "ESM与现代浏览器",
-        "component": "./others/ESM与现代浏览器.md",
         "meta": {
           "lastUpdate": "2023/2/5 19:39:44"
         }
@@ -3496,6 +3496,14 @@
         "component": "./others/todos.md",
         "meta": {
           "lastUpdate": "2023/2/14 18:16:58"
+        }
+      },
+      {
+        "name": "others-linux终端命令",
+        "path": "linux终端命令",
+        "component": "./others/linux终端命令.md",
+        "meta": {
+          "lastUpdate": "2023/6/17 12:14:14"
         }
       }
     ],

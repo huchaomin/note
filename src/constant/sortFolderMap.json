@@ -181,7 +181,8 @@
   "others-浏览器_": [
     "others-浏览器-内核",
     "others-浏览器-缓存",
-    "others-浏览器-performance"
+    "others-浏览器-performance",
+    "others-浏览器-ESM与现代浏览器"
   ],
   "others-移动端_": [
     "others-移动端-单位",
@@ -199,14 +200,14 @@
     "others-模块通常的写法",
     "others-微任务宏任务执行顺序",
     "others-严格模式",
-    "others-ESM与现代浏览器",
     "others-前后端鉴权方式",
     "others-JSON",
     "others-思考",
     "others-markdown",
     "others-markdown-markmap",
     "others-小知识点",
-    "others-todos"
+    "others-todos",
+    "others-linux终端命令"
   ],
   "plugin-axios-honor-hus_": [
     "plugin-axios-honor-hus-apis_js",
@@ -382,7 +383,8 @@
     "工程架构-.prettierrc"
   ],
   "微信小程序_": [
-    "微信小程序-生命周期"
+    "微信小程序-生命周期",
+    "微信小程序-路由跳转"
   ],
   "框架-pinia_": [
     "框架-pinia-state",
@@ -489,8 +491,7 @@
     "框架-vue2.x-v-for",
     "框架-vue2.x-v-model",
     "框架-vue2.x-Vue.extend",
-    "框架-vue2.x-x-template",
-    "框架-vue2.x-源码走读"
+    "框架-vue2.x-x-template"
   ],
   "框架-vue3.x-vue-router_": [
     "框架-vue3.x-vue-router-others"

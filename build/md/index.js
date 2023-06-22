@@ -10,7 +10,7 @@ module.exports = {
     if (mdRE.test(id) === false) return;
     try {
       // eslint-disable-next-line consistent-return
-      return mdParse(code, id); // 最终的编译结果就是一个vue文件
+      return mdParse(code); // 最终的编译结果就是一个vue文件
     } catch (err) {
       this.error(err);
     }

@@ -1772,7 +1772,7 @@
             "path": "静态资源处理",
             "component": "./工程架构/vite/静态资源处理.md",
             "meta": {
-              "lastUpdate": "2023/3/8 18:09:16"
+              "lastUpdate": "2023/6/23 18:39:06"
             }
           },
           {
@@ -1780,7 +1780,7 @@
             "path": "css相关",
             "component": "./工程架构/vite/css相关.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/6/23 18:39:06"
             }
           },
           {
@@ -1788,7 +1788,7 @@
             "path": "glob 导入",
             "component": "./工程架构/vite/glob 导入.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/6/23 18:39:06"
             }
           },
           {
@@ -1796,7 +1796,7 @@
             "path": "vue3+ts",
             "component": "./工程架构/vite/vue3+ts.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/6/23 18:39:06"
             }
           },
           {
@@ -1804,7 +1804,7 @@
             "path": "vite.config_ts",
             "component": "./工程架构/vite/vite.config_ts.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/6/23 18:39:06"
             }
           },
           {
@@ -1812,7 +1812,7 @@
             "path": "others",
             "component": "./工程架构/vite/others.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/6/23 18:39:06"
             }
           }
         ],

@@ -1760,14 +1760,6 @@
         "component": "Empty",
         "children": [
           {
-            "name": "工程架构-vite-注意",
-            "path": "注意",
-            "component": "./工程架构/vite/注意.md",
-            "meta": {
-              "lastUpdate": "2023/2/8 17:12:39"
-            }
-          },
-          {
             "name": "工程架构-vite-预构建的简单理解",
             "path": "预构建的简单理解",
             "component": "./工程架构/vite/预构建的简单理解.md",
@@ -1782,10 +1774,50 @@
             "meta": {
               "lastUpdate": "2023/3/8 18:09:16"
             }
+          },
+          {
+            "name": "工程架构-vite-css相关",
+            "path": "css相关",
+            "component": "./工程架构/vite/css相关.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-vite-glob 导入",
+            "path": "glob 导入",
+            "component": "./工程架构/vite/glob 导入.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-vite-vue3+ts",
+            "path": "vue3+ts",
+            "component": "./工程架构/vite/vue3+ts.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-vite-vite.config_ts",
+            "path": "vite.config_ts",
+            "component": "./工程架构/vite/vite.config_ts.md",
+            "meta": {
+              "lastUpdate": ""
+            }
+          },
+          {
+            "name": "工程架构-vite-others",
+            "path": "others",
+            "component": "./工程架构/vite/others.md",
+            "meta": {
+              "lastUpdate": ""
+            }
           }
         ],
         "redirect": {
-          "name": "工程架构-vite-注意"
+          "name": "工程架构-vite-预构建的简单理解"
         }
       },
       {
@@ -3236,7 +3268,7 @@
             "path": "ESM与现代浏览器",
             "component": "./others/浏览器/ESM与现代浏览器.md",
             "meta": {
-              "lastUpdate": ""
+              "lastUpdate": "2023/6/22 14:17:42"
             }
           }
         ],

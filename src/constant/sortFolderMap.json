@@ -323,9 +323,13 @@
     "工程架构-typescript-others"
   ],
   "工程架构-vite_": [
-    "工程架构-vite-注意",
     "工程架构-vite-预构建的简单理解",
-    "工程架构-vite-静态资源处理"
+    "工程架构-vite-静态资源处理",
+    "工程架构-vite-css相关",
+    "工程架构-vite-glob 导入",
+    "工程架构-vite-vue3+ts",
+    "工程架构-vite-vite.config_ts",
+    "工程架构-vite-others"
   ],
   "工程架构-vue-cli_": [
     "工程架构-vue-cli-基本配置",

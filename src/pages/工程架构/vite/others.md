@@ -26,7 +26,7 @@ Vite 会为入口 chunk 和它们在打包出的 HTML 中的直接引入自动�
 - 启动开发服务器时指定 `--force`
 - 手动删除 `node_modules/.vite` 缓存目录
 
-## import.meta.env
+## import.meta\u200b.env
 
 - MODE
 - BASE_URL

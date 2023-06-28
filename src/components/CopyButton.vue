@@ -27,7 +27,8 @@ const instance = getCurrentInstance();
 function copy() {
   let { text } = props;
   if (text === undefined) {
-    const parentEl = instance.parent.ctx.$el;
+    debugger;
+    const parentEl = instance.parent.proxy.$el;
     text = parentEl.querySelector('.doc-code code')?.textContent;
   }
   if (!text) return;

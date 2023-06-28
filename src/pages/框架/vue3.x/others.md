@@ -17,3 +17,10 @@ title: 其他
 - vue 在 3.2.34 或以上的版本中, 使用 `<script setup>` 的单文件组件会自动根据文件名生成对应的 name 选项，无需再手动声明。前提是解析后 Component.type.__name 有值
 - v-bind 绑定的对象里面如果包含 ref, 是不会自动解构到模板上面的
 - onMounted 早于 onActivated
+
+## getCurrentInstance
+
+```js
+const { ctx }  = getCurrentInstance();  //  方式一，这种方式只能在开发环境下使用，生产环境下的ctx将访问不到
+const { proxy }  = getCurrentInstance();  //  方式二，此方法在开发环境以及生产环境下都能放到组件上下文对象（推荐
+```

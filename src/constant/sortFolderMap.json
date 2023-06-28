@@ -25,12 +25,18 @@
     "css-css3-linear-gradient",
     "css-css3-min、max、clamp、calc"
   ],
+  "css-less_": [
+    "css-less-变量",
+    "css-less-mixin",
+    "css-less-容易忘记的"
+  ],
   "css_": [
     "css-css3_",
     "css-css选择器",
     "css-reset",
     "css-scrollBar",
-    "css-others"
+    "css-others",
+    "css-less_"
   ],
   "html_": [
     "html-api-drag",

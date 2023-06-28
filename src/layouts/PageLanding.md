@@ -31,7 +31,7 @@ markmap: true
 
 ##### vite/quasar-cli
 
-##### element-plus/quasar
+##### element-plus/quasar/arco-design-vue
 
 ##### pinia
 

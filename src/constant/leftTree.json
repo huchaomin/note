@@ -914,6 +914,14 @@
             "meta": {
               "lastUpdate": "2023/2/5 19:39:44"
             }
+          },
+          {
+            "name": "javascript-bom-requestAnimationFrame",
+            "path": "requestAnimationFrame",
+            "component": "./javascript/bom/requestAnimationFrame.md",
+            "meta": {
+              "lastUpdate": ""
+            }
           }
         ],
         "redirect": {
@@ -2959,7 +2967,7 @@
         "path": "路由跳转",
         "component": "./微信小程序/路由跳转.md",
         "meta": {
-          "lastUpdate": "2023/6/23 18:56:27"
+          "lastUpdate": "2023/7/9 14:30:30"
         }
       }
     ],
@@ -3517,6 +3525,14 @@
         }
       },
       {
+        "name": "others-sso单点登录",
+        "path": "sso单点登录",
+        "component": "./others/sso单点登录.md",
+        "meta": {
+          "lastUpdate": "2023/7/9 14:30:30"
+        }
+      },
+      {
         "name": "others-JSON",
         "path": "JSON",
         "component": "./others/JSON.md",
@@ -3570,14 +3586,6 @@
         "component": "./others/linux终端命令.md",
         "meta": {
           "lastUpdate": "2023/6/17 12:14:14"
-        }
-      },
-      {
-        "name": "others-sso单点登录",
-        "path": "sso单点登录",
-        "component": "./others/sso单点登录.md",
-        "meta": {
-          "lastUpdate": ""
         }
       }
     ],

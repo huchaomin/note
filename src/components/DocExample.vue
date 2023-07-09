@@ -105,8 +105,9 @@ if (process.env.CLIENT) {
             :name="tab"
           >
             <doc-code
-              lang="markup"
+              lang="vue"
               :code="def.parts[tab]"
+              :from-doc-example="true"
             ></doc-code>
           </q-tab-panel>
         </q-tab-panels>

@@ -8,9 +8,13 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  fromDocExample: {
+    type: Boolean,
+    default: false,
+  },
 });
 const docStore = useDocStore();
-const fullScreen = computed(() => docStore.state.toc.length === 0);
+const fullScreen = computed(() => docStore.state.toc.length === 0 || props.fromDocExample);
 const qPageHeight = inject('qPageHeight');
 </script>
 

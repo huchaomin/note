@@ -56,7 +56,8 @@
   ],
   "javascript-bom_": [
     "javascript-bom-webstorage_",
-    "javascript-bom-Navigator.sendBeacon"
+    "javascript-bom-Navigator.sendBeacon",
+    "javascript-bom-requestAnimationFrame"
   ],
   "javascript-dom_": [
     "javascript-dom-节点类型",

@@ -41,7 +41,7 @@ module.exports = configure((ctx) => {
       vueRouterMode: ctx.mode.spa ? 'hash' : 'history',
       distDir: 'docs',
       // useFilenameHashes: false, // TODO
-      analyze: true,
+      analyze: false,
       env: {
         DOC_NAME: productName,
         DOC_DESCRIPTION: description,

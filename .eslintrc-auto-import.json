@@ -52,7 +52,6 @@
     "toRaw": "readonly",
     "toRef": "readonly",
     "toRefs": "readonly",
-    "toValue": "readonly",
     "triggerRef": "readonly",
     "unref": "readonly",
     "useAttrs": "readonly",

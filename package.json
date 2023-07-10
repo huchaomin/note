@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "quasar dev",
     "dev:ssr": "quasar dev -m ssr",
-    "build": "quasar build && mkdir -p docs/examples/ && cp -R src/examples/* docs/examples/",
+    "build": "pnpm gts && quasar build",
     "gts": "node build/gLeftTreeSiteMap.js",
     "lint": "eslint --ext .js,.vue ./ --fix",
     "test": "echo \"No test specified\" && exit 0"
@@ -38,7 +38,6 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-quasar": "^1.1.0",
     "eslint-plugin-vue": "^9.10.0",
-    "fast-glob": "^3.2.12",
     "gray-matter": "^4.0.3",
     "markdown-ast": "^0.3.0",
     "markdown-it": "^13.0.1",

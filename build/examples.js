@@ -1,11 +1,11 @@
 /* eslint-disable consistent-return */
-const { join } = require('path');
-const { sync: fgSync } = require('fast-glob');
+// const { join } = require('path');
+// const { sync: fgSync } = require('fast-glob');
 
 const moduleIdRE = /^examples:/;
 const resolvedIdPrefix = '\0examples:';
 
-const targetFolder = join(__dirname, '../src/examples');
+// const targetFolder = join(__dirname, '../src/examples');
 
 function devLoad(id) {
   if (id.startsWith(resolvedIdPrefix) === true) {
@@ -15,32 +15,32 @@ function devLoad(id) {
   }
 }
 
-function prodLoad(id) {
-  if (id.startsWith(resolvedIdPrefix) === true) {
-    const exampleId = id.substring(id.indexOf(':') + 1);
-    const files = fgSync(join(__dirname, '../src/pages/**/*.vue'));
+// function prodLoad(id) {
+//   if (id.startsWith(resolvedIdPrefix) === true) {
+//     const exampleId = id.substring(id.indexOf(':') + 1);
+//     const files = fgSync(join(__dirname, '../src/pages/**/*.vue'));
 
-    console.log(join(__dirname, '../src/pages/**/*.vue'));
-    console.log(files);
+//     console.log(join(__dirname, '../src/pages/**/*.vue'));
+//     console.log(files);
 
-    const localFolder = `${join(targetFolder, exampleId)}/`;
-    const localFolderLen = localFolder.length;
+//     const localFolder = `${join(targetFolder, exampleId)}/`;
+//     const localFolderLen = localFolder.length;
 
-    const importList = files.map((entry) => entry.substring(localFolderLen, entry.length - 4));
-    const importStatements = importList
-      .map((entry) => (
-        `import ${entry} from 'app/src/examples/${exampleId}/${entry}.vue'`
-        + `\nimport Raw${entry} from 'app/src/examples/${exampleId}/${entry}.vue?raw'`
-      ))
-      .join('\n');
+//     const importList = files.map((entry) => entry.substring(localFolderLen, entry.length - 4));
+//     const importStatements = importList
+//       .map((entry) => (
+//         `import ${entry} from 'app/src/examples/${exampleId}/${entry}.vue'`
+//         + `\nimport Raw${entry} from 'app/src/examples/${exampleId}/${entry}.vue?raw'`
+//       ))
+//       .join('\n');
 
-    const exportStatements = importList
-      .map((entry) => `${entry},Raw${entry}`)
-      .join(',');
+//     const exportStatements = importList
+//       .map((entry) => `${entry},Raw${entry}`)
+//       .join(',');
 
-    return `${importStatements}\nexport {${exportStatements}}`;
-  }
-}
+//     return `${importStatements}\nexport {${exportStatements}}`;
+//   }
+// }
 
 module.exports = (isProd) => ({
   name: 'docs-examples',

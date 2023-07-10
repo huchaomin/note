@@ -1,6 +1,5 @@
 ---
 title: requestAnimationFrame 详解
-examples: QDrawer
 ---
 
 ## 为什么要使用
@@ -49,5 +48,3 @@ const id = requestAnimationFrame(callback);
 ### 返回值 id
 
 一个长整数，请求 ID，是回调列表中唯一的标识符。是回调函数列表中唯一的标识符，可以传递给 `window.cancelAnimationFrame()` 以取消回调函数。
-
-<doc-example title="hahaha" file="Basic" />

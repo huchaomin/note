@@ -18,7 +18,10 @@ function devLoad(id) {
 function prodLoad(id) {
   if (id.startsWith(resolvedIdPrefix) === true) {
     const exampleId = id.substring(id.indexOf(':') + 1);
-    const files = fgSync(join(targetFolder, exampleId, '/*.vue'));
+    const files = fgSync(join(__dirname, '../src/pages/**/*.vue'));
+
+    console.log(join(__dirname, '../src/pages/**/*.vue'));
+    console.log(files);
 
     const localFolder = `${join(targetFolder, exampleId)}/`;
     const localFolderLen = localFolder.length;
@@ -48,5 +51,5 @@ module.exports = (isProd) => ({
     }
   },
 
-  load: isProd === true ? prodLoad : devLoad,
+  load: devLoad,
 });

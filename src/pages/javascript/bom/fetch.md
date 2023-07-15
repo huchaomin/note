@@ -169,3 +169,126 @@ async function getJSON() {
     });
   };
   ```
+
+- redirect：属性指定 HTTP 跳转的处理方法
+
+  - follow：默认值，自动跟随跳转。
+  - error：如果服务器返回重定向指令，fetch()将抛出一个错误。
+  - manual：不跟随 HTTP 跳转，但是response.url属性会指向新的 URL，response.redirected属性会变为true，由开发者自己决定后续如何处理跳转，具体操作需要在then()里面进行。
+
+- integrity：属性指定一个哈希值，用于检查 HTTP 回应传回的数据是否等于这个预先设定的哈希值
+
+  ```js
+  // 下载文件时，检查文件的 SHA-256 哈希值是否相符，确保没有被篡改
+  fetch('http://site.com/file', {
+    integrity: 'sha256-abcdef'
+  });
+  ```
+
+- referrer：属性用于设定fetch()请求的referer标头，为空的话表示不发送该标头
+- referrerPolicy：用于设定Referer标头的规则
+
+  - no-referrer-when-downgrade：默认值，总是发送Referer标头，除非从 HTTPS 页面请求 HTTP 资源时不发送。
+  - no-referrer：不发送Referer标头。
+  - origin：Referer标头只包含域名，不包含完整的路径。
+  - origin-when-cross-origin：同源请求Referer标头包含完整的路径，跨域请求只包含域名。
+  - same-origin：跨域请求不发送Referer，同源请求发送。
+  - strict-origin：Referer标头只包含域名，HTTPS 页面请求 HTTP 资源时不发送Referer标头。
+  - strict-origin-when-cross-origin：同源请求时Referer标头包含完整路径，跨域请求时只包含域名，HTTPS 页面请求 HTTP 资源时不发送该标头。
+  - unsafe-url：不管什么情况，总是发送Referer标头。
+
+## 使用
+
+### POST 请求
+
+```js
+const response = await fetch(url, {
+  method: 'POST',
+  headers: {
+    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+  },
+  body: 'foo=bar&lorem=ipsum',
+});
+
+const json = await response.json();
+```
+
+### 提交表单
+
+```js
+const form = document.querySelector('form');
+
+const response = await fetch('/users', {
+  method: 'POST',
+  body: new FormData(form)
+})
+// TODO 和上例的情况是不是差不多？
+```
+
+### 上传文件
+
+如果表单里面有文件选择器，可以用前一个例子的写法，上传的文件包含在整个表单里面，一起提交。
+
+```js
+const input = document.querySelector('input[type="file"]');
+
+const data = new FormData();
+data.append('file', input.files[0]);
+data.append('user', 'foo');
+
+fetch('/avatars', {
+  method: 'POST',
+  body: data
+});
+```
+
+### 提交 JSON 数据
+
+```js
+const user =  { name:  'John', surname:  'Smith'  };
+const response = await fetch('/article/fetch/post/user', {
+  method: 'POST',
+  headers: {
+   'Content-Type': 'application/json;charset=utf-8'
+  },
+  body: JSON.stringify(user)
+});
+```
+
+### 上传二进制数据
+
+```js
+let blob = await new Promise(resolve =>
+  canvasElem.toBlob(resolve,  'image/png')
+);
+
+let response = await fetch('/article/fetch/post/image', {
+  method:  'POST',
+  body: blob // 将 Blob 或 arrayBuffer 数据放在body属性里面
+});
+```
+
+## 取消fetch请求
+
+```js
+let controller = new AbortController();
+let signal = controller.signal;
+
+fetch(url, {
+  signal: controller.signal
+}).catch((e) => {
+  if(e.name === 'AbortError') {
+    console.log('Fetch aborted');
+  } else {
+    throw e;
+  }
+});
+
+signal.addEventListener('abort',
+  () => console.log('abort!')
+);
+
+controller.abort(); // 取消
+
+console.log(signal.aborted); // true
+```

@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -76,9 +76,6 @@ devDependencies:
   eslint-plugin-vue:
     specifier: ^9.10.0
     version: 9.11.0(eslint@8.40.0)
-  fast-glob:
-    specifier: ^3.2.12
-    version: 3.2.12
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3

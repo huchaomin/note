@@ -920,7 +920,15 @@
             "path": "requestAnimationFrame",
             "component": "./javascript/bom/requestAnimationFrame.md",
             "meta": {
-              "lastUpdate": "2023/7/9 18:07:02"
+              "lastUpdate": "2023/7/10 14:39:40"
+            }
+          },
+          {
+            "name": "javascript-bom-fetch",
+            "path": "fetch",
+            "component": "./javascript/bom/fetch.md",
+            "meta": {
+              "lastUpdate": ""
             }
           }
         ],
@@ -1854,7 +1862,7 @@
             "path": "others",
             "component": "./工程架构/vite/others.md",
             "meta": {
-              "lastUpdate": "2023/6/23 18:56:27"
+              "lastUpdate": "2023/7/10 14:39:40"
             }
           }
         ],

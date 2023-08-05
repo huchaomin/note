@@ -10,7 +10,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   root: process.cwd(), // 项目根目录(index.html 文件所在的位置)
-  base: '/', // 部署时的基本 URL
+  base: '/', // 部署时的基本 URL,配置了该项等于配置了import.meta.env.VITE_BASE_URL
   mode: 'development', // 开发模式,在配置中指明将会把 serve 和 build 时的模式 都 覆盖掉。也可以通过命令行 --mode 选项来重写
   esbuild: {
     jsxFactory: 'h',
@@ -81,6 +81,12 @@ export default defineConfig(async ({ command, mode }) => {
     // vite 配置
     define: {
       __APP_ENV__: env.APP_ENV,
+      // String 值会以原始表达式形式使用，所以如果定义了一个字符串常量，它需要被显式地打引号。（例如使用 JSON.stringify）
+      API_PREFIX: JSON.stringify(apiPrefix), // const apiPrefix = 'basic'
+      API_PREFIX: '"basic"',
+      // 以 envPrefix 开头的环境变量会通过 import.meta.env 暴露在你的客户端源码中
+      // 如果你想暴露一个不含前缀的变量，可以使用 define 选项：
+      // https://cn.vitejs.dev/config/shared-options.html#envprefix
       'import.meta.env.ENV_VARIABLE': JSON.stringify(process.env.ENV_VARIABLE),
     },
   }

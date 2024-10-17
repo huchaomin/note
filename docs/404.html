@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>404 | vite</title>
+    <meta name="description" content="Not Found">
+    <meta name="generator" content="VitePress v1.4.0">
+    <link rel="preload stylesheet" href="/assets/style.DMizJe2k.css" as="style">
+    
+    <script type="module" src="/assets/app.BHOG5Zxq.js"></script>
+    <link href="/favicon.ico" rel="icon">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+    <link as="font" crossorigin="" href="/assets/SmileySans-Oblique.ttf.K8hpreXB.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-Medium.3S3k2nMz.woff2" media="screen and (max-width: 480px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-MediumItalic.BKKs7F3t.woff2" media="screen and (max-width: 480px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-SemiBold.BM8Dc2t-.woff2" media="screen and (min-width: 481px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-SemiBoldItalic.CekZ8Kac.woff2" media="screen and (min-width: 481px)" rel="preload" type="font/woff2">
+  </head>
+  <body>
+    <div id="app"></div><div id="waiting">
+      <style>
+        #waiting {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          z-index: 999999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0;
+          left: 0;
+          transition: opacity 0.8s;
+        }
+
+        #waiting .loader {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-flex;
+          width: 200px;
+          height: 140px;
+          background: #979794;
+          border-radius: 8px;
+          perspective: 1000px;
+
+          &::before {
+            position: absolute;
+            inset: 10px;
+            content: "";
+            background: #f5f5f5  no-repeat;
+            background-image:
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0);
+            background-position:
+              15px 30px,
+              15px 60px,
+              15px 90px,
+              105px 30px,
+              105px 60px,
+              105px 90px;
+            background-size: 60px 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+          }
+
+          &::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            width: calc(50% - 10px);
+            content: "";
+            background: #fff no-repeat;
+            background-image:
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0);
+            background-position: 50% 30px, 50% 60px, 50%  90px;
+            background-size: 60px 10px;
+            border-radius: 8px;
+            transform: rotateY(0deg);
+            transform-origin: left center;
+            animation: paging 1s linear infinite;
+          }
+        }
+
+        @keyframes paging {
+          to {
+            transform: rotateY(-180deg);
+          }
+        }
+      </style>
+      <div class="loader"></div>
+    </div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"api-examples.md\":\"CJQtCZmD\",\"css_@rules_@layer.md\":\"CllJArdm\",\"css_@rules_@media.md\":\"Dr7H4Our\",\"css_css变量.md\":\"B5pCvq0V\",\"css_css级联(cascade).md\":\"DsuicxKk\",\"index.md\":\"BLrZPtiA\",\"markdown-examples.md\":\"DiGoyx_g\",\"tools_tailwindcss.md\":\"Be-YMX9u\",\"tools_vite.md\":\"DIafb7Sg\",\"tools_vitepress.md\":\"Cv94UfWY\",\"utils_确保网页字体加载完成.md\":\"Dq76HeHQ\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"vite\",\"description\":\"木林子的笔记-记住自己的点滴\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"sidebar\":[{\"text\":\"Runtime API Examples\",\"link\":\"/api-examples\"},{\"text\":\"css\",\"items\":[{\"text\":\"@rules\",\"items\":[{\"text\":\"@layer\",\"link\":\"/css/@rules/@layer\"},{\"text\":\"@media\",\"link\":\"/css/@rules/@media\"}]},{\"text\":\"css 变量\",\"link\":\"/css/css变量\"},{\"text\":\"css级联(cascade)\",\"link\":\"/css/css级联(cascade)\"}]},{\"text\":\"Markdown Extension Examples\",\"link\":\"/markdown-examples\"},{\"text\":\"tools\",\"items\":[{\"text\":\"tailwindcss\",\"link\":\"/tools/tailwindcss\"},{\"text\":\"使用vite构建自己的前端应用\",\"link\":\"/tools/vite\"},{\"text\":\"VitePress 介绍\",\"link\":\"/tools/vitePress\"}]},{\"text\":\"utils\",\"items\":[{\"text\":\"确保网页字体加载完成\",\"link\":\"/utils/确保网页字体加载完成\"}]}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":true}");</script>
+    
+  </body>
+</html>

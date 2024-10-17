@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>css级联(cascade) | vite</title>
+    <meta name="description" content="木林子的笔记-记住自己的点滴">
+    <meta name="generator" content="VitePress v1.4.0">
+    <link rel="preload stylesheet" href="/assets/style.DMizJe2k.css" as="style">
+    
+    <script type="module" src="/assets/app.BHOG5Zxq.js"></script>
+    <link rel="modulepreload" href="/assets/chunks/theme.DX5qUaEt.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.xgaWqU_i.js">
+    <link rel="modulepreload" href="/assets/css_css级联(cascade).md.DsuicxKk.lean.js">
+    <link href="/favicon.ico" rel="icon">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+    <link as="font" crossorigin="" href="/assets/SmileySans-Oblique.ttf.K8hpreXB.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-Medium.3S3k2nMz.woff2" media="screen and (max-width: 480px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-MediumItalic.BKKs7F3t.woff2" media="screen and (max-width: 480px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-SemiBold.BM8Dc2t-.woff2" media="screen and (min-width: 481px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-SemiBoldItalic.CekZ8Kac.woff2" media="screen and (min-width: 481px)" rel="preload" type="font/woff2">
+  </head>
+  <body>
+    <div id="app"><div class="__layout-f91x0l n-layout n-layout--absolute-positioned root-layout" style=""><div class="n-layout-scroll-container" style=""><div class="n-layout-header __layout-header-f91x0l-b n-layout-header--static-positioned n-layout-header--bordered nav" style="--side-padding:32px;grid-template-columns:calc(272px - var(--side-padding)) 1fr auto;" data-v-7cc283f3><div class="n-text __text-f91x0l-d1 ui-logo" style="" data-v-7cc283f3><span data-v-7cc283f3>mu</span></div></div><div class="__layout-f91x0l n-layout n-layout--absolute-positioned" style="top:var(--header-height);" id="doc-layout"><div class="n-layout-scroll-container" style="display:flex;flex-wrap:nowrap;width:100%;flex-direction:row;"><aside class="n-layout-sider __layout-sider-f91x0l-b n-layout-sider--static-positioned n-layout-sider--left-placement n-layout-sider--bordered n-layout-sider--show-content" style="max-width:272px;width:272px;"><div style="min-width:272px;" role="none" class="n-scrollbar __scrollbar-f91x0l"><div role="none" class="n-scrollbar-container" style=""><div role="none" style="" class="n-scrollbar-content"><div class="n-tree n-tree--block-node n-tree--block-line __tree-f91x0l" tabindex="0" style=""><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">Runtime API Examples</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher n-tree-node-switcher--expanded" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">css</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">@rules</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">css 变量</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selected n-tree-node--pending n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf n-tree-node-indent--last-child"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">css级联(cascade)</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">Markdown Extension Examples</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">tools</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">utils</div></span></div></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div></div><div class="n-layout-toggle-button" style="top:240px;"><i class="n-base-icon"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg></i></div><div class="n-layout-sider__border"></div></aside><div class="__layout-f91x0l n-layout n-layout--static-positioned" style=""><div role="none" class="n-scrollbar __scrollbar-f91x0l" style=""><div role="none" class="n-scrollbar-container document-scroll-container" style=""><div role="none" style="min-height:calc(100vh - var(--header-height));display:flex;flex-direction:column;" class="n-scrollbar-content"><div style="position:relative;"><div><h1 id="css级联-cascade" tabindex="-1">css级联(cascade) <a class="header-anchor" href="#css级联-cascade" aria-label="Permalink to &quot;css级联(cascade)&quot;">​</a></h1><h2 id="where-与-is" tabindex="-1"><code>where()</code> 与 <code>is:()</code> <a class="header-anchor" href="#where-与-is" aria-label="Permalink to &quot;`where()` 与 `is:()`&quot;">​</a></h2><p>使用 <code>:where()</code> 选择的元素，优先级为 0</p><div class="language-css vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">css</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> :where</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">.link</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">button</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">.btn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">red</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">.link</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">blue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">/* 权重高 */</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><p><code>:is()</code> 元素选择器的优先级，取自优先级最高的选择器</p><div class="language-css vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">css</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">p</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> :is</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">.link</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">button</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">.btn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">red</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">/* 0,1,2 权重高 */</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">/* 不可以覆盖 */</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">.link</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">blue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">/* 0,1,0 权重低 */</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">/* 可以覆盖 */</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">.link.someClass</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  color</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">blue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">/* 0,2,0 权重最高 */</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div></div></div></div></div></div></div><css-render-style><style cssr-id="n-layout">
+.n-layout {
+
+ color: var(--n-text-color);
+ background-color: var(--n-color);
+ box-sizing: border-box;
+ position: relative;
+ z-index: auto;
+ flex: auto;
+ overflow: hidden;
+ transition:
+ box-shadow .3s var(--n-bezier),
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier);
+
+}
+
+.n-layout .n-layout-scroll-container {
+
+ overflow-x: hidden;
+ box-sizing: border-box;
+ height: 100%;
+ 
+}
+
+.n-layout.n-layout--absolute-positioned {
+
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ 
+}
+</style>
+<style cssr-id="n-global">
+body {
+
+ margin: 0;
+ font-size: 14px;
+ font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ line-height: 1.6;
+ -webkit-text-size-adjust: 100%;
+ -webkit-tap-highlight-color: transparent;
+
+}
+
+body input {
+
+ font-family: inherit;
+ font-size: inherit;
+ 
+}
+</style>
+<style cssr-id="__layout-f91x0l">
+.__layout-f91x0l {
+--n-bezier: cubic-bezier(.4, 0, .2, 1);--n-color: #fff;--n-text-color: rgb(51, 54, 57);
+}
+</style>
+<style cssr-id="n-layout-header">
+.n-layout-header {
+
+ transition:
+ color .3s var(--n-bezier),
+ background-color .3s var(--n-bezier),
+ box-shadow .3s var(--n-bezier),
+ border-color .3s var(--n-bezier);
+ box-sizing: border-box;
+ width: 100%;
+ background-color: var(--n-color);
+ color: var(--n-text-color);
+
+}
+
+.n-layout-header.n-layout-header--absolute-positioned {
+
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 0;
+ 
+}
+
+.n-layout-header.n-layout-header--bordered {
+
+ border-bottom: solid 1px var(--n-border-color);
+ 
+}
+</style>
+<style cssr-id="__layout-header-f91x0l-b">
+.__layout-header-f91x0l-b {
+--n-bezier: cubic-bezier(.4, 0, .2, 1);--n-color: #fff;--n-text-color: rgb(51, 54, 57);--n-border-color: rgb(239, 239, 245);
+}
+</style>
+<style cssr-id="n-text">
+.n-text {
+
+ transition: color .3s var(--n-bezier);
+ color: var(--n-text-color);
+
+}
+
+.n-text.n-text--strong {
+
+ font-weight: var(--n-font-weight-strong);
+ 
+}
+
+.n-text.n-text--italic {
+  font-style: italic;
+}
+
+.n-text.n-text--underline {
+  text-decoration: underline;
+}
+
+.n-text.n-text--code {
+
+ line-height: 1.4;
+ display: inline-block;
+ font-family: var(--n-font-famliy-mono);
+ transition: 
+ color .3s var(--n-bezier),
+ border-color .3s var(--n-bezier),
+ background-color .3s var(--n-bezier);
+ box-sizing: border-box;
+ padding: .05em .35em 0 .35em;
+ border-radius: var(--n-code-border-radius);
+ font-size: .9em;
+ color: var(--n-code-text-color);
+ background-color: var(--n-code-color);
+ border: var(--n-code-border);
+ 
+}
+</style>
+<style cssr-id="__text-f91x0l-d1">
+.__text-f91x0l-d1 {
+--n-bezier: cubic-bezier(.4, 0, .2, 1);--n-text-color: rgb(31, 34, 37);--n-font-weight-strong: 500;--n-font-famliy-mono: var(--font-family-mono);--n-code-border-radius: 2px;--n-code-text-color: rgb(51, 54, 57);--n-code-color: rgb(244, 244, 248);--n-code-border: 1px solid #0000;
+}
+</style></css-render-style><vitepress-path>/css/css%E7%BA%A7%E8%81%94(cascade)</vitepress-path></div><div id="waiting">
+      <style>
+        #waiting {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          z-index: 999999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0;
+          left: 0;
+          transition: opacity 0.8s;
+        }
+
+        #waiting .loader {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-flex;
+          width: 200px;
+          height: 140px;
+          background: #979794;
+          border-radius: 8px;
+          perspective: 1000px;
+
+          &::before {
+            position: absolute;
+            inset: 10px;
+            content: "";
+            background: #f5f5f5  no-repeat;
+            background-image:
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0);
+            background-position:
+              15px 30px,
+              15px 60px,
+              15px 90px,
+              105px 30px,
+              105px 60px,
+              105px 90px;
+            background-size: 60px 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+          }
+
+          &::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            width: calc(50% - 10px);
+            content: "";
+            background: #fff no-repeat;
+            background-image:
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0);
+            background-position: 50% 30px, 50% 60px, 50%  90px;
+            background-size: 60px 10px;
+            border-radius: 8px;
+            transform: rotateY(0deg);
+            transform-origin: left center;
+            animation: paging 1s linear infinite;
+          }
+        }
+
+        @keyframes paging {
+          to {
+            transform: rotateY(-180deg);
+          }
+        }
+      </style>
+      <div class="loader"></div>
+    </div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"api-examples.md\":\"CJQtCZmD\",\"css_@rules_@layer.md\":\"CllJArdm\",\"css_@rules_@media.md\":\"Dr7H4Our\",\"css_css变量.md\":\"B5pCvq0V\",\"css_css级联(cascade).md\":\"DsuicxKk\",\"index.md\":\"BLrZPtiA\",\"markdown-examples.md\":\"DiGoyx_g\",\"tools_tailwindcss.md\":\"Be-YMX9u\",\"tools_vite.md\":\"DIafb7Sg\",\"tools_vitepress.md\":\"Cv94UfWY\",\"utils_确保网页字体加载完成.md\":\"Dq76HeHQ\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"vite\",\"description\":\"木林子的笔记-记住自己的点滴\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"sidebar\":[{\"text\":\"Runtime API Examples\",\"link\":\"/api-examples\"},{\"text\":\"css\",\"items\":[{\"text\":\"@rules\",\"items\":[{\"text\":\"@layer\",\"link\":\"/css/@rules/@layer\"},{\"text\":\"@media\",\"link\":\"/css/@rules/@media\"}]},{\"text\":\"css 变量\",\"link\":\"/css/css变量\"},{\"text\":\"css级联(cascade)\",\"link\":\"/css/css级联(cascade)\"}]},{\"text\":\"Markdown Extension Examples\",\"link\":\"/markdown-examples\"},{\"text\":\"tools\",\"items\":[{\"text\":\"tailwindcss\",\"link\":\"/tools/tailwindcss\"},{\"text\":\"使用vite构建自己的前端应用\",\"link\":\"/tools/vite\"},{\"text\":\"VitePress 介绍\",\"link\":\"/tools/vitePress\"}]},{\"text\":\"utils\",\"items\":[{\"text\":\"确保网页字体加载完成\",\"link\":\"/utils/确保网页字体加载完成\"}]}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":true}");</script>
+    
+  </body>
+</html>

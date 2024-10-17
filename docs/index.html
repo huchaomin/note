@@ -1,22 +1,279 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"><meta name=twitter:card content=summary_large_image><meta name=twitter:site content=木林子的笔记空间><meta property=og:type content=article><meta property=og:image content=https://www.mulinzi.cn/icons/icon-512x512.png><meta property=og:site_name content=木林子的笔记空间><link rel=icon type=image/png sizes=128x128 href="/icons/favicon-128x128.png"><link rel=icon type=image/png sizes=96x96 href="/icons/favicon-96x96.png"><link rel=icon type=image/png sizes=32x32 href="/icons/favicon-32x32.png"><link rel=icon type=image/png sizes=16x16 href="/icons/favicon-16x16.png"><link rel=icon type=image/ico href="/favicon.ico"><link rel=apple-touch-startup-image media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3)" href="/icons/apple-launch-1284x2778.png"><link rel=apple-touch-startup-image media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)" href="/icons/apple-launch-1170x2532.png"><link rel=apple-touch-startup-image media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-launch-828x1792.png"><link rel=apple-touch-startup-image media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/icons/apple-launch-1125x2436.png"><link rel=apple-touch-startup-image media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="/icons/apple-launch-1242x2688.png"><link rel=apple-touch-startup-image media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-launch-750x1334.png"><link rel=apple-touch-startup-image media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="/icons/apple-launch-1242x2208.png"><link rel=apple-touch-startup-image media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-launch-1620x2160.png"><link rel=apple-touch-startup-image media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-launch-1536x2048.png"><link rel=apple-touch-startup-image media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-launch-1668x2224.png"><link rel=apple-touch-startup-image media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-launch-1668x2388.png"><link rel=apple-touch-startup-image media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-launch-2048x2732.png"><style>.doc-enter-loading {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 99999;
-      }
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>test | vite</title>
+    <meta name="description" content="木林子的笔记-记住自己的点滴">
+    <meta name="generator" content="VitePress v1.4.0">
+    <link rel="preload stylesheet" href="/assets/style.DMizJe2k.css" as="style">
+    
+    <script type="module" src="/assets/app.BHOG5Zxq.js"></script>
+    <link rel="modulepreload" href="/assets/chunks/theme.DX5qUaEt.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.xgaWqU_i.js">
+    <link rel="modulepreload" href="/assets/index.md.BLrZPtiA.lean.js">
+    <link href="/favicon.ico" rel="icon">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+    <link as="font" crossorigin="" href="/assets/SmileySans-Oblique.ttf.K8hpreXB.woff2" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-Medium.3S3k2nMz.woff2" media="screen and (max-width: 480px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-MediumItalic.BKKs7F3t.woff2" media="screen and (max-width: 480px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-SemiBold.BM8Dc2t-.woff2" media="screen and (min-width: 481px)" rel="preload" type="font/woff2">
+    <link as="font" crossorigin="" href="/assets/JetBrainsMono-SemiBoldItalic.CekZ8Kac.woff2" media="screen and (min-width: 481px)" rel="preload" type="font/woff2">
+  </head>
+  <body>
+    <div id="app"><div class="__layout-f91x0l n-layout n-layout--absolute-positioned root-layout" style=""><div class="n-layout-scroll-container" style=""><div class="__layout-f91x0l n-layout n-layout--absolute-positioned" style="top:var(--header-height);" id="doc-layout"><div class="n-layout-scroll-container" style="display:flex;flex-wrap:nowrap;width:100%;flex-direction:row;"><aside class="n-layout-sider __layout-sider-f91x0l-b n-layout-sider--static-positioned n-layout-sider--left-placement n-layout-sider--bordered n-layout-sider--show-content" style="max-width:272px;width:272px;"><div style="min-width:272px;" role="none" class="n-scrollbar __scrollbar-f91x0l"><div role="none" class="n-scrollbar-container" style=""><div role="none" style="" class="n-scrollbar-content"><div class="n-tree n-tree--block-node n-tree--block-line __tree-f91x0l" tabindex="0" style=""><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">Runtime API Examples</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">css</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">Markdown Extension Examples</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">tools</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">utils</div></span></div></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div></div><div class="n-layout-toggle-button" style="top:240px;"><i class="n-base-icon"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg></i></div><div class="n-layout-sider__border"></div></aside><div class="__layout-f91x0l n-layout n-layout--static-positioned" style=""><div role="none" class="n-scrollbar __scrollbar-f91x0l" style=""><div role="none" class="n-scrollbar-container document-scroll-container" style=""><div role="none" style="min-height:calc(100vh - var(--header-height));display:flex;flex-direction:column;" class="n-scrollbar-content"><div style="position:relative;"><div><h1 id="test" tabindex="-1">test <a class="header-anchor" href="#test" aria-label="Permalink to &quot;test&quot;">​</a></h1><div class="vp-raw"><p>Wraps in a</p></div><div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;"># 使用vite构建自己的前端应用</span></span>
+<span class="line highlighted"><wbr></span>
+<span class="line highlighted"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 功能</span></span>
+<span class="line highlighted"><wbr></span>
+<span class="line highlighted"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### JSON</span></span>
+<span class="line highlighted"><wbr></span>
+<span class="line highlighted"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">JSON 可以被直接导入 —— 同样支持具名导入</span></span>
+<span class="line highlighted"><wbr></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">```ts</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 导入整个对象</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> json </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;./example.json&#39;</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 对一个根字段使用具名导入 —— 有效帮助 treeshaking！</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { field } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;./example2.json&#39;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">```</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### 动态导入</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">```ts</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 变量仅代表一层深的文件名。如果 file 是 foo/bar，导入将会失败</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> module</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">`./dir/${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">}.js`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">```</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 环境变量和模式</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### 'production'</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">应用运行的模式，可以通过 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`--mode &lt;xxx&gt;`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 指定，然后加载对应的 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`.env.xxx`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 文件</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">默认情况下, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`dev`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 命令 运行在 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`development`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 模式，而 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`build`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 命令则运行在 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`production`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 模式</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### NODE_ENV</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">与 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`MODE`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 的没有丝毫关系，是两个不同的概念</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">会影响 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`PROD`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 和 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`DEV`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 的行为</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">| Command              | true | false |</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">| -------------------- | -------------------- | ------------------- |</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">| NODE_ENV=production  | true                 | false               |</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">| NODE_ENV=development | false                | true                |</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">| NODE_ENV=other       | false                | false               |</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">可以在命令行中设置，也可以在env文件中设置</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">```bash</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">NODE_ENV</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">development</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> vite</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> build</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">```</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::: tip</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">命令中使用 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`NODE_ENV=...`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 的主要好处是，它允许 Vite 提前检测到该值, 该值的重要性最高，不需要等待读取 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`env`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 文件之后才拿到该值</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:::</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## ssr</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### import.meta.url</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">::: warning 无法在 SSR 中使用</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">因为 import.meta.url 在浏览器和 Node.js 中有不同的语义。服务端的产物也无法预先确定客户端主机 URL。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:::</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 参考资料</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">vitesse</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">](</span><span style="--shiki-light:#24292E;--shiki-light-text-decoration:underline;--shiki-dark:#E1E4E8;--shiki-dark-text-decoration:underline;">https://github.com/antfu-collective/vitesse</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> unplugin-vue-router 和 vite-plugin-vue-layouts 可以不用自己写路由</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> vite-plugin-webfont-dl 自动处理字体</span></span></code></pre></div><div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">---</span></span>
+<span class="line highlighted"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">outline</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">deep</span></span>
+<span class="line highlighted"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;"># Runtime API Examples</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">This page demonstrates usage of some of the runtime APIs provided by VitePress.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">The main </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`useData()`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> API can be used to access site, theme, and page data for the current page. It works in both </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`.md`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> and </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">`.vue`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> files:</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">```md</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">script</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> setup</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { useData } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">theme</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">page</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">frontmatter</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useData</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## Results</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Theme Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ theme }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">### Page Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ page }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">### Page Frontmatter</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ frontmatter }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">```</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">script</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> setup</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { useData } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">site</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">theme</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">page</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">frontmatter</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> useData</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## Results</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Theme Data</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ theme }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">### Page Data</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ page }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">### Page Frontmatter</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;{{ frontmatter }}&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">pre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">## More</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).</span></span></code></pre></div><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">/</span></span></code></pre></div><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> a</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> test</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;hello&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></div></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div></div></div></div></div></div></div><css-render-style><style cssr-id="n-layout">
+.n-layout {
 
-      body.is-loading {
-        margin: 0;
-        overflow: hidden;
-        position: relative;
-      }</style>  <script type="module" crossorigin src="/assets/index.5e42b5f2.js"></script>
-  <link rel="modulepreload" href="/chunk/vendor-e1827163.js">
-  <link rel="stylesheet" href="/assets/vendor.0853aa52.css">
-  <link rel="stylesheet" href="/assets/index.69b7f7ad.css">
-</head><body class=is-loading><div id=q-app></div><div class=doc-enter-loading><svg xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink style=margin:auto;background:#fff;display:block; width=20vw height=20vh viewBox="0 0 100 100" preserveAspectRatio=xMidYMid><path d="M20 25L80 25L80 75L20 75Z" fill=#ffffff stroke=#1976d2 stroke-width=3></path><path d="M50 25L80 25L80 75L50 75" fill=#ffffff stroke=#1976d2 stroke-width=3 stroke-linejoin=round stroke-linecap=round><animate attributeName=d dur=1s repeatCount=indefinite begin=0s keyTimes=0;0.5;0.501;1 values="M50 25L80 25L80 75L50 75;M50 25L50 20L50 80L50 75;M50 25L80 25L80 75L50 75;M50 25L80 25L80 75L50 75"></animate><animate attributeName=opacity dur=1s repeatCount=indefinite begin=0s keyTimes=0;0.5;0.5001;1 values=1;1;0;0></animate></path><path d="M50 25L80 25L80 75L50 75" fill=#ffffff stroke=#1976d2 stroke-width=3 stroke-linejoin=round stroke-linecap=round><animate attributeName=d dur=1s repeatCount=indefinite begin=-0.166s keyTimes=0;0.5;0.501;1 values="M50 25L80 25L80 75L50 75;M50 25L50 20L50 80L50 75;M50 25L80 25L80 75L50 75;M50 25L80 25L80 75L50 75"></animate><animate attributeName=opacity dur=1s repeatCount=indefinite begin=-0.166s keyTimes=0;0.5;0.5001;1 values=1;1;0;0></animate></path><path d="M50 25L80 25L80 75L50 75" fill=#ffffff stroke=#1976d2 stroke-width=3 stroke-linejoin=round stroke-linecap=round><animate attributeName=d dur=1s repeatCount=indefinite begin=-0.33s keyTimes=0;0.5;0.501;1 values="M50 25L80 25L80 75L50 75;M50 25L50 20L50 80L50 75;M50 25L80 25L80 75L50 75;M50 25L80 25L80 75L50 75"></animate><animate attributeName=opacity dur=1s repeatCount=indefinite begin=-0.33s keyTimes=0;0.5;0.5001;1 values=1;1;0;0></animate></path><path d="M50 25L80 25L80 75L50 75" fill=#ffffff stroke=#1976d2 stroke-width=3 stroke-linejoin=round stroke-linecap=round><animate attributeName=d dur=1s repeatCount=indefinite begin=-0.33s keyTimes=0;0.499;0.5;1 values="M50 25L20 25L20 75L50 75;M50 25L20 25L20 75L50 75;M50 25L50 20L50 80L50 75;M50 25L20 25L20 75L50 75"></animate><animate attributeName=opacity dur=1s repeatCount=indefinite begin=-0.33s keyTimes=0;0.4999;0.5;1 values=0;0;1;1></animate></path><path d="M50 25L80 25L80 75L50 75" fill=#ffffff stroke=#1976d2 stroke-width=3 stroke-linejoin=round stroke-linecap=round><animate attributeName=d dur=1s repeatCount=indefinite begin=-0.166s keyTimes=0;0.499;0.5;1 values="M50 25L20 25L20 75L50 75;M50 25L20 25L20 75L50 75;M50 25L50 20L50 80L50 75;M50 25L20 25L20 75L50 75"></animate><animate attributeName=opacity dur=1s repeatCount=indefinite begin=-0.166s keyTimes=0;0.4999;0.5;1 values=0;0;1;1></animate></path><path d="M50 25L80 25L80 75L50 75" fill=#ffffff stroke=#1976d2 stroke-width=3 stroke-linejoin=round stroke-linecap=round><animate attributeName=d dur=1s repeatCount=indefinite begin=0s keyTimes=0;0.499;0.5;1 values="M50 25L20 25L20 75L50 75;M50 25L20 25L20 75L50 75;M50 25L50 20L50 80L50 75;M50 25L20 25L20 75L50 75"></animate><animate attributeName=opacity dur=1s repeatCount=indefinite begin=0s keyTimes=0;0.4999;0.5;1 values=0;0;1;1></animate></path></svg></div></body></html>
+ color: var(--n-text-color);
+ background-color: var(--n-color);
+ box-sizing: border-box;
+ position: relative;
+ z-index: auto;
+ flex: auto;
+ overflow: hidden;
+ transition:
+ box-shadow .3s var(--n-bezier),
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier);
+
+}
+
+.n-layout .n-layout-scroll-container {
+
+ overflow-x: hidden;
+ box-sizing: border-box;
+ height: 100%;
+ 
+}
+
+.n-layout.n-layout--absolute-positioned {
+
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ 
+}
+</style>
+<style cssr-id="n-global">
+body {
+
+ margin: 0;
+ font-size: 14px;
+ font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ line-height: 1.6;
+ -webkit-text-size-adjust: 100%;
+ -webkit-tap-highlight-color: transparent;
+
+}
+
+body input {
+
+ font-family: inherit;
+ font-size: inherit;
+ 
+}
+</style>
+<style cssr-id="__layout-f91x0l">
+.__layout-f91x0l {
+--n-bezier: cubic-bezier(.4, 0, .2, 1);--n-color: #fff;--n-text-color: rgb(51, 54, 57);
+}
+</style></css-render-style><vitepress-path>/</vitepress-path></div><div id="waiting">
+      <style>
+        #waiting {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          z-index: 999999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0;
+          left: 0;
+          transition: opacity 0.8s;
+        }
+
+        #waiting .loader {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-flex;
+          width: 200px;
+          height: 140px;
+          background: #979794;
+          border-radius: 8px;
+          perspective: 1000px;
+
+          &::before {
+            position: absolute;
+            inset: 10px;
+            content: "";
+            background: #f5f5f5  no-repeat;
+            background-image:
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0);
+            background-position:
+              15px 30px,
+              15px 60px,
+              15px 90px,
+              105px 30px,
+              105px 60px,
+              105px 90px;
+            background-size: 60px 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+          }
+
+          &::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            width: calc(50% - 10px);
+            content: "";
+            background: #fff no-repeat;
+            background-image:
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0);
+            background-position: 50% 30px, 50% 60px, 50%  90px;
+            background-size: 60px 10px;
+            border-radius: 8px;
+            transform: rotateY(0deg);
+            transform-origin: left center;
+            animation: paging 1s linear infinite;
+          }
+        }
+
+        @keyframes paging {
+          to {
+            transform: rotateY(-180deg);
+          }
+        }
+      </style>
+      <div class="loader"></div>
+    </div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"api-examples.md\":\"CJQtCZmD\",\"css_@rules_@layer.md\":\"CllJArdm\",\"css_@rules_@media.md\":\"Dr7H4Our\",\"css_css变量.md\":\"B5pCvq0V\",\"css_css级联(cascade).md\":\"DsuicxKk\",\"index.md\":\"BLrZPtiA\",\"markdown-examples.md\":\"DiGoyx_g\",\"tools_tailwindcss.md\":\"Be-YMX9u\",\"tools_vite.md\":\"DIafb7Sg\",\"tools_vitepress.md\":\"Cv94UfWY\",\"utils_确保网页字体加载完成.md\":\"Dq76HeHQ\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"vite\",\"description\":\"木林子的笔记-记住自己的点滴\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"sidebar\":[{\"text\":\"Runtime API Examples\",\"link\":\"/api-examples\"},{\"text\":\"css\",\"items\":[{\"text\":\"@rules\",\"items\":[{\"text\":\"@layer\",\"link\":\"/css/@rules/@layer\"},{\"text\":\"@media\",\"link\":\"/css/@rules/@media\"}]},{\"text\":\"css 变量\",\"link\":\"/css/css变量\"},{\"text\":\"css级联(cascade)\",\"link\":\"/css/css级联(cascade)\"}]},{\"text\":\"Markdown Extension Examples\",\"link\":\"/markdown-examples\"},{\"text\":\"tools\",\"items\":[{\"text\":\"tailwindcss\",\"link\":\"/tools/tailwindcss\"},{\"text\":\"使用vite构建自己的前端应用\",\"link\":\"/tools/vite\"},{\"text\":\"VitePress 介绍\",\"link\":\"/tools/vitePress\"}]},{\"text\":\"utils\",\"items\":[{\"text\":\"确保网页字体加载完成\",\"link\":\"/utils/确保网页字体加载完成\"}]}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":true}");</script>
+    
+  </body>
+</html>

@@ -3,30 +3,516 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>使用vite构建自己的前端应用 | vite</title>
+    <title>使用vite构建自己的前端应用</title>
     <meta name="description" content="木林子的笔记-记住自己的点滴">
-    <meta name="generator" content="VitePress v1.4.0">
-    <link rel="preload stylesheet" href="/assets/style.DMizJe2k.css" as="style">
+    <meta name="generator" content="VitePress v1.5.0">
+    <link rel="preload stylesheet" href="/assets/style.BgQxxdlE.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
     
-    <script type="module" src="/assets/app.BHOG5Zxq.js"></script>
-    <link rel="modulepreload" href="/assets/chunks/theme.DX5qUaEt.js">
-    <link rel="modulepreload" href="/assets/chunks/framework.xgaWqU_i.js">
-    <link rel="modulepreload" href="/assets/tools_vite.md.DIafb7Sg.lean.js">
+    <script type="module" src="/assets/app.Cs0o2NmR.js"></script>
+    <link rel="modulepreload" href="/assets/chunks/theme.Cx5N_GoI.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.BAU0wbai.js">
+    <link rel="modulepreload" href="/assets/chunks/FenceWrapper.Bs4gGVCd.js">
+    <link rel="modulepreload" href="/assets/tools_vite.md.CnoNgTjW.lean.js">
     <link href="/favicon.ico" rel="icon">
     <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
     <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
-    <link as="font" crossorigin="" href="/assets/SmileySans-Oblique.ttf.K8hpreXB.woff2" rel="preload" type="font/woff2">
-    <link as="font" crossorigin="" href="/assets/JetBrainsMono-Medium.3S3k2nMz.woff2" media="screen and (max-width: 480px)" rel="preload" type="font/woff2">
-    <link as="font" crossorigin="" href="/assets/JetBrainsMono-MediumItalic.BKKs7F3t.woff2" media="screen and (max-width: 480px)" rel="preload" type="font/woff2">
-    <link as="font" crossorigin="" href="/assets/JetBrainsMono-SemiBold.BM8Dc2t-.woff2" media="screen and (min-width: 481px)" rel="preload" type="font/woff2">
-    <link as="font" crossorigin="" href="/assets/JetBrainsMono-SemiBoldItalic.CekZ8Kac.woff2" media="screen and (min-width: 481px)" rel="preload" type="font/woff2">
-  </head>
-  <body>
-    <div id="app"><div class="__layout-f91x0l n-layout n-layout--absolute-positioned root-layout" style=""><div class="n-layout-scroll-container" style=""><div class="n-layout-header __layout-header-f91x0l-b n-layout-header--static-positioned n-layout-header--bordered nav" style="--side-padding:32px;grid-template-columns:calc(272px - var(--side-padding)) 1fr auto;" data-v-7cc283f3><div class="n-text __text-f91x0l-d1 ui-logo" style="" data-v-7cc283f3><span data-v-7cc283f3>mu</span></div></div><div class="__layout-f91x0l n-layout n-layout--absolute-positioned" style="top:var(--header-height);" id="doc-layout"><div class="n-layout-scroll-container" style="display:flex;flex-wrap:nowrap;width:100%;flex-direction:row;"><aside class="n-layout-sider __layout-sider-f91x0l-b n-layout-sider--static-positioned n-layout-sider--left-placement n-layout-sider--bordered n-layout-sider--show-content" style="max-width:272px;width:272px;"><div style="min-width:272px;" role="none" class="n-scrollbar __scrollbar-f91x0l"><div role="none" class="n-scrollbar-container" style=""><div role="none" style="" class="n-scrollbar-content"><div class="n-tree n-tree--block-node n-tree--block-line __tree-f91x0l" tabindex="0" style=""><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">Runtime API Examples</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">css</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">Markdown Extension Examples</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher n-tree-node-switcher--expanded" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">tools</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">tailwindcss</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selected n-tree-node--pending n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">使用vite构建自己的前端应用</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf n-tree-node-indent--last-child"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text">VitePress 介绍</div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text">utils</div></span></div></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div></div><div class="n-layout-toggle-button" style="top:240px;"><i class="n-base-icon"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg></i></div><div class="n-layout-sider__border"></div></aside><div class="__layout-f91x0l n-layout n-layout--static-positioned" style=""><div role="none" class="n-scrollbar __scrollbar-f91x0l" style=""><div role="none" class="n-scrollbar-container document-scroll-container" style=""><div role="none" style="min-height:calc(100vh - var(--header-height));display:flex;flex-direction:column;" class="n-scrollbar-content"><div style="position:relative;"><div><h1 id="使用vite构建自己的前端应用" tabindex="-1">使用vite构建自己的前端应用 <a class="header-anchor" href="#使用vite构建自己的前端应用" aria-label="Permalink to &quot;使用vite构建自己的前端应用&quot;">​</a></h1><h2 id="功能" tabindex="-1">功能 <a class="header-anchor" href="#功能" aria-label="Permalink to &quot;功能&quot;">​</a></h2><h3 id="json" tabindex="-1">JSON <a class="header-anchor" href="#json" aria-label="Permalink to &quot;JSON&quot;">​</a></h3><p>JSON 可以被直接导入 —— 同样支持具名导入</p><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 导入整个对象</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> json </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;./example.json&#39;</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 对一个根字段使用具名导入 —— 有效帮助 treeshaking！</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { field } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;./example2.json&#39;</span></span></code></pre></div><h3 id="动态导入" tabindex="-1">动态导入 <a class="header-anchor" href="#动态导入" aria-label="Permalink to &quot;动态导入&quot;">​</a></h3><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 变量仅代表一层深的文件名。如果 file 是 foo/bar，导入将会失败</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> module</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">`./dir/${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">}.js`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></div><h2 id="环境变量和模式" tabindex="-1">环境变量和模式 <a class="header-anchor" href="#环境变量和模式" aria-label="Permalink to &quot;环境变量和模式&quot;">​</a></h2><h3 id="production" tabindex="-1">&#39;production&#39; <a class="header-anchor" href="#production" aria-label="Permalink to &quot;&#39;production&#39;&quot;">​</a></h3><p>应用运行的模式，可以通过 <code>--mode &lt;xxx&gt;</code> 指定，然后加载对应的 <code>.env.xxx</code> 文件 默认情况下, <code>dev</code> 命令 运行在 <code>development</code> 模式，而 <code>build</code> 命令则运行在 <code>production</code> 模式</p><h3 id="node-env" tabindex="-1">NODE_ENV <a class="header-anchor" href="#node-env" aria-label="Permalink to &quot;NODE_ENV&quot;">​</a></h3><p>与 <code>MODE</code> 的没有丝毫关系，是两个不同的概念 会影响 <code>PROD</code> 和 <code>DEV</code> 的行为</p><table tabindex="0"><thead><tr><th>Command</th><th>true</th><th>false</th></tr></thead><tbody><tr><td>NODE_ENV=production</td><td>true</td><td>false</td></tr><tr><td>NODE_ENV=development</td><td>false</td><td>true</td></tr><tr><td>NODE_ENV=other</td><td>false</td><td>false</td></tr></tbody></table><p>可以在命令行中设置，也可以在env文件中设置</p><div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">NODE_ENV</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">development</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> vite</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> build</span></span></code></pre></div><div class="tip custom-block"><p class="custom-block-title">提示</p><p>命令中使用 <code>NODE_ENV=...</code> 的主要好处是，它允许 Vite 提前检测到该值, 该值的重要性最高，不需要等待读取 <code>env</code> 文件之后才拿到该值</p></div><h2 id="ssr" tabindex="-1">ssr <a class="header-anchor" href="#ssr" aria-label="Permalink to &quot;ssr&quot;">​</a></h2><h3 id="import-meta-url" tabindex="-1">import.meta.url <a class="header-anchor" href="#import-meta-url" aria-label="Permalink to &quot;import.meta.url&quot;">​</a></h3><div class="warning custom-block"><p class="custom-block-title">无法在 SSR 中使用</p><p>因为 import.meta.url 在浏览器和 Node.js 中有不同的语义。服务端的产物也无法预先确定客户端主机 URL。</p></div><h2 id="参考资料" tabindex="-1">参考资料 <a class="header-anchor" href="#参考资料" aria-label="Permalink to &quot;参考资料&quot;">​</a></h2><ul><li><a href="https://github.com/antfu-collective/vitesse" target="_blank" rel="noreferrer">vitesse</a></li><li>unplugin-vue-router 和 vite-plugin-vue-layouts 可以不用自己写路由</li><li>vite-plugin-webfont-dl 自动处理字体</li></ul></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div></div></div></div></div></div></div><css-render-style><style cssr-id="n-layout">
+  <style cssr-id="n-loading-bar">
+.n-loading-bar-container {
+
+ z-index: 5999;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 2px;
+
+}
+
+.n-loading-bar-container.fade-in-transition-enter-active {
+  transition: all 0.3s cubic-bezier(.4, 0, .2, 1)!important;
+}
+
+.n-loading-bar-container.fade-in-transition-leave-active {
+  transition: all 0.8s cubic-bezier(.4, 0, .2, 1)!important;
+}
+
+.n-loading-bar-container.fade-in-transition-enter-from, .n-loading-bar-container.fade-in-transition-leave-to {
+  opacity: 0;
+}
+
+.n-loading-bar-container.fade-in-transition-leave-from, .n-loading-bar-container.fade-in-transition-enter-to {
+  opacity: 1;
+}
+
+.n-loading-bar-container .n-loading-bar {
+
+ width: 100%;
+ transition:
+ max-width 4s linear,
+ background .2s linear;
+ height: var(--n-height);
+ 
+}
+
+.n-loading-bar-container .n-loading-bar.n-loading-bar--starting {
+
+ background: var(--n-color-loading);
+ 
+}
+
+.n-loading-bar-container .n-loading-bar.n-loading-bar--finishing {
+
+ background: var(--n-color-loading);
+ transition:
+ max-width .2s linear,
+ background .2s linear;
+ 
+}
+
+.n-loading-bar-container .n-loading-bar.n-loading-bar--error {
+
+ background: var(--n-color-error);
+ transition:
+ max-width .2s linear,
+ background .2s linear;
+ 
+}
+</style>
+<style cssr-id="n-global">
+body {
+
+ margin: 0;
+ font-size: 14px;
+ font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ line-height: 1.6;
+ -webkit-text-size-adjust: 100%;
+ -webkit-tap-highlight-color: transparent;
+
+}
+
+body input {
+
+ font-family: inherit;
+ font-size: inherit;
+ 
+}
+</style>
+<style cssr-id="n-notification">
+.n-notification-container {
+
+ z-index: 4000;
+ position: fixed;
+ overflow: visible;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ 
+}
+
+.n-notification-container > .n-scrollbar {
+
+ width: initial;
+ overflow: visible;
+ height: -moz-fit-content !important;
+ height: fit-content !important;
+ max-height: 100vh !important;
+ 
+}
+
+.n-notification-container > .n-scrollbar > .n-scrollbar-container {
+
+ height: -moz-fit-content !important;
+ height: fit-content !important;
+ max-height: 100vh !important;
+ 
+}
+
+.n-notification-container > .n-scrollbar > .n-scrollbar-container .n-scrollbar-content {
+
+ padding-top: 12px;
+ padding-bottom: 33px;
+ 
+}
+
+.n-notification-container.n-notification-container--top, .n-notification-container.n-notification-container--top-right, .n-notification-container.n-notification-container--top-left {
+
+ top: 12px;
+ 
+}
+
+.n-notification-container.n-notification-container--top.transitioning > .n-scrollbar > .n-scrollbar-container, .n-notification-container.n-notification-container--top-right.transitioning > .n-scrollbar > .n-scrollbar-container, .n-notification-container.n-notification-container--top-left.transitioning > .n-scrollbar > .n-scrollbar-container {
+
+ min-height: 100vh !important;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom, .n-notification-container.n-notification-container--bottom-right, .n-notification-container.n-notification-container--bottom-left {
+
+ bottom: 12px;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom > .n-scrollbar > .n-scrollbar-container .n-scrollbar-content, .n-notification-container.n-notification-container--bottom-right > .n-scrollbar > .n-scrollbar-container .n-scrollbar-content, .n-notification-container.n-notification-container--bottom-left > .n-scrollbar > .n-scrollbar-container .n-scrollbar-content {
+
+ padding-bottom: 12px;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom .n-notification-wrapper, .n-notification-container.n-notification-container--bottom-right .n-notification-wrapper, .n-notification-container.n-notification-container--bottom-left .n-notification-wrapper {
+
+ display: flex;
+ align-items: flex-end;
+ margin-bottom: 0;
+ margin-top: 12px;
+ 
+}
+
+.n-notification-container.n-notification-container--top, .n-notification-container.n-notification-container--bottom {
+
+ left: 50%;
+ transform: translateX(-50%);
+ 
+}
+
+.n-notification-container.n-notification-container--top .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--bottom .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--top .n-notification-wrapper.notification-transition-leave-to, .n-notification-container.n-notification-container--bottom .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: scale(0.85);
+ 
+}
+
+.n-notification-container.n-notification-container--top .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--bottom .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--top .n-notification-wrapper.notification-transition-enter-to, .n-notification-container.n-notification-container--bottom .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: scale(1);
+ 
+}
+
+.n-notification-container.n-notification-container--top .n-notification-wrapper {
+
+ transform-origin: top center;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom .n-notification-wrapper {
+
+ transform-origin: bottom center;
+ 
+}
+
+.n-notification-container.n-notification-container--top-right .n-notification, .n-notification-container.n-notification-container--bottom-right .n-notification {
+
+ margin-left: 28px;
+ margin-right: 16px;
+ 
+}
+
+.n-notification-container.n-notification-container--top-left .n-notification, .n-notification-container.n-notification-container--bottom-left .n-notification {
+
+ margin-left: 16px;
+ margin-right: 28px;
+ 
+}
+
+.n-notification-container.n-notification-container--top-right {
+
+ right: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--top-right .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--top-right .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: translate(calc(100%), 0);
+ 
+}
+
+.n-notification-container.n-notification-container--top-right .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--top-right .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: translate(0, 0);
+ 
+}
+
+.n-notification-container.n-notification-container--top-left {
+
+ left: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--top-left .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--top-left .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: translate(calc(-100%), 0);
+ 
+}
+
+.n-notification-container.n-notification-container--top-left .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--top-left .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: translate(0, 0);
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-right {
+
+ right: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-right .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--bottom-right .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: translate(calc(100%), 0);
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-right .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--bottom-right .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: translate(0, 0);
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-left {
+
+ left: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-left .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--bottom-left .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: translate(calc(-100%), 0);
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-left .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--bottom-left .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: translate(0, 0);
+ 
+}
+
+.n-notification-container.n-notification-container--scrollable.n-notification-container--top-right {
+
+ top: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--scrollable.n-notification-container--top-left {
+
+ top: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--scrollable.n-notification-container--bottom-right {
+
+ bottom: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--scrollable.n-notification-container--bottom-left {
+
+ bottom: 0;
+ 
+}
+
+.n-notification-container .n-notification-wrapper {
+
+ margin-bottom: 12px;
+ 
+}
+
+.n-notification-container .n-notification-wrapper.notification-transition-enter-from, .n-notification-container .n-notification-wrapper.notification-transition-leave-to {
+
+ opacity: 0;
+ margin-top: 0 !important;
+ margin-bottom: 0 !important;
+ 
+}
+
+.n-notification-container .n-notification-wrapper.notification-transition-leave-from, .n-notification-container .n-notification-wrapper.notification-transition-enter-to {
+
+ opacity: 1;
+ 
+}
+
+.n-notification-container .n-notification-wrapper.notification-transition-leave-active {
+
+ transition:
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier),
+ opacity .3s var(--n-bezier),
+ transform .3s var(--n-bezier-ease-in),
+ max-height .3s var(--n-bezier),
+ margin-top .3s linear,
+ margin-bottom .3s linear,
+ box-shadow .3s var(--n-bezier);
+ 
+}
+
+.n-notification-container .n-notification-wrapper.notification-transition-enter-active {
+
+ transition:
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier),
+ opacity .3s var(--n-bezier),
+ transform .3s var(--n-bezier-ease-out),
+ max-height .3s var(--n-bezier),
+ margin-top .3s linear,
+ margin-bottom .3s linear,
+ box-shadow .3s var(--n-bezier);
+ 
+}
+
+.n-notification-container .n-notification {
+
+ background-color: var(--n-color);
+ color: var(--n-text-color);
+ transition:
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier),
+ opacity .3s var(--n-bezier),
+ box-shadow .3s var(--n-bezier);
+ font-family: inherit;
+ font-size: var(--n-font-size);
+ font-weight: 400;
+ position: relative;
+ display: flex;
+ overflow: hidden;
+ flex-shrink: 0;
+ padding-left: var(--n-padding-left);
+ padding-right: var(--n-padding-right);
+ width: var(--n-width);
+ max-width: calc(100vw - 16px - 16px);
+ border-radius: var(--n-border-radius);
+ box-shadow: var(--n-box-shadow);
+ box-sizing: border-box;
+ opacity: 1;
+ 
+}
+
+.n-notification-container .n-notification .n-notification__avatar .n-icon {
+
+ color: var(--n-icon-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification__avatar .n-base-icon {
+
+ color: var(--n-icon-color);
+ 
+}
+
+.n-notification-container .n-notification.n-notification--show-avatar .n-notification-main {
+
+ margin-left: 40px;
+ width: calc(100% - 40px); 
+ 
+}
+
+.n-notification-container .n-notification.n-notification--closable .n-notification-main > *:first-child {
+
+ padding-right: 20px;
+ 
+}
+
+.n-notification-container .n-notification.n-notification--closable .n-notification__close {
+
+ position: absolute;
+ top: 0;
+ right: 0;
+ margin: var(--n-close-margin);
+ transition:
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier);
+ 
+}
+
+.n-notification-container .n-notification .n-notification__avatar {
+
+ position: absolute;
+ top: var(--n-padding-top);
+ left: var(--n-padding-left);
+ width: 28px;
+ height: 28px;
+ font-size: 28px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+}
+
+.n-notification-container .n-notification .n-notification__avatar .n-icon {
+transition: color .3s var(--n-bezier);
+}
+
+.n-notification-container .n-notification .n-notification-main {
+
+ padding-top: var(--n-padding-top);
+ padding-bottom: var(--n-padding-bottom);
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ margin-left: 8px;
+ width: calc(100% - 8px);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main-footer {
+
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-top: 12px;
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main-footer .n-notification-main-footer__meta {
+
+ font-size: var(--n-meta-font-size);
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-description-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main-footer .n-notification-main-footer__action {
+
+ cursor: pointer;
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-action-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main__header {
+
+ font-weight: var(--n-title-font-weight);
+ font-size: var(--n-title-font-size);
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-title-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main__description {
+
+ margin-top: 8px;
+ font-size: var(--n-description-font-size);
+ white-space: pre-wrap;
+ word-wrap: break-word;
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-description-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main__content {
+
+ line-height: var(--n-line-height);
+ margin: 12px 0 0 0;
+ font-family: inherit;
+ white-space: pre-wrap;
+ word-wrap: break-word;
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main__content:first-child {
+margin: 0;
+}
+</style>
+<style cssr-id="n-layout">
 .n-layout {
 
  color: var(--n-text-color);
@@ -61,111 +547,17 @@
  
 }
 </style>
-<style cssr-id="n-global">
-body {
-
- margin: 0;
- font-size: 14px;
- font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
- line-height: 1.6;
- -webkit-text-size-adjust: 100%;
- -webkit-tap-highlight-color: transparent;
-
-}
-
-body input {
-
- font-family: inherit;
- font-size: inherit;
- 
-}
-</style>
-<style cssr-id="__layout-f91x0l">
-.__layout-f91x0l {
+<style cssr-id="__layout-1fgcd7k">
+.__layout-1fgcd7k {
 --n-bezier: cubic-bezier(.4, 0, .2, 1);--n-color: #fff;--n-text-color: rgb(51, 54, 57);
 }
-</style>
-<style cssr-id="n-layout-header">
-.n-layout-header {
-
- transition:
- color .3s var(--n-bezier),
- background-color .3s var(--n-bezier),
- box-shadow .3s var(--n-bezier),
- border-color .3s var(--n-bezier);
- box-sizing: border-box;
- width: 100%;
- background-color: var(--n-color);
- color: var(--n-text-color);
-
-}
-
-.n-layout-header.n-layout-header--absolute-positioned {
-
- position: absolute;
- left: 0;
- right: 0;
- top: 0;
- 
-}
-
-.n-layout-header.n-layout-header--bordered {
-
- border-bottom: solid 1px var(--n-border-color);
- 
-}
-</style>
-<style cssr-id="__layout-header-f91x0l-b">
-.__layout-header-f91x0l-b {
---n-bezier: cubic-bezier(.4, 0, .2, 1);--n-color: #fff;--n-text-color: rgb(51, 54, 57);--n-border-color: rgb(239, 239, 245);
-}
-</style>
-<style cssr-id="n-text">
-.n-text {
-
- transition: color .3s var(--n-bezier);
- color: var(--n-text-color);
-
-}
-
-.n-text.n-text--strong {
-
- font-weight: var(--n-font-weight-strong);
- 
-}
-
-.n-text.n-text--italic {
-  font-style: italic;
-}
-
-.n-text.n-text--underline {
-  text-decoration: underline;
-}
-
-.n-text.n-text--code {
-
- line-height: 1.4;
- display: inline-block;
- font-family: var(--n-font-famliy-mono);
- transition: 
- color .3s var(--n-bezier),
- border-color .3s var(--n-bezier),
- background-color .3s var(--n-bezier);
- box-sizing: border-box;
- padding: .05em .35em 0 .35em;
- border-radius: var(--n-code-border-radius);
- font-size: .9em;
- color: var(--n-code-text-color);
- background-color: var(--n-code-color);
- border: var(--n-code-border);
- 
-}
-</style>
-<style cssr-id="__text-f91x0l-d1">
-.__text-f91x0l-d1 {
---n-bezier: cubic-bezier(.4, 0, .2, 1);--n-text-color: rgb(31, 34, 37);--n-font-weight-strong: 500;--n-font-famliy-mono: var(--font-family-mono);--n-code-border-radius: 2px;--n-code-text-color: rgb(51, 54, 57);--n-code-color: rgb(244, 244, 248);--n-code-border: 1px solid #0000;
-}
-</style></css-render-style><vitepress-path>/tools/vite</vitepress-path></div><div id="waiting">
+</style></head>
+  <body>
+    <div id="app"><div class="__layout-1fgcd7k n-layout n-layout--absolute-positioned root-layout" style=""><div class="n-layout-scroll-container" style=""><div class="n-layout-header __layout-header-1fgcd7k-b n-layout-header--static-positioned n-layout-header--bordered nav" style="--side-padding:32px;grid-template-columns:calc(272px - var(--side-padding)) 1fr auto;" data-v-7cc283f3><div class="n-text __text-1fgcd7k-d1 ui-logo" style="" data-v-7cc283f3><span data-v-7cc283f3>mu</span></div></div><div class="__layout-1fgcd7k n-layout n-layout--absolute-positioned" style="top:var(--header-height);" id="doc-layout"><div class="n-layout-scroll-container" style="display:flex;flex-wrap:nowrap;width:100%;flex-direction:row;"><aside class="n-layout-sider __layout-sider-1fgcd7k-b n-layout-sider--static-positioned n-layout-sider--left-placement n-layout-sider--bordered n-layout-sider--show-content" style="max-width:300px;width:300px;"><div style="min-width:300px;" role="none" class="n-scrollbar __scrollbar-1fgcd7k"><div role="none" class="n-scrollbar-container" style=""><div role="none" style="" class="n-scrollbar-content"><div class="n-tree n-tree--block-node n-tree--block-line __tree-1fgcd7k" tabindex="0" style=""><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text"><span class="n-ellipsis" style="text-overflow:ellipsis;-webkit-line-clamp:;"><span>css</span></span></div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher n-tree-node-switcher--expanded" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text"><span class="n-ellipsis" style="text-overflow:ellipsis;-webkit-line-clamp:;"><span>tools</span></span></div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text"><span class="n-ellipsis" style="text-overflow:ellipsis;-webkit-line-clamp:;"><span>vitepress</span></span></div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text"><a class="flex items-center" href="/tools/tailwindcss" style="height:var(--n-node-content-height);"><span class="n-ellipsis" style="text-overflow:ellipsis;-webkit-line-clamp:;"><span>tailwindcss</span></span></a></div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selected n-tree-node--pending n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text"><a class="flex items-center" href="/tools/vite" style="height:var(--n-node-content-height);"><span class="n-ellipsis" style="text-overflow:ellipsis;-webkit-line-clamp:;"><span>使用vite构建自己的前端应用</span></span></a></div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><div class="n-tree-node-indent n-tree-node-indent--show-line"><div style="width:24px;"></div></div><div class="n-tree-node-indent n-tree-node-indent--show-line n-tree-node-indent--is-leaf n-tree-node-indent--last-child"><div style="width:24px;"></div></div><span class="n-tree-node-content"><div class="n-tree-node-content__text"><a class="flex items-center" href="/tools/vscode" style="height:var(--n-node-content-height);"><span class="n-ellipsis" style="text-overflow:ellipsis;-webkit-line-clamp:;"><span>vscode使用经验</span></span></a></div></span></div></div><div class="n-tree-node-wrapper"><div class="n-tree-node n-tree-node--selectable n-tree-node--clickable" draggable="false"><span data-switcher="true" class="n-tree-node-switcher" style="width:24px;"><div class="n-tree-node-switcher__icon"><i class="n-base-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 8l10 8l-10 8z"></path></svg></i></div></span><span class="n-tree-node-content"><div class="n-tree-node-content__text"><span class="n-ellipsis" style="text-overflow:ellipsis;-webkit-line-clamp:;"><span>utils</span></span></div></span></div></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div></div><div class="n-layout-toggle-button" style="top:240px;"><i class="n-base-icon"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg></i></div><div class="n-layout-sider__border"></div></aside><div class="__layout-1fgcd7k n-layout n-layout--static-positioned" style=""><div role="none" class="n-scrollbar __scrollbar-1fgcd7k" style=""><div role="none" class="n-scrollbar-container document-scroll-container" style=""><div role="none" style="min-height:calc(100vh - var(--header-height));display:flex;flex-direction:column;" class="n-scrollbar-content"><div class="flex"><div class="overflow-hidden p-8 pr-3 flex-1 VPDoc"><div><h1 class="n-h n-h1 __h1-1fgcd7k-d" style="" id="使用vite构建自己的前端应用"><span class="n-text __text-1fgcd7k-d" style="">使用vite构建自己的前端应用</span></h1><div role="separator" class="n-divider __divider-1fgcd7k n-divider--no-title -ml-8 -mr-3" style="margin-bottom:0 !important;width:calc(100% + var(--spacing-12));"><div class="n-divider__line n-divider__line--left"></div></div><h2 class="n-h n-h2 __h2-1fgcd7k-d" style="" id="功能"><span class="n-text __text-1fgcd7k-d" style="">功能</span></h2><h3 class="n-h n-h3 __h3-1fgcd7k-d" style="" id="json"><span class="n-text __text-1fgcd7k-d" style="">JSON</span></h3><p class="n-p __p-1fgcd7k" style="">JSON 可以被直接导入 —— 同样支持具名导入</p><div class="n-card __card-1fgcd7k-m n-card--embedded fence_card" style="" data-v-0d0fdc7d><div class="n-card__content !p-0" style="" role="none"><button class="__button-1fgcd7k-hlmmd n-button n-button--default-type n-button--medium-type copy_btn !absolute" tabindex="0" type="button" style="" data-v-0d0fdc7d><span class="n-button__content"><svg viewBox="0 0 24 24" width="1.2em" height="1.2em" data-v-0d0fdc7d><path fill="currentColor" d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18zm0-2h9V4H9zm-4 6q-.825 0-1.412-.587T3 20V6h2v14h11v2zm4-6V4z"></path></svg></span><div aria-hidden="true" class="n-base-wave"></div></button><div role="none" class="n-scrollbar __scrollbar-1fgcd7k" style=""><div role="none" class="n-scrollbar-container" style=""><div role="none" style="width:fit-content;" class="n-scrollbar-content"><div class="language-ts line-numbers-mode"><span class="lang">ts</span><pre class="shiki shiki-themes github-dark github-light vp-code" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A737D;--shiki-light:#6A737D;">// 对一个根字段使用具名导入 —— 有效帮助 treeshaking！</span></span>
+<span class="line"><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;">import</span><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E;"> { field } </span><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;">from</span><span style="--shiki-dark:#9ECBFF;--shiki-light:#032F62;"> &#39;./example2.json&#39;</span></span>
+<span class="line"><span style="--shiki-dark:#6A737D;--shiki-light:#6A737D;">// 导入整个对象</span></span>
+<span class="line"><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;">import</span><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E;"> json </span><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;">from</span><span style="--shiki-dark:#9ECBFF;--shiki-light:#032F62;"> &#39;./example.json&#39;</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div><div class="n-scrollbar-rail n-scrollbar-rail--horizontal n-scrollbar-rail--horizontal--bottom" style="" data-scrollbar-rail="true" aria-hidden="true"></div></div></div></div><h3 class="n-h n-h3 __h3-1fgcd7k-d" style="" id="动态导入"><span class="n-text __text-1fgcd7k-d" style="">动态导入</span></h3><div class="n-card __card-1fgcd7k-m n-card--embedded fence_card" style="" data-v-0d0fdc7d><div class="n-card__content !p-0" style="" role="none"><button class="__button-1fgcd7k-hlmmd n-button n-button--default-type n-button--medium-type copy_btn !absolute" tabindex="0" type="button" style="" data-v-0d0fdc7d><span class="n-button__content"><svg viewBox="0 0 24 24" width="1.2em" height="1.2em" data-v-0d0fdc7d><path fill="currentColor" d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18zm0-2h9V4H9zm-4 6q-.825 0-1.412-.587T3 20V6h2v14h11v2zm4-6V4z"></path></svg></span><div aria-hidden="true" class="n-base-wave"></div></button><div role="none" class="n-scrollbar __scrollbar-1fgcd7k" style=""><div role="none" class="n-scrollbar-container" style=""><div role="none" style="width:fit-content;" class="n-scrollbar-content"><div class="language-ts line-numbers-mode"><span class="lang">ts</span><pre class="shiki shiki-themes github-dark github-light vp-code" tabindex="0"><code><span class="line"><span style="--shiki-dark:#6A737D;--shiki-light:#6A737D;">// 变量仅代表一层深的文件名。如果 file 是 foo/bar，导入将会失败</span></span>
+<span class="line"><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;">const</span><span style="--shiki-dark:#79B8FF;--shiki-light:#005CC5;"> module</span><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;"> =</span><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;"> await</span><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;"> import</span><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E;">(</span><span style="--shiki-dark:#9ECBFF;--shiki-light:#032F62;">`./dir/${</span><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E;">file</span><span style="--shiki-dark:#9ECBFF;--shiki-light:#032F62;">}.js`</span><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E;">)</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div><div class="n-scrollbar-rail n-scrollbar-rail--horizontal n-scrollbar-rail--horizontal--bottom" style="" data-scrollbar-rail="true" aria-hidden="true"></div></div></div></div><div role="separator" class="n-divider __divider-1fgcd7k n-divider--no-title -ml-8 -mr-3" style="margin-bottom:0 !important;width:calc(100% + var(--spacing-12));"><div class="n-divider__line n-divider__line--left"></div></div><h2 class="n-h n-h2 __h2-1fgcd7k-d" style="" id="环境变量和模式"><span class="n-text __text-1fgcd7k-d" style="">环境变量和模式</span></h2><h3 class="n-h n-h3 __h3-1fgcd7k-d" style="" id="production"><span class="n-text __text-1fgcd7k-d" style="">&#39;production&#39;</span></h3><p class="n-p __p-1fgcd7k" style="">应用运行的模式，可以通过 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>--mode &lt;xxx&gt;</code></code> 指定，然后加载对应的 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>.env.xxx</code></code> 文件 默认情况下, <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>dev</code></code> 命令 运行在 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>development</code></code> 模式，而 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>build</code></code> 命令则运行在 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>production</code></code> 模式</p><h3 class="n-h n-h3 __h3-1fgcd7k-d" style="" id="node-env"><span class="n-text __text-1fgcd7k-d" style="">NODE_ENV</span></h3><p class="n-p __p-1fgcd7k" style="">与 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>MODE</code></code> 的没有丝毫关系，是两个不同的概念 会影响 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>PROD</code></code> 和 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>DEV</code></code> 的行为</p><table class="n-table __table-1fgcd7k-m n-table--bottom-bordered n-table--bordered n-table--striped" style=""><thead><tr><th>Command</th><th>true</th><th>false</th></tr></thead><tbody><tr><td>NODE_ENV=production</td><td>true</td><td>false</td></tr><tr><td>NODE_ENV=development</td><td>false</td><td>true</td></tr><tr><td>NODE_ENV=other</td><td>false</td><td>false</td></tr></tbody></table><p class="n-p __p-1fgcd7k" style="">可以在命令行中设置，也可以在env文件中设置</p><div class="n-card __card-1fgcd7k-m n-card--embedded fence_card" style="" data-v-0d0fdc7d><div class="n-card__content !p-0" style="" role="none"><button class="__button-1fgcd7k-hlmmd n-button n-button--default-type n-button--medium-type copy_btn !absolute" tabindex="0" type="button" style="" data-v-0d0fdc7d><span class="n-button__content"><svg viewBox="0 0 24 24" width="1.2em" height="1.2em" data-v-0d0fdc7d><path fill="currentColor" d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18zm0-2h9V4H9zm-4 6q-.825 0-1.412-.587T3 20V6h2v14h11v2zm4-6V4z"></path></svg></span><div aria-hidden="true" class="n-base-wave"></div></button><div role="none" class="n-scrollbar __scrollbar-1fgcd7k" style=""><div role="none" class="n-scrollbar-container" style=""><div role="none" style="width:fit-content;" class="n-scrollbar-content"><div class="language-bash line-numbers-mode"><span class="lang">bash</span><pre class="shiki shiki-themes github-dark github-light vp-code" tabindex="0"><code><span class="line"><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E;">NODE_ENV</span><span style="--shiki-dark:#F97583;--shiki-light:#D73A49;">=</span><span style="--shiki-dark:#9ECBFF;--shiki-light:#032F62;">development</span><span style="--shiki-dark:#B392F0;--shiki-light:#6F42C1;"> vite</span><span style="--shiki-dark:#9ECBFF;--shiki-light:#032F62;"> build</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br></div></div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div><div class="n-scrollbar-rail n-scrollbar-rail--horizontal n-scrollbar-rail--horizontal--bottom" style="" data-scrollbar-rail="true" aria-hidden="true"></div></div></div></div><div class="n-alert __alert-1fgcd7k-s n-alert--show-icon" style="" role="alert"><div class="n-alert__icon" aria-hidden="true"><i class="n-base-icon"><svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g fill-rule="nonzero"><path d="M24,4 C35.045695,4 44,12.954305 44,24 C44,35.045695 35.045695,44 24,44 C12.954305,44 4,35.045695 4,24 C4,12.954305 12.954305,4 24,4 Z M32.6338835,17.6161165 C32.1782718,17.1605048 31.4584514,17.1301307 30.9676119,17.5249942 L30.8661165,17.6161165 L20.75,27.732233 L17.1338835,24.1161165 C16.6457281,23.6279612 15.8542719,23.6279612 15.3661165,24.1161165 C14.9105048,24.5717282 14.8801307,25.2915486 15.2749942,25.7823881 L15.3661165,25.8838835 L19.8661165,30.3838835 C20.3217282,30.8394952 21.0415486,30.8698693 21.5323881,30.4750058 L21.6338835,30.3838835 L32.6338835,19.3838835 C33.1220388,18.8957281 33.1220388,18.1042719 32.6338835,17.6161165 Z"></path></g></g></svg></i></div><div class="n-alert-body"><div class="n-alert-body__title">提示</div><div class="n-alert-body__content"><p class="n-p __p-1fgcd7k" style="">命令中使用 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>NODE_ENV=...</code></code> 的主要好处是，它允许 Vite 提前检测到该值, 该值的重要性最高，不需要等待读取 <code class="n-text __text-1fgcd7k-d n-text--code" style=""><code>env</code></code> 文件之后才拿到该值</p></div></div></div><div role="separator" class="n-divider __divider-1fgcd7k n-divider--no-title -ml-8 -mr-3" style="margin-bottom:0 !important;width:calc(100% + var(--spacing-12));"><div class="n-divider__line n-divider__line--left"></div></div><h2 class="n-h n-h2 __h2-1fgcd7k-d" style="" id="ssr"><span class="n-text __text-1fgcd7k-d" style="">ssr</span></h2><h3 class="n-h n-h3 __h3-1fgcd7k-d" style="" id="import-meta-url"><span class="n-text __text-1fgcd7k-d" style="">import.meta.url</span></h3><div class="n-alert __alert-1fgcd7k-w n-alert--show-icon" style="" role="alert"><div class="n-alert__icon" aria-hidden="true"><i class="n-base-icon"><svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g fill-rule="nonzero"><path d="M12,2 C17.523,2 22,6.478 22,12 C22,17.522 17.523,22 12,22 C6.477,22 2,17.522 2,12 C2,6.478 6.477,2 12,2 Z M12.0018002,15.0037242 C11.450254,15.0037242 11.0031376,15.4508407 11.0031376,16.0023869 C11.0031376,16.553933 11.450254,17.0010495 12.0018002,17.0010495 C12.5533463,17.0010495 13.0004628,16.553933 13.0004628,16.0023869 C13.0004628,15.4508407 12.5533463,15.0037242 12.0018002,15.0037242 Z M11.99964,7 C11.4868042,7.00018474 11.0642719,7.38637706 11.0066858,7.8837365 L11,8.00036004 L11.0018003,13.0012393 L11.00857,13.117858 C11.0665141,13.6151758 11.4893244,14.0010638 12.0021602,14.0008793 C12.514996,14.0006946 12.9375283,13.6145023 12.9951144,13.1171428 L13.0018002,13.0005193 L13,7.99964009 L12.9932303,7.8830214 C12.9352861,7.38570354 12.5124758,6.99981552 11.99964,7 Z"></path></g></g></svg></i></div><div class="n-alert-body"><div class="n-alert-body__title">无法在 SSR 中使用</div><div class="n-alert-body__content"><p class="n-p __p-1fgcd7k" style="">因为 import.meta.url 在浏览器和 Node.js 中有不同的语义。服务端的产物也无法预先确定客户端主机 URL。</p></div></div></div><div role="separator" class="n-divider __divider-1fgcd7k n-divider--no-title -ml-8 -mr-3" style="margin-bottom:0 !important;width:calc(100% + var(--spacing-12));"><div class="n-divider__line n-divider__line--left"></div></div><h2 class="n-h n-h2 __h2-1fgcd7k-d" style="" id="参考资料"><span class="n-text __text-1fgcd7k-d" style="">参考资料</span></h2><ul class="n-ul __ul-1fgcd7k" style=""><li><p class="n-p __p-1fgcd7k" style=""><a class="n-a __a-1fgcd7k" style="" href="https://github.com/antfu-collective/vitesse" target="_blank" rel="noreferrer"><span class="n-gradient-text n-gradient-text--primary-type __gradient-text-1fgcd7k-p" style="">vitesse</span></a></p></li><li><p class="n-p __p-1fgcd7k" style="">unplugin-vue-router 和 vite-plugin-vue-layouts 可以不用自己写路由</p></li><li><p class="n-p __p-1fgcd7k" style="">vite-plugin-webfont-dl 自动处理字体</p></li></ul></div></div></div><div class="n-layout-footer __layout-footer-1fgcd7k-b n-layout-footer--static-positioned n-layout-footer--bordered" style="height:100px;"> this is footer </div></div></div><div class="n-scrollbar-rail n-scrollbar-rail--vertical n-scrollbar-rail--vertical--right" data-scrollbar-rail="true" style="" aria-hidden="true"></div></div></div></div></div></div></div><div class="-mr-3 -ml-8 hidden"></div></div><div id="waiting">
       <style>
         #waiting {
           position: fixed;
@@ -178,7 +570,7 @@ body input {
           align-items: center;
           top: 0;
           left: 0;
-          transition: opacity 0.8s;
+          transition: opacity 1s ease-in-out;
         }
 
         #waiting .loader {
@@ -244,7 +636,7 @@ body input {
       </style>
       <div class="loader"></div>
     </div>
-    <script>window.__VP_HASH_MAP__=JSON.parse("{\"api-examples.md\":\"CJQtCZmD\",\"css_@rules_@layer.md\":\"CllJArdm\",\"css_@rules_@media.md\":\"Dr7H4Our\",\"css_css变量.md\":\"B5pCvq0V\",\"css_css级联(cascade).md\":\"DsuicxKk\",\"index.md\":\"BLrZPtiA\",\"markdown-examples.md\":\"DiGoyx_g\",\"tools_tailwindcss.md\":\"Be-YMX9u\",\"tools_vite.md\":\"DIafb7Sg\",\"tools_vitepress.md\":\"Cv94UfWY\",\"utils_确保网页字体加载完成.md\":\"Dq76HeHQ\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"vite\",\"description\":\"木林子的笔记-记住自己的点滴\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"sidebar\":[{\"text\":\"Runtime API Examples\",\"link\":\"/api-examples\"},{\"text\":\"css\",\"items\":[{\"text\":\"@rules\",\"items\":[{\"text\":\"@layer\",\"link\":\"/css/@rules/@layer\"},{\"text\":\"@media\",\"link\":\"/css/@rules/@media\"}]},{\"text\":\"css 变量\",\"link\":\"/css/css变量\"},{\"text\":\"css级联(cascade)\",\"link\":\"/css/css级联(cascade)\"}]},{\"text\":\"Markdown Extension Examples\",\"link\":\"/markdown-examples\"},{\"text\":\"tools\",\"items\":[{\"text\":\"tailwindcss\",\"link\":\"/tools/tailwindcss\"},{\"text\":\"使用vite构建自己的前端应用\",\"link\":\"/tools/vite\"},{\"text\":\"VitePress 介绍\",\"link\":\"/tools/vitePress\"}]},{\"text\":\"utils\",\"items\":[{\"text\":\"确保网页字体加载完成\",\"link\":\"/utils/确保网页字体加载完成\"}]}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":true}");</script>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"css_@rules_@layer_index.md\":\"DuhHDdck\",\"css_@rules_@media.md\":\"BlsYTNLh\",\"css_css变量.md\":\"DuFQUAQR\",\"css_css级联(cascade).md\":\"74bskVnz\",\"index.md\":\"2lKCsMaB\",\"tools_tailwindcss.md\":\"UE1LRuKc\",\"tools_vite.md\":\"CnoNgTjW\",\"tools_vitepress_preload字体_index.md\":\"BIE5-wDr\",\"tools_vitepress_容易忘记的写法.md\":\"MnpilM4r\",\"tools_vitepress_自定义container_code-group.md\":\"VOtcpfn6\",\"tools_vscode.md\":\"C_lZSVOp\",\"utils_确保网页字体加载完成.md\":\"DLsF7JOH\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"zh-CN\",\"dir\":\"ltr\",\"title\":\"vite\",\"titleTemplate\":false,\"description\":\"木林子的笔记-记住自己的点滴\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"outline\":{\"level\":[2,3]},\"sidebar\":[{\"text\":\"css\",\"items\":[{\"text\":\"css变量\",\"link\":\"/css/css变量\",\"order\":0},{\"text\":\"css级联(cascade)\",\"link\":\"/css/css级联(cascade)\",\"order\":1},{\"text\":\"@rules\",\"items\":[{\"text\":\"@media\",\"link\":\"/css/@rules/@media\",\"order\":0},{\"text\":\"@layer\",\"link\":\"/css/@rules/@layer/\",\"order\":1}],\"order\":2}],\"order\":0},{\"text\":\"tools\",\"items\":[{\"text\":\"vitepress\",\"items\":[{\"text\":\"容易忘记的写法\",\"link\":\"/tools/vitepress/容易忘记的写法\",\"order\":0},{\"text\":\"preload字体\",\"link\":\"/tools/vitepress/preload字体/\",\"order\":1},{\"text\":\"自定义vitepress的container_code-group\",\"link\":\"/tools/vitepress/自定义container_code-group\",\"order\":2}],\"order\":0},{\"text\":\"tailwindcss\",\"link\":\"/tools/tailwindcss\",\"order\":1},{\"text\":\"使用vite构建自己的前端应用\",\"link\":\"/tools/vite\",\"order\":2},{\"text\":\"vscode使用经验\",\"link\":\"/tools/vscode\",\"order\":3}],\"order\":1},{\"text\":\"utils\",\"items\":[{\"text\":\"确保网页字体加载完成\",\"link\":\"/utils/确保网页字体加载完成\",\"order\":0}],\"order\":2}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":true,\"contentProps\":{\"class\":\"overflow-hidden\"}}");</script>
     
   </body>
 </html>

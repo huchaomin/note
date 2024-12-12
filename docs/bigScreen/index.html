@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>擎聪智慧大屏系统</title>
+    <meta name="description" content="木林子的笔记-记住自己的点滴">
+    <meta name="generator" content="VitePress v1.5.0">
+    <link rel="preload stylesheet" href="/assets/style.Dwffz0iP.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    <script type="module" src="/assets/chunks/metadata.1f95ef9b.js"></script>
+    <script type="module" src="/assets/app.Bpu7EPs-.js"></script>
+    <link rel="modulepreload" href="/assets/chunks/theme.Bvy8fpr0.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.yfsRM9mo.js">
+    <link rel="modulepreload" href="/assets/chunks/Index.eYgxhKOc.js">
+    <link rel="modulepreload" href="/assets/bigScreen_index.md.CdVD_ECR.lean.js">
+    <link href="/favicon.ico" rel="icon">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  <style cssr-id="n-loading-bar">
+.n-loading-bar-container {
+
+ z-index: 5999;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 2px;
+
+}
+
+.n-loading-bar-container.fade-in-transition-enter-active {
+  transition: all 0.3s cubic-bezier(.4, 0, .2, 1)!important;
+}
+
+.n-loading-bar-container.fade-in-transition-leave-active {
+  transition: all 0.8s cubic-bezier(.4, 0, .2, 1)!important;
+}
+
+.n-loading-bar-container.fade-in-transition-enter-from, .n-loading-bar-container.fade-in-transition-leave-to {
+  opacity: 0;
+}
+
+.n-loading-bar-container.fade-in-transition-leave-from, .n-loading-bar-container.fade-in-transition-enter-to {
+  opacity: 1;
+}
+
+.n-loading-bar-container .n-loading-bar {
+
+ width: 100%;
+ transition:
+ max-width 4s linear,
+ background .2s linear;
+ height: var(--n-height);
+ 
+}
+
+.n-loading-bar-container .n-loading-bar.n-loading-bar--starting {
+
+ background: var(--n-color-loading);
+ 
+}
+
+.n-loading-bar-container .n-loading-bar.n-loading-bar--finishing {
+
+ background: var(--n-color-loading);
+ transition:
+ max-width .2s linear,
+ background .2s linear;
+ 
+}
+
+.n-loading-bar-container .n-loading-bar.n-loading-bar--error {
+
+ background: var(--n-color-error);
+ transition:
+ max-width .2s linear,
+ background .2s linear;
+ 
+}
+</style>
+<style cssr-id="n-global">
+body {
+
+ margin: 0;
+ font-size: 14px;
+ font-family: v-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ line-height: 1.6;
+ -webkit-text-size-adjust: 100%;
+ -webkit-tap-highlight-color: transparent;
+
+}
+
+body input {
+
+ font-family: inherit;
+ font-size: inherit;
+ 
+}
+</style>
+<style cssr-id="n-notification">
+.n-notification-container {
+
+ z-index: 4000;
+ position: fixed;
+ overflow: visible;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ 
+}
+
+.n-notification-container > .n-scrollbar {
+
+ width: initial;
+ overflow: visible;
+ height: -moz-fit-content !important;
+ height: fit-content !important;
+ max-height: 100vh !important;
+ 
+}
+
+.n-notification-container > .n-scrollbar > .n-scrollbar-container {
+
+ height: -moz-fit-content !important;
+ height: fit-content !important;
+ max-height: 100vh !important;
+ 
+}
+
+.n-notification-container > .n-scrollbar > .n-scrollbar-container .n-scrollbar-content {
+
+ padding-top: 12px;
+ padding-bottom: 33px;
+ 
+}
+
+.n-notification-container.n-notification-container--top, .n-notification-container.n-notification-container--top-right, .n-notification-container.n-notification-container--top-left {
+
+ top: 12px;
+ 
+}
+
+.n-notification-container.n-notification-container--top.transitioning > .n-scrollbar > .n-scrollbar-container, .n-notification-container.n-notification-container--top-right.transitioning > .n-scrollbar > .n-scrollbar-container, .n-notification-container.n-notification-container--top-left.transitioning > .n-scrollbar > .n-scrollbar-container {
+
+ min-height: 100vh !important;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom, .n-notification-container.n-notification-container--bottom-right, .n-notification-container.n-notification-container--bottom-left {
+
+ bottom: 12px;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom > .n-scrollbar > .n-scrollbar-container .n-scrollbar-content, .n-notification-container.n-notification-container--bottom-right > .n-scrollbar > .n-scrollbar-container .n-scrollbar-content, .n-notification-container.n-notification-container--bottom-left > .n-scrollbar > .n-scrollbar-container .n-scrollbar-content {
+
+ padding-bottom: 12px;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom .n-notification-wrapper, .n-notification-container.n-notification-container--bottom-right .n-notification-wrapper, .n-notification-container.n-notification-container--bottom-left .n-notification-wrapper {
+
+ display: flex;
+ align-items: flex-end;
+ margin-bottom: 0;
+ margin-top: 12px;
+ 
+}
+
+.n-notification-container.n-notification-container--top, .n-notification-container.n-notification-container--bottom {
+
+ left: 50%;
+ transform: translateX(-50%);
+ 
+}
+
+.n-notification-container.n-notification-container--top .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--bottom .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--top .n-notification-wrapper.notification-transition-leave-to, .n-notification-container.n-notification-container--bottom .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: scale(0.85);
+ 
+}
+
+.n-notification-container.n-notification-container--top .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--bottom .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--top .n-notification-wrapper.notification-transition-enter-to, .n-notification-container.n-notification-container--bottom .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: scale(1);
+ 
+}
+
+.n-notification-container.n-notification-container--top .n-notification-wrapper {
+
+ transform-origin: top center;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom .n-notification-wrapper {
+
+ transform-origin: bottom center;
+ 
+}
+
+.n-notification-container.n-notification-container--top-right .n-notification, .n-notification-container.n-notification-container--bottom-right .n-notification {
+
+ margin-left: 28px;
+ margin-right: 16px;
+ 
+}
+
+.n-notification-container.n-notification-container--top-left .n-notification, .n-notification-container.n-notification-container--bottom-left .n-notification {
+
+ margin-left: 16px;
+ margin-right: 28px;
+ 
+}
+
+.n-notification-container.n-notification-container--top-right {
+
+ right: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--top-right .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--top-right .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: translate(calc(100%), 0);
+ 
+}
+
+.n-notification-container.n-notification-container--top-right .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--top-right .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: translate(0, 0);
+ 
+}
+
+.n-notification-container.n-notification-container--top-left {
+
+ left: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--top-left .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--top-left .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: translate(calc(-100%), 0);
+ 
+}
+
+.n-notification-container.n-notification-container--top-left .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--top-left .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: translate(0, 0);
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-right {
+
+ right: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-right .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--bottom-right .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: translate(calc(100%), 0);
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-right .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--bottom-right .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: translate(0, 0);
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-left {
+
+ left: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-left .n-notification-wrapper.notification-transition-enter-from, .n-notification-container.n-notification-container--bottom-left .n-notification-wrapper.notification-transition-leave-to {
+
+ transform: translate(calc(-100%), 0);
+ 
+}
+
+.n-notification-container.n-notification-container--bottom-left .n-notification-wrapper.notification-transition-leave-from, .n-notification-container.n-notification-container--bottom-left .n-notification-wrapper.notification-transition-enter-to {
+
+ transform: translate(0, 0);
+ 
+}
+
+.n-notification-container.n-notification-container--scrollable.n-notification-container--top-right {
+
+ top: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--scrollable.n-notification-container--top-left {
+
+ top: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--scrollable.n-notification-container--bottom-right {
+
+ bottom: 0;
+ 
+}
+
+.n-notification-container.n-notification-container--scrollable.n-notification-container--bottom-left {
+
+ bottom: 0;
+ 
+}
+
+.n-notification-container .n-notification-wrapper {
+
+ margin-bottom: 12px;
+ 
+}
+
+.n-notification-container .n-notification-wrapper.notification-transition-enter-from, .n-notification-container .n-notification-wrapper.notification-transition-leave-to {
+
+ opacity: 0;
+ margin-top: 0 !important;
+ margin-bottom: 0 !important;
+ 
+}
+
+.n-notification-container .n-notification-wrapper.notification-transition-leave-from, .n-notification-container .n-notification-wrapper.notification-transition-enter-to {
+
+ opacity: 1;
+ 
+}
+
+.n-notification-container .n-notification-wrapper.notification-transition-leave-active {
+
+ transition:
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier),
+ opacity .3s var(--n-bezier),
+ transform .3s var(--n-bezier-ease-in),
+ max-height .3s var(--n-bezier),
+ margin-top .3s linear,
+ margin-bottom .3s linear,
+ box-shadow .3s var(--n-bezier);
+ 
+}
+
+.n-notification-container .n-notification-wrapper.notification-transition-enter-active {
+
+ transition:
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier),
+ opacity .3s var(--n-bezier),
+ transform .3s var(--n-bezier-ease-out),
+ max-height .3s var(--n-bezier),
+ margin-top .3s linear,
+ margin-bottom .3s linear,
+ box-shadow .3s var(--n-bezier);
+ 
+}
+
+.n-notification-container .n-notification {
+
+ background-color: var(--n-color);
+ color: var(--n-text-color);
+ transition:
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier),
+ opacity .3s var(--n-bezier),
+ box-shadow .3s var(--n-bezier);
+ font-family: inherit;
+ font-size: var(--n-font-size);
+ font-weight: 400;
+ position: relative;
+ display: flex;
+ overflow: hidden;
+ flex-shrink: 0;
+ padding-left: var(--n-padding-left);
+ padding-right: var(--n-padding-right);
+ width: var(--n-width);
+ max-width: calc(100vw - 16px - 16px);
+ border-radius: var(--n-border-radius);
+ box-shadow: var(--n-box-shadow);
+ box-sizing: border-box;
+ opacity: 1;
+ 
+}
+
+.n-notification-container .n-notification .n-notification__avatar .n-icon {
+
+ color: var(--n-icon-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification__avatar .n-base-icon {
+
+ color: var(--n-icon-color);
+ 
+}
+
+.n-notification-container .n-notification.n-notification--show-avatar .n-notification-main {
+
+ margin-left: 40px;
+ width: calc(100% - 40px); 
+ 
+}
+
+.n-notification-container .n-notification.n-notification--closable .n-notification-main > *:first-child {
+
+ padding-right: 20px;
+ 
+}
+
+.n-notification-container .n-notification.n-notification--closable .n-notification__close {
+
+ position: absolute;
+ top: 0;
+ right: 0;
+ margin: var(--n-close-margin);
+ transition:
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier);
+ 
+}
+
+.n-notification-container .n-notification .n-notification__avatar {
+
+ position: absolute;
+ top: var(--n-padding-top);
+ left: var(--n-padding-left);
+ width: 28px;
+ height: 28px;
+ font-size: 28px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+}
+
+.n-notification-container .n-notification .n-notification__avatar .n-icon {
+transition: color .3s var(--n-bezier);
+}
+
+.n-notification-container .n-notification .n-notification-main {
+
+ padding-top: var(--n-padding-top);
+ padding-bottom: var(--n-padding-bottom);
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ margin-left: 8px;
+ width: calc(100% - 8px);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main-footer {
+
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-top: 12px;
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main-footer .n-notification-main-footer__meta {
+
+ font-size: var(--n-meta-font-size);
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-description-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main-footer .n-notification-main-footer__action {
+
+ cursor: pointer;
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-action-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main__header {
+
+ font-weight: var(--n-title-font-weight);
+ font-size: var(--n-title-font-size);
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-title-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main__description {
+
+ margin-top: 8px;
+ font-size: var(--n-description-font-size);
+ white-space: pre-wrap;
+ word-wrap: break-word;
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-description-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main__content {
+
+ line-height: var(--n-line-height);
+ margin: 12px 0 0 0;
+ font-family: inherit;
+ white-space: pre-wrap;
+ word-wrap: break-word;
+ transition: color .3s var(--n-bezier-ease-out);
+ color: var(--n-text-color);
+ 
+}
+
+.n-notification-container .n-notification .n-notification-main .n-notification-main__content:first-child {
+margin: 0;
+}
+</style>
+<style cssr-id="n-layout">
+.n-layout {
+
+ color: var(--n-text-color);
+ background-color: var(--n-color);
+ box-sizing: border-box;
+ position: relative;
+ z-index: auto;
+ flex: auto;
+ overflow: hidden;
+ transition:
+ box-shadow .3s var(--n-bezier),
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier);
+
+}
+
+.n-layout .n-layout-scroll-container {
+
+ overflow-x: hidden;
+ box-sizing: border-box;
+ height: 100%;
+ 
+}
+
+.n-layout.n-layout--absolute-positioned {
+
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ 
+}
+</style>
+<style cssr-id="__layout-1fgcd7k">
+.__layout-1fgcd7k {
+--n-bezier: cubic-bezier(.4, 0, .2, 1);--n-color: #fff;--n-text-color: rgb(51, 54, 57);
+}
+</style></head>
+  <body>
+    <div id="app"><div class="__layout-1fgcd7k n-layout n-layout--absolute-positioned root-layout" style=""><div class="n-layout-scroll-container" style=""><div class="overflow-hidden"><div></div></div></div></div><div class="-mr-3 -ml-8 hidden"></div></div><div id="waiting">
+      <style>
+        #waiting {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          z-index: 999999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0;
+          left: 0;
+          transition: opacity 1s ease-in-out;
+        }
+
+        #waiting .loader {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-flex;
+          width: 200px;
+          height: 140px;
+          background: #979794;
+          border-radius: 8px;
+          perspective: 1000px;
+
+          &::before {
+            position: absolute;
+            inset: 10px;
+            content: "";
+            background: #f5f5f5  no-repeat;
+            background-image:
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0);
+            background-position:
+              15px 30px,
+              15px 60px,
+              15px 90px,
+              105px 30px,
+              105px 60px,
+              105px 90px;
+            background-size: 60px 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+          }
+
+          &::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            width: calc(50% - 10px);
+            content: "";
+            background: #fff no-repeat;
+            background-image:
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0),
+              linear-gradient(#ddd 100px, transparent 0);
+            background-position: 50% 30px, 50% 60px, 50%  90px;
+            background-size: 60px 10px;
+            border-radius: 8px;
+            transform: rotateY(0deg);
+            transform-origin: left center;
+            animation: paging 1s linear infinite;
+          }
+        }
+
+        @keyframes paging {
+          to {
+            transform: rotateY(-180deg);
+          }
+        }
+      </style>
+      <div class="loader"></div>
+    </div>
+    
+    
+  </body>
+</html>
